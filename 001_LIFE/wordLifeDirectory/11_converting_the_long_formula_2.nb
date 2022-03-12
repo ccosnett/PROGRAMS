@@ -1,0 +1,167 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5368,        159]
+NotebookOptionsPosition[      4755,        141]
+NotebookOutlinePosition[      5100,        156]
+CellTagsIndexPosition[      5057,        153]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ StyleBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"cnf2clausalForm2", "::", "usage"}], "=", 
+    "\"\<cnf2clausalForm2[clausesInCNF]\>\""}], ";"}],
+  FontSize->12], "\n", 
+ StyleBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"cnf2clausalForm2", "[", "clausesInCNF_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{"(", "clausesInCNF", ")"}], "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Or", "\[Rule]", "List"}], ",", 
+       RowBox[{"And", "\[Rule]", "List"}]}], "}"}]}]}], ";"}],
+  FontSize->12], "\n", 
+ StyleBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"clausalForm22cnf", "::", "usage"}], "=", 
+    "\"\<clausalForm22cnf[clausesInClausalForm2]\>\""}], ";"}],
+  FontSize->12], "\n", 
+ StyleBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"clausalForm22cnf", "[", "clausesInClausalForm2_", "]"}], ":=", 
+    RowBox[{"And", "@@", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Or", "@@", "#"}], "&"}], "/@", 
+       RowBox[{"(", "clausesInClausalForm2", ")"}]}], ")"}]}]}], ";"}],
+  FontSize->12]}], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ CellFrameLabels->{{None, None}, {None, "input (mathematica code)"}},
+ CellChangeTimes->{{3.765690460663842*^9, 3.765690461391439*^9}, {
+  3.7656906024434443`*^9, 3.765690603751608*^9}, {3.795350071063526*^9, 
+  3.795350072722823*^9}},
+ Background->GrayLevel[0.95],
+ CellLabel->
+  "In[294]:=",ExpressionUUID->"4b22e43c-e9ad-4b5a-ae32-cae877d7a4af"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"Get", "[", 
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+    "\"\<longFORMULAmodular.m\>\""}], "]"}],
+  FontSize->12]], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellFrameLabels->{{None, None}, {None, "input (mathematica code)"}},
+ CellChangeTimes->{{3.765690460663842*^9, 3.765690461391439*^9}, {
+   3.7656906024434443`*^9, 3.765690603751608*^9}, {3.795339775449004*^9, 
+   3.795339792379526*^9}, 3.795348628497592*^9, {3.7953486843282127`*^9, 
+   3.795348727421541*^9}, {3.795349938780135*^9, 3.795349944825329*^9}},
+ Background->GrayLevel[0.95],
+ CellLabel->
+  "In[298]:=",ExpressionUUID->"19eae7f3-2f66-480a-93d2-35a8647dc5f4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", 
+   RowBox[{"i", ",", "j", ",", "g", ",", "x", ",", "xp", ",", "a", ",", "b"}],
+    "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"inter1", "=", 
+    RowBox[{"cnf2clausalForm2", "[", 
+     RowBox[{
+      RowBox[{"FORMULA", "[", 
+       RowBox[{"x", ",", "xp"}], "]"}], "[", 
+      RowBox[{"i", ",", "j"}], "]"}], " ", "]"}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{"inter2", "=", 
+    RowBox[{"inter1", "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x", "[", 
+        RowBox[{"a_", ",", "b_"}], "]"}], ":>", 
+       RowBox[{"y", "[", 
+        RowBox[{"a", ",", "b"}], "]"}]}], "}"}]}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{"inter3", "=", 
+    RowBox[{"inter2", "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"xp", "[", 
+         RowBox[{"a_", ",", "b_"}], "]"}], ":>", 
+        RowBox[{"x", "[", 
+         RowBox[{"a", ",", "b", ",", 
+          RowBox[{"g", "+", "1"}]}], "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"y", "[", 
+         RowBox[{"a_", ",", "b_"}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"x", "[", 
+         RowBox[{"a", ",", "b", ",", "g"}], "]"}]}]}], "}"}]}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{"CopyToClipboard", "[", "inter3", " ", "]"}]}], 
+  "\[IndentingNewLine]", " ", "]"}]}], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.795349949009321*^9, 3.795350045267548*^9}, {
+   3.795350079898999*^9, 3.795350309454402*^9}, {3.795350352387579*^9, 
+   3.795350355185351*^9}},
+ CellLabel->
+  "In[299]:=",ExpressionUUID->"8f1c1735-0a41-4886-bbcf-19d9a6073fe4"],
+
+Cell[BoxData["Null"], "Print",
+ CellChangeTimes->{{3.795350083488421*^9, 3.795350150812608*^9}, {
+   3.795350280768588*^9, 3.7953503112148027`*^9}, 3.7953503569311447`*^9},
+ CellLabel->
+  "During evaluation of \
+In[299]:=",ExpressionUUID->"0f685554-5f7d-414f-8dec-c017ecef72e2"]
+}, Open  ]]
+},
+WindowSize->{1686, 1387},
+WindowMargins->{{Automatic, 1}, {-28, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1419, 42, 279, "Input",ExpressionUUID->"4b22e43c-e9ad-4b5a-ae32-cae877d7a4af"],
+Cell[1980, 64, 745, 16, 158, "Input",ExpressionUUID->"19eae7f3-2f66-480a-93d2-35a8647dc5f4"],
+Cell[CellGroupData[{
+Cell[2750, 84, 1708, 47, 355, "Input",ExpressionUUID->"8f1c1735-0a41-4886-bbcf-19d9a6073fe4"],
+Cell[4461, 133, 278, 5, 48, "Print",ExpressionUUID->"0f685554-5f7d-414f-8dec-c017ecef72e2"]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,101 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3164,         93]
+NotebookOptionsPosition[      2518,         72]
+NotebookOutlinePosition[      2861,         87]
+CellTagsIndexPosition[      2818,         84]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Suppose that the function has a DNF with only a few \
+terms",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.78739152898993*^9, 3.787391540138386*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"0a1bbd6a-e2ab-4732-a30f-89945a5665ae"],
+
+Cell[TextData[StyleBox["We will see in a moment that it is easy to express \
+such an assumption as a sat problem",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7873915416397552`*^9, 3.787391561217433*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"de62087c-f242-4ab9-b765-feeb08b25476"],
+
+Cell[TextData[StyleBox["And when the author constructed clauses corresponding \
+to Table 2 and presented them to sat solver, he did in fact learn almost \
+immediately that a very simple formula is consistent with all of the data",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7873915625611563`*^9, 3.787391599927737*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"f85a5b37-a614-42c8-9d3e-c579ee4f3d29"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 590, 15, 69, "Text",ExpressionUUID->"0a1bbd6a-e2ab-4732-a30f-89945a5665ae",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1151, 37, 622, 15, 69, "Text",ExpressionUUID->"de62087c-f242-4ab9-b765-feeb08b25476",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1776, 54, 738, 16, 114, "Text",ExpressionUUID->"f85a5b37-a614-42c8-9d3e-c579ee4f3d29",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+

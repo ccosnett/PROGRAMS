@@ -1,0 +1,69 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1894,         61]
+NotebookOptionsPosition[      1424,         44]
+NotebookOutlinePosition[      1795,         60]
+CellTagsIndexPosition[      1752,         57]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["sudo: /usr/bin/sudo must be owned by uid 0 and have \
+the setuid bit set\n",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.768041054647616*^9, 
+  3.768041055006078*^9}},ExpressionUUID->"98cbcb0f-b143-48ea-8c35-\
+a251bd97d889"],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", "\"\<~/asdf.txt\>\"", "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7680413927171*^9, 3.7680414026267633`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"1436e899-5074-4749-9d3a-3711fc34b189"]
+},
+WindowSize->{1278, 1388},
+WindowMargins->{{Automatic, 442}, {0, Automatic}},
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 562, 15, 114, "Text",ExpressionUUID->"98cbcb0f-b143-48ea-8c35-a251bd97d889",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1123, 37, 297, 5, 93, "Input",ExpressionUUID->"1436e899-5074-4749-9d3a-3711fc34b189"]
+}
+]
+*)
+

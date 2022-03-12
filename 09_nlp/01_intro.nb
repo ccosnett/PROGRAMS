@@ -1,0 +1,675 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     25955,        667]
+NotebookOptionsPosition[     20948,        562]
+NotebookOutlinePosition[     21300,        578]
+CellTagsIndexPosition[     21257,        575]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["sequence learning and NLP with neural networks",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.75553200368711*^9, 3.755532014685172*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"1829e601-ac67-4c51-8846-4018643622a4"],
+
+Cell[TextData[StyleBox["Sequence regression",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "ItemNumbered",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7555320334271917`*^9, 
+  3.755532052883992*^9}},ExpressionUUID->"71288073-b4f0-4658-87b4-\
+2a0adbddd47a"],
+
+Cell[TextData[StyleBox["Sequence classification",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "ItemNumbered",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.75553205937703*^9, 
+  3.755532064851313*^9}},ExpressionUUID->"59c6287e-603a-4b01-8636-\
+485595e64c18"],
+
+Cell[TextData[StyleBox["Sequence to sequence learning",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "ItemNumbered",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.755532086642652*^9, 
+  3.755532092386734*^9}},ExpressionUUID->"37b145ae-bafb-424b-aeec-\
+f54c47de709b"],
+
+Cell[TextData[StyleBox["Question Answering",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "ItemNumbered",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.755532094873466*^9, 
+  3.755532107354032*^9}},ExpressionUUID->"9279d122-a7b5-454c-83b8-\
+0d59be44b509"],
+
+Cell[TextData[StyleBox["Language Modeling",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "ItemNumbered",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.755532108816161*^9, 
+  3.755532123305416*^9}},ExpressionUUID->"58756e55-73ef-40b1-b05d-\
+0d88dd2aac00"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.7555321473816957`*^9},ExpressionUUID->"b8dcbb42-85c8-470a-a373-\
+9b34ea043d82"],
+
+Cell[TextData[StyleBox["",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.7555322308784857`*^9},ExpressionUUID->"ec9ee69d-b3ba-4469-b261-\
+befe4fe7499a"],
+
+Cell[TextData[StyleBox["Sequence learning refers to a variety of tasks that \
+neural nets can be trained to perform.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.755532125851643*^9, 3.7555321627445593`*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"b1b35f59-45d5-4624-9d27-23fcd2bed77f"],
+
+Cell[TextData[StyleBox["What all these tasks have in common is that the input \
+to the net is a sequence of some kind.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.755532163786273*^9, 3.7555321828957653`*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"522d6dcc-82c6-47bf-80e1-16f98a094e60"],
+
+Cell[TextData[StyleBox["This input is usually variable length, meaning that \
+the net can operate equally well on short or long sequences.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.755532184089753*^9, 3.755532211830472*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"e63d7621-178b-416e-9783-07eb93d6367d"],
+
+Cell[TextData[{
+ StyleBox["An unencoded variable-length tensor, indicated visually as a \
+placeholder such as ",
+  StripOnInput->False,
+  LineColor->RGBColor[1, 0, 0],
+  FrontFaceColor->RGBColor[1, 0, 0],
+  BackFaceColor->RGBColor[1, 0, 0],
+  GraphicsColor->RGBColor[1, 0, 0],
+  FontWeight->Normal,
+  FontColor->RGBColor[1, 0, 0]],
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "7c070cb7-2fe7-4f0d-aaa5-e0eb864c5a38"],
+ StyleBox[" in for example a matrix of size n by 3",
+  StripOnInput->False,
+  LineColor->RGBColor[1, 0, 0],
+  FrontFaceColor->RGBColor[1, 0, 0],
+  BackFaceColor->RGBColor[1, 0, 0],
+  GraphicsColor->RGBColor[1, 0, 0],
+  FontWeight->Normal,
+  FontColor->RGBColor[1, 0, 0]]
+}], "ItemNumbered",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7555322325645447`*^9, 3.755532334691835*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"a132b09d-dd3f-49c4-a551-9b50915b7083"],
+
+Cell[TextData[StyleBox["A variable-length tensor, encoded from a string using \
+a Characters or Tokens NetEncoder",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "ItemNumbered",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7555323439256773`*^9, 3.755532371000823*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"bf66721e-2121-4161-a69d-1e10d7e6dea0"],
+
+Cell[TextData[StyleBox["A variable length tensor, encoded from an Audio \
+object using an Audio, AudioSpectrogram, AudioSTFT, etc. Net encoder",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "ItemNumbered",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.755532373378255*^9, 3.7555324119747143`*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"e89cab9f-9894-4320-8b24-38913ed9306d"],
+
+Cell[TextData[StyleBox["Fixed length forms of the above, for instance by \
+using the Target Length option to the net encoder",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "ItemNumbered",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.755532422953147*^9, 3.7555324606770906`*^9}},
+ CellLabel->"In[38]:=",ExpressionUUID->"de8d2f7c-7018-466f-bd1a-edbe8db0fced"],
+
+Cell[TextData[StyleBox["",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.755532562236117*^9},ExpressionUUID->"9f81b89d-9c20-42b8-9fd4-\
+cc715b02e3fd"],
+
+Cell[TextData[StyleBox["What distinguishes the various sequence learning \
+tasks is the form of the output of the net.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.75553249804213*^9, 3.755532514683813*^9}},
+ CellLabel->"In[40]:=",ExpressionUUID->"9f365c77-a7f9-47f2-8d18-e6e20186ac85"],
+
+Cell[TextData[StyleBox["Here, there is a wide diversity of techniques, with \
+corresponding forms of output.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7555325165219707`*^9, 3.755532534467205*^9}},
+ CellLabel->"In[42]:=",ExpressionUUID->"a41d6e44-6aa7-4549-88dc-3fdf0d677dc9"],
+
+Cell[TextData[StyleBox["For auto regressive language models, used to model \
+the probability p of x of a particular sequence x, the output is the next \
+element of the sequence.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "ItemNumbered",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.755532558002001*^9, 3.755532598664846*^9}},
+ CellLabel->"In[50]:=",ExpressionUUID->"98cc3205-149a-4a5c-b01c-ee3e7b5cf856"],
+
+Cell[TextData[StyleBox["     In the case of a textual model, this is a \
+character or token, as decoded via a Class, Characters, or Token NetDecoder.",
+ 
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.755533075037201*^9, 3.755533079623315*^9}},
+ CellLabel->"In[51]:=",ExpressionUUID->"06a4e42f-64f1-4645-be17-ae4edb471b62"],
+
+Cell[TextData[StyleBox["For sequence tagging models, the output is a sequence \
+of classes of the same length as the input.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "ItemNumbered",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7555326019803267`*^9, 3.755532634975885*^9}, {
+  3.755533072313353*^9, 3.75553312544601*^9}},
+ CellLabel->"In[52]:=",ExpressionUUID->"bf1b7255-f941-425c-935f-8d6e282acf81"],
+
+Cell[TextData[StyleBox["     For example, in the case of a part-of-speech \
+tagger, these classes are Noun, Verb, etc.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.75553312917124*^9, 3.755533153605104*^9}},
+ CellLabel->"In[54]:=",ExpressionUUID->"fd988483-7138-400b-a591-3bc55690ccf6"],
+
+Cell[TextData[StyleBox["     For this, a Class NetDecoder is appropriate.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7555331565122433`*^9, 3.7555331702364264`*^9}},
+ CellLabel->"In[56]:=",ExpressionUUID->"e7bcd4b6-5f93-4230-b318-6d2a08003228"],
+
+Cell[TextData[StyleBox["For translation models, that is an English to French \
+translator, the output is itself a language model, albeit one that is \
+conditional on the source sequence.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "ItemNumbered",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.7555330451695147`*^9, {3.7555331749558887`*^9, 
+   3.7555332193378897`*^9}},ExpressionUUID->"a35eb3a1-be8e-4010-9851-\
+c281a152f7a5"],
+
+Cell[TextData[StyleBox["     In other words, there are two inputs to the net: \
+the complete source sequence, and the target sequence so far, and             \
+                                               the output is a prediction of \
+the next element of the target sequence",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.75553322134896*^9, 
+  3.75553328493661*^9}},ExpressionUUID->"71c69ce8-673b-4983-aa30-\
+b605dfb9ff64"],
+
+Cell[TextData[StyleBox["For CTC models, the input sequence is used to form a \
+sequence of intermittent predictions for the target sequence, which is always \
+shorter than the input sequence.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "ItemNumbered",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7555332895029697`*^9, 3.755533330238216*^9}},
+ CellLabel->"In[62]:=",ExpressionUUID->"88debe0c-f034-433d-82ed-859858ba7f55"],
+
+Cell[TextData[StyleBox["    Examples of this include handwriting recognition \
+from pixel or stroke data, in which the input is segmented into individual \
+characters, or audio transcription, in which features of the audio are \
+segmented into characters or phonemes.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.755533331922594*^9, 3.7555333899971*^9}},
+ CellLabel->"In[64]:=",ExpressionUUID->"bfad5c90-d7d0-43c3-9ce5-95abd424d7fe"],
+
+Cell[TextData[StyleBox["For these, a CTC Beam Search Net Decoder must be \
+used.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.75553339147268*^9, 3.755533421563699*^9}},
+ CellLabel->"In[66]:=",ExpressionUUID->"bc4fd600-f95f-4dc6-9fe2-39287ae89153"],
+
+Cell[TextData[StyleBox["We give simple examples of most of these techniques \
+in this tutorial.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.755533424487398*^9, 3.755533435931047*^9}},
+ CellLabel->"In[68]:=",ExpressionUUID->"ee5624e0-06c1-481d-92ed-70396b639cee"],
+
+Cell[TextData[StyleBox["Sequence regression",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7555334383709097`*^9, 
+  3.755533441962647*^9}},ExpressionUUID->"b083b93e-e8d5-414c-a2be-\
+eb5848bbff87"],
+
+Cell[TextData[StyleBox["  ",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.755533212421232*^9, 
+  3.755533213282654*^9}},ExpressionUUID->"1e175ae4-0b0d-4581-a5e9-\
+d193bf6756cb"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.755532227946138*^9},ExpressionUUID->"bfd73152-f9d2-4270-ade6-\
+f113076f12ff"]
+},
+WindowSize->{1720, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+Magnification->2,
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 871, 19, 163, "Section",ExpressionUUID->"1829e601-ac67-4c51-8846-4018643622a4",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1432, 41, 542, 14, 63, "ItemNumbered",ExpressionUUID->"71288073-b4f0-4658-87b4-2a0adbddd47a",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1977, 57, 543, 14, 63, "ItemNumbered",ExpressionUUID->"59c6287e-603a-4b01-8636-485595e64c18",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2523, 73, 550, 14, 63, "ItemNumbered",ExpressionUUID->"37b145ae-bafb-424b-aeec-f54c47de709b",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3076, 89, 539, 14, 63, "ItemNumbered",ExpressionUUID->"9279d122-a7b5-454c-83b8-0d59be44b509",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3618, 105, 538, 14, 63, "ItemNumbered",ExpressionUUID->"58756e55-73ef-40b1-b05d-0d88dd2aac00",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4159, 121, 149, 3, 104, "Input",ExpressionUUID->"b8dcbb42-85c8-470a-a373-9b34ea043d82"],
+Cell[4311, 126, 834, 22, 134, "Section",ExpressionUUID->"ec9ee69d-b3ba-4469-b261-befe4fe7499a",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5148, 150, 601, 14, 69, "Text",ExpressionUUID->"b1b35f59-45d5-4624-9d27-23fcd2bed77f",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5752, 166, 603, 14, 69, "Text",ExpressionUUID->"522d6dcc-82c6-47bf-80e1-16f98a094e60",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[6358, 182, 621, 14, 69, "Text",ExpressionUUID->"e63d7621-178b-416e-9783-07eb93d6367d",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[6982, 198, 1050, 28, 133, "ItemNumbered",ExpressionUUID->"a132b09d-dd3f-49c4-a551-9b50915b7083",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[8035, 228, 631, 14, 92, "ItemNumbered",ExpressionUUID->"bf66721e-2121-4161-a69d-1e10d7e6dea0",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[8669, 244, 660, 14, 133, "ItemNumbered",ExpressionUUID->"e89cab9f-9894-4320-8b24-38913ed9306d",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[9332, 260, 642, 14, 92, "ItemNumbered",ExpressionUUID->"de8d2f7c-7018-466f-bd1a-edbe8db0fced",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[9977, 276, 832, 22, 134, "Section",ExpressionUUID->"9f81b89d-9c20-42b8-9fd4-cc715b02e3fd",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[10812, 300, 600, 14, 69, "Text",ExpressionUUID->"9f365c77-a7f9-47f2-8d18-e6e20186ac85",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[11415, 316, 593, 14, 69, "Text",ExpressionUUID->"a41d6e44-6aa7-4549-88dc-3fdf0d677dc9",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[12011, 332, 693, 15, 133, "ItemNumbered",ExpressionUUID->"98cc3205-149a-4a5c-b01c-ee3e7b5cf856",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[12707, 349, 659, 15, 69, "Text",ExpressionUUID->"06a4e42f-64f1-4645-be17-ae4edb471b62",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[13369, 366, 689, 15, 92, "ItemNumbered",ExpressionUUID->"bf1b7255-f941-425c-935f-8d6e282acf81",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[14061, 383, 625, 14, 69, "Text",ExpressionUUID->"fd988483-7138-400b-a591-3bc55690ccf6",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[14689, 399, 585, 13, 69, "Text",ExpressionUUID->"e7bcd4b6-5f93-4230-b318-6d2a08003228",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[15277, 414, 715, 17, 104, "ItemNumbered",ExpressionUUID->"a35eb3a1-be8e-4010-9851-c281a152f7a5",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[15995, 433, 765, 17, 114, "Text",ExpressionUUID->"71c69ce8-673b-4983-aa30-b605dfb9ff64",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[16763, 452, 709, 15, 133, "ItemNumbered",ExpressionUUID->"88debe0c-f034-433d-82ed-859858ba7f55",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[17475, 469, 773, 16, 159, "Text",ExpressionUUID->"bfad5c90-d7d0-43c3-9ce5-95abd424d7fe",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[18251, 487, 587, 14, 69, "Text",ExpressionUUID->"bc4fd600-f95f-4dc6-9fe2-39287ae89153",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[18841, 503, 603, 14, 69, "Text",ExpressionUUID->"ee5624e0-06c1-481d-92ed-70396b639cee",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[19447, 519, 829, 20, 134, "Section",ExpressionUUID->"b083b93e-e8d5-414c-a2be-eb5848bbff87",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[20279, 541, 515, 14, 69, "Text",ExpressionUUID->"1e175ae4-0b0d-4581-a5e9-d193bf6756cb",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[20797, 557, 147, 3, 104, "Input",ExpressionUUID->"bfd73152-f9d2-4270-ade6-f113076f12ff"]
+}
+]
+*)
+

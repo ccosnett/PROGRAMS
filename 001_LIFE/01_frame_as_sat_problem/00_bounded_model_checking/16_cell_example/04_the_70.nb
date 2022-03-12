@@ -1,0 +1,1413 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     49090,       1405]
+NotebookOptionsPosition[     47486,       1368]
+NotebookOutlinePosition[     47829,       1383]
+CellTagsIndexPosition[     47786,       1380]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["the rules of chess occupy 10 to the 5 pages in this \
+language.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874709497250147`*^9, 
+  3.787470970002172*^9}},ExpressionUUID->"b17f1cda-6a43-413c-9800-\
+65d8f8371b96"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"X1", "=", 
+   RowBox[{"(", GridBox[{
+      {"0", "0", "0"},
+      {"1", "1", "1"},
+      {"0", "0", "0"}
+     }], ")"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"plt", "/@", 
+  RowBox[{"NestList", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"updateLife", "[", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "3"}], "}"}], "]"}], "[", " ", "#", "]"}], "&"}], 
+    ",", "\[IndentingNewLine]", "X1", ",", "1"}], "]"}]}]}], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellFrameLabels->{{None, None}, {None, 
+    Cell[
+     TextData[{
+       StyleBox["input", FontColor -> GrayLevel[0.5]], " ", 
+       "(Mathematica Code)"}], "Input", FontSize -> 13, FontColor -> 
+     RGBColor[0.8491033800710062, 0.0031235304134196173`, 
+       0.06325861363578178], FontFamily -> "TeX Gyre Chorus", Background -> 
+     GrayLevel[0.99]]}},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787397882303399*^9, 3.787397920128484*^9}, {
+   3.787398269246654*^9, 3.787398399936985*^9}, {3.7874702563471193`*^9, 
+   3.7874702702412*^9}, {3.787470450126066*^9, 3.7874705029795017`*^9}, 
+   3.787470652042301*^9},
+ Background->GrayLevel[0.95],
+ CellLabel->"In[21]:=",ExpressionUUID->"1daeae80-ed40-4341-a4fc-7865ca4d4ce1"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   StyleBox[
+    GraphicsBox[{
+      RasterBox[{{1, 1, 1}, {0, 0, 0}, {1, 1, 1}}, {{0, 0}, {3, 3}}, {0, 1}], {
+       {GrayLevel[
+         NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+        StyleBox[
+         LineBox[{{{0, 3}, {3, 3}}, {{0, 2}, {3, 2}}, {{0, 1}, {3, 1}}, {{0, 
+          0}, {3, 0}}}],
+         Antialiasing->False]}, 
+       {GrayLevel[
+         NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+        StyleBox[
+         LineBox[{{{0, 0}, {0, 3}}, {{1, 0}, {1, 3}}, {{2, 0}, {2, 3}}, {{3, 
+          0}, {3, 3}}}],
+         Antialiasing->False]}}},
+     Frame->False,
+     FrameLabel->{None, None},
+     FrameTicks->{{None, None}, {None, None}},
+     GridLinesStyle->Directive[
+       GrayLevel[0.5, 0.4]],
+     Method->{
+      "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic}],
+    StripOnInput->False,
+    Magnification->0.3 Inherited], ",", 
+   StyleBox[
+    GraphicsBox[{
+      RasterBox[{{1, 0, 1}, {1, 0, 1}, {1, 0, 1}}, {{0, 0}, {3, 3}}, {0, 1}], {
+       {GrayLevel[
+         NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+        StyleBox[
+         LineBox[{{{0, 3}, {3, 3}}, {{0, 2}, {3, 2}}, {{0, 1}, {3, 1}}, {{0, 
+          0}, {3, 0}}}],
+         Antialiasing->False]}, 
+       {GrayLevel[
+         NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+        StyleBox[
+         LineBox[{{{0, 0}, {0, 3}}, {{1, 0}, {1, 3}}, {{2, 0}, {2, 3}}, {{3, 
+          0}, {3, 3}}}],
+         Antialiasing->False]}}},
+     Frame->False,
+     FrameLabel->{None, None},
+     FrameTicks->{{None, None}, {None, None}},
+     GridLinesStyle->Directive[
+       GrayLevel[0.5, 0.4]],
+     Method->{
+      "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic}],
+    StripOnInput->False,
+    Magnification->0.3 Inherited]}], "}"}]], "Output",
+ CellFrame->{{True, True}, {True, False}},
+ CellFrameLabels->{{None, None}, {
+    Cell[
+     TextData[{"output"}], "Input", Background -> GrayLevel[0.99], FontSize -> 
+     13, FontColor -> GrayLevel[0.5], FontFamily -> "TeX Gyre Chorus"], None}},
+ CellChangeTimes->{
+  3.7873978823502903`*^9, {3.787398307474762*^9, 3.7873984002809467`*^9}, 
+   3.787470256846654*^9, {3.7874704511342382`*^9, 3.787470503355277*^9}, 
+   3.787470652060814*^9},
+ Background->GrayLevel[0.85],
+ CellLabel->"Out[22]=",ExpressionUUID->"f8271a3d-8282-4254-ac59-cd7411f2df4d"],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[
+   TagBox[RasterBox[CompressedData["
+1:eJzt3QtQVNUfB3AEExkl8pWIFWqMYdqgDmmigzr2QgoQzEQZFKTASjP8FxqO
+NoaFlZZZGTSZmU4WkeBj8hEBppn5QDAtC4QocEpS5KEC4v5/cevOzi4sd+/r
+3D37/czUuGfv3j2/c86e/Z3lPgbHPxv5pKuLi8vi7vS/yLiUycnJcUujbqEH
+jy1cPD9x4RMJIQv/90TiE8n3xbtR4f3033r6xz//NgEAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAOLjTp09fu3aNdS0AAPhx48YN1lUAAOBKc3Pz
+qVOnFi5c2KVLl+PHj7OuDgAADyhlnTFjxqBBg8rKyljXBQCAE0uXLg0MDHzu
+uefCwsJcXFyOHj3KukYAADwoKSlxaZOdnc26LvI1NzfX/6exsZF1dQAA/pWS
+koLEFQAMoqWlRcyXGhoaWFdHjrS0NJpU+/Xrd/XqVdZ1ke+jjz5y+c/w4cNZ
+VwcA4F9IXAHAOLKyssR8aeDAgayrI8eYMWOo8itXrmRdEUUocb3tttuK2vz0
+00+sqwMA8C8krgBgHJcuXRKSpVdffdURE9fq6mqaUT08PGpqaljXRRFKXO+8
+804pW/7888+bNm3asGFDQUHBhQsXtK4YADg5JK4AoL/k5OT8/HwbG3z66aeO
+mLhmZGTQjPr000+zrohSUhJXSlOjoqLGjh27cOHC6OhoHx8fin327NlVVVX6
+VBIAnBASVwDQWU5ODk07H3zwgY1tHDRxDQ0NdXV15eB6Ap0mrtXV1X5+fjt2
+7BAv/NXU1BQTE0M927Nnz5MnT+pSTQBwOkhcAUBPFy9e9Pb25jJxbWhocHd3
+f+yxx1hXRAW2E1dKViMiIrZt22ZdPnLkSOrcYcOG4VoEqkhPT//4449Z10J9
+vMYlkZOEr1GYxklcuexHLoOSgad24CkWJuLj42+55RYuE9ft27dTXEeOHGFd
+ERXYTlzPnj3r5eWVlZXV3Nxs8dTWrVuFc+vWrVunbpWqq6tXrVp1/vx5dXdr
+cFFRUc8++yzrWqiP17gkcpLwNQrTOIkrl/3IZVAy8NQOPMWikIxEYs+ePQsW
+LBg7diyXiWtcXFxwcDDrWqjDduIqZqcrVqyweOrXX38VngoPD1erMrTPxMTE
+bt26jRo1qrKyUq3dOgReJxxe45LIScJH4uqIuAxKBp7agadYZJOXSNTV1VFe
+V19fz2vi6u/vv3v3bta1UIftxFW8yqt1dtrY2Cg8NWHCBOXVKCoqmjlzpqur
+K+2N2tYJb6TL64TDa1wSOUn4SFwdEZdBycBTO/AUiwxKEomnnnpq37599A8H
+SlyvX7++ffv2JUuWvPzyy2fPnhUKKTfLzMxMTU3Nyckxv0vClStXGFVTfbYT
+V1qDxMbGTp061fokLGolIXGdO3eu7HencXXgwIGQkBDaT2ho6MGDB+16uV29
+ZnBqTThGaxNe45LIScLX6OsyKSmJZoa8vDwpG2vaRFz2oypBGSoieXjqXJ5i
+kU5hIkEKCgoSEhKEfztK4lpbWztt2rS1a9eeOXOGatujR4/c3Nyampr7779/
+8+bNZWVl06dPHz16NJc/A0q/jquFLVu2CInrO++8I+Plra2tO3fuDAoKosVR
+dHR0cXGxvXvgrNdUmXAM2Ca8xiWRk4SvbuJKMY4ZM8bX17dXr159+/bt3bv3
+XXfdNW7cuNLS0o5eonUTcdmPyoMyWkTy8NS5PMUihfJEwtSWkAcHB1+6dEl4
+6BCJ67Vr16g7zON98MEH+/fvP3Xq1KKiInq4adMmIUMrLy9X/d2p6/Pz87+S
+5fvvv1deAdmJ6+TJk6lNBg8ebO/vzy0tLZT0jhgxwt3dPSkpSd4lxdj2mhaU
+TzjGbBNe45LIScJn+wdKHZqIy35UGJQBI5KHp87lKRbbVEkkBMnJyZSZiw8d
+InFNS0ujjjAviYyMpGo//PDDwsOVK1fSQ1rvX79+XfV3r6io6NOnTw9ZfH19
+r169qrAC8hLXgwcPUpvQGofyZ+mvohT33XffHTRokKen5wsvvKDkugFse00L
+yiccY7YJr3FJ5CThs01cdWgiLvtRYVAGjEgenjqXp1g6omIiQQ4fPjx79mzz
+EuMnrk1NTffcc4/FtZ78/f2p2lu3bhUe3rhxo7S01Ai/imtBRuJKjUbLHGqi
+jRs3SnxJbW3tK6+8cuutt/br148+F+Jv8vJw2WsKJxzDtgmvcUnkJOEzTFz1
+aSIu+1FJUMaMSB6eOpenWKypm0iY2n5enjhx4l9//WVeaPzEtbGxsbCw0LyE
+knk3Nzeq9oULF1jVSk8yEtfExERqn/Xr10vZ+PLly0uWLLn55pt9fX3pJarc
+rcBBe621tXX//v07OxAUFPToo4929OyhQ4ds75xhm/Aal0ROEr6mYQpaWlrK
+JLD4nUetJuKyH7ULyjgjUwqeOpenWKTTIpEgqamplIJaFBo/cbWWl5dHdR4x
+YgTriujE3sSVxkzXrl2l35sjNzeX2rNXr15fffWVdms0h+i1ioqK/v37e3WA
+WrVbt24dPTtkyBB7DwvRrU14jUsiJwlfhzDLy8tdJPjtt99s70deE3HZj3oG
+ZbQPpjmeOpenWKTTIpE4ceJEVFSU9d4cMXFdtmwZ1fmZZ55hXRGd2JW4ZmVl
+eXp62nVcKykpKZk1axat2gIDA7Ozs2nBaH81O8FBr6n+x1aDtAmvcUnkJOGr
+dWGl8xJ0OoFo0URc9qO6QRkhInl46lyeYrGgbiLR3Nw8adIkWgW3WBkzZgyF
+/P777wsP230joyWuQUFBVGfK0PR5O2qTPXv2bJfF4id9eaQnrgUFBQMGDPjh
+hx/MC2m18vXXX0t5eVlZ2fz5893d3f39/elNm5qa5FS3A5322tatW19us3nz
+ZvMV1o8//vjaa6+99dZba9asEY5Ip2/G1atXU8mbb75J/xBPrlzbhspp+127
+dgmFf/75Z3p6Om1JTwnXLpZN9QlHxTZRwuBx0UJ+fce2bNmisLb6h89kABvq
+sudazOH696PWI9OkdlASm72hoYFGYFxcXGxsbEJCQn5+/smTJ+mjanKmuddk
+sx2UYBKLqbNwVBzMaiUStJ+OfpcW/rLTvXt34SENMOuXGypxra+v79q1K9X5
+jz/+MC+n9tfoDqQVFRUUfh9Zhg4dqttVBWix4+fnZ30bgnPnzs2YMUP629HU
+JBypcvvtt69bt06VI1Wk9FppaSkl3h4eHrTZ22+/LW5TU1OTk5NDCXlKSooQ
+3ZUrVw4cOHDvvffSlrQH8cCew4cPx8TEUOHixYvFy4BQ/WkA9+jRg5al4lWa
+5VF3wlG3TZQweFxFRUWZmZm05fjx42kJlt9m9+7dVHjffffRrKXwz1L6h89k
+ABsncdVoDte/H7UemSZVg5LY7JTeTJ48ee/evULlafitWLGib9++tMw0OdPc
+a7sdlNA/FpOEcFQfzFokEiLKig1+qEBVVdWGDRvEg6ZoNUcV7tevn3kzUnJ4
+9913q/sLoXFISVypfUaPHn3q1Cnrp2gA0xC1903FcwNpbKelpV28eNGul8vr
+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
+yYSbxw==
+     "], {{0, 68}, {915, 0}}, {0, 255},
+     ColorFunction->RGBColor],
+    BoxForm`ImageTag[
+    "Byte", ColorSpace -> "RGB", Interleaving -> True, MetaInformation -> 
+     Association["Comments" -> Association["Software" -> "gnome-screenshot"]]],
+    Selectable->False],
+   DefaultBaseStyle->"ImageGraphics",
+   ImageSize->{1318.3333333333326`, Automatic},
+   ImageSizeRaw->{915, 68},
+   PlotRange->{{0, 915}, {0, 68}}],
+  StripOnInput->False,
+  Magnification->0.3 Inherited]], "Print",
+ Evaluatable->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.787471021327526*^9},ExpressionUUID->"57a4ca8a-fdd4-454e-b408-\
+f35f3ddedad8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Binomial", "[", 
+  RowBox[{"8", ",", "4"}], "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787471103607983*^9, 3.787471106902989*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"81ef3aeb-2366-4738-b717-93bf79bba442"],
+
+Cell[BoxData["70"], "Output",
+ CellChangeTimes->{3.787471107286294*^9},
+ CellLabel->"Out[30]=",ExpressionUUID->"7dbb30aa-5773-4770-84e6-f75988c93c8e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Not", "/@", 
+  RowBox[{"Prepend", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}], " ", ",", "xP"}], 
+   "]"}]}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.78747177374434*^9, 3.78747182774754*^9}, {
+   3.787471877380014*^9, 3.787471878714129*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"e2419a4c-7ed5-4311-9e54-d0f815074b29"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"!", "xP"}], ",", 
+   RowBox[{"!", "1"}], ",", 
+   RowBox[{"!", "2"}], ",", 
+   RowBox[{"!", "3"}], ",", 
+   RowBox[{"!", "4"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.787471788670363*^9, 3.7874718280139723`*^9, 
+  3.78747187900387*^9},
+ CellLabel->"Out[19]=",ExpressionUUID->"811d7e6e-14c0-42f8-9f1c-b1d85fb5590c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["the 70", "Section",
+ CellChangeTimes->{{3.78747201429158*^9, 
+  3.787472015251144*^9}},ExpressionUUID->"89f3c6a1-9cb9-49ef-95ee-\
+9a491720adf5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"lifeNeighbours", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "xNW", ",", "xN", ",", "xNE", ",", "xW", ",", "xE", ",", "xSW", ",", "xS",
+      ",", "xSE"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"lists70", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"Not", "/@", 
+       RowBox[{"Prepend", "[", 
+        RowBox[{"#", ",", "xP"}], "]"}]}], ")"}], "&"}], "/@", 
+    RowBox[{"Subsets", "[", 
+     RowBox[{"lifeNeighbours", ",", 
+      RowBox[{"{", "4", "}"}]}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"the70", "=", 
+   RowBox[{"And", "@@", 
+    RowBox[{"Or", "@@@", "lists70"}]}]}], 
+  ";"}], "\[IndentingNewLine]", "the70"}], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellFrameLabels->{{None, None}, {None, 
+    Cell[
+     TextData[{
+       StyleBox["input", FontColor -> GrayLevel[0.5]], " ", 
+       "(Mathematica Code)"}], "Input", FontSize -> 13, FontColor -> 
+     RGBColor[0.8491033800710062, 0.0031235304134196173`, 
+       0.06325861363578178], FontFamily -> "TeX Gyre Chorus", Background -> 
+     GrayLevel[0.99]]}},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787471321987207*^9, 3.787471353471773*^9}, {
+   3.787471406558158*^9, 3.787471420893484*^9}, {3.787471491475567*^9, 
+   3.787471524929949*^9}, 3.78747155935235*^9, {3.787471691157011*^9, 
+   3.7874717464409018`*^9}, {3.787471834495571*^9, 3.787471944423031*^9}, {
+   3.7874719857209587`*^9, 3.787472011251789*^9}, {3.787474126842463*^9, 
+   3.7874741391219788`*^9}},
+ Background->GrayLevel[0.95],
+ CellLabel->"In[4]:=",ExpressionUUID->"54c290c6-2f81-42dc-978e-124e09b38463"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xW"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xSW"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xSW"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSW"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xS"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xSW"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSW"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xS"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSW"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xS"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xS"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNW"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xS"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xSW"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSW"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xS"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSW"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xS"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xS"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xN"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xS"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSW"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xS"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xS"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xNE"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xS"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xS"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xS"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xW"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xS"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}], "&&", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"!", "xP"}], "||", 
+    RowBox[{"!", "xE"}], "||", 
+    RowBox[{"!", "xSW"}], "||", 
+    RowBox[{"!", "xS"}], "||", 
+    RowBox[{"!", "xSE"}]}], ")"}]}]], "Output",
+ CellFrame->{{True, True}, {True, False}},
+ CellFrameLabels->{{None, None}, {
+    Cell[
+     TextData[{"output"}], "Input", Background -> GrayLevel[0.99], FontSize -> 
+     13, FontColor -> GrayLevel[0.5], FontFamily -> "TeX Gyre Chorus"], None}},
+ CellChangeTimes->{
+  3.787471322018814*^9, 3.7874715597170258`*^9, {3.787471691176385*^9, 
+   3.787471693254034*^9}, {3.787471741396302*^9, 3.787471747717834*^9}, {
+   3.7874718471365633`*^9, 3.7874718668336487`*^9}, {3.787471905108074*^9, 
+   3.787471944808731*^9}, 3.787472007448083*^9, 3.7874741395650682`*^9},
+ Background->GrayLevel[0.85],
+ CellLabel->"Out[7]=",ExpressionUUID->"e47ee54b-eb24-4324-9bba-9f9a55a888f9"]
+}, Open  ]],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xN"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xNE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}], "\[And]", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Not]", "xP"}], "\[Or]", 
+     RowBox[{"\[Not]", "xE"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSW"}], "\[Or]", 
+     RowBox[{"\[Not]", "xS"}], "\[Or]", 
+     RowBox[{"\[Not]", "xSE"}]}], ")"}]}],
+  FontWeight->"Normal"]], "DisplayFormula",
+ CellChangeTimes->{{3.787471961626542*^9, 3.787471963555646*^9}},
+ FontSize->5,ExpressionUUID->"7e115678-1f53-41ad-96cb-e1fc465aee1f"]
+}, Open  ]]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 603, 16, 69, "Text",ExpressionUUID->"b17f1cda-6a43-413c-9800-65d8f8371b96",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[1186, 40, 1353, 35, 299, "Input",ExpressionUUID->"1daeae80-ed40-4341-a4fc-7865ca4d4ce1"],
+Cell[2542, 77, 2383, 61, 255, "Output",ExpressionUUID->"f8271a3d-8282-4254-ac59-cd7411f2df4d"],
+Cell[4928, 140, 7130, 126, 75, "Print",ExpressionUUID->"57a4ca8a-fdd4-454e-b408-f35f3ddedad8",
+ Evaluatable->False]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12095, 271, 302, 6, 60, "Input",ExpressionUUID->"81ef3aeb-2366-4738-b717-93bf79bba442"],
+Cell[12400, 279, 150, 2, 97, "Output",ExpressionUUID->"7dbb30aa-5773-4770-84e6-f75988c93c8e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12587, 286, 457, 11, 60, "Input",ExpressionUUID->"e2419a4c-7ed5-4311-9e54-d0f815074b29"],
+Cell[13047, 299, 368, 10, 97, "Output",ExpressionUUID->"811d7e6e-14c0-42f8-9f1c-b1d85fb5590c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13452, 314, 150, 3, 99, "Section",ExpressionUUID->"89f3c6a1-9cb9-49ef-95ee-9a491720adf5"],
+Cell[CellGroupData[{
+Cell[13627, 321, 1700, 41, 272, "Input",ExpressionUUID->"54c290c6-2f81-42dc-978e-124e09b38463"],
+Cell[15330, 364, 14630, 503, 1613, "Output",ExpressionUUID->"e47ee54b-eb24-4324-9bba-9f9a55a888f9"]
+}, Open  ]],
+Cell[29975, 870, 17495, 495, 211, "DisplayFormula",ExpressionUUID->"7e115678-1f53-41ad-96cb-e1fc465aee1f"]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,118 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3758,        110]
+NotebookOptionsPosition[      2965,         86]
+NotebookOutlinePosition[      3308,        101]
+CellTagsIndexPosition[      3265,         98]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["We will consider one more instructive example before \
+moving on, namely an application to eaters.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787427617014741*^9, 3.787427636863461*^9}},
+ CellLabel->"In[52]:=",ExpressionUUID->"6a6ba2cb-54dc-442e-8f3e-79d74818231f"],
+
+Cell[TextData[StyleBox["Consider a 5 state Life path of the form",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787427642822956*^9, 3.7874276532302303`*^9}},
+ CellLabel->"In[55]:=",ExpressionUUID->"7f986a5d-d6ac-4f90-99f0-db3605d59f24"],
+
+Cell[TextData[StyleBox["where the gray cells form a still life and the cells \
+of X1 X2 X3 are unknown",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787427655143086*^9, 3.787427675709489*^9}},
+ CellLabel->"In[57]:=",ExpressionUUID->"f778114c-b0db-416b-b423-17727f884667"],
+
+Cell[TextData[StyleBox["Thus X4 equals X5 and X0 equals X5 plus glider",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874276818216743`*^9, 3.787427697852023*^9}},
+ CellLabel->"In[59]:=",ExpressionUUID->"3253a2aa-42d4-43bc-8c41-affab4047abe"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 630, 15, 69, "Text",ExpressionUUID->"6a6ba2cb-54dc-442e-8f3e-79d74818231f",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1191, 37, 574, 14, 69, "Text",ExpressionUUID->"7f986a5d-d6ac-4f90-99f0-db3605d59f24",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1768, 53, 610, 15, 69, "Text",ExpressionUUID->"f778114c-b0db-416b-b423-17727f884667",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2381, 70, 580, 14, 69, "Text",ExpressionUUID->"3253a2aa-42d4-43bc-8c41-affab4047abe",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+

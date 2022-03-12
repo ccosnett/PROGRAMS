@@ -1,0 +1,512 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19839,        502]
+NotebookOptionsPosition[     15824,        434]
+NotebookOutlinePosition[     16469,        456]
+CellTagsIndexPosition[     16426,        453]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767963679422325*^9, 
+   3.767963695338168*^9}},ExpressionUUID->"68d0df8e-5ce1-4f6f-8c99-\
+6bae891a2e7a"],
+
+Cell[BoxData["Dial"], "Input",
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.76796370342697*^9, 
+   3.767963705016924*^9}},ExpressionUUID->"9e7c8bda-6fb6-4117-ba25-\
+b5b047b89fd3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ChoiceDialog", "[", 
+  RowBox[{"\"\<Pick one\>\"", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"1", "\[Rule]", "\"\<a\>\""}], ",", 
+     RowBox[{"2", "\[Rule]", "\"\<b\>\""}], ",", 
+     RowBox[{"3", "\[Rule]", "\"\<c\>\""}], ",", 
+     RowBox[{"4", "\[Rule]", "\"\<d\>\""}]}], "}"}]}], "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> 24},
+ CellLabel->"In[2]:=",ExpressionUUID->"c91711a6-b388-4706-8d6a-f0bd80d52fa9"],
+
+Cell[BoxData["\<\"a\"\>"], "Output",
+ CellChangeTimes->{3.7679637844307632`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"1cb47d89-a4f2-4dd8-a745-69448db2690d"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<GUIKit`\>\"", "]"}], ";"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767963858779595*^9, 3.767963858780451*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"0ccd5a82-a3e0-4db2-8528-927aeefebbed"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"widget", "=", 
+   RowBox[{"Widget", "[", 
+    RowBox[{"\"\<Panel\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Widget", "[", 
+        RowBox[{"\"\<Button\>\"", ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<text\>\"", "\[Rule]", "\"\<Button A\>\""}], "}"}]}], 
+        "]"}], ",", 
+       RowBox[{"Widget", "[", 
+        RowBox[{"\"\<Button\>\"", ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<text\>\"", "\[Rule]", "\"\<Button B\>\""}], "}"}]}], 
+        "]"}], ",", 
+       RowBox[{"Widget", "[", 
+        RowBox[{"\"\<Button\>\"", ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<text\>\"", "\[Rule]", "\"\<Button C\>\""}], "}"}]}], 
+        "]"}]}], "}"}]}], "]"}]}], ";"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767963853171805*^9, 3.767963853172682*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"15447aa7-5dae-442e-a5ca-9ae3c5c67be3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GUIRun", "[", "widget", "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767963891671126*^9, 3.76796389878432*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"d7e40f93-c8a1-4c0d-a475-d4f2a7bdf35b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[SkeletonIndicator]", "GUIObject", "\[SkeletonIndicator]"}],
+  GUIKit`GUIObject[
+  JLink`Objects`vm1`JavaObject21163739180957697, 
+   JLink`Objects`vm1`JavaObject34539236090707969]]], "Output",
+ CellChangeTimes->{3.7679639001334953`*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"a279634b-a542-485c-80d8-8db69a815b41"]
+}, Open  ]],
+
+Cell[BoxData["EventHandler"], "Input",
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767964074549755*^9, 
+   3.7679640815263557`*^9}},ExpressionUUID->"dd526be9-5780-4034-b320-\
+e45a20f3ec6e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EventHandler", "[", 
+   RowBox[{
+    RowBox[{"InputField", "[", "]"}], ",", 
+    RowBox[{"\"\<KeyDown\>\"", "\[RuleDelayed]", 
+     RowBox[{"Print", "[", 
+      RowBox[{"CurrentValue", "[", "\"\<EventKey\>\"", "]"}], "]"}]}]}], 
+   "]"}], "\n"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.76796413154662*^9, 3.76796413154749*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"1a622640-e47c-42c3-8ad4-c86de0d23588"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[
+   DynamicModuleBox[{Typeset`i$$ = Null}, 
+    InputFieldBox[Dynamic[Typeset`i$$]],
+    DynamicModuleValues:>{}],
+   InputField[
+    Setting[#]]& ],
+  EventHandlerTag[{"KeyDown" :> Print[
+      CurrentValue["EventKey"]], Method -> "Preemptive", PassEventsDown -> 
+    Automatic, PassEventsUp -> True}]]], "Output",
+ CellChangeTimes->{3.767964134499454*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"b058d2bc-fe9c-4f85-96aa-99f254a30cd7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["None"], "Print",
+ CellChangeTimes->{3.767964137552413*^9},
+ CellLabel->"",ExpressionUUID->"db9a8b22-fd0c-460b-a56f-d1e804ebfe1a"],
+
+Cell[BoxData["None"], "Print",
+ CellChangeTimes->{3.7679641380898027`*^9},
+ CellLabel->"",ExpressionUUID->"70d92982-7339-478d-85c5-64388a595c35"],
+
+Cell[BoxData["None"], "Print",
+ CellChangeTimes->{3.767964138818282*^9},
+ CellLabel->"",ExpressionUUID->"086874c1-068e-48e4-9a1c-92f3ab2469a2"],
+
+Cell[BoxData["\<\"a\"\>"], "Print",
+ CellChangeTimes->{3.767964140706324*^9},
+ CellLabel->"",ExpressionUUID->"025c6cf1-6810-4416-a7a9-17f2ff642d26"],
+
+Cell[BoxData["\<\"a\"\>"], "Print",
+ CellChangeTimes->{3.767964141586041*^9},
+ CellLabel->"",ExpressionUUID->"7e0f250c-810a-44f9-8b0c-39036fa62729"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"task", ",", 
+     RowBox[{"pressed", "=", 
+      RowBox[{"{", "}"}]}], ",", 
+     RowBox[{"on", "=", "False"}], ",", "last", ",", "time", ",", "modNew", 
+     ",", "modOld", ",", 
+     RowBox[{"event", "=", 
+      RowBox[{"{", "}"}]}], ",", 
+     RowBox[{"mods", "=", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<AltKey\>\"", ",", "\"\<CommandKey\>\"", ",", "\"\<ControlKey\>\"",
+         ",", "\"\<OptionKey\>\"", ",", "\"\<ShiftKey\>\""}], "}"}]}]}], 
+    "}"}], ",", 
+   RowBox[{"Column", "@", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Dynamic", "@", "pressed"}], ",", 
+      RowBox[{"EventHandler", "[", 
+       RowBox[{
+        RowBox[{"InputField", "[", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"\"\<KeyDown\>\"", "\[RuleDelayed]", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"!", "on"}], ",", 
+              RowBox[{"on", "=", "True"}]}], "]"}], ";", 
+            RowBox[{"last", "=", 
+             RowBox[{"SessionTime", "[", "]"}]}], ";", "\[IndentingNewLine]", 
+            
+            RowBox[{"event", "=", 
+             RowBox[{"CurrentValue", "@", "\"\<EventKey\>\""}]}]}], ")"}]}], 
+         "}"}], ",", 
+        RowBox[{"PassEventsDown", "\[Rule]", "True"}]}], "]"}]}], "}"}]}], 
+   ",", 
+   RowBox[{"Initialization", "\[RuleDelayed]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"modOld", "=", 
+       RowBox[{"False", "/@", "mods"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"FreeQ", "[", 
+         RowBox[{
+          RowBox[{"ScheduledTasks", "[", "]"}], ",", "task"}], "]"}], ",", 
+        RowBox[{"task", "=", 
+         RowBox[{"RunScheduledTask", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"time", "=", 
+             RowBox[{"SessionTime", "[", "]"}]}], ";", "\[IndentingNewLine]", 
+            
+            RowBox[{"modNew", "=", 
+             RowBox[{"CurrentValue", "/@", "mods"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"modNew", "=!=", "modOld"}], ",", 
+              RowBox[{"pressed", "=", 
+               RowBox[{"Pick", "[", 
+                RowBox[{"mods", ",", "modOld"}], "]"}]}]}], "]"}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"on", "&&", 
+               RowBox[{
+                RowBox[{"time", "-", "last"}], ">", ".55"}]}], ",", 
+              RowBox[{
+               RowBox[{"on", "=", "False"}], ";", 
+               RowBox[{"pressed", "=", 
+                RowBox[{"{", "event", "}"}]}]}]}], "]"}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"modOld", "=", "modNew"}]}], ",", ".05"}], "]"}]}]}], 
+       "]"}], ";"}], ")"}]}], ",", 
+   RowBox[{"Deinitialization", "\[RuleDelayed]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"MemberQ", "[", 
+       RowBox[{
+        RowBox[{"ScheduledTasks", "[", "]"}], ",", "task"}], "]"}], ",", 
+      RowBox[{"RemoveScheduledTask", "@", "task"}]}], "]"}]}]}], 
+  "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767964176356308*^9, 3.767964176357194*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"b69704e2-5c19-4da1-9496-781f2c47a509"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`task$$ = ScheduledTaskObject[7, 
+   HoldForm[$CellContext`time$$ = SessionTime[]; $CellContext`modNew$$ = 
+     Map[CurrentValue, $CellContext`mods$$]; 
+    If[$CellContext`modNew$$ =!= $CellContext`modOld$$, \
+$CellContext`pressed$$ = Pick[$CellContext`mods$$, $CellContext`modOld$$]]; If[
+      And[$CellContext`on$$, $CellContext`time$$ - $CellContext`last$$ > 
+       0.55], $CellContext`on$$ = 
+       False; $CellContext`pressed$$ = {$CellContext`event$$}]; \
+$CellContext`modOld$$ = $CellContext`modNew$$], {0.05, 
+    DirectedInfinity[1]}, Automatic, True, "AutoRemove" -> False, 
+   "EpilogFunction" :> Null, "TaskGroup" -> 
+   "Global`"], $CellContext`pressed$$ = {}, $CellContext`on$$ = 
+  True, $CellContext`last$$ = 
+  309.135904`8.941694441792986, $CellContext`time$$, $CellContext`modNew$$, \
+$CellContext`modOld$$ = {
+   False["AltKey"], 
+   False["CommandKey"], 
+   False["ControlKey"], 
+   False["OptionKey"], 
+   False["ShiftKey"]}, $CellContext`event$$ = "\.08", $CellContext`mods$$ = {
+  "AltKey", "CommandKey", "ControlKey", "OptionKey", "ShiftKey"}}, 
+  TagBox[GridBox[{
+     {
+      DynamicBox[ToBoxes[$CellContext`pressed$$, StandardForm],
+       ImageSizeCache->{32., {5., 17.}}]},
+     {
+      TagBox[
+       TagBox[
+        DynamicModuleBox[{Typeset`i$$ = Null}, 
+         InputFieldBox[Dynamic[Typeset`i$$]],
+         DynamicModuleValues:>{}],
+        InputField[
+         Setting[#]]& ],
+       EventHandlerTag[{"KeyDown" :> (If[
+            Not[$CellContext`on$$], $CellContext`on$$ = 
+            True]; $CellContext`last$$ = SessionTime[]; $CellContext`event$$ = 
+           CurrentValue["EventKey"]), PassEventsDown -> True, Method -> 
+         "Preemptive", PassEventsUp -> True}]]}
+    },
+    DefaultBaseStyle->"Column",
+    GridBoxAlignment->{"Columns" -> {{Left}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Column"],
+  Deinitialization:>If[
+    MemberQ[
+     ScheduledTasks[], $CellContext`task$$], 
+    RemoveScheduledTask[$CellContext`task$$]],
+  DynamicModuleValues:>{},
+  Initialization:>($CellContext`modOld$$ = Map[False, $CellContext`mods$$]; If[
+     FreeQ[
+      ScheduledTasks[], $CellContext`task$$], $CellContext`task$$ = 
+     RunScheduledTask[$CellContext`time$$ = 
+        SessionTime[]; $CellContext`modNew$$ = 
+        Map[CurrentValue, $CellContext`mods$$]; 
+       If[$CellContext`modNew$$ =!= $CellContext`modOld$$, \
+$CellContext`pressed$$ = Pick[$CellContext`mods$$, $CellContext`modOld$$]]; If[
+         And[$CellContext`on$$, $CellContext`time$$ - $CellContext`last$$ > 
+          0.55], $CellContext`on$$ = 
+          False; $CellContext`pressed$$ = {$CellContext`event$$}]; \
+$CellContext`modOld$$ = $CellContext`modNew$$, 0.05]]; Null)]], "Output",
+ CellChangeTimes->{3.767964178461534*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"ad46a490-d426-42d3-97eb-b84432654770"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"displaying", "=", "True"}], ";"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{"SetOptions", "[", 
+  RowBox[{
+   RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
+   RowBox[{"NotebookEventActions", "\[RuleDelayed]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<KeyDown\>\"", ",", "\"\<k\>\""}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"(", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"!", "displaying"}], ",", 
+          RowBox[{"Print", "[", "\"\<k press\>\"", "]"}]}], "]"}], ")"}]}], 
+      ",", 
+      RowBox[{"\"\<DownArrowKeyDown\>\"", "\[RuleDelayed]", 
+       RowBox[{"(", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"!", "displaying"}], ",", 
+          RowBox[{"Print", "[", "\"\<down press\>\"", "]"}]}], "]"}], ")"}]}],
+       ",", 
+      RowBox[{"\"\<MouseClicked\>\"", "\[RuleDelayed]", 
+       RowBox[{"(", 
+        RowBox[{"If", "[", 
+         RowBox[{"displaying", ",", 
+          RowBox[{"displaying", "=", "False"}]}], "]"}], ")"}]}]}], "}"}]}]}],
+   "]"}]}], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767964206897764*^9, 
+   3.767964219918408*^9}},ExpressionUUID->"d2e7e0d6-fc5d-41ad-bde7-\
+1f96b248229f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"k press\"\>"], "Print",
+ CellChangeTimes->{3.767964216935614*^9},
+ CellLabel->"",ExpressionUUID->"feed69b3-ae0e-4e48-a250-dd9a103f5d82"],
+
+Cell[BoxData["\<\"k press\"\>"], "Print",
+ CellChangeTimes->{3.767964217597075*^9},
+ CellLabel->"",ExpressionUUID->"24d71e94-fbab-4c9e-bd3a-48a803967623"],
+
+Cell[BoxData["\<\"k press\"\>"], "Print",
+ CellChangeTimes->{3.767964217925043*^9},
+ CellLabel->"",ExpressionUUID->"4fe88721-c68a-4400-8323-0f4ab72fd7c5"],
+
+Cell[BoxData["\<\"k press\"\>"], "Print",
+ CellChangeTimes->{3.767964219086689*^9},
+ CellLabel->"",ExpressionUUID->"eb9ff7b4-c68e-4f90-b4a9-94b9dc7776e8"],
+
+Cell[BoxData["\<\"k press\"\>"], "Print",
+ CellChangeTimes->{3.767964219429154*^9},
+ CellLabel->"",ExpressionUUID->"d59a3c0f-e9ef-46f6-a407-ebfeed0a2d6f"],
+
+Cell[BoxData["\<\"k press\"\>"], "Print",
+ CellChangeTimes->{3.767964219638729*^9},
+ CellLabel->"",ExpressionUUID->"3ac231c1-1984-4514-bd03-aab44fad96ff"],
+
+Cell[BoxData["\<\"k press\"\>"], "Print",
+ CellChangeTimes->{3.767964220237051*^9},
+ CellLabel->"",ExpressionUUID->"f7f02bdf-1f47-41e2-b559-4304d32ff985"],
+
+Cell[BoxData["\<\"k press\"\>"], "Print",
+ CellChangeTimes->{3.7679642204767513`*^9},
+ CellLabel->"",ExpressionUUID->"68de2e16-2073-4298-ad45-5a3e543aeb7d"],
+
+Cell[BoxData["\<\"k press\"\>"], "Print",
+ CellChangeTimes->{3.767964220694498*^9},
+ CellLabel->"",ExpressionUUID->"124603ff-ee50-4d3d-a4f9-762a6710004a"],
+
+Cell[BoxData["\<\"k press\"\>"], "Print",
+ CellChangeTimes->{3.767964221246812*^9},
+ CellLabel->"",ExpressionUUID->"f482af96-6c66-4d13-9310-0e0d4dbc1b44"],
+
+Cell[BoxData["\<\"k press\"\>"], "Print",
+ CellChangeTimes->{3.7679642218611717`*^9},
+ CellLabel->"",ExpressionUUID->"8738237d-b629-4f12-8ea0-90e1a56255c9"],
+
+Cell[BoxData["\<\"k press\"\>"], "Print",
+ CellChangeTimes->{3.767964222949093*^9},
+ CellLabel->"",ExpressionUUID->"40031a47-0ceb-4b02-8e92-1c4f1c710af3"],
+
+Cell[BoxData["\<\"k press\"\>"], "Print",
+ CellChangeTimes->{3.7679642236551647`*^9},
+ CellLabel->"",ExpressionUUID->"d728cef9-e953-41ff-94ac-41e9a08c971a"],
+
+Cell[BoxData["\<\"k press\"\>"], "Print",
+ CellChangeTimes->{3.767964224604918*^9},
+ CellLabel->"",ExpressionUUID->"34782425-df25-47c2-98db-49775e959966"],
+
+Cell[BoxData["\<\"k press\"\>"], "Print",
+ CellChangeTimes->{3.767964225772983*^9},
+ CellLabel->"",ExpressionUUID->"4702259f-d850-4697-9a88-ecc71a3f5f06"],
+
+Cell[BoxData["\<\"k press\"\>"], "Print",
+ CellChangeTimes->{3.7679642263087177`*^9},
+ CellLabel->"",ExpressionUUID->"0581c855-1a9b-4dc5-93c4-370e079971a4"]
+}, Open  ]]
+}, Open  ]]
+},
+NotebookEventActions:>{{"KeyDown", "k"} :> If[
+    Not[$CellContext`displaying], 
+    Print["k press"]], "DownArrowKeyDown" :> If[
+    Not[$CellContext`displaying], 
+    Print["down press"]], "MouseClicked" :> 
+  If[$CellContext`displaying, $CellContext`displaying = False]},
+WindowSize->{1720, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 178, 4, 60, "Input",ExpressionUUID->"68d0df8e-5ce1-4f6f-8c99-6bae891a2e7a"],
+Cell[739, 26, 181, 4, 60, "Input",ExpressionUUID->"9e7c8bda-6fb6-4117-ba25-b5b047b89fd3"],
+Cell[CellGroupData[{
+Cell[945, 34, 455, 10, 60, "Input",ExpressionUUID->"c91711a6-b388-4706-8d6a-f0bd80d52fa9"],
+Cell[1403, 46, 158, 2, 68, "Output",ExpressionUUID->"1cb47d89-a4f2-4dd8-a745-69448db2690d"]
+}, Open  ]],
+Cell[1576, 51, 307, 6, 60, "Input",ExpressionUUID->"0ccd5a82-a3e0-4db2-8528-927aeefebbed"],
+Cell[1886, 59, 969, 25, 104, "Input",ExpressionUUID->"15447aa7-5dae-442e-a5ca-9ae3c5c67be3"],
+Cell[CellGroupData[{
+Cell[2880, 88, 280, 5, 60, "Input",ExpressionUUID->"d7e40f93-c8a1-4c0d-a475-d4f2a7bdf35b"],
+Cell[3163, 95, 361, 7, 68, "Output",ExpressionUUID->"a279634b-a542-485c-80d8-8db69a815b41"]
+}, Open  ]],
+Cell[3539, 105, 192, 4, 60, "Input",ExpressionUUID->"dd526be9-5780-4034-b320-e45a20f3ec6e"],
+Cell[CellGroupData[{
+Cell[3756, 113, 506, 12, 104, "Input",ExpressionUUID->"1a622640-e47c-42c3-8ad4-c86de0d23588"],
+Cell[4265, 127, 467, 12, 78, "Output",ExpressionUUID->"b058d2bc-fe9c-4f85-96aa-99f254a30cd7"],
+Cell[CellGroupData[{
+Cell[4757, 143, 143, 2, 48, "Print",ExpressionUUID->"db9a8b22-fd0c-460b-a56f-d1e804ebfe1a"],
+Cell[4903, 147, 145, 2, 48, "Print",ExpressionUUID->"70d92982-7339-478d-85c5-64388a595c35"],
+Cell[5051, 151, 143, 2, 48, "Print",ExpressionUUID->"086874c1-068e-48e4-9a1c-92f3ab2469a2"],
+Cell[5197, 155, 148, 2, 48, "Print",ExpressionUUID->"025c6cf1-6810-4416-a7a9-17f2ff642d26"],
+Cell[5348, 159, 148, 2, 48, "Print",ExpressionUUID->"7e0f250c-810a-44f9-8b0c-39036fa62729"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5545, 167, 3422, 90, 534, "Input",ExpressionUUID->"b69704e2-5c19-4da1-9496-781f2c47a509"],
+Cell[8970, 259, 2919, 62, 114, "Output",ExpressionUUID->"ad46a490-d426-42d3-97eb-b84432654770"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11926, 326, 1328, 38, 276, "Input",ExpressionUUID->"d2e7e0d6-fc5d-41ad-bde7-1f96b248229f"],
+Cell[CellGroupData[{
+Cell[13279, 368, 154, 2, 48, "Print",ExpressionUUID->"feed69b3-ae0e-4e48-a250-dd9a103f5d82"],
+Cell[13436, 372, 154, 2, 48, "Print",ExpressionUUID->"24d71e94-fbab-4c9e-bd3a-48a803967623"],
+Cell[13593, 376, 154, 2, 48, "Print",ExpressionUUID->"4fe88721-c68a-4400-8323-0f4ab72fd7c5"],
+Cell[13750, 380, 154, 2, 48, "Print",ExpressionUUID->"eb9ff7b4-c68e-4f90-b4a9-94b9dc7776e8"],
+Cell[13907, 384, 154, 2, 48, "Print",ExpressionUUID->"d59a3c0f-e9ef-46f6-a407-ebfeed0a2d6f"],
+Cell[14064, 388, 154, 2, 48, "Print",ExpressionUUID->"3ac231c1-1984-4514-bd03-aab44fad96ff"],
+Cell[14221, 392, 154, 2, 48, "Print",ExpressionUUID->"f7f02bdf-1f47-41e2-b559-4304d32ff985"],
+Cell[14378, 396, 156, 2, 48, "Print",ExpressionUUID->"68de2e16-2073-4298-ad45-5a3e543aeb7d"],
+Cell[14537, 400, 154, 2, 48, "Print",ExpressionUUID->"124603ff-ee50-4d3d-a4f9-762a6710004a"],
+Cell[14694, 404, 154, 2, 48, "Print",ExpressionUUID->"f482af96-6c66-4d13-9310-0e0d4dbc1b44"],
+Cell[14851, 408, 156, 2, 48, "Print",ExpressionUUID->"8738237d-b629-4f12-8ea0-90e1a56255c9"],
+Cell[15010, 412, 154, 2, 48, "Print",ExpressionUUID->"40031a47-0ceb-4b02-8e92-1c4f1c710af3"],
+Cell[15167, 416, 156, 2, 48, "Print",ExpressionUUID->"d728cef9-e953-41ff-94ac-41e9a08c971a"],
+Cell[15326, 420, 154, 2, 48, "Print",ExpressionUUID->"34782425-df25-47c2-98db-49775e959966"],
+Cell[15483, 424, 154, 2, 48, "Print",ExpressionUUID->"4702259f-d850-4697-9a88-ecc71a3f5f06"],
+Cell[15640, 428, 156, 2, 48, "Print",ExpressionUUID->"0581c855-1a9b-4dc5-93c4-370e079971a4"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

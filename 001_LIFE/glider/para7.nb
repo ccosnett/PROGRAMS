@@ -1,0 +1,205 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7340,        197]
+NotebookOptionsPosition[      5947,        161]
+NotebookOutlinePosition[      6290,        176]
+CellTagsIndexPosition[      6247,        173]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["In exercises x and y we have already seen of the \
+amazing Life histories that are possible, using Binary Decision Diagram \
+methods. These were used in the 90s before efficient sat solvers appeared in \
+the year 2000.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7870814964879*^9, 3.7870815291159782`*^9}, {
+  3.7870816638528833`*^9, 
+  3.787081701915539*^9}},ExpressionUUID->"0e3a87e6-8729-4a6f-a3bc-\
+823b38e92eb6"],
+
+Cell[TextData[StyleBox["And many further aspects of Life can be explored with \
+sat methods, because sat solvers can often deal with many more variables.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7870815301347103`*^9, 3.787081557890317*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"ce8635c0-7620-4499-880e-a8e64c3ad3fb"],
+
+Cell[TextData[StyleBox["For example, Figure 35 was discovered by using 7 by \
+15 equals 105 variables for each state, X0, x1, x2, x3",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787081560322742*^9, 3.78708158135282*^9}, {
+  3.7870817057277317`*^9, 3.787081726712945*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"25eedd6e-c8c4-4fc5-9751-4b85f54e5063"],
+
+Cell[TextData[StyleBox["so we can discover sequences that lead to desired \
+outcomes using BDDs and sat",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787081734959519*^9, 3.787081756487558*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"8d526aa8-6615-405a-8d56-1dfa1d063963"],
+
+Cell[TextData[StyleBox["for instance we can discover a sequence that leads to \
+the improbable future that the universe will write the word Life",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787081758663913*^9, 3.7870817799180317`*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"3f44d4a2-ec42-498e-84f5-f2969bdce54a"],
+
+Cell[TextData[StyleBox["The values of X3 were obviously predetermined but the \
+other 315 variables had to be computed, in this mysterious computation that \
+created figure 35",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787081796363084*^9, 3.787081829092052*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"252ba874-30a1-4c5e-abc5-2be7d7ffe7cc"],
+
+Cell[TextData[StyleBox["BDDs cannot handle that many variables",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7870818361268578`*^9, 3.7870818425067863`*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"8b706a05-cf0f-4429-abb8-b0521a2446b0"],
+
+Cell[TextData[StyleBox["Moreover, additional variables were introduce to \
+ensure that the initial state X0 would have as few live cells as possible.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787081844361169*^9, 3.787081867353648*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"47178241-006a-4a5d-a24b-1c52ddf527e6"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 782, 19, 159, "Text",ExpressionUUID->"0e3a87e6-8729-4a6f-a3bc-823b38e92eb6",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1343, 41, 663, 15, 114, "Text",ExpressionUUID->"ce8635c0-7620-4499-880e-a8e64c3ad3fb",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2009, 58, 690, 16, 69, "Text",ExpressionUUID->"25eedd6e-c8c4-4fc5-9751-4b85f54e5063",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2702, 76, 636, 15, 69, "Text",ExpressionUUID->"8d526aa8-6615-405a-8d56-1dfa1d063963",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3341, 93, 679, 15, 114, "Text",ExpressionUUID->"3f44d4a2-ec42-498e-84f5-f2969bdce54a",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4023, 110, 683, 16, 114, "Text",ExpressionUUID->"252ba874-30a1-4c5e-abc5-2be7d7ffe7cc",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4709, 128, 574, 14, 69, "Text",ExpressionUUID->"8b706a05-cf0f-4429-abb8-b0521a2446b0",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5286, 144, 657, 15, 114, "Text",ExpressionUUID->"47178241-006a-4a5d-a24b-1c52ddf527e6",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+

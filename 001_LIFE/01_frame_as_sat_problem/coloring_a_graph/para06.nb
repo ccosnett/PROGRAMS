@@ -1,0 +1,100 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2952,         92]
+NotebookOptionsPosition[      2307,         71]
+NotebookOutlinePosition[      2650,         86]
+CellTagsIndexPosition[      2607,         83]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Such additional constraints can be generated in many \
+ways.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787391192294944*^9, 3.7873912043170652`*^9}},
+ CellLabel->"In[68]:=",ExpressionUUID->"f3a58d03-9fd8-44fc-83a8-5896d418ab38"],
+
+Cell[TextData[StyleBox["We could,",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787391205549059*^9, 
+  3.7873912134458237`*^9}},ExpressionUUID->"ad806bbe-456f-40d2-adce-\
+744241060e2f"],
+
+Cell[TextData[StyleBox["so the Boolean clauses test for the existence of a 4 \
+coloring!",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787391215162834*^9, 3.787391225923477*^9}},
+ CellLabel->"In[71]:=",ExpressionUUID->"56e4219d-972f-42b0-aee8-0d358ad3941b"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 594, 15, 69, "Text",ExpressionUUID->"f3a58d03-9fd8-44fc-83a8-5896d418ab38",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1155, 37, 524, 15, 69, "Text",ExpressionUUID->"ad806bbe-456f-40d2-adce-744241060e2f",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1682, 54, 621, 15, 69, "Text",ExpressionUUID->"56e4219d-972f-42b0-aee8-0d358ad3941b",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+

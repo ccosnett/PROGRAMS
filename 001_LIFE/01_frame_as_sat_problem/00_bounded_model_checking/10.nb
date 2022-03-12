@@ -1,0 +1,208 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7180,        200]
+NotebookOptionsPosition[      5789,        164]
+NotebookOutlinePosition[      6132,        179]
+CellTagsIndexPosition[      6089,        176]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["There is a better way, based on the binary tree \
+approach underlying 20 and 21 above, which requires only about 63 clauses of \
+size 3 or less",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874011727656507`*^9, 3.787401200825068*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"73eac2a2-aa6e-4d5c-9383-8ec0c07e4a19"],
+
+Cell[TextData[StyleBox["together with about 14 auxiliary variables per cell.",
+ 
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874012084785423`*^9, 3.78740121838383*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"e369a2bb-59f7-4976-b7c1-0dbbc1d3be6a"],
+
+Cell[TextData[StyleBox["This approach see exercise 65 takes advantage of the \
+fact that many intermediate calculations can be shared.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874012213894043`*^9, 3.787401238958753*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"eaa6b99e-6545-43ba-bb0e-f134741e5427"],
+
+Cell[TextData[StyleBox["For example, cells x and the cell west of x ,(x \
+west), have four neigbours in common",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787401245674931*^9, 3.787401274514517*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"02d8350e-9e1d-4b37-92f7-b84b32b9d82b"],
+
+Cell[TextData[StyleBox["so we need to compute the sum of these only once not \
+twice.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787401281498599*^9, 3.787401293580464*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"2241b9a6-272f-49b6-a898-f46778cab710"],
+
+Cell[TextData[StyleBox["many options, type out the rest of this to rule out \
+the possibility that Knuth explains how to encode LIFE in boolean clauses.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787403084594783*^9, 
+  3.7874031164640512`*^9}},ExpressionUUID->"3e59eb98-ad20-473a-8993-\
+4e7944a77737"],
+
+Cell[TextData[StyleBox["go straight to Mathematica website.",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787403120651692*^9, 3.787403127175714*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"e6897e29-6c75-4f29-a204-540389552685"],
+
+Cell[TextData[StyleBox["",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.787403118540694*^9},ExpressionUUID->"b7c47394-4659-4ca2-b892-\
+b526d0f4ac36"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 677, 16, 114, "Text",ExpressionUUID->"73eac2a2-aa6e-4d5c-9383-8ec0c07e4a19",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1238, 38, 587, 15, 69, "Text",ExpressionUUID->"e369a2bb-59f7-4976-b7c1-0dbbc1d3be6a",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1828, 55, 644, 15, 114, "Text",ExpressionUUID->"eaa6b99e-6545-43ba-bb0e-f134741e5427",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2475, 72, 618, 15, 69, "Text",ExpressionUUID->"02d8350e-9e1d-4b37-92f7-b84b32b9d82b",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3096, 89, 593, 15, 69, "Text",ExpressionUUID->"2241b9a6-272f-49b6-a898-f46778cab710",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3692, 106, 668, 16, 114, "Text",ExpressionUUID->"3e59eb98-ad20-473a-8993-4e7944a77737",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4363, 124, 882, 19, 69, "Text",ExpressionUUID->"e6897e29-6c75-4f29-a204-540389552685",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5248, 145, 537, 17, 69, "Text",ExpressionUUID->"b7c47394-4659-4ca2-b892-b526d0f4ac36",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+

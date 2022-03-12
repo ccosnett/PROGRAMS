@@ -1,0 +1,196 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6743,        188]
+NotebookOptionsPosition[      5399,        154]
+NotebookOutlinePosition[      5742,        169]
+CellTagsIndexPosition[      5699,        166]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["In propositional logic, an assignment of true and \
+false to the atomic propositions of a formula A satisfies A if A evaluates to \
+true.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787381021867119*^9, 3.787381047573244*^9}},
+ CellLabel->"In[63]:=",ExpressionUUID->"69a84553-6081-4ba4-9924-c3399af7bf9f"],
+
+Cell[TextData[StyleBox["A SAT solver is a computer program that checks if a \
+formula in CNF is satisfiable or unsatisfiable.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787381051265029*^9, 3.78738108104322*^9}},
+ CellLabel->"In[65]:=",ExpressionUUID->"d99e4a3e-b0d9-4419-9e17-856a95485cf9"],
+
+Cell[TextData[StyleBox["For an overview of SAT solving see Ben Ari 2012, \
+chapter 6",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787381088092572*^9, 3.7873811049060993`*^9}},
+ CellLabel->"In[68]:=",ExpressionUUID->"7c993c15-6308-4cfd-87c5-9fcd59e39cfc"],
+
+Cell[TextData[StyleBox["Knuth in 2015 shows how solutions to Langfords \
+problem can be found by a SAT solver, by encoding the array representation as \
+a CNF formula.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787381457839367*^9, 3.7873814909660187`*^9}},
+ CellLabel->"In[73]:=",ExpressionUUID->"b3f16771-12f5-4654-bd0e-d730833135a4"],
+
+Cell[TextData[StyleBox["Let x sub i be true if row i is chosen.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787381492384644*^9, 3.7873815072126637`*^9}},
+ CellLabel->"In[72]:=",ExpressionUUID->"3ffe2dbf-1486-4743-8311-6918da8c84c2"],
+
+Cell[TextData[StyleBox["For L3 the following clauses encode that exactly one \
+of rows 1 to 4 containing 1 must be chosen",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787381534537417*^9, 3.787381562033547*^9}},
+ CellLabel->"In[75]:=",ExpressionUUID->"beb1dc1f-b0b9-440e-b5a6-e7d1335ad70b"],
+
+Cell[TextData[StyleBox["The first clause encodes that at least one row must \
+be chosen.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787381596383582*^9, 3.787381606671734*^9}},
+ CellLabel->"In[77]:=",ExpressionUUID->"8613cecc-d32b-440f-b147-5eb255378f64"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["(",
+   FontWeight->"Normal"], 
+  RowBox[{
+   SubscriptBox[
+    StyleBox["x",
+     FontWeight->"Normal"], "1"], "\[Or]", 
+   SubscriptBox["x", "2"], "\[Or]", 
+   SubscriptBox["x", "3"], "\[Or]", 
+   SubscriptBox["x", "4"]}], ")"}]], "DisplayFormula",
+ CellChangeTimes->{{3.787381608813426*^9, 3.787381626902617*^9}},
+ FontSize->13,ExpressionUUID->"c3da3b5a-1342-45ed-b70f-13e0b2e89f92"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 669, 16, 114, "Text",ExpressionUUID->"69a84553-6081-4ba4-9924-c3399af7bf9f",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1230, 38, 632, 15, 69, "Text",ExpressionUUID->"d99e4a3e-b0d9-4419-9e17-856a95485cf9",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1865, 55, 594, 15, 69, "Text",ExpressionUUID->"7c993c15-6308-4cfd-87c5-9fcd59e39cfc",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2462, 72, 677, 16, 114, "Text",ExpressionUUID->"b3f16771-12f5-4654-bd0e-d730833135a4",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3142, 90, 573, 14, 69, "Text",ExpressionUUID->"3ffe2dbf-1486-4743-8311-6918da8c84c2",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3718, 106, 629, 15, 69, "Text",ExpressionUUID->"beb1dc1f-b0b9-440e-b5a6-e7d1335ad70b",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4350, 123, 621, 15, 69, "Text",ExpressionUUID->"8613cecc-d32b-440f-b147-5eb255378f64",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4974, 140, 421, 12, 50, "DisplayFormula",ExpressionUUID->"c3da3b5a-1342-45ed-b70f-13e0b2e89f92"]
+}
+]
+*)
+

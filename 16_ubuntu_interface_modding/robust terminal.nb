@@ -1,0 +1,374 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14387,        366]
+NotebookOptionsPosition[     10232,        268]
+NotebookOutlinePosition[     11968,        318]
+CellTagsIndexPosition[     11925,        315]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["http://xmodulo.com/simulate-key-press-mouse-movement-\
+linux.html",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 1, 0],
+ FrontFaceColor->RGBColor[0, 1, 0],
+ BackFaceColor->RGBColor[0, 1, 0],
+ GraphicsColor->RGBColor[0, 1, 0],
+ FontSize->8,
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 1, 0],
+ Background->GrayLevel[0.5]]], "ExternalLanguage",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->(SystemOpen[cephalon`Private`xxx = First[{
+      SlotSequence[1]}]]& ),
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.767896961378563*^9, 
+  3.767896982539928*^9}},ExpressionUUID->"38211198-c77b-49e9-8e76-\
+696e6bf9f140"],
+
+Cell[TextData[StyleBox["http://lxlinux.com/uxlta.html",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 1, 0],
+ FrontFaceColor->RGBColor[0, 1, 0],
+ BackFaceColor->RGBColor[0, 1, 0],
+ GraphicsColor->RGBColor[0, 1, 0],
+ FontSize->8,
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 1, 0],
+ Background->GrayLevel[0.5]]], "ExternalLanguage",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->(SystemOpen[cephalon`Private`xxx = First[{
+      SlotSequence[1]}]]& ),
+ CellFrameLabels->{{None, "hyperLink"}, {None, None}},
+ CellChangeTimes->{{3.767934477941401*^9, 
+  3.767934478682302*^9}},ExpressionUUID->"737a74a0-e2b6-45fb-99db-\
+7937aa4abac7"],
+
+Cell[" xdotool key alt+Tab", "ExternalLanguage",
+ Evaluatable->True,
+ CellGroupingRules->"InputGrouping",
+ CellEvaluationFunction->(Import[
+   StringExpression["!", #], "Text"]& ),
+ CellFrameLabels->{{None, "shell"}, {None, None}},
+ CellChangeTimes->{
+  3.767897167706085*^9, {3.767897214950852*^9, 3.767897248884955*^9}},
+ CellLabel->"In[55]:=",ExpressionUUID->"c74b3bc9-b532-42e9-9953-578b1bcb6bb8"],
+
+Cell[TextData[StyleBox["rob",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7678983747800007`*^9, 
+  3.7678983756828957`*^9}},ExpressionUUID->"b7555795-4803-4195-b97a-\
+48f8ab55f98b"],
+
+Cell["xdotool getactivewindow", "ExternalLanguage",
+ Evaluatable->True,
+ CellGroupingRules->"InputGrouping",
+ CellEvaluationFunction->(Import[
+   StringExpression["!", #], "Text"]& ),
+ CellFrameLabels->{{None, "shell"}, {None, None}},
+ CellChangeTimes->{
+  3.767933201808826*^9, {3.767933264776932*^9, 3.7679332740483713`*^9}, {
+   3.767933542621017*^9, 3.767933544824395*^9}, {3.7679342822009077`*^9, 
+   3.767934310210602*^9}, 
+   3.767934540813341*^9},ExpressionUUID->"6b32ed6e-dc52-4145-96f3-\
+d3fe55780c9b"],
+
+Cell[TextData[StyleBox["The xdotool is a utility used from the terminal or in \
+a script to manually perform keyboard input. The commands can also be used to \
+manually perform actions on windows and perform mouse inputs.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7678992242124157`*^9, 3.767899224616395*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"507d82ca-e346-4dac-b000-1060c9b071a4"],
+
+Cell[TextData[StyleBox["The syntax for xdotool depends on the command being \
+used. To send keystrokes to a window you use the key command.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.767933077801099*^9, 
+  3.7679331080169163`*^9}},ExpressionUUID->"5bdb2ac8-80eb-4bc3-894b-\
+9f05c49b52d6"],
+
+Cell[TextData[StyleBox["The syntax is as follows: xdotool [options] [keys]. \
+There are three options available for \[OpenCurlyDoubleQuote]options\
+\[CloseCurlyDoubleQuote]:",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.767933109326007*^9, 3.767933122411091*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"361cba82-df3e-4ae7-bce9-0a264dfdf11e"],
+
+Cell[TextData[StyleBox["1, double dash window window_id specified keys for \
+the keystrokes are sent to the window id application.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.767933136288344*^9, 3.767933165454307*^9}},
+ CellLabel->"In[35]:=",ExpressionUUID->"a4c73dac-7bd3-4a0d-8f28-d4f693631285"],
+
+Cell[TextData[StyleBox["To get window id from window title",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.767933169030541*^9, 3.767933181661511*^9}},
+ CellLabel->"In[37]:=",ExpressionUUID->"116e383c-6570-4b86-bf07-d53c301ca895"],
+
+Cell[TextData[StyleBox["xdotool search --name",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.767933184129106*^9, 
+  3.7679331957961397`*^9}},ExpressionUUID->"55485522-49b5-405d-89f4-\
+4111e6dd0faa"],
+
+Cell[CellGroupData[{
+
+Cell["xdotool getactivewindow", "ExternalLanguage",
+ Evaluatable->True,
+ CellGroupingRules->"InputGrouping",
+ CellEvaluationFunction->(Import[
+   StringExpression["!", #], "Text"]& ),
+ CellFrameLabels->{{None, "shell"}, {None, None}},
+ CellChangeTimes->{
+  3.767933201808826*^9, {3.767933264776932*^9, 3.7679332740483713`*^9}, {
+   3.767933542621017*^9, 3.767933544824395*^9}, {3.7679342822009077`*^9, 
+   3.767934310210602*^9}, 3.767934540813341*^9},
+ CellLabel->"In[8]:=",ExpressionUUID->"ddf9ae0a-d8b7-4b25-97f1-3c87c787b3a8"],
+
+Cell[BoxData["\<\"62914613\"\>"], "Output",
+ CellChangeTimes->{3.767933274858424*^9, 3.767933522757607*^9, 
+  3.767934295604328*^9, 3.767934635576023*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"bc5da7c4-34a9-4475-be25-9ee03e5aa55e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["xdotool search --name \"Wolfram Mathematica 11.3\"", "ExternalLanguage",
+ Evaluatable->True,
+ CellGroupingRules->"InputGrouping",
+ CellEvaluationFunction->(Import[
+   StringExpression["!", #, " 2>&1"], "Text"]& ),
+ CellFrameLabels->{{None, "shell"}, {None, None}},
+ CellChangeTimes->{{3.767934609319055*^9, 3.767934626553151*^9}, {
+  3.7679346853999987`*^9, 3.767934715052188*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"e17499fc-8cd8-4f7d-8605-f6443ba58e73"],
+
+Cell[BoxData["\<\"62914613\"\>"], "Output",
+ CellChangeTimes->{
+  3.7679346273902903`*^9, {3.767934693202097*^9, 3.767934716298644*^9}},
+ CellLabel->"Out[14]=",ExpressionUUID->"4b9f72ea-2e24-4e18-9811-e19bb829771e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["wmctrl -l|awk '{$3=\"\"; $2=\"\"; $1=\"\"; print $0}'", \
+"ExternalLanguage",
+ Evaluatable->True,
+ CellGroupingRules->"InputGrouping",
+ CellEvaluationFunction->(Import[
+   StringExpression["!", #, " 2>&1"], "Text"]& ),
+ CellFrameLabels->{{None, "shell"}, {None, None}},
+ CellChangeTimes->{{3.767934671696724*^9, 3.767934672255645*^9}, {
+  3.767934874604953*^9, 3.767934878557869*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"7129aa29-18b7-4325-a2d8-bf0c7c1cd796"],
+
+Cell[BoxData["\<\"   XdndCollectionWindowImp\\n   unity-launcher\\n   \
+unity-panel\\n   unity-dash\\n   Hud\\n   Desktop\\n   05_PROGRAMS - \
+[~/Dropbox/05_PROGRAMS] - .../000_hyper_graph/cephalon.m - PyCharm Community \
+Edition 2017.2.2\\n   ubuntu - Get a list of open windows in Linux - Super \
+User - Google Chrome\\n   conor@clara: ~/Dropbox/05_PROGRAMS\\n   \
+conor@clara: ~/Dropbox/05_PROGRAMS\\n   Plover\\n   conor@clara: \
+~/Dropbox/05_PROGRAMS\\n   conor@clara: ~/Dropbox/05_PROGRAMS\\n   robust \
+terminal.nb * (Running...) - Wolfram Mathematica 11.3\\n   conor@clara: \
+~/Dropbox/05_PROGRAMS\"\>"], "Output",
+ CellChangeTimes->{
+  3.767934673392394*^9, 3.76793473170544*^9, {3.767934877545288*^9, 
+   3.767934879374784*^9}},
+ CellLabel->"Out[17]=",ExpressionUUID->"9b2ef146-d7d9-488d-94a9-8cd59cfadba6"]
+}, Open  ]]
+},
+WindowSize->{1720, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+TaggingRules->{"LastCursorPosition" -> False},
+CellEpilog:>If[
+  IntegerQ[
+   CurrentValue[
+    SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}]], 
+  SelectionMove[
+    EvaluationCell[], Before, CellContents]; SelectionMove[
+    SelectedNotebook[], Next, Character, 
+    CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}]]; 
+  CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}] = False],
+CellEventActions:>{{"MenuCommand", "HandleShiftReturn"} :> (CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}] = If[
+     MemberQ[
+      FrontEndExecute[
+       FrontEnd`UndocumentedGetSelectionPacket[
+        SelectedNotebook[]]], "CharacterRange" -> Blank[]], 
+     Last[
+      ReplaceAll["CharacterRange", 
+       FrontEndExecute[
+        FrontEnd`UndocumentedGetSelectionPacket[
+         SelectedNotebook[]]]]], False]), {
+   "MenuCommand", "EvaluateCells"} :> (CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}] = If[
+     MemberQ[
+      FrontEndExecute[
+       FrontEnd`UndocumentedGetSelectionPacket[
+        SelectedNotebook[]]], "CharacterRange" -> Blank[]], 
+     Last[
+      ReplaceAll["CharacterRange", 
+       FrontEndExecute[
+        FrontEnd`UndocumentedGetSelectionPacket[
+         SelectedNotebook[]]]]], False]), PassEventsDown -> True},
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 692, 18, 90, "ExternalLanguage",ExpressionUUID->"38211198-c77b-49e9-8e76-696e6bf9f140",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1253, 40, 665, 17, 90, "ExternalLanguage",ExpressionUUID->"737a74a0-e2b6-45fb-99db-7937aa4abac7",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1921, 59, 401, 8, 100, "ExternalLanguage",ExpressionUUID->"c74b3bc9-b532-42e9-9953-578b1bcb6bb8",
+ Evaluatable->True,
+ CellGroupingRules->"InputGrouping"],
+Cell[2325, 69, 815, 20, 134, "Section",ExpressionUUID->"b7555795-4803-4195-b97a-48f8ab55f98b",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3143, 91, 512, 11, 100, "ExternalLanguage",ExpressionUUID->"6b32ed6e-dc52-4145-96f3-d3fe55780c9b",
+ Evaluatable->True,
+ CellGroupingRules->"InputGrouping"],
+Cell[3658, 104, 706, 15, 114, "Text",ExpressionUUID->"507d82ca-e346-4dac-b000-1060c9b071a4",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4367, 121, 605, 15, 114, "Text",ExpressionUUID->"5bdb2ac8-80eb-4bc3-894b-9f05c49b52d6",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4975, 138, 656, 15, 69, "Text",ExpressionUUID->"361cba82-df3e-4ae7-bce9-0a264dfdf11e",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5634, 155, 638, 14, 69, "Text",ExpressionUUID->"a4c73dac-7bd3-4a0d-8f28-d4f693631285",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[6275, 171, 566, 13, 69, "Text",ExpressionUUID->"116e383c-6570-4b86-bf07-d53c301ca895",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[6844, 186, 536, 14, 69, "Text",ExpressionUUID->"55485522-49b5-405d-89f4-4111e6dd0faa",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[7405, 204, 529, 10, 100, "ExternalLanguage",ExpressionUUID->"ddf9ae0a-d8b7-4b25-97f1-3c87c787b3a8",
+ Evaluatable->True,
+ CellGroupingRules->"InputGrouping"],
+Cell[7937, 216, 232, 3, 68, "Output",ExpressionUUID->"bc5da7c4-34a9-4475-be25-9ee03e5aa55e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8206, 224, 466, 8, 100, "ExternalLanguage",ExpressionUUID->"e17499fc-8cd8-4f7d-8605-f6443ba58e73",
+ Evaluatable->True,
+ CellGroupingRules->"InputGrouping"],
+Cell[8675, 234, 215, 3, 97, "Output",ExpressionUUID->"4b9f72ea-2e24-4e18-9811-e19bb829771e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8927, 242, 469, 9, 100, "ExternalLanguage",ExpressionUUID->"7129aa29-18b7-4325-a2d8-bf0c7c1cd796",
+ Evaluatable->True,
+ CellGroupingRules->"InputGrouping"],
+Cell[9399, 253, 817, 12, 743, "Output",ExpressionUUID->"9b2ef146-d7d9-488d-94a9-8cd59cfadba6"]
+}, Open  ]]
+}
+]
+*)
+

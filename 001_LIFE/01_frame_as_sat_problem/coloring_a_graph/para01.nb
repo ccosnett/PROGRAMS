@@ -1,0 +1,202 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7157,        194]
+NotebookOptionsPosition[      5674,        157]
+NotebookOutlinePosition[      6017,        172]
+CellTagsIndexPosition[      5974,        169]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["The classical problem of coloring a graph with at \
+most d colors is another rich source of benchmark examples for SAT solvers.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787389909805046*^9, 3.78738993199508*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"3d6f202f-aa13-4ecb-9a1a-aae7e1b30bfc"],
+
+Cell[TextData[StyleBox["If the graph has n vertices \
+V={v1,v2,v3,\[Ellipsis],vn}, then we can introduce n d varables v j for v",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787389934453174*^9, 3.7873899973039093`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"3ad1a61d-2cac-49d6-9c9b-d06d0d1f7268"],
+
+Cell[TextData[StyleBox["If the graph has n vertices, then we can introduce n \
+d variables v j, for each vertice and j signifies the color",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787390022508544*^9, 3.7873900513625193`*^9}, {
+  3.78739008845875*^9, 3.7873901029219847`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"66780487-d268-400a-a628-22fca09e4ead"],
+
+Cell[TextData[StyleBox["the resulting clauses are quite simple",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.78739011050224*^9, 3.787390116097052*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"2ea96325-32f8-4b9a-a461-6ab31f6f3dd4"],
+
+Cell[TextData[StyleBox["v1 or v2 or v3, i.e. each vertex v has at least one \
+color j",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787390133964995*^9, 3.78739015798302*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"20a5301c-4320-420e-8c27-739f8a93a693"],
+
+Cell[TextData[StyleBox["v is red or v is blue or v is green or v is yellow",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.78739016139618*^9, 3.787390176197953*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"1908630f-93de-4151-b278-be555953329e"],
+
+Cell[TextData[StyleBox["not u j or not v j, adjacent vertices have different \
+colors",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787390181145588*^9, 3.787390205820393*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"f869b6ee-eead-4b87-9e6c-1dfde3b0f7b5"],
+
+Cell[TextData[StyleBox["so Boolean logic allows you to encode knowledge into \
+mathematics, doing so called knowledge engineering",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787390211229669*^9, 3.7873902354424133`*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"f2a895da-dd75-4b67-bb6f-33f0bf9183c1"],
+
+Cell["", "Section",ExpressionUUID->"f3a0b213-b281-40be-83f7-34308a1e9b4c"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 657, 15, 114, "Text",ExpressionUUID->"3d6f202f-aa13-4ecb-9a1a-aae7e1b30bfc",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1218, 37, 636, 15, 69, "Text",ExpressionUUID->"3ad1a61d-2cac-49d6-9c9b-d06d0d1f7268",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1857, 54, 697, 16, 69, "Text",ExpressionUUID->"66780487-d268-400a-a628-22fca09e4ead",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2557, 72, 569, 14, 69, "Text",ExpressionUUID->"2ea96325-32f8-4b9a-a461-6ab31f6f3dd4",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3129, 88, 592, 15, 69, "Text",ExpressionUUID->"20a5301c-4320-420e-8c27-739f8a93a693",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3724, 105, 606, 14, 69, "Text",ExpressionUUID->"1908630f-93de-4151-b278-be555953329e",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4333, 121, 593, 15, 69, "Text",ExpressionUUID->"f869b6ee-eead-4b87-9e6c-1dfde3b0f7b5",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4929, 138, 664, 15, 69, "Text",ExpressionUUID->"f2a895da-dd75-4b67-bb6f-33f0bf9183c1",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5596, 155, 74, 0, 99, "Section",ExpressionUUID->"f3a0b213-b281-40be-83f7-34308a1e9b4c"]
+}
+]
+*)
+

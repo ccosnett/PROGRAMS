@@ -1,0 +1,322 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11889,        314]
+NotebookOptionsPosition[     10494,        282]
+NotebookOutlinePosition[     10858,        298]
+CellTagsIndexPosition[     10815,        295]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData["copyNotebookDirectory"], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787746993522908*^9, 3.7877469954635344`*^9}},
+ CellLabel->
+  "In[115]:=",ExpressionUUID->"eea8cc43-9c31-488e-a74c-e290505f17a3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+   "Get", "[", 
+    "\"\</Users/johncosnett/Dropbox/05_PROGRAMS/001_LIFE/03_formula_to_cnf/\
+cnf_programs/cnf2.m\>\"", "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"output", "=", 
+   RowBox[{"StringReplace", "[", 
+    RowBox[{
+     RowBox[{"updateIJ", "[", 
+      RowBox[{"(", GridBox[{
+         {"0", "0", "0"},
+         {"0", "1", "0"},
+         {"0", "0", "0"}
+        }], ")"}], "]"}], ",", "rules"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"export", "=", 
+   RowBox[{"\"\<p cnf 9 36 \\n\>\"", "<>", "output", "<>", "\"\< 0\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ii", "=", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+       "\"\<satproblem.txt\>\""}], ",", "export"}], "]"}], "//", "Import"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"DeleteFile", "[", "\"\<satproblem.cnf\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"RenameFile", "[", 
+   RowBox[{"\"\<satproblem.txt\>\"", ",", "\"\<satproblem.cnf\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", "ii"}], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellFrameLabels->{{None, None}, {None, 
+    Cell[
+     TextData[{
+       StyleBox["input", FontColor -> GrayLevel[0.5]], " ", 
+       "(Mathematica Code)"}], "Input", FontSize -> 13, FontColor -> 
+     RGBColor[0.8491033800710062, 0.0031235304134196173`, 
+       0.06325861363578178], FontFamily -> "TeX Gyre Chorus", Background -> 
+     GrayLevel[0.99]]}},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.78774572251898*^9, 3.7877457651763*^9}, {
+   3.787745858150152*^9, 3.787746008227009*^9}, {3.7877461108708477`*^9, 
+   3.787746110987658*^9}, 3.787746322291749*^9, {3.787746452809719*^9, 
+   3.787746468261023*^9}, {3.787746583719329*^9, 3.787746586291403*^9}, {
+   3.7877466390197887`*^9, 3.787746660017787*^9}, {3.787746838147421*^9, 
+   3.787746946993408*^9}, {3.787747069114723*^9, 3.7877471758249817`*^9}},
+ Background->GrayLevel[0.95],
+ CellLabel->
+  "In[155]:=",ExpressionUUID->"d26df1cc-6249-4054-ad56-586b6391e997"],
+
+Cell[BoxData["\<\"p cnf 9 36 \\n-1   -2   -3  0 \\n -1   -2   -4  0 \\n -1   \
+-2   -6  0 \\n -1   -2   -7  0 \\n -1   -3   -4  0 \\n -1   -3   -5  0 \\n -1 \
+  -3   -6  0 \\n -1   -3   -7   -9  0 \\n -1   -7   -8  0 \\n 1   2   3  0 \
+\\n 1   2   4   5   6   8   9  0 \\n 1   4   7  0 \\n -2   -3   -4  0 \\n -2  \
+ -3   -6  0 \\n -2   -3   7  0 \\n -2   -3   -9  0 \\n -2   -5  0 \\n -2   -6 \
+  7  0 \\n -2   -8  0 \\n 2   3   4   5   6   7   8  0 \\n -3   -8   -9  0 \
+\\n 3   -4   -7  0 \\n 3   -4   -8  0 \\n 3   -5   -7  0 \\n 3   6   9  0 \\n \
+-4   -5  0 \\n -4   -6  0 \\n -4   -7   -8  0 \\n -4   -7   -9  0 \\n -5   -6 \
+ 0 \\n -5   -7   -9  0 \\n -5   -8  0 \\n -6   -7   -8  0 \\n -6   -7   -9  0 \
+\\n -6   -8   -9  0 \\n 7   8   9 0\"\>"], "Output",
+ CellChangeTimes->{{3.787747168666025*^9, 3.787747178842808*^9}},
+ CellLabel->
+  "Out[162]=",ExpressionUUID->"88230e8a-1d6b-41ed-baef-69efde9b8480"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Import", "[", 
+  "\"\</Users/johncosnett/Dropbox/05_PROGRAMS/001_LIFE/03_formula_to_cnf/cnf_\
+programs/satproblem1output.txt\>\"", "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787747239712284*^9, 3.7877472451028214`*^9}},
+ CellLabel->
+  "In[163]:=",ExpressionUUID->"4004124d-a03b-4e8f-877e-f4af3b5abddc"],
+
+Cell[BoxData["\<\"s SATISFIABLE\\nv -1 2 3 -4 -5 -6 7 -8 -9 0\"\>"], "Output",
+ CellChangeTimes->{3.7877472463587723`*^9},
+ CellLabel->
+  "Out[163]=",ExpressionUUID->"f3cd0f17-d391-4350-95a5-03c945183026"]
+}, Open  ]],
+
+Cell[BoxData["life33"], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787747271001628*^9, 3.787747271986079*^9}},
+ CellLabel->
+  "In[164]:=",ExpressionUUID->"75355e0b-fc8b-4849-9df4-1344cd4b1715"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"X1", "=", 
+   RowBox[{"(", GridBox[{
+      {"0", "1", "1"},
+      {"0", "0", "0"},
+      {"1", "0", "0"}
+     }], ")"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"plt", "/@", 
+  RowBox[{"NestList", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"updateLife", "[", " ", "#", "]"}], "&"}], ",", 
+    "\[IndentingNewLine]", "X1", ",", "1"}], "]"}]}]}], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellFrameLabels->{{None, None}, {None, 
+    Cell[
+     TextData[{
+       StyleBox["input", FontColor -> GrayLevel[0.5]], " ", 
+       "(Mathematica Code)"}], "Input", FontSize -> 13, FontColor -> 
+     RGBColor[0.8491033800710062, 0.0031235304134196173`, 
+       0.06325861363578178], FontFamily -> "TeX Gyre Chorus", Background -> 
+     GrayLevel[0.99]]}},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787397882303399*^9, 3.787397920128484*^9}, {
+   3.787398269246654*^9, 3.787398399936985*^9}, {3.7874702563471193`*^9, 
+   3.7874702702412*^9}, {3.787470450126066*^9, 3.7874705029795017`*^9}, {
+   3.787747272657312*^9, 3.787747321389892*^9}},
+ Background->GrayLevel[0.95],
+ CellLabel->
+  "In[169]:=",ExpressionUUID->"2135229e-b0f3-461d-8a8e-1d8419ea357d"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   StyleBox[
+    GraphicsBox[{
+      RasterBox[{{0, 1, 1}, {1, 1, 1}, {1, 0, 0}}, {{0, 0}, {3, 3}}, {0, 1}], {
+       {GrayLevel[
+         NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+        StyleBox[
+         LineBox[{{{0, 3}, {3, 3}}, {{0, 2}, {3, 2}}, {{0, 1}, {3, 1}}, {{0, 
+          0}, {3, 0}}}],
+         Antialiasing->False]}, 
+       {GrayLevel[
+         NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+        StyleBox[
+         LineBox[{{{0, 0}, {0, 3}}, {{1, 0}, {1, 3}}, {{2, 0}, {2, 3}}, {{3, 
+          0}, {3, 3}}}],
+         Antialiasing->False]}}},
+     Frame->False,
+     FrameLabel->{None, None},
+     FrameTicks->{{None, None}, {None, None}},
+     GridLinesStyle->Directive[
+       GrayLevel[0.5, 0.4]],
+     Method->{
+      "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic}],
+    StripOnInput->False,
+    Magnification->0.3 Inherited], ",", 
+   StyleBox[
+    GraphicsBox[{
+      RasterBox[{{1, 1, 1}, {1, 0, 1}, {1, 1, 1}}, {{0, 0}, {3, 3}}, {0, 1}], {
+       {GrayLevel[
+         NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+        StyleBox[
+         LineBox[{{{0, 3}, {3, 3}}, {{0, 2}, {3, 2}}, {{0, 1}, {3, 1}}, {{0, 
+          0}, {3, 0}}}],
+         Antialiasing->False]}, 
+       {GrayLevel[
+         NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+        StyleBox[
+         LineBox[{{{0, 0}, {0, 3}}, {{1, 0}, {1, 3}}, {{2, 0}, {2, 3}}, {{3, 
+          0}, {3, 3}}}],
+         Antialiasing->False]}}},
+     Frame->False,
+     FrameLabel->{None, None},
+     FrameTicks->{{None, None}, {None, None}},
+     GridLinesStyle->Directive[
+       GrayLevel[0.5, 0.4]],
+     Method->{
+      "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic}],
+    StripOnInput->False,
+    Magnification->0.3 Inherited]}], "}"}]], "Output",
+ CellFrame->{{True, True}, {True, False}},
+ CellFrameLabels->{{None, None}, {
+    Cell[
+     TextData[{"output"}], "Input", Background -> GrayLevel[0.99], FontSize -> 
+     13, FontColor -> GrayLevel[0.5], FontFamily -> "TeX Gyre Chorus"], None}},
+ CellChangeTimes->{
+  3.7873978823502903`*^9, {3.787398307474762*^9, 3.7873984002809467`*^9}, 
+   3.787470256846654*^9, {3.7874704511342382`*^9, 3.787470503355277*^9}, {
+   3.7877472727543592`*^9, 3.787747287041484*^9}, 3.7877473225843267`*^9},
+ Background->GrayLevel[0.85],
+ CellLabel->
+  "Out[170]=",ExpressionUUID->"7ed2c01c-f0c8-4024-bbee-543d5dcac64d"]
+}, Open  ]],
+
+Cell[BoxData["|"], "Input",
+ CellChangeTimes->{3.767869704382765*^9, 
+  3.787747281997899*^9},ExpressionUUID->"50481487-8ac2-4652-a7ed-\
+3983618c0fb5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"updateIJ", "[", 
+  RowBox[{"(", GridBox[{
+     {"0", "0", "0"},
+     {"0", "1", "0"},
+     {"0", "0", "0"}
+    }], ")"}], "]"}]], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellFrameLabels->{{None, None}, {None, 
+    Cell[
+     TextData[{
+       StyleBox["input", FontColor -> GrayLevel[0.5]], " ", 
+       "(Mathematica Code)"}], "Input", FontSize -> 13, FontColor -> 
+     RGBColor[0.8491033800710062, 0.0031235304134196173`, 
+       0.06325861363578178], FontFamily -> "TeX Gyre Chorus", Background -> 
+     GrayLevel[0.99]]}},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787746265172538*^9, 3.787746265866436*^9}, 
+   3.787746297000732*^9},
+ Background->GrayLevel[0.95],
+ CellLabel->"In[83]:=",ExpressionUUID->"ab899350-f56e-4c4e-af15-7f26bde172f8"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0", ",", "0"}], "}"}]}], "}"}]], "Output",
+ CellFrame->{{True, True}, {True, False}},
+ CellFrameLabels->{{None, None}, {
+    Cell[
+     TextData[{"output"}], "Input", Background -> GrayLevel[0.99], FontSize -> 
+     13, FontColor -> GrayLevel[0.5], FontFamily -> "TeX Gyre Chorus"], None}},
+ CellChangeTimes->{{3.787746265259244*^9, 3.787746297581727*^9}},
+ Background->GrayLevel[0.85],
+ CellLabel->"Out[83]=",ExpressionUUID->"405abcb6-34b3-4b0f-a2c6-b0309a37dba2"]
+}, Open  ]]
+},
+WindowSize->{1262, 1395},
+WindowMargins->{{Automatic, 1}, {Automatic, -1}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 271, 5, 81, "Input",ExpressionUUID->"eea8cc43-9c31-488e-a74c-e290505f17a3"],
+Cell[CellGroupData[{
+Cell[854, 29, 2374, 62, 686, "Input",ExpressionUUID->"d26df1cc-6249-4054-ad56-586b6391e997"],
+Cell[3231, 93, 914, 12, 1566, "Output",ExpressionUUID->"88230e8a-1d6b-41ed-baef-69efde9b8480"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4182, 110, 395, 8, 164, "Input",ExpressionUUID->"4004124d-a03b-4e8f-877e-f4af3b5abddc"],
+Cell[4580, 120, 205, 3, 131, "Output",ExpressionUUID->"f3cd0f17-d391-4350-95a5-03c945183026"]
+}, Open  ]],
+Cell[4800, 126, 254, 5, 81, "Input",ExpressionUUID->"75355e0b-fc8b-4849-9df4-1344cd4b1715"],
+Cell[CellGroupData[{
+Cell[5079, 135, 1244, 31, 310, "Input",ExpressionUUID->"2135229e-b0f3-461d-8a8e-1d8419ea357d"],
+Cell[6326, 168, 2437, 62, 244, "Output",ExpressionUUID->"7ed2c01c-f0c8-4024-bbee-543d5dcac64d"]
+}, Open  ]],
+Cell[8778, 233, 151, 3, 59, "Input",ExpressionUUID->"50481487-8ac2-4652-a7ed-3983618c0fb5"],
+Cell[CellGroupData[{
+Cell[8954, 240, 838, 21, 198, "Input",ExpressionUUID->"ab899350-f56e-4c4e-af15-7f26bde172f8"],
+Cell[9795, 263, 683, 16, 167, "Output",ExpressionUUID->"405abcb6-34b3-4b0f-a2c6-b0309a37dba2"]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,107 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3216,         99]
+NotebookOptionsPosition[      2479,         77]
+NotebookOutlinePosition[      2822,         92]
+CellTagsIndexPosition[      2779,         89]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Such ",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874272952896843`*^9, 
+  3.787427302442425*^9}},ExpressionUUID->"e0f718c9-e9aa-4b73-9301-\
+fa128b666d5a"],
+
+Cell[TextData[StyleBox["Such a repeating pattern is called an oscillator of \
+period 2.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787427322225894*^9, 3.787427335769994*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"6b060884-4f84-4163-b9a2-a64bb7d53ca5"],
+
+Cell[TextData[StyleBox["The third example ends with an oscillator of period \
+1, known as a still life.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874273378561687`*^9, 3.787427361903619*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"c58b86a9-cb2b-4169-a361-25cac1a61f1f"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787427343324038*^9, 
+   3.7874273447056417`*^9}},ExpressionUUID->"f806bbf9-8b75-4e25-969d-\
+7e6090b44625"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 520, 15, 69, "Text",ExpressionUUID->"e0f718c9-e9aa-4b73-9301-fa128b666d5a",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1081, 37, 595, 15, 69, "Text",ExpressionUUID->"6b060884-4f84-4163-b9a2-a64bb7d53ca5",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1679, 54, 613, 15, 69, "Text",ExpressionUUID->"c58b86a9-cb2b-4169-a361-25cac1a61f1f",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2295, 71, 180, 4, 60, "Input",ExpressionUUID->"f806bbf9-8b75-4e25-969d-7e6090b44625"]
+}
+]
+*)
+

@@ -1,0 +1,161 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5479,        153]
+NotebookOptionsPosition[      4883,        136]
+NotebookOutlinePosition[      5247,        152]
+CellTagsIndexPosition[      5204,        149]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"lr", ";"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787768618145471*^9, 3.787768619753828*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"91ed8d48-c6f1-45d0-ad13-f64b6ef785d0"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "Get", "[", 
+   "\"\</Users/johncosnett/Dropbox/05_PROGRAMS/001_LIFE/03_formula_to_cnf/cnf_\
+programs/cnf4.m\>\"", "]"}], ";"}]], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellFrameLabels->{{None, None}, {None, 
+    Cell[
+     TextData[{
+       StyleBox["input", FontColor -> GrayLevel[0.5]], " ", 
+       "(Mathematica Code)"}], "Input", FontSize -> 13, FontColor -> 
+     RGBColor[0.8491033800710062, 0.0031235304134196173`, 
+       0.06325861363578178], FontFamily -> "TeX Gyre Chorus", Background -> 
+     GrayLevel[0.99]]}},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.78776477597049*^9, 3.787764776822874*^9}, 
+   3.7877649788570747`*^9, {3.787765096057444*^9, 3.787765099638727*^9}, 
+   3.78776523625156*^9, {3.7877652715779047`*^9, 3.787765280721158*^9}, {
+   3.787765621906487*^9, 3.787765621973363*^9}, {3.787768067817444*^9, 
+   3.787768068310648*^9}},
+ Background->GrayLevel[0.95],
+ CellLabel->"In[87]:=",ExpressionUUID->"76b561ea-21f6-4856-b04f-46f5e1a678d2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Clear", "[", 
+    RowBox[{"i", ",", "j"}], "]"}], ";", 
+   RowBox[{"CopyToClipboard", "[", 
+    RowBox[{"BooleanConvert", "[", 
+     RowBox[{
+      RowBox[{"And", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"x0", "[", 
+            RowBox[{"i", ",", "j"}], "]"}], "&&", 
+           RowBox[{"count", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"2", ",", "3"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "j"}], "}"}], ",", "x0"}], "]"}]}], ")"}], 
+         "~", "Implies", "~", 
+         RowBox[{"x1", "[", 
+          RowBox[{"i", ",", "j"}], "]"}]}], "\n", "        ", ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"x0", "[", 
+            RowBox[{"i", ",", "j"}], "]"}], "&&", 
+           RowBox[{"!", 
+            RowBox[{"count", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"2", ",", "3"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "j"}], "}"}], ",", "x0"}], "]"}]}]}], ")"}], 
+         "~", "Implies", "~", 
+         RowBox[{"!", 
+          RowBox[{"x1", "[", 
+           RowBox[{"i", ",", "j"}], "]"}]}]}], "\n", "        ", ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"!", 
+            RowBox[{"x0", "[", 
+             RowBox[{"i", ",", "j"}], "]"}]}], "&&", 
+           RowBox[{"count", "[", 
+            RowBox[{
+             RowBox[{"{", "3", "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "j"}], "}"}], ",", "x0"}], "]"}]}], ")"}], 
+         "~", "Implies", "~", 
+         RowBox[{"x1", "[", 
+          RowBox[{"i", ",", "j"}], "]"}]}], "\n", "        ", ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"!", 
+            RowBox[{"x0", "[", 
+             RowBox[{"i", ",", "j"}], "]"}]}], "&&", 
+           RowBox[{"!", 
+            RowBox[{"count", "[", 
+             RowBox[{
+              RowBox[{"{", "3", "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "j"}], "}"}], ",", "x0"}], "]"}]}]}], ")"}], 
+         "~", "Implies", "~", 
+         RowBox[{"!", 
+          RowBox[{"x1", "[", 
+           RowBox[{"i", ",", "j"}], "]"}]}]}]}], "]"}], ",", "\"\<CNF\>\""}], 
+     "]"}], "]"}]}], "\n"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7877659689913282`*^9, 3.787766016999692*^9}, {
+   3.787768013183002*^9, 3.787768038243355*^9}, {3.787770700386005*^9, 
+   3.787770727958486*^9}, {3.787770884122388*^9, 3.787770914060486*^9}, {
+   3.787770967698853*^9, 3.7877709908174887`*^9}},
+ CellLabel->"In[86]:=",ExpressionUUID->"e374fc29-27a2-4e80-89ff-72beae46517a"],
+
+Cell[BoxData["e"], "Input",
+ CellChangeTimes->{3.767869704382765*^9, 
+  3.787771410442905*^9},ExpressionUUID->"1bfecd04-78b9-413e-88ce-\
+aa565480720d"]
+},
+WindowSize->{1262, 1395},
+WindowMargins->{{Automatic, 1}, {Automatic, -1}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 263, 5, 59, "Input",ExpressionUUID->"91ed8d48-c6f1-45d0-ad13-f64b6ef785d0"],
+Cell[824, 27, 1071, 23, 220, "Input",ExpressionUUID->"76b561ea-21f6-4856-b04f-46f5e1a678d2"],
+Cell[1898, 52, 2827, 77, 388, "Input",ExpressionUUID->"e374fc29-27a2-4e80-89ff-72beae46517a"],
+Cell[4728, 131, 151, 3, 59, "Input",ExpressionUUID->"1bfecd04-78b9-413e-88ce-aa565480720d"]
+}
+]
+*)
+

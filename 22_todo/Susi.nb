@@ -1,0 +1,289 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10099,        281]
+NotebookOptionsPosition[      6973,        218]
+NotebookOutlinePosition[      7342,        234]
+CellTagsIndexPosition[      7299,        231]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Get the damn documents of the accountant just in case!", "Section",
+ CellChangeTimes->{{3.768241473111113*^9, 
+  3.768241483606477*^9}},ExpressionUUID->"044133dd-bfdc-4b3e-89e8-\
+b0987463c797"],
+
+Cell[TextData[StyleBox["https://grantsonline.ie/eseries/esr.elogin",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 1, 0],
+ FrontFaceColor->RGBColor[0, 1, 0],
+ BackFaceColor->RGBColor[0, 1, 0],
+ GraphicsColor->RGBColor[0, 1, 0],
+ FontSize->8,
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 1, 0],
+ Background->GrayLevel[0.5]]], "ExternalLanguage",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->(SystemOpen[cephalon`Private`xxx = First[{
+      SlotSequence[1]}]]& ),
+ CellFrameLabels->{{None, "hyperLink"}, {None, None}},
+ CellChangeTimes->{{3.768227858963694*^9, 3.768227859115489*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"75bffd13-3ade-4604-b23e-1e77497de98b"]
+}, Open  ]],
+
+Cell["Email to Cora", "Section",
+ CellChangeTimes->{{3.768227670324935*^9, 
+  3.768227684620614*^9}},ExpressionUUID->"8bba84db-44f9-4edd-89ec-\
+09ef0796497c"],
+
+Cell[CellGroupData[{
+
+Cell["Can I apply for the 1500 fee discount for this course?", "Subchapter",
+ CellChangeTimes->{{3.768228382714636*^9, 
+  3.768228397178405*^9}},ExpressionUUID->"5da2280b-4102-4f8f-a931-\
+8978396720bd"],
+
+Cell["Find out Deadlines", "Section",
+ CellChangeTimes->{{3.768227679556926*^9, 
+  3.768227683468521*^9}},ExpressionUUID->"bc2ed432-e514-4b87-bdc2-\
+6458d571ba3d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Mon 9th September 2019", "Subchapter",
+ CellChangeTimes->{{3.768228468822414*^9, 
+  3.768228474413694*^9}},ExpressionUUID->"226bdd0d-cae2-4fa6-98c9-\
+26e9ad6ad0ee"],
+
+Cell[CellGroupData[{
+
+Cell["Susi Deadline", "Subsection",
+ CellChangeTimes->{{3.76822769878786*^9, 
+  3.768227702571576*^9}},ExpressionUUID->"507dcc52-3346-4755-b32a-\
+fe2a268d06dc"],
+
+Cell[BoxData[
+ RowBox[{"13", "th", " ", "June"}]], "Input",
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7682277963739767`*^9, 
+   3.768227800206951*^9}},ExpressionUUID->"7b4e0922-f4ba-4e96-8171-\
+570b313a6435"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["phone number:", "Subchapter",
+ CellChangeTimes->{{3.768227768872881*^9, 
+  3.768227771184516*^9}},ExpressionUUID->"f0d6d343-217d-4840-9b1d-\
+8609c51b2339"],
+
+Cell["BTEA for 2019/2020", "Section",
+ CellChangeTimes->{{3.768228120016479*^9, 
+  3.768228127999489*^9}},ExpressionUUID->"e9fc5ee2-2e84-489a-9630-\
+12dc4122499c"],
+
+Cell[CellGroupData[{
+
+Cell["Fees", "Section",
+ CellChangeTimes->{{3.7682284200812063`*^9, 
+  3.768228420848668*^9}},ExpressionUUID->"2ceff997-cf33-4094-b029-\
+368346d50dc6"],
+
+Cell["6000", "Item",
+ CellChangeTimes->{{3.768228421659227*^9, 
+  3.768228423016645*^9}},ExpressionUUID->"e0c5e5a5-3e97-42fd-aa13-\
+839df95d6d3e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Details I need", "Section",
+ CellChangeTimes->{{3.768229777231697*^9, 
+  3.768229780127185*^9}},ExpressionUUID->"03ac3b45-534d-4c3f-87b6-\
+a36d8dc79122"],
+
+Cell["Emmies PPSN and Charlies PPSN", "Item",
+ CellChangeTimes->{{3.768229780968771*^9, 
+  3.7682297932865963`*^9}},ExpressionUUID->"4f848cae-2c4c-4bc0-82de-\
+e4bb41e37483"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["What I get/What you get", "Section",
+ CellChangeTimes->{{3.768233117951234*^9, 
+  3.7682331243270884`*^9}},ExpressionUUID->"50e0ac2c-48f1-494e-9598-\
+9ec433bb14bd"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["10", "14"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "357a168f-b5a9-4c65-adff-6ab0cb24c3fb"],
+ " adjustable synapses organized in the dour Northern European style, in \
+which you can impart your personality, way of thinking, programming style, \
+and knowledge and thus save a dour backup of yourself."
+}], "Item",
+ CellChangeTimes->{{3.768233124959264*^9, 3.768233173076887*^9}, {
+  3.7682332756390123`*^9, 3.76823329922989*^9}, {3.768233361034423*^9, 
+  3.768233362833954*^9}, {3.768233541080389*^9, 
+  3.7682337297731457`*^9}},ExpressionUUID->"d84df07a-65f8-460d-9e4b-\
+668cf0717beb"],
+
+Cell[CellGroupData[{
+
+Cell["100000 man hours of work, on an interesting new subject. ", "Subitem",
+ CellChangeTimes->{{3.768233183365271*^9, 3.7682331979631023`*^9}, {
+  3.768233831648082*^9, 
+  3.768233842559495*^9}},ExpressionUUID->"2744959c-0104-4c4c-89f5-\
+b014bd84893d"],
+
+Cell["\<\
+Working knowledge of an interesting new Interface Layer for Artificial \
+intelligence.\
+\>", "Subitem",
+ CellChangeTimes->{{3.768233230898402*^9, 
+  3.768233262343834*^9}},ExpressionUUID->"08c7d379-4a11-4bfe-ba86-\
+af8e7da3cc5e"],
+
+Cell["A loyal and relentless apostle.", "Subitem",
+ CellChangeTimes->{{3.7682334989308357`*^9, 3.768233519825152*^9}, {
+  3.768233554667159*^9, 3.768233559671068*^9}, {3.7682337457730017`*^9, 
+  3.768233755651801*^9}},ExpressionUUID->"f8e4c22b-d4b8-4605-9a92-\
+111e5b03f096"],
+
+Cell["A software artifact which people can use.", "Subitem",
+ CellChangeTimes->{{3.7682338437934313`*^9, 
+  3.768233863334839*^9}},ExpressionUUID->"29c203c4-5e19-44cd-8896-\
+3a8bb2fef9bd"],
+
+Cell["store a fragment of your mind, in a lossy memory bank.", "Subitem",
+ CellChangeTimes->{{3.768238694754169*^9, 
+  3.768238719280582*^9}},ExpressionUUID->"cd146d48-7c64-446e-a463-\
+b59ecc91d4e7"]
+}, Open  ]],
+
+Cell["What I get, ", "Item",
+ CellChangeTimes->{{3.768233176474992*^9, 
+  3.768233180864655*^9}},ExpressionUUID->"5153fdea-b596-4d72-9288-\
+a6a71613c273"],
+
+Cell[CellGroupData[{
+
+Cell["Deep understanding of a potent subject", "Subitem",
+ CellChangeTimes->{{3.768233203483672*^9, 
+  3.768233228201313*^9}},ExpressionUUID->"374ff48a-ad68-43e7-8c70-\
+4698f270b9f3"],
+
+Cell["\<\
+Some kudos which I can trade in for future electricity and wifi.\
+\>", "Subitem",
+ CellChangeTimes->{{3.768233371526864*^9, 3.7682333952059193`*^9}, {
+  3.768233772611597*^9, 3.768233815304337*^9}, {3.768233873822332*^9, 
+  3.768233894290285*^9}},ExpressionUUID->"379ad598-0ad0-4da8-9008-\
+e9d2f9a51fed"],
+
+Cell["Hopefully a chair in my broom cupboard.", "Subitem",
+ CellChangeTimes->{
+  3.7682332169235992`*^9, {3.76823330405346*^9, 
+   3.7682333550665693`*^9}},ExpressionUUID->"91bd53d2-c287-426b-8c7a-\
+a93d71c76a7b"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell["Math is respected! And Math is Useful", "Section",
+ CellChangeTimes->{{3.768240256018811*^9, 
+  3.7682402673059072`*^9}},ExpressionUUID->"a18f325a-4c4d-4fda-8066-\
+2baa5f1e44b0"]
+}, Open  ]]
+},
+WindowSize->{1720, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 199, 3, 134, "Section",ExpressionUUID->"044133dd-bfdc-4b3e-89e8-b0987463c797"],
+Cell[782, 27, 696, 16, 90, "ExternalLanguage",ExpressionUUID->"75bffd13-3ade-4604-b23e-1e77497de98b",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}, Open  ]],
+Cell[1493, 46, 158, 3, 134, "Section",ExpressionUUID->"8bba84db-44f9-4edd-89ec-09ef0796497c"],
+Cell[CellGroupData[{
+Cell[1676, 53, 202, 3, 92, "Subchapter",ExpressionUUID->"5da2280b-4102-4f8f-a931-8978396720bd"],
+Cell[1881, 58, 163, 3, 134, "Section",ExpressionUUID->"bc2ed432-e514-4b87-bdc2-6458d571ba3d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2081, 66, 170, 3, 128, "Subchapter",ExpressionUUID->"226bdd0d-cae2-4fa6-98c9-26e9ad6ad0ee"],
+Cell[CellGroupData[{
+Cell[2276, 73, 160, 3, 107, "Subsection",ExpressionUUID->"507dcc52-3346-4755-b32a-fe2a268d06dc"],
+Cell[2439, 78, 213, 5, 60, "Input",ExpressionUUID->"7b4e0922-f4ba-4e96-8171-570b313a6435"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2701, 89, 161, 3, 128, "Subchapter",ExpressionUUID->"f0d6d343-217d-4840-9b1d-8609c51b2339"],
+Cell[2865, 94, 163, 3, 134, "Section",ExpressionUUID->"e9fc5ee2-2e84-489a-9630-12dc4122499c"],
+Cell[CellGroupData[{
+Cell[3053, 101, 151, 3, 102, "Section",ExpressionUUID->"2ceff997-cf33-4094-b029-368346d50dc6"],
+Cell[3207, 106, 146, 3, 63, "Item",ExpressionUUID->"e0c5e5a5-3e97-42fd-aa13-839df95d6d3e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3390, 114, 159, 3, 134, "Section",ExpressionUUID->"03ac3b45-534d-4c3f-87b6-a36d8dc79122"],
+Cell[3552, 119, 173, 3, 63, "Item",ExpressionUUID->"4f848cae-2c4c-4bc0-82de-e4bb41e37483"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3762, 127, 170, 3, 134, "Section",ExpressionUUID->"50e0ac2c-48f1-494e-9598-9ec433bb14bd"],
+Cell[CellGroupData[{
+Cell[3957, 134, 676, 14, 104, "Item",ExpressionUUID->"d84df07a-65f8-460d-9e4b-668cf0717beb"],
+Cell[CellGroupData[{
+Cell[4658, 152, 253, 4, 53, "Subitem",ExpressionUUID->"2744959c-0104-4c4c-89f5-b014bd84893d"],
+Cell[4914, 158, 239, 6, 53, "Subitem",ExpressionUUID->"08c7d379-4a11-4bfe-ba86-af8e7da3cc5e"],
+Cell[5156, 166, 275, 4, 53, "Subitem",ExpressionUUID->"f8e4c22b-d4b8-4605-9a92-111e5b03f096"],
+Cell[5434, 172, 188, 3, 53, "Subitem",ExpressionUUID->"29c203c4-5e19-44cd-8896-3a8bb2fef9bd"],
+Cell[5625, 177, 199, 3, 53, "Subitem",ExpressionUUID->"cd146d48-7c64-446e-a463-b59ecc91d4e7"]
+}, Open  ]],
+Cell[5839, 183, 154, 3, 63, "Item",ExpressionUUID->"5153fdea-b596-4d72-9288-a6a71613c273"],
+Cell[CellGroupData[{
+Cell[6018, 190, 183, 3, 53, "Subitem",ExpressionUUID->"374ff48a-ad68-43e7-8c70-4698f270b9f3"],
+Cell[6204, 195, 314, 6, 53, "Subitem",ExpressionUUID->"379ad598-0ad0-4da8-9008-e9d2f9a51fed"],
+Cell[6521, 203, 213, 4, 53, "Subitem",ExpressionUUID->"91bd53d2-c287-426b-8c7a-a93d71c76a7b"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[6773, 212, 184, 3, 134, "Section",ExpressionUUID->"a18f325a-4c4d-4fda-8066-2baa5f1e44b0"]
+}, Open  ]]
+}
+]
+*)
+

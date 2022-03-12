@@ -1,0 +1,117 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3729,        109]
+NotebookOptionsPosition[      2936,         85]
+NotebookOutlinePosition[      3279,        100]
+CellTagsIndexPosition[      3236,         97]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["maybe Martin writes them out in an exercise.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787155071807519*^9, 3.7871550799700413`*^9}},
+ CellLabel->"In[76]:=",ExpressionUUID->"1cf926ec-c7a5-4dc1-9444-7eef2d85a059"],
+
+Cell[TextData[StyleBox["What are the ultimate destinations of these paths?",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787155066251028*^9, 3.787155086609734*^9}},
+ CellLabel->"In[77]:=",ExpressionUUID->"98e4ae16-20c0-415c-b56d-1d67649c43ef"],
+
+Cell[TextData[StyleBox["The first one becomes still, with X69 equaling X70;",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787155088823649*^9, 3.7871551021374903`*^9}},
+ CellLabel->"In[79]:=",ExpressionUUID->"47fa6343-77c2-4bbc-ad9b-3b1d0abad662"],
+
+Cell[TextData[StyleBox["and the fourth becomes very still, with X12 equalling \
+zero.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787155103188148*^9, 3.7871551166483517`*^9}},
+ CellLabel->"In[81]:=",ExpressionUUID->"da3e6b4e-f29d-4aee-86fa-9fd989227d50"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 603, 14, 69, "Text",ExpressionUUID->"1cf926ec-c7a5-4dc1-9444-7eef2d85a059",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1164, 36, 582, 14, 69, "Text",ExpressionUUID->"98e4ae16-20c0-415c-b56d-1d67649c43ef",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1749, 52, 585, 14, 69, "Text",ExpressionUUID->"47fa6343-77c2-4bbc-ad9b-3b1d0abad662",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2337, 68, 595, 15, 69, "Text",ExpressionUUID->"da3e6b4e-f29d-4aee-86fa-9fd989227d50",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+

@@ -1,0 +1,97 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2357,         89]
+NotebookOptionsPosition[      1932,         73]
+NotebookOutlinePosition[      2313,         90]
+CellTagsIndexPosition[      2270,         87]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"1", "+", "1"}]], "Input",
+ CellChangeTimes->{{3.767361406914867*^9, 
+  3.767361408246258*^9}},ExpressionUUID->"b0e1592a-0891-4d28-a138-\
+39ee289634c8"],
+
+Cell["\<\
+NeedsFrontEnd[Speak@\"the rain in spain\"]; Pause[3];
+Get[\"allPossibleShortcuts1`\"];
+
+rules = {
+      \" \" -> \"_\",
+      \"[\" -> \"leftSquareBracket\",
+      \"]\" -> \"rightSquareBracket\",
+      \"\\\\\" -> \"backSlash\",
+      \"/\" -> \"forwardSlash\",
+      \";\" -> \"semiColon\",
+      \".\" -> \"period\",
+      \"'\" -> \"singleQuote\",
+      \"`\" -> \"grave\",
+      \"-\" -> \"dash\",
+      \"=\" -> \"equals\",
+      \"\[RightArrow]\" -> \"rightArrow\",
+      \"\[LeftArrow]\" -> \"leftArrow\",
+      \"\[UpArrow]\" -> \"upArrow\",
+      \"\[DownArrow]\" -> \"downArrow\"
+      };
+
+some = allPossibleShortcuts1`$allPossibleShortcuts;
+
+morph[str_] := ToLowerCase[str];
+
+morph2[str_] := StringReplace[morph[str], rules] <> \"_.m\";
+
+
+allJokers = morph2 /@ some;
+Print[allJokers];
+
+
+Get[\"mindExtension`\"];
+NeedsFrontEnd[
+  CreateWindow[
+    DocumentNotebook[
+      Grid[Partition[
+          Button[Style[#, 8], mindExtension`runShortcut[#], ImageSize -> \
+Medium] & /@
+            allJokers, 10]]],
+    WindowSize -> Full]];\
+\>", "Text",
+ CellChangeTimes->{{3.767361397283064*^9, 
+  3.767361405149025*^9}},ExpressionUUID->"ffbb26d6-b333-4338-aa24-\
+9b4a8aa39177"]
+},
+WindowSize->{1278, 1395},
+WindowMargins->{{0, Automatic}, {Automatic, -1}},
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 175, 4, 59, "Input",ExpressionUUID->"b0e1592a-0891-4d28-a138-39ee289634c8"],
+Cell[736, 26, 1192, 45, 1824, "Text",ExpressionUUID->"ffbb26d6-b333-4338-aa24-9b4a8aa39177"]
+}
+]
+*)
+

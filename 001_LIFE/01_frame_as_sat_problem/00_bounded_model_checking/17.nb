@@ -1,0 +1,181 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6200,        173]
+NotebookOptionsPosition[      4960,        140]
+NotebookOutlinePosition[      5303,        155]
+CellTagsIndexPosition[      5260,        152]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["What are the ultimate destinations of these paths?",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787427368872933*^9, 3.78742737962318*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"a7a82007-6a82-43bc-94c7-45cbf0c8a494"],
+
+Cell[TextData[StyleBox["The first one becomes still with state 69 equal to \
+state 70",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787427380711196*^9, 3.787427396589847*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"8cf6ec66-27c0-4609-addb-c7992d7fdb38"],
+
+Cell[TextData[StyleBox["The fourth becomes very still, with state 12 equal to \
+the barren state",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787427397603253*^9, 3.787427418660145*^9}},
+ CellLabel->"In[38]:=",ExpressionUUID->"ba80cc55-3b7c-4243-a373-a4307aad0daf"],
+
+Cell[TextData[StyleBox["The fifth is the most fascinating of the group, \
+because it continues to produce ever more elaborate valentine shapes, then \
+proceeds to dance and sparkle, until finally beginning to twinkle with period \
+2 starting at time 177.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787427419759202*^9, 3.787427470666191*^9}},
+ CellLabel->"In[40]:=",ExpressionUUID->"3af5bde3-1c68-4d8a-b382-767294fc7cbc"],
+
+Cell[TextData[StyleBox["Thus its members X2 through X7 qualify as \
+Methuselahs.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874274727549477`*^9, 3.787427490544228*^9}},
+ CellLabel->"In[42]:=",ExpressionUUID->"036833eb-bd29-4de4-8e50-0d3434fa9d9b"],
+
+Cell[TextData[StyleBox["A methuselah is a life pattern of population less \
+than 10 that do not become stable within 50 generations",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.78742749677586*^9, 3.7874275237820177`*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"348682fe-00a7-4f52-b5e4-6b542c3ffe93"],
+
+Cell[TextData[StyleBox["A predictable pattern, like the glider or an \
+oscillator, is called stable.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874275266038437`*^9, 3.787427545564928*^9}},
+ CellLabel->"In[46]:=",ExpressionUUID->"3c82575c-a322-4b6b-a96f-196344e698d0"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 581, 14, 69, "Text",ExpressionUUID->"a7a82007-6a82-43bc-94c7-45cbf0c8a494",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1142, 36, 593, 15, 69, "Text",ExpressionUUID->"8cf6ec66-27c0-4609-addb-c7992d7fdb38",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1738, 53, 604, 15, 69, "Text",ExpressionUUID->"ba80cc55-3b7c-4243-a373-a4307aad0daf",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2345, 70, 762, 17, 159, "Text",ExpressionUUID->"3af5bde3-1c68-4d8a-b382-767294fc7cbc",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3110, 89, 590, 15, 69, "Text",ExpressionUUID->"036833eb-bd29-4de4-8e50-0d3434fa9d9b",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3703, 106, 640, 15, 69, "Text",ExpressionUUID->"348682fe-00a7-4f52-b5e4-6b542c3ffe93",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4346, 123, 610, 15, 69, "Text",ExpressionUUID->"3c82575c-a322-4b6b-a96f-196344e698d0",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+

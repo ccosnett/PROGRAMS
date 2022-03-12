@@ -1,0 +1,275 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9880,        267]
+NotebookOptionsPosition[      8115,        224]
+NotebookOutlinePosition[      8458,        239]
+CellTagsIndexPosition[      8415,        236]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["The beauty of the backtracking idea can perhaps be \
+seen most naturally in an important class of problems known as exact \
+covering.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787340364705785*^9, 
+  3.7873403946119127`*^9}},ExpressionUUID->"9be99b6e-bab7-4973-bc26-\
+98d88a23daf9"],
+
+Cell[TextData[StyleBox["We are given a rectangular matrix A of zeros and ones",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7873403956050987`*^9, 3.7873404072988873`*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"df327068-9e3b-47fa-a94a-a08bcf922eaa"],
+
+Cell[TextData[StyleBox["The problem is to find a subset of rows",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7873404131937523`*^9, 3.787340424530381*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"8536ba95-cd95-4123-ab18-9cbfa9351775"],
+
+Cell[TextData[StyleBox["i.e. rows 3 to 7",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7873404290957212`*^9, 3.7873404345061483`*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"4f19b3d9-c9f3-4ba8-8296-163ad372f390"],
+
+Cell[TextData[StyleBox["the sum of these rows is exactly 1 in every column",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7873404380759487`*^9, 3.7873404538488283`*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"cadac97d-5218-44b8-9f7e-2f762a9861d4"],
+
+Cell[TextData[StyleBox["this is a bit like a lock, we have to cover every \
+column in a one by the sum of this subset",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787340458286151*^9, 3.787340473047475*^9}},
+ CellLabel->"In[35]:=",ExpressionUUID->"fc7609a3-9c4e-46e2-a661-a4b4b45192f3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{"(", GridBox[{
+      {"0", "0", "1", "0", "1", "1", "0"},
+      {"1", "0", "0", "1", "0", "0", "1"},
+      {"0", "1", "1", "0", "0", "1", "0"},
+      {"1", "0", "0", "1", "0", "0", "0"},
+      {"0", "1", "0", "0", "0", "0", "1"},
+      {"0", "0", "0", "1", "1", "0", "1"}
+     }], ")"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "row1", "\[IndentingNewLine]", ",", "row2", "\[IndentingNewLine]", ",", 
+     "row3", "\[IndentingNewLine]", ",", "row4", "\[IndentingNewLine]", ",", 
+     "row5", "\[IndentingNewLine]", ",", "row6"}], "\[IndentingNewLine]", 
+    "}"}], "=", "A"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"row1", "+", "row4", "+", "row5"}]}], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellFrameLabels->{{None, None}, {None, 
+    Cell[
+     TextData[{
+       StyleBox["input", FontColor -> GrayLevel[0.5]], " ", 
+       "(Mathematica Code)"}], "Input", FontSize -> 13, FontColor -> 
+     RGBColor[0.8491033800710062, 0.0031235304134196173`, 
+       0.06325861363578178], FontFamily -> "TeX Gyre Chorus", Background -> 
+     GrayLevel[0.99]]}},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787340475868527*^9, 3.78734059388202*^9}},
+ Background->GrayLevel[0.95],
+ CellLabel->"In[49]:=",ExpressionUUID->"218d9e62-3120-4aef-a87e-b3aebcd3f91c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1"}], 
+  "}"}]], "Output",
+ CellFrame->{{True, True}, {True, False}},
+ CellFrameLabels->{{None, None}, {
+    Cell[
+     TextData[{"output"}], "Input", Background -> GrayLevel[0.99], FontSize -> 
+     13, FontColor -> GrayLevel[0.5], FontFamily -> "TeX Gyre Chorus"], None}},
+ CellChangeTimes->{
+  3.78734047591846*^9, {3.787340561955449*^9, 3.7873405943881474`*^9}},
+ Background->GrayLevel[0.85],
+ CellLabel->"Out[51]=",ExpressionUUID->"d1c58943-7360-4d9e-a1f6-f96e671ea2a3"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["Each row of A corresponds to a subset of a 7 element \
+universe (surely each row is an element of a 6 element set of rows?)",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.78734060132449*^9, 3.7873406471983957`*^9}},
+ CellLabel->"In[53]:=",ExpressionUUID->"b06bcc82-3467-4124-8621-b552e11022be"],
+
+Cell[TextData[StyleBox["A moments thought shows that there is only one way to \
+cover all seven of these columns with disjoint rows, namely by choosing rows \
+1, 4, and 5.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787340661187451*^9, 3.787340693844501*^9}},
+ CellLabel->"In[55]:=",ExpressionUUID->"87762ed4-a077-4305-b729-2358048af2bf"],
+
+Cell[TextData[StyleBox["We want to teach a computer how to solve such \
+problems,",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787340704856826*^9, 3.787340714546784*^9}},
+ CellLabel->"In[57]:=",ExpressionUUID->"75db449b-8411-4d08-8a4e-2ed585ec7e40"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 648, 17, 114, "Text",ExpressionUUID->"9be99b6e-bab7-4973-bc26-98d88a23daf9",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1209, 39, 589, 14, 69, "Text",ExpressionUUID->"df327068-9e3b-47fa-a94a-a08bcf922eaa",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1801, 55, 573, 14, 69, "Text",ExpressionUUID->"8536ba95-cd95-4123-ab18-9cbfa9351775",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2377, 71, 552, 14, 69, "Text",ExpressionUUID->"4f19b3d9-c9f3-4ba8-8296-163ad372f390",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2932, 87, 586, 14, 69, "Text",ExpressionUUID->"cadac97d-5218-44b8-9f7e-2f762a9861d4",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3521, 103, 625, 15, 69, "Text",ExpressionUUID->"fc7609a3-9c4e-46e2-a661-a4b4b45192f3",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[4171, 122, 1417, 33, 675, "Input",ExpressionUUID->"218d9e62-3120-4aef-a87e-b3aebcd3f91c"],
+Cell[5591, 157, 575, 12, 179, "Output",ExpressionUUID->"d1c58943-7360-4d9e-a1f6-f96e671ea2a3"]
+}, Open  ]],
+Cell[6181, 172, 656, 15, 114, "Text",ExpressionUUID->"b06bcc82-3467-4124-8621-b552e11022be",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[6840, 189, 679, 16, 114, "Text",ExpressionUUID->"87762ed4-a077-4305-b729-2358048af2bf",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[7522, 207, 589, 15, 69, "Text",ExpressionUUID->"75db449b-8411-4d08-8a4e-2ed585ec7e40",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+

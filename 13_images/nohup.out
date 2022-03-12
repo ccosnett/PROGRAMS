@@ -1,0 +1,10 @@
+Exception in thread Thread-1-machine:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/dist-packages/plover/machine/txbolt.py", line 74, in run
+    raw = self.serial_port.read(max(1, self.serial_port.inWaiting()))
+  File "/usr/lib/python2.7/dist-packages/serial/serialposix.py", line 495, in read
+    raise SerialException('device reports readiness to read but returned no data (device disconnected or multiple access on port?)')
+SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+

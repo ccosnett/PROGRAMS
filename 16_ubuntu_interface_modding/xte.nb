@@ -1,0 +1,161 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5468,        153]
+NotebookOptionsPosition[      3368,         97]
+NotebookOutlinePosition[      5104,        147]
+CellTagsIndexPosition[      5061,        144]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["This is the biggest thing keeping me from enjoying \
+Ubuntu/Linux.\n\nIdeally I\[CloseCurlyQuote]d like to just be able to run my \
+AutoHotKey script on Ubuntu, but I didn\[CloseCurlyQuote]t have much luck \
+getting that working with Wine.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.767882641910901*^9, 
+  3.767882642256538*^9}},ExpressionUUID->"98df6e88-96ee-4b18-b8af-\
+bc194f2ffbbf"],
+
+Cell[TextData[StyleBox["The closest I got was xbindkeys for setting up \
+hotkeys, this seems to work great. And xvkbd for simulating input; this part \
+is really buggy; it doesn\[CloseCurlyQuote]t work in all programs, and causes \
+me to lose focus a lot, among other issues.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7678827040191183`*^9, 3.767882711785281*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"3c3f8e71-4f2e-4839-8aa5-969dd59c31dd"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"xvkbd", " ", "for", " ", "simulating", " ", "input"}],
+  StripOnInput->False,
+  LineColor->GrayLevel[0],
+  FrontFaceColor->GrayLevel[0],
+  BackFaceColor->GrayLevel[0],
+  GraphicsColor->GrayLevel[0],
+  FontWeight->Normal,
+  FontColor->GrayLevel[0]]], "Input",
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767884651988679*^9, 
+   3.767884651988976*^9}},ExpressionUUID->"d64bb400-eb04-47c0-a242-\
+ca40f223491e"],
+
+Cell[BoxData[
+ RowBox[{"Grid", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"ToExpression", "[", 
+        RowBox[{"\"\<\\\\[\>\"", "<>", "#", "<>", "\"\<]\>\""}], "]"}], ",", 
+       RowBox[{"Dynamic", "[", 
+        RowBox[{"CurrentValue", "[", "#", "]"}], "]"}]}], "}"}], "&"}], "/@", 
+    
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<AltKey\>\"", ",", "\"\<CommandKey\>\"", ",", "\"\<ControlKey\>\"", 
+      ",", "\"\<OptionKey\>\"", ",", "\"\<ShiftKey\>\""}], "}"}]}], ",", 
+   RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+   RowBox[{"ItemStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"{", 
+      RowBox[{"Large", ",", "Automatic"}], "}"}], "}"}]}]}], "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellLabel->"In[3]:=",
+ CellID->1433526070,ExpressionUUID->"6736b0b7-b8d9-4864-af8c-db9ac6395868"]
+},
+WindowSize->{1720, 1388},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+TaggingRules->{"LastCursorPosition" -> False},
+CellEpilog:>If[
+  IntegerQ[
+   CurrentValue[
+    SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}]], 
+  SelectionMove[
+    EvaluationCell[], Before, CellContents]; SelectionMove[
+    SelectedNotebook[], Next, Character, 
+    CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}]]; 
+  CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}] = False],
+CellEventActions:>{{"MenuCommand", "HandleShiftReturn"} :> (CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}] = If[
+     MemberQ[
+      FrontEndExecute[
+       FrontEnd`UndocumentedGetSelectionPacket[
+        SelectedNotebook[]]], "CharacterRange" -> Blank[]], 
+     Last[
+      ReplaceAll["CharacterRange", 
+       FrontEndExecute[
+        FrontEnd`UndocumentedGetSelectionPacket[
+         SelectedNotebook[]]]]], False]), {
+   "MenuCommand", "EvaluateCells"} :> (CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}] = If[
+     MemberQ[
+      FrontEndExecute[
+       FrontEnd`UndocumentedGetSelectionPacket[
+        SelectedNotebook[]]], "CharacterRange" -> Blank[]], 
+     Last[
+      ReplaceAll["CharacterRange", 
+       FrontEndExecute[
+        FrontEnd`UndocumentedGetSelectionPacket[
+         SelectedNotebook[]]]]], False]), PassEventsDown -> True},
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 727, 17, 204, "Text",ExpressionUUID->"98df6e88-96ee-4b18-b8af-bc194f2ffbbf",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1288, 39, 759, 16, 159, "Text",ExpressionUUID->"3c3f8e71-4f2e-4839-8aa5-969dd59c31dd",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2050, 57, 446, 13, 60, "Input",ExpressionUUID->"d64bb400-eb04-47c0-a242-ca40f223491e"],
+Cell[2499, 72, 865, 23, 147, "Input",ExpressionUUID->"6736b0b7-b8d9-4864-af8c-db9ac6395868",
+ CellID->1433526070]
+}
+]
+*)
+

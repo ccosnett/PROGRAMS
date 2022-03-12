@@ -1,0 +1,1272 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f523c0de01b, pid=9143, tid=0x00007f51e48fb700
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_161-b12) (build 1.8.0_161-b12)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.161-b12 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x4a101b]  Compile::identify_useful_nodes(Unique_Node_List&)+0x15b
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f523413a800):  JavaThread "C2 CompilerThread6" daemon [_thread_in_native, id=9176, stack(0x00007f51e47fb000,0x00007f51e48fc000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00007f71ac0c4598
+
+Registers:
+RAX=0x00007f51bc00f410, RBX=0x00007f71ac0c4598, RCX=0x000000000084f020, RDX=0x000000000084f020
+RSP=0x00007f51e48f8d80, RBP=0x00007f51e48f8dc0, RSI=0x0000000000002000, RDI=0x00007f51b02db7a0
+R8 =0x00007f51bc00f308, R9 =0x0000000000257000, R10=0x00007f51e48f9c00, R11=0x0000000000000206
+R12=0x0000000000000030, R13=0x0000000000000301, R14=0x00007f51e48f8ee0, R15=0x00000000000000c0
+RIP=0x00007f523c0de01b, EFLAGS=0x0000000000010246, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f51e48f8d80)
+0x00007f51e48f8d80:   00007f51ac07b750 000001a33c03a658
+0x00007f51e48f8d90:   00007f51e48f8f00 00007f523413b3b0
+0x00007f51e48f8da0:   00007f51e48f8ed0 00007f51e48f8f00
+0x00007f51e48f8db0:   00007f51e48f8ff0 00007f51e48f8ee0
+0x00007f51e48f8dc0:   00007f51e48f8e10 00007f523c5b021d
+0x00007f51e48f8dd0:   00007f51e48f8f60 00007f523c033e6f
+0x00007f51e48f8de0:   00007f51e48f9ad0 00007f523413b3b0
+0x00007f51e48f8df0:   00007f51e48f9c00 00007f51b0283fd0
+0x00007f51e48f8e00:   0000000000020338 00007f51b0287790
+0x00007f51e48f8e10:   00007f51e48f8f60 00007f523c0e1f65
+0x00007f51e48f8e20:   00007f51e48f8ed0 01007f523c5af794
+0x00007f51e48f8e30:   00007f51b028bfb8 00007f51bc251d00
+0x00007f51e48f8e40:   00007f51e48f9c00 00007f51bc251d00
+0x00007f51e48f8e50:   00007f51e48f8ff0 00007f51d4011ac8
+0x00007f51e48f8e60:   0000000000001680 00007f51ac0c4418
+0x00007f51e48f8e70:   00007f51e48f8ea0 00007f523c5b10ca
+0x00007f51e48f8e80:   00007f51e48f9ad0 000000000000052d
+0x00007f51e48f8e90:   00007f51bc251d00 00007f51e48f9c00
+0x00007f51e48f8ea0:   00007f51e48f8f60 00007f523c5911eb
+0x00007f51e48f8eb0:   00007f51bc113e40 00007f5100000001
+0x00007f51e48f8ec0:   00007f51bc251a40 00007f51bc113e40
+0x00007f51e48f8ed0:   00007f5100000002 00007f51e48f9c00
+0x00007f51e48f8ee0:   00007f523413b3b0 00007f5100002000
+0x00007f51e48f8ef0:   00007f51bc256880 00007f5100000302
+0x00007f51e48f8f00:   00007f523cbb40d0 00007f523413b3b0
+0x00007f51e48f8f10:   0000000000000100 00007f51b02db400
+0x00007f51e48f8f20:   0000000000000000 00007f5100000000
+0x00007f51e48f8f30:   00007f51e48f8f60 00007f51e48f9a30
+0x00007f51e48f8f40:   00007f51bc02d640 00007f51bc02d388
+0x00007f51e48f8f50:   00007f51e48f9a80 00007f523cbd1de0
+0x00007f51e48f8f60:   00007f51e48f9b90 00007f523c0e6907
+0x00007f51e48f8f70:   0000000000000004 00007f51b8121a80 
+
+Instructions: (pc=0x00007f523c0de01b)
+0x00007f523c0ddffb:   f1 89 10 74 44 49 83 c4 08 4d 39 fc 74 67 49 8b
+0x00007f523c0de00b:   40 08 4a 8b 1c 20 48 85 db 74 ea f6 c3 01 75 e5
+0x00007f523c0de01b:   48 83 3b fe 74 df 8b 4b 28 89 c8 c1 e8 05 41 3b
+0x00007f523c0de02b:   46 30 72 b1 49 8b 46 20 4c 89 45 c0 89 ce 48 8b 
+
+Register to memory mapping:
+
+RAX=0x00007f51bc00f410 is an unknown value
+RBX=0x00007f71ac0c4598 is an unknown value
+RCX=0x000000000084f020 is an unknown value
+RDX=0x000000000084f020 is an unknown value
+RSP=0x00007f51e48f8d80 is pointing into the stack for thread: 0x00007f523413a800
+RBP=0x00007f51e48f8dc0 is pointing into the stack for thread: 0x00007f523413a800
+RSI=0x0000000000002000 is an unknown value
+RDI=0x00007f51b02db7a0 is an unknown value
+R8 =0x00007f51bc00f308 is an unknown value
+R9 =0x0000000000257000 is an unknown value
+R10=0x00007f51e48f9c00 is pointing into the stack for thread: 0x00007f523413a800
+R11=0x0000000000000206 is an unknown value
+R12=0x0000000000000030 is an unknown value
+R13=0x0000000000000301 is an unknown value
+R14=0x00007f51e48f8ee0 is pointing into the stack for thread: 0x00007f523413a800
+R15=0x00000000000000c0 is an unknown value
+
+
+Stack: [0x00007f51e47fb000,0x00007f51e48fc000],  sp=0x00007f51e48f8d80,  free space=1015k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x4a101b]  Compile::identify_useful_nodes(Unique_Node_List&)+0x15b
+V  [libjvm.so+0x97321d]  PhaseRemoveUseless::PhaseRemoveUseless(PhaseGVN*, Unique_Node_List*, Phase::PhaseNumber)+0xdd
+V  [libjvm.so+0x4a4f65]  Compile::inline_string_calls(bool)+0x75
+V  [libjvm.so+0x4a9907]  Compile::Compile(ciEnv*, C2Compiler*, ciMethod*, int, bool, bool, bool)+0x1707
+V  [libjvm.so+0x3f57d5]  C2Compiler::compile_method(ciEnv*, ciMethod*, int)+0x1f5
+V  [libjvm.so+0x4b3c2a]  CompileBroker::invoke_compiler_on_method(CompileTask*)+0xcba
+V  [libjvm.so+0x4b4bd6]  CompileBroker::compiler_thread_loop()+0x5d6
+V  [libjvm.so+0xa7eaa3]  JavaThread::thread_main_inner()+0x103
+V  [libjvm.so+0xa7ebec]  JavaThread::run()+0x11c
+V  [libjvm.so+0x92da28]  java_start(Thread*)+0x108
+C  [libpthread.so.0+0x76ba]  start_thread+0xca
+
+
+Current CompileTask:
+C2:   2536  887   !   4       java.io.FilePermission$1::run (116 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f5180009800 JavaThread "J/Link reader2" [_thread_in_native, id=9197, stack(0x00007f519c20e000,0x00007f519c30f000)]
+  0x00007f523400b000 JavaThread "DestroyJavaVM" [_thread_blocked, id=9145, stack(0x00007f523d734000,0x00007f523d835000)]
+  0x00007f52344a3800 JavaThread "J/Link reader" [_thread_in_Java, id=9191, stack(0x00007f519c30f000,0x00007f519c410000)]
+  0x00007f5234148800 JavaThread "Service Thread" daemon [_thread_blocked, id=9182, stack(0x00007f51e41f5000,0x00007f51e42f6000)]
+  0x00007f5234145000 JavaThread "C1 CompilerThread11" daemon [_thread_blocked, id=9181, stack(0x00007f51e42f6000,0x00007f51e43f7000)]
+  0x00007f5234143000 JavaThread "C1 CompilerThread10" daemon [_thread_blocked, id=9180, stack(0x00007f51e43f7000,0x00007f51e44f8000)]
+  0x00007f5234141000 JavaThread "C1 CompilerThread9" daemon [_thread_blocked, id=9179, stack(0x00007f51e44f8000,0x00007f51e45f9000)]
+  0x00007f523413f000 JavaThread "C1 CompilerThread8" daemon [_thread_blocked, id=9178, stack(0x00007f51e45f9000,0x00007f51e46fa000)]
+  0x00007f523413d000 JavaThread "C2 CompilerThread7" daemon [_thread_in_native, id=9177, stack(0x00007f51e46fa000,0x00007f51e47fb000)]
+=>0x00007f523413a800 JavaThread "C2 CompilerThread6" daemon [_thread_in_native, id=9176, stack(0x00007f51e47fb000,0x00007f51e48fc000)]
+  0x00007f5234138800 JavaThread "C2 CompilerThread5" daemon [_thread_in_native, id=9175, stack(0x00007f51e48fc000,0x00007f51e49fd000)]
+  0x00007f523412e800 JavaThread "C2 CompilerThread4" daemon [_thread_blocked, id=9174, stack(0x00007f51e49fd000,0x00007f51e4afe000)]
+  0x00007f523412c800 JavaThread "C2 CompilerThread3" daemon [_thread_in_native, id=9173, stack(0x00007f51e4afe000,0x00007f51e4bff000)]
+  0x00007f523412a000 JavaThread "C2 CompilerThread2" daemon [_thread_in_native, id=9172, stack(0x00007f51e4bff000,0x00007f51e4d00000)]
+  0x00007f5234128000 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=9171, stack(0x00007f51e4d00000,0x00007f51e4e01000)]
+  0x00007f523411a800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=9170, stack(0x00007f51e4e01000,0x00007f51e4f02000)]
+  0x00007f5234124800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=9169, stack(0x00007f51e4f02000,0x00007f51e5003000)]
+  0x00007f523409b800 JavaThread "Finalizer" daemon [_thread_blocked, id=9163, stack(0x00007f51e5371000,0x00007f51e5472000)]
+  0x00007f5234097000 JavaThread "Reference Handler" daemon [_thread_blocked, id=9162, stack(0x00007f51e5472000,0x00007f51e5573000)]
+
+Other Threads:
+  0x00007f523408f000 VMThread [stack: 0x00007f51e5573000,0x00007f51e5674000] [id=9161]
+  0x00007f523414d800 WatcherThread [stack: 0x00007f51e40f4000,0x00007f51e41f5000] [id=9183]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 153088K, used 78959K [0x00000000f5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 131584K, 60% used [0x00000000f5580000,0x00000000fa29be40,0x00000000fd600000)
+  from space 21504K, 0% used [0x00000000feb00000,0x00000000feb00000,0x0000000100000000)
+  to   space 21504K, 0% used [0x00000000fd600000,0x00000000fd600000,0x00000000feb00000)
+ ParOldGen       total 349696K, used 0K [0x00000000e0000000, 0x00000000f5580000, 0x00000000f5580000)
+  object space 349696K, 0% used [0x00000000e0000000,0x00000000e0000000,0x00000000f5580000)
+ Metaspace       used 7607K, capacity 7836K, committed 7936K, reserved 1056768K
+  class space    used 870K, capacity 936K, committed 1024K, reserved 1048576K
+
+Card table byte_map: [0x00007f523a3d4000,0x00007f523a4d5000] byte_map_base: 0x00007f5239cd4000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f523cc0c920
+ Begin Bits: [0x00007f52384c5000, 0x00007f5238cc5000)
+ End Bits:   [0x00007f5238cc5000, 0x00007f52394c5000)
+
+Polling page: 0x00007f523d85e000
+
+CodeCache: size=245760Kb used=5332Kb max_used=5343Kb free=240427Kb
+ bounds [0x00007f5225000000, 0x00007f5225540000, 0x00007f5234000000]
+ total_blobs=1194 nmethods=884 adapters=221
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 2.519 Thread 0x00007f523412e800 nmethod 878 0x00007f52255305d0 code [0x00007f52255307e0, 0x00007f52255310e0]
+Event: 2.520 Thread 0x00007f5234128000  883       4       java.io.FilePermission::getMask (948 bytes)
+Event: 2.520 Thread 0x00007f523411a800  884       4       java.lang.String::<init> (38 bytes)
+Event: 2.520 Thread 0x00007f5234128000 nmethod 883 0x00007f5225535b50 code [0x00007f5225535ca0, 0x00007f5225535d18]
+Event: 2.521 Thread 0x00007f523412e800  885       4       java.util.HashMap::removeNode (291 bytes)
+Event: 2.521 Thread 0x00007f5234128000  886       4       java.io.FilePermission$1::run (5 bytes)
+Event: 2.521 Thread 0x00007f523413a800  887   !   4       java.io.FilePermission$1::run (116 bytes)
+Event: 2.521 Thread 0x00007f523411a800 nmethod 884 0x00007f5225537ad0 code [0x00007f5225537c40, 0x00007f5225537dc8]
+Event: 2.523 Thread 0x00007f523412e800 nmethod 885 0x00007f5225538fd0 code [0x00007f5225539160, 0x00007f52255394b8]
+Event: 2.530 Thread 0x00007f523412a000  888       4       java.lang.String::<init> (10 bytes)
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (8 events):
+Event: 0.104 Thread 0x00007f523400b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f52252f7d70 method=java.lang.String.startsWith(Ljava/lang/String;I)Z @ 25
+Event: 1.012 Thread 0x00007f523400b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f522532542c method=java.net.URLStreamHandler.sameFile(Ljava/net/URL;Ljava/net/URL;)Z @ 8
+Event: 2.083 Thread 0x00007f52344a3800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f5225329ed4 method=java.net.URLStreamHandler.sameFile(Ljava/net/URL;Ljava/net/URL;)Z @ 63
+Event: 2.083 Thread 0x00007f52344a3800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f5225321ecc method=java.net.URLStreamHandler.sameFile(Ljava/net/URL;Ljava/net/URL;)Z @ 63
+Event: 2.088 Thread 0x00007f52344a3800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f5225328c40 method=java.lang.String.regionMatches(ZILjava/lang/String;II)Z @ 41
+Event: 2.092 Thread 0x00007f52344a3800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f5225315aa8 method=java.lang.String.<init>([CII)V @ 18
+Event: 2.260 Thread 0x00007f52344a3800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f52253ed564 method=java.lang.String.replace(CC)Ljava/lang/String; @ 26
+Event: 2.284 Thread 0x00007f52344a3800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f52253eafbc method=java.io.UnixFileSystem.parentOrNull(Ljava/lang/String;)Ljava/lang/String; @ 81
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 2.121 Thread 0x00007f52344a3800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000f66b3bf0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 2.121 Thread 0x00007f52344a3800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000f66b3e00) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 2.125 Thread 0x00007f52344a3800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000f66ea8b8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 2.125 Thread 0x00007f52344a3800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000f66eaac8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 2.127 Thread 0x00007f52344a3800 Exception <a 'java/util/zip/DataFormatException': invalid block type> (0x00000000f66f5d78) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 2.135 Thread 0x00007f52344a3800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000f673d620) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 2.135 Thread 0x00007f52344a3800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000f673d830) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 2.268 Thread 0x00007f52344a3800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x00000000f7832020) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/prims/methodHandles.cpp, line 1167]
+Event: 2.269 Thread 0x00007f52344a3800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x00000000f783f790) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/prims/methodHandles.cpp, line 1167]
+Event: 2.278 Thread 0x00007f52344a3800 Exception <a 'java/lang/NoSuchMethodError': sun.misc.Unsafe.invokeCleaner(Ljava/nio/ByteBuffer;)V> (0x00000000f78ef9b8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u161/10277/hotspot/src/share/vm/interpreter/linkResolver.cpp, line 620]
+
+Events (10 events):
+Event: 2.527 loading class org/apache/lucene/codecs/DocValuesFormat
+Event: 2.527 loading class org/apache/lucene/codecs/DocValuesFormat done
+Event: 2.528 loading class org/apache/lucene/codecs/lucene60/Lucene60Codec$2
+Event: 2.528 loading class org/apache/lucene/codecs/lucene60/Lucene60Codec$2 done
+Event: 2.529 loading class org/apache/lucene/codecs/perfield/PerFieldDocValuesFormat
+Event: 2.529 loading class org/apache/lucene/codecs/perfield/PerFieldDocValuesFormat done
+Event: 2.529 loading class org/apache/lucene/codecs/NormsFormat
+Event: 2.529 loading class org/apache/lucene/codecs/NormsFormat done
+Event: 2.530 loading class org/apache/lucene/codecs/lucene53/Lucene53NormsFormat
+Event: 2.530 loading class org/apache/lucene/codecs/lucene53/Lucene53NormsFormat done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 103:05 8422010                           /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/bin/java
+00600000-00601000 rw-p 00000000 103:05 8422010                           /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/bin/java
+0168a000-016ab000 rw-p 00000000 00:00 0                                  [heap]
+e0000000-100100000 rw-p 00000000 00:00 0 
+100100000-140000000 ---p 00000000 00:00 0 
+7f5168fff000-7f516c000000 rw-p 00000000 00:00 0 
+7f516c000000-7f516c021000 rw-p 00000000 00:00 0 
+7f516c021000-7f5170000000 ---p 00000000 00:00 0 
+7f5170000000-7f5170021000 rw-p 00000000 00:00 0 
+7f5170021000-7f5174000000 ---p 00000000 00:00 0 
+7f5174000000-7f5174021000 rw-p 00000000 00:00 0 
+7f5174021000-7f5178000000 ---p 00000000 00:00 0 
+7f517a714000-7f517a715000 r--s 00000000 103:05 8450909                   /home/conor/mathematica/SystemFiles/Links/WebServices/Documentation/English/SearchIndex/2/segments_2
+7f517a715000-7f517a72b000 r-xp 00000000 103:05 8421557                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/libnet.so
+7f517a72b000-7f517a92b000 ---p 00016000 103:05 8421557                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/libnet.so
+7f517a92b000-7f517a92c000 rw-p 00016000 103:05 8421557                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/libnet.so
+7f517a92c000-7f517a93d000 r-xp 00000000 103:05 8421578                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/libnio.so
+7f517a93d000-7f517ab3c000 ---p 00011000 103:05 8421578                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/libnio.so
+7f517ab3c000-7f517ab3d000 rw-p 00010000 103:05 8421578                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/libnio.so
+7f517ab3d000-7f517ab3f000 r--s 0001d000 103:05 8443200                   /home/conor/mathematica/SystemFiles/Components/TextSearch/Java/TextSearch.jar
+7f517ab3f000-7f517ab44000 r--s 00038000 103:05 8443201                   /home/conor/mathematica/SystemFiles/Components/TextSearch/Java/lucene-suggest-7.1.0.jar
+7f517ab44000-7f517ab49000 r--s 00041000 103:05 8443192                   /home/conor/mathematica/SystemFiles/Components/TextSearch/Java/lucene-spatial3d-7.1.0.jar
+7f517ab49000-7f517ab4f000 r--s 00044000 103:05 8443196                   /home/conor/mathematica/SystemFiles/Components/TextSearch/Java/antlr4-runtime-4.5.1-1.jar
+7f517ab4f000-7f517ab51000 r--s 0000a000 103:05 8443199                   /home/conor/mathematica/SystemFiles/Components/TextSearch/Java/asm-commons-5.1.jar
+7f517ab51000-7f517ab57000 r--s 00036000 103:05 8443194                   /home/conor/mathematica/SystemFiles/Components/TextSearch/Java/junit-4.11.jar
+7f517ab57000-7f517ab5e000 r--s 00035000 103:05 8443204                   /home/conor/mathematica/SystemFiles/Components/TextSearch/Java/lucene-queries-7.1.0.jar
+7f517ab5e000-7f517ab63000 r--s 0002c000 103:05 8443193                   /home/conor/mathematica/SystemFiles/Components/TextSearch/Java/lucene-highlighter-7.1.0.jar
+7f517ab63000-7f517ab6c000 r--s 00055000 103:05 8443191                   /home/conor/mathematica/SystemFiles/Components/TextSearch/Java/lucene-queryparser-7.1.0.jar
+7f517ab6c000-7f517ab6e000 r--s 00009000 103:05 8443197                   /home/conor/mathematica/SystemFiles/Components/TextSearch/Java/hamcrest-core-1.3.jar
+7f517ab6e000-7f517ab70000 r--s 00010000 103:05 8443203                   /home/conor/mathematica/SystemFiles/Components/TextSearch/Java/lucene-expressions-7.1.0.jar
+7f517ab70000-7f517ab81000 r--s 0017b000 103:05 8443202                   /home/conor/mathematica/SystemFiles/Components/TextSearch/Java/lucene-analyzers-common-7.1.0.jar
+7f517ab81000-7f517abaf000 r--s 00279000 103:05 8443190                   /home/conor/mathematica/SystemFiles/Components/TextSearch/Java/lucene-core-7.1.0.jar
+7f517abaf000-7f517abb1000 r--s 0000c000 103:05 8443195                   /home/conor/mathematica/SystemFiles/Components/TextSearch/Java/asm-5.1.jar
+7f517abb1000-7f517abb4000 r--s 00016000 103:05 8443198                   /home/conor/mathematica/SystemFiles/Components/TextSearch/Java/lucene-backward-codecs-7.1.0.jar
+7f517abb4000-7f517ac2d000 r--s 010f9000 103:05 8421983                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/tools.jar
+7f517ac2d000-7f517ac2e000 r--s 00000000 103:05 8443364                   /home/conor/mathematica/SystemFiles/Components/Interpreter/Java/ParseTelephoneNumber.jar
+7f517ac2e000-7f517ac3f000 r--s 00041000 103:05 8443365                   /home/conor/mathematica/SystemFiles/Components/Interpreter/Java/libphonenumber-8.8.8.jar
+7f517ac3f000-7f517ac4a000 r--s 00238000 103:05 8451193                   /home/conor/mathematica/SystemFiles/Links/Databases/Java/sqlalchemy-1.1.14.jar
+7f517ac4a000-7f517ae3a000 r--s 0254b000 103:05 8451195                   /home/conor/mathematica/SystemFiles/Links/Databases/Java/jython-standalone-2.7.1.jar
+7f517ae3a000-7f517ae48000 r--s 00074000 103:05 8451194                   /home/conor/mathematica/SystemFiles/Links/Databases/Java/pytz-2017.3.jar
+7f517ae48000-7f517ae4f000 r--s 00049000 103:05 8450039                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/httpcore-4.4.4.jar
+7f517ae4f000-7f517ae51000 r--s 0000e000 103:05 8450043                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/commons-logging-1.1.3.jar
+7f517ae51000-7f517ae91000 r--s 00344000 103:05 8450042                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/aws-java-sdk-ec2-1.11.242.jar
+7f517ae91000-7f517ae93000 r--s 00002000 103:05 8450041                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/awslink-1.0-SNAPSHOT.jar
+7f517ae93000-7f517ae9c000 r--s 0005a000 103:05 8450035                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/aws-java-sdk-kms-1.11.242.jar
+7f517ae9c000-7f517aeb1000 r--s 000bd000 103:05 8450038                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/aws-java-sdk-core-1.11.242.jar
+7f517aeb1000-7f517aeb5000 r--s 0003c000 103:05 8450040                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/jackson-core-2.6.7.jar
+7f517aeb5000-7f517aebf000 r--s 00081000 103:05 8450031                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/ion-java-1.0.2.jar
+7f517aebf000-7f517aec2000 r--s 0001b000 103:05 8450032                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/junit-3.8.1.jar
+7f517aec2000-7f517aec5000 r--s 00009000 103:05 8450030                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/jackson-annotations-2.6.0.jar
+7f517aec5000-7f517aed5000 r--s 00088000 103:05 8450046                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/joda-time-2.8.1.jar
+7f517aed5000-7f517aed7000 r--s 00005000 103:05 8450044                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/jmespath-java-1.11.242.jar
+7f517aed7000-7f517aee8000 r--s 0010c000 103:05 8450037                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/jackson-databind-2.6.7.1.jar
+7f517aee8000-7f517aefa000 r--s 000bb000 103:05 8450036                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/aws-java-sdk-s3-1.11.242.jar
+7f517aefa000-7f517af01000 r--s 0003a000 103:05 8450045                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/commons-codec-1.9.jar
+7f517af01000-7f517af02000 r--s 0000b000 103:05 8450034                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/jackson-dataformat-cbor-2.6.7.jar
+7f517af02000-7f517af0f000 r--s 000a7000 103:05 8450033                   /home/conor/mathematica/SystemFiles/Links/AWSLink/Java/httpclient-4.5.2.jar
+7f517af0f000-7f517af5e000 r--s 00402000 103:05 8419611                   /home/conor/mathematica/AddOns/Applications/LightweightGridClient/Java/wolfram-remote-services-client.jar
+7f517af5e000-7f517af5f000 r--s 00000000 103:05 8420028                   /home/conor/mathematica/AddOns/Applications/ClusterIntegration/Java/Wolfram_SGE.jar
+7f517af5f000-7f517af61000 r--s 0000a000 103:05 8450756                   /home/conor/mathematica/SystemFiles/Links/XMLSchema/Java/commons-codec-1.3.jar
+7f517af61000-7f517af66000 r--s 00040000 103:05 8450884                   /home/conor/mathematica/SystemFiles/Links/WebServices/Java/commons-httpclient-3.0.jar
+7f517af66000-7f517af69000 r--s 0001b000 103:05 8450886                   /home/conor/mathematica/SystemFiles/Links/WebServices/Java/junit-3.8.1.jar
+7f517af69000-7f517af6b000 r--s 00008000 103:05 8450885                   /home/conor/mathematica/SystemFiles/Links/WebServices/Java/commons-logging-1.0.4.jar
+7f517af6b000-7f517af6d000 r--s 00006000 103:05 8450672                   /home/conor/mathematica/SystemFiles/Links/RLink/Java/REngine.jar
+7f517af6d000-7f517af70000 r--s 00008000 103:05 8450669                   /home/conor/mathematica/SystemFiles/Links/RLink/Java/RLink.jar
+7f517af70000-7f517af79000 r--s 0006d000 103:05 8450618                   /home/conor/mathematica/SystemFiles/Links/RLink/Java/log4j-1.2.16.jar
+7f517af79000-7f517af7d000 r--s 000f2000 103:05 8450671                   /home/conor/mathematica/SystemFiles/Links/RLink/Java/jna.jar
+7f517af7d000-7f517af7e000 r--s 00002000 103:05 8450670                   /home/conor/mathematica/SystemFiles/Links/RLink/Java/JRIEngine.jar
+7f517af7e000-7f517af7f000 r--s 00009000 103:05 8450619                   /home/conor/mathematica/SystemFiles/Links/RLink/Java/JRI.jar
+7f517af7f000-7f517af8c000 r--s 00189000 103:05 8449727                   /home/conor/mathematica/SystemFiles/Links/DatabaseLink/Java/h2-1.3.176.jar
+7f517af8c000-7f517af91000 r--s 0054d000 103:05 8449725                   /home/conor/mathematica/SystemFiles/Links/DatabaseLink/Java/sqlite-jdbc-3.8.11.2.jar
+7f517af91000-7f517af99000 r--s 0004d000 103:05 8449731                   /home/conor/mathematica/SystemFiles/Links/DatabaseLink/Java/ucanaccess-3.0.6.jar
+7f517af99000-7f517af9c000 r--s 00018000 103:05 8449737                   /home/conor/mathematica/SystemFiles/Links/DatabaseLink/Java/commons-dbcp-1.2.1.jar
+7f517af9c000-7f517afaa000 r--s 00159000 103:05 8449519                   /home/conor/mathematica/SystemFiles/Links/DatabaseLink/Java/hsqldb.jar
+7f517afaa000-7f517afb8000 r--s 000d1000 103:05 8449739                   /home/conor/mathematica/SystemFiles/Links/DatabaseLink/Java/jaybird-full-2.2.9.jar
+7f517afb8000-7f517afc2000 r--s 000e7000 103:05 8449520                   /home/conor/mathematica/SystemFiles/Links/DatabaseLink/Java/mysql-connector-java-5.1.38-bin.jar
+7f517afc2000-7f517afcf000 r--s 0007c000 103:05 8449730                   /home/conor/mathematica/SystemFiles/Links/DatabaseLink/Java/commons-collections-3.1.jar
+7f517afcf000-7f517affe000 r--s 002e5000 103:05 8449521                   /home/conor/mathematica/SystemFiles/Links/DatabaseLink/Java/derby.jar
+7f517affe000-7f517afff000 ---p 00000000 00:00 0 
+7f517afff000-7f517b7ff000 rw-p 00000000 00:00 0 
+7f517b7ff000-7f517b800000 ---p 00000000 00:00 0 
+7f517b800000-7f517c000000 rw-p 00000000 00:00 0 
+7f517c000000-7f517c021000 rw-p 00000000 00:00 0 
+7f517c021000-7f5180000000 ---p 00000000 00:00 0 
+7f5180000000-7f5180779000 rw-p 00000000 00:00 0 
+7f5180779000-7f5184000000 ---p 00000000 00:00 0 
+7f5184000000-7f5184021000 rw-p 00000000 00:00 0 
+7f5184021000-7f5188000000 ---p 00000000 00:00 0 
+7f5188000000-7f5188021000 rw-p 00000000 00:00 0 
+7f5188021000-7f518c000000 ---p 00000000 00:00 0 
+7f518c000000-7f518c021000 rw-p 00000000 00:00 0 
+7f518c021000-7f5190000000 ---p 00000000 00:00 0 
+7f5190000000-7f5190021000 rw-p 00000000 00:00 0 
+7f5190021000-7f5194000000 ---p 00000000 00:00 0 
+7f5194000000-7f5194021000 rw-p 00000000 00:00 0 
+7f5194021000-7f5198000000 ---p 00000000 00:00 0 
+7f5198000000-7f5198021000 rw-p 00000000 00:00 0 
+7f5198021000-7f519c000000 ---p 00000000 00:00 0 
+7f519c000000-7f519c002000 r--s 00009000 103:05 8449738                   /home/conor/mathematica/SystemFiles/Links/DatabaseLink/Java/commons-pool-1.2.jar
+7f519c002000-7f519c007000 r--s 00041000 103:05 8449728                   /home/conor/mathematica/SystemFiles/Links/DatabaseLink/Java/commons-lang-2.6.jar
+7f519c007000-7f519c00e000 r--s 0009a000 103:05 8449726                   /home/conor/mathematica/SystemFiles/Links/DatabaseLink/Java/postgresql-9.4-1206-jdbc4.jar
+7f519c00e000-7f519c015000 r--s 0008a000 103:05 8449740                   /home/conor/mathematica/SystemFiles/Links/DatabaseLink/Java/derbyclient.jar
+7f519c015000-7f519c017000 r--s 0000d000 103:05 8449729                   /home/conor/mathematica/SystemFiles/Links/DatabaseLink/Java/commons-logging-1.1.1.jar
+7f519c017000-7f519c01d000 r--s 00027000 103:05 8449736                   /home/conor/mathematica/SystemFiles/Links/DatabaseLink/Java/glazedlists.jar
+7f519c01d000-7f519c020000 r--s 0004b000 103:05 8449735                   /home/conor/mathematica/SystemFiles/Links/DatabaseLink/Java/jtds-1.3.1.jar
+7f519c020000-7f519c027000 r--s 00036000 103:05 8420286                   /home/conor/mathematica/AddOns/Packages/GUIKit/Java/concurrent.jar
+7f519c027000-7f519c028000 r--s 00009000 103:05 8420285                   /home/conor/mathematica/AddOns/Packages/GUIKit/Java/OculusLayout.jar
+7f519c028000-7f519c02a000 r--s 0000d000 103:05 8420289                   /home/conor/mathematica/AddOns/Packages/GUIKit/Java/bsf-Wolfram.jar
+7f519c02a000-7f519c032000 r--s 00040000 103:05 8420291                   /home/conor/mathematica/AddOns/Packages/GUIKit/Java/diva-canvas-core.jar
+7f519c032000-7f519c036000 r--s 00026000 103:05 8420293                   /home/conor/mathematica/AddOns/Packages/GUIKit/Java/bsf.jar
+7f519c036000-7f519c03b000 r--s 00010000 103:05 8420294                   /home/conor/mathematica/AddOns/Packages/GUIKit/Java/xmlParserAPIs.jar
+7f519c03b000-7f519c04d000 r--s 000ba000 103:05 8420288                   /home/conor/mathematica/AddOns/Packages/GUIKit/Java/xercesImpl.jar
+7f519c04d000-7f519c054000 r--s 0003d000 103:05 8420287                   /home/conor/mathematica/AddOns/Packages/GUIKit/Java/GUIKit.jar
+7f519c054000-7f519c055000 r--s 00011000 103:05 8422066                   /home/conor/mathematica/SystemFiles/Converters/Java/customizer.jar
+7f519c055000-7f519c059000 r--s 0002f000 103:05 8422071                   /home/conor/mathematica/SystemFiles/Converters/Java/commons-lang-2.1.jar
+7f519c059000-7f519c062000 r--s 00085000 103:05 8422062                   /home/conor/mathematica/SystemFiles/Converters/Java/JPEG2000b.jar
+7f519c062000-7f519c063000 r--s 00001000 103:05 8422075                   /home/conor/mathematica/SystemFiles/Converters/Java/jdbf.jar
+7f519c063000-7f519c065000 r--s 00006000 103:05 8422086                   /home/conor/mathematica/SystemFiles/Converters/Java/poi-excelant-3.11-20150702.jar
+7f519c065000-7f519c06b000 r--s 0004b000 103:05 8422051                   /home/conor/mathematica/SystemFiles/Converters/Java/poi-examples-3.11-20150702.jar
+7f519c06b000-7f519c076000 r--s 000a5000 103:05 8422083                   /home/conor/mathematica/SystemFiles/Converters/Java/jxl.jar
+7f519c076000-7f519c077000 r--s 00006000 103:05 8422079                   /home/conor/mathematica/SystemFiles/Converters/Java/bzip2.jar
+7f519c077000-7f519c07a000 r--s 00023000 103:05 8422073                   /home/conor/mathematica/SystemFiles/Converters/Java/jdom.jar
+7f519c07a000-7f519c07b000 r--s 00009000 103:05 8422074                   /home/conor/mathematica/SystemFiles/Converters/Java/gnu-regexp-1.1.4.jar
+7f519c07b000-7f519c083000 r--s 0007c000 103:05 8422061                   /home/conor/mathematica/SystemFiles/Converters/Java/core-3.0.0.jar
+7f519c083000-7f519c084000 r--s 00003000 103:05 8422085                   /home/conor/mathematica/SystemFiles/Converters/Java/externalservice.jar
+7f519c084000-7f519c086000 r--s 0000b000 103:05 8422078                   /home/conor/mathematica/SystemFiles/Converters/Java/tagsoup-1.0rc9.jar
+7f519c086000-7f519c13e000 r--s 0049f000 103:05 8422065                   /home/conor/mathematica/SystemFiles/Converters/Java/poi-ooxml-schemas-3.11-20150702.jar
+7f519c13e000-7f519c17b000 r--s 0024f000 103:05 8422090                   /home/conor/mathematica/SystemFiles/Converters/Java/xmlbeans-2.3.0.jar
+7f519c17b000-7f519c17c000 r--s 00003000 103:05 8422081                   /home/conor/mathematica/SystemFiles/Converters/Java/zxing-client.jar
+7f519c17c000-7f519c181000 r--s 00040000 103:05 8422055                   /home/conor/mathematica/SystemFiles/Converters/Java/commons-httpclient-3.0.jar
+7f519c181000-7f519c191000 r--s 0012b000 103:05 8422076                   /home/conor/mathematica/SystemFiles/Converters/Java/poi-scratchpad-3.11-20150702.jar
+7f519c191000-7f519c193000 r--s 0000e000 103:05 8422064                   /home/conor/mathematica/SystemFiles/Converters/Java/multiplayer.jar
+7f519c193000-7f519c1a0000 r--s 0007f000 103:05 8422094                   /home/conor/mathematica/SystemFiles/Converters/Java/commons-collections-3.2.jar
+7f519c1a0000-7f519c1af000 r--s 0011a000 103:05 8422084                   /home/conor/mathematica/SystemFiles/Converters/Java/poi-ooxml-3.11-20150702.jar
+7f519c1af000-7f519c1b1000 r--s 00008000 103:05 8422077                   /home/conor/mathematica/SystemFiles/Converters/Java/mediaplayer.jar
+7f519c1b1000-7f519c1b3000 r--s 00005000 103:05 8422091                   /home/conor/mathematica/SystemFiles/Converters/Java/stax-api-1.0.1.jar
+7f519c1b3000-7f519c1b8000 r--s 00048000 103:05 8422053                   /home/conor/mathematica/SystemFiles/Converters/Java/dom4j-1.6.1.jar
+7f519c1b8000-7f519c1c3000 r--s 000f8000 103:05 8422056                   /home/conor/mathematica/SystemFiles/Converters/Java/grib-8.0.jar
+7f519c1c3000-7f519c1c4000 r--s 0000a000 103:05 8422070                   /home/conor/mathematica/SystemFiles/Converters/Java/JSON.jar
+7f519c1c4000-7f519c1c6000 r--s 0000a000 103:05 8422059                   /home/conor/mathematica/SystemFiles/Converters/Java/commons-codec-1.3.jar
+7f519c1c6000-7f519c1d0000 r--s 00086000 103:05 8422069                   /home/conor/mathematica/SystemFiles/Converters/Java/ldap.jar
+7f519c1d0000-7f519c1d1000 r--s 002a0000 103:05 8422095                   /home/conor/mathematica/SystemFiles/Converters/Java/resourcesOptional.jar
+7f519c1d1000-7f519c1dc000 r--s 000bd000 103:05 8422057                   /home/conor/mathematica/SystemFiles/Converters/Java/jackcess-2.1.3.jar
+7f519c1dc000-7f519c20e000 r--s 00428000 103:05 8422063                   /home/conor/mathematica/SystemFiles/Converters/Java/netcdf-4.2.jar
+7f519c20e000-7f519c211000 ---p 00000000 00:00 0 
+7f519c211000-7f519c30f000 rw-p 00000000 00:00 0 
+7f519c30f000-7f519c312000 ---p 00000000 00:00 0 
+7f519c312000-7f519c410000 rw-p 00000000 00:00 0 
+7f519c410000-7f519c411000 ---p 00000000 00:00 0 
+7f519c411000-7f519cc11000 rw-p 00000000 00:00 0 
+7f519cc11000-7f519cc12000 ---p 00000000 00:00 0 
+7f519cc12000-7f519d412000 rw-p 00000000 00:00 0 
+7f519d412000-7f519d413000 ---p 00000000 00:00 0 
+7f519d413000-7f519dc13000 rw-p 00000000 00:00 0 
+7f519dc13000-7f519dc14000 ---p 00000000 00:00 0 
+7f519dc14000-7f519e414000 rw-p 00000000 00:00 0 
+7f519e414000-7f519e415000 ---p 00000000 00:00 0 
+7f519e415000-7f519ec15000 rw-p 00000000 00:00 0 
+7f519ec15000-7f519ec16000 ---p 00000000 00:00 0 
+7f519ec16000-7f519f416000 rw-p 00000000 00:00 0 
+7f519f416000-7f519f42c000 r-xp 00000000 103:05 3936754                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f519f42c000-7f519f62b000 ---p 00016000 103:05 3936754                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f519f62b000-7f519f62c000 rw-p 00015000 103:05 3936754                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f519f62c000-7f519f630000 r-xp 00000000 103:05 3939232                   /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f519f630000-7f519f82f000 ---p 00004000 103:05 3939232                   /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f519f82f000-7f519f830000 r--p 00003000 103:05 3939232                   /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f519f830000-7f519f831000 rw-p 00004000 103:05 3939232                   /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f519f831000-7f519f9a3000 r-xp 00000000 103:05 22282365                  /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f519f9a3000-7f519fba3000 ---p 00172000 103:05 22282365                  /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f519fba3000-7f519fbad000 r--p 00172000 103:05 22282365                  /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f519fbad000-7f519fbaf000 rw-p 0017c000 103:05 22282365                  /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f519fbaf000-7f519fbb3000 rw-p 00000000 00:00 0 
+7f519fbb3000-7f519fdce000 r-xp 00000000 103:05 8450142                   /home/conor/mathematica/SystemFiles/Links/JLink/SystemFiles/Libraries/Linux-x86-64/libJLinkNativeLibrary.so
+7f519fdce000-7f519ffcd000 ---p 0021b000 103:05 8450142                   /home/conor/mathematica/SystemFiles/Links/JLink/SystemFiles/Libraries/Linux-x86-64/libJLinkNativeLibrary.so
+7f519ffcd000-7f51a0000000 rw-p 0021a000 103:05 8450142                   /home/conor/mathematica/SystemFiles/Links/JLink/SystemFiles/Libraries/Linux-x86-64/libJLinkNativeLibrary.so
+7f51a0000000-7f51a012f000 rw-p 00000000 00:00 0 
+7f51a012f000-7f51a4000000 ---p 00000000 00:00 0 
+7f51a4000000-7f51a4021000 rw-p 00000000 00:00 0 
+7f51a4021000-7f51a8000000 ---p 00000000 00:00 0 
+7f51a8000000-7f51a8109000 rw-p 00000000 00:00 0 
+7f51a8109000-7f51ac000000 ---p 00000000 00:00 0 
+7f51ac000000-7f51ac128000 rw-p 00000000 00:00 0 
+7f51ac128000-7f51b0000000 ---p 00000000 00:00 0 
+7f51b0000000-7f51b04ad000 rw-p 00000000 00:00 0 
+7f51b04ad000-7f51b4000000 ---p 00000000 00:00 0 
+7f51b4000000-7f51b40bb000 rw-p 00000000 00:00 0 
+7f51b40bb000-7f51b8000000 ---p 00000000 00:00 0 
+7f51b8000000-7f51b81fd000 rw-p 00000000 00:00 0 
+7f51b81fd000-7f51bc000000 ---p 00000000 00:00 0 
+7f51bc000000-7f51bc4fc000 rw-p 00000000 00:00 0 
+7f51bc4fc000-7f51c0000000 ---p 00000000 00:00 0 
+7f51c0000000-7f51c0605000 rw-p 00000000 00:00 0 
+7f51c0605000-7f51c4000000 ---p 00000000 00:00 0 
+7f51c4000000-7f51c415c000 rw-p 00000000 00:00 0 
+7f51c415c000-7f51c8000000 ---p 00000000 00:00 0 
+7f51c8000000-7f51c84fe000 rw-p 00000000 00:00 0 
+7f51c84fe000-7f51cc000000 ---p 00000000 00:00 0 
+7f51cc000000-7f51cc332000 rw-p 00000000 00:00 0 
+7f51cc332000-7f51d0000000 ---p 00000000 00:00 0 
+7f51d0000000-7f51d0021000 rw-p 00000000 00:00 0 
+7f51d0021000-7f51d4000000 ---p 00000000 00:00 0 
+7f51d4000000-7f51d4116000 rw-p 00000000 00:00 0 
+7f51d4116000-7f51d8000000 ---p 00000000 00:00 0 
+7f51d8000000-7f51d8021000 rw-p 00000000 00:00 0 
+7f51d8021000-7f51dc000000 ---p 00000000 00:00 0 
+7f51dc000000-7f51dc021000 rw-p 00000000 00:00 0 
+7f51dc021000-7f51e0000000 ---p 00000000 00:00 0 
+7f51e0000000-7f51e0021000 rw-p 00000000 00:00 0 
+7f51e0021000-7f51e4000000 ---p 00000000 00:00 0 
+7f51e4000000-7f51e4002000 r--s 0000d000 103:05 8422082                   /home/conor/mathematica/SystemFiles/Converters/Java/commons-logging-1.1.1.jar
+7f51e4002000-7f51e4004000 r--s 00014000 103:05 8422092                   /home/conor/mathematica/SystemFiles/Converters/Java/Exif.jar
+7f51e4004000-7f51e4008000 r--s 0002f000 103:05 8422089                   /home/conor/mathematica/SystemFiles/Converters/Java/prefsAll.jar
+7f51e4008000-7f51e401e000 r--s 00110000 103:05 8422080                   /home/conor/mathematica/SystemFiles/Converters/Java/xercesImpl.jar
+7f51e401e000-7f51e4026000 r--s 00028000 103:05 8422088                   /home/conor/mathematica/SystemFiles/Converters/Java/xml-apis.jar
+7f51e4026000-7f51e4049000 r--s 001ee000 103:05 8422068                   /home/conor/mathematica/SystemFiles/Converters/Java/poi-3.11-20150702.jar
+7f51e4049000-7f51e4061000 r--s 001b9000 103:05 8422054                   /home/conor/mathematica/SystemFiles/Converters/Java/jmf.jar
+7f51e4061000-7f51e4092000 rw-s 00000000 00:18 16                         /dev/shm/ptgh5_shm
+7f51e4092000-7f51e40c3000 rw-s 00000000 00:18 15                         /dev/shm/uvn49_shm
+7f51e40c3000-7f51e40f4000 rw-s 00000000 00:18 14                         /dev/shm/9wyu9_shm
+7f51e40f4000-7f51e40f5000 ---p 00000000 00:00 0 
+7f51e40f5000-7f51e41f5000 rw-p 00000000 00:00 0 
+7f51e41f5000-7f51e41f8000 ---p 00000000 00:00 0 
+7f51e41f8000-7f51e42f6000 rw-p 00000000 00:00 0 
+7f51e42f6000-7f51e42f9000 ---p 00000000 00:00 0 
+7f51e42f9000-7f51e43f7000 rw-p 00000000 00:00 0 
+7f51e43f7000-7f51e43fa000 ---p 00000000 00:00 0 
+7f51e43fa000-7f51e44f8000 rw-p 00000000 00:00 0 
+7f51e44f8000-7f51e44fb000 ---p 00000000 00:00 0 
+7f51e44fb000-7f51e45f9000 rw-p 00000000 00:00 0 
+7f51e45f9000-7f51e45fc000 ---p 00000000 00:00 0 
+7f51e45fc000-7f51e46fa000 rw-p 00000000 00:00 0 
+7f51e46fa000-7f51e46fd000 ---p 00000000 00:00 0 
+7f51e46fd000-7f51e47fb000 rw-p 00000000 00:00 0 
+7f51e47fb000-7f51e47fe000 ---p 00000000 00:00 0 
+7f51e47fe000-7f51e48fc000 rw-p 00000000 00:00 0 
+7f51e48fc000-7f51e48ff000 ---p 00000000 00:00 0 
+7f51e48ff000-7f51e49fd000 rw-p 00000000 00:00 0 
+7f51e49fd000-7f51e4a00000 ---p 00000000 00:00 0 
+7f51e4a00000-7f51e4afe000 rw-p 00000000 00:00 0 
+7f51e4afe000-7f51e4b01000 ---p 00000000 00:00 0 
+7f51e4b01000-7f51e4bff000 rw-p 00000000 00:00 0 
+7f51e4bff000-7f51e4c02000 ---p 00000000 00:00 0 
+7f51e4c02000-7f51e4d00000 rw-p 00000000 00:00 0 
+7f51e4d00000-7f51e4d03000 ---p 00000000 00:00 0 
+7f51e4d03000-7f51e4e01000 rw-p 00000000 00:00 0 
+7f51e4e01000-7f51e4e04000 ---p 00000000 00:00 0 
+7f51e4e04000-7f51e4f02000 rw-p 00000000 00:00 0 
+7f51e4f02000-7f51e4f05000 ---p 00000000 00:00 0 
+7f51e4f05000-7f51e5003000 rw-p 00000000 00:00 0 
+7f51e5003000-7f51e5099000 r--s 0110a000 103:05 8421696                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/ext/jfxrt.jar
+7f51e5099000-7f51e5371000 r--p 00000000 103:05 22284053                  /usr/lib/locale/locale-archive
+7f51e5371000-7f51e5374000 ---p 00000000 00:00 0 
+7f51e5374000-7f51e5472000 rw-p 00000000 00:00 0 
+7f51e5472000-7f51e5475000 ---p 00000000 00:00 0 
+7f51e5475000-7f51e5573000 rw-p 00000000 00:00 0 
+7f51e5573000-7f51e5574000 ---p 00000000 00:00 0 
+7f51e5574000-7f51e8000000 rw-p 00000000 00:00 0 
+7f51e8000000-7f51e8021000 rw-p 00000000 00:00 0 
+7f51e8021000-7f51ec000000 ---p 00000000 00:00 0 
+7f51ec000000-7f51ec021000 rw-p 00000000 00:00 0 
+7f51ec021000-7f51f0000000 ---p 00000000 00:00 0 
+7f51f0000000-7f51f0021000 rw-p 00000000 00:00 0 
+7f51f0021000-7f51f4000000 ---p 00000000 00:00 0 
+7f51f4000000-7f51f4021000 rw-p 00000000 00:00 0 
+7f51f4021000-7f51f8000000 ---p 00000000 00:00 0 
+7f51f8000000-7f51f8021000 rw-p 00000000 00:00 0 
+7f51f8021000-7f51fc000000 ---p 00000000 00:00 0 
+7f51fc000000-7f51fc021000 rw-p 00000000 00:00 0 
+7f51fc021000-7f5200000000 ---p 00000000 00:00 0 
+7f5200000000-7f5200021000 rw-p 00000000 00:00 0 
+7f5200021000-7f5204000000 ---p 00000000 00:00 0 
+7f5204000000-7f5204021000 rw-p 00000000 00:00 0 
+7f5204021000-7f5208000000 ---p 00000000 00:00 0 
+7f5208000000-7f5208021000 rw-p 00000000 00:00 0 
+7f5208021000-7f520c000000 ---p 00000000 00:00 0 
+7f520c000000-7f520c021000 rw-p 00000000 00:00 0 
+7f520c021000-7f5210000000 ---p 00000000 00:00 0 
+7f5210000000-7f5210021000 rw-p 00000000 00:00 0 
+7f5210021000-7f5214000000 ---p 00000000 00:00 0 
+7f5214000000-7f5214021000 rw-p 00000000 00:00 0 
+7f5214021000-7f5218000000 ---p 00000000 00:00 0 
+7f5218000000-7f5218021000 rw-p 00000000 00:00 0 
+7f5218021000-7f521c000000 ---p 00000000 00:00 0 
+7f521c000000-7f521c021000 rw-p 00000000 00:00 0 
+7f521c021000-7f5220000000 ---p 00000000 00:00 0 
+7f5220000000-7f5220021000 rw-p 00000000 00:00 0 
+7f5220021000-7f5224000000 ---p 00000000 00:00 0 
+7f5224000000-7f5224002000 r--s 0000c000 103:05 8422058                   /home/conor/mathematica/SystemFiles/Converters/Java/activation.jar
+7f5224002000-7f5224004000 r--s 00005000 103:05 8422072                   /home/conor/mathematica/SystemFiles/Converters/Java/tar.jar
+7f5224004000-7f5224006000 r--s 00008000 103:05 8422067                   /home/conor/mathematica/SystemFiles/Converters/Java/javase-3.0.0.jar
+7f5224006000-7f5224008000 r--s 00014000 103:05 8422093                   /home/conor/mathematica/SystemFiles/Converters/Java/Convert.jar
+7f5224008000-7f522400e000 r--s 00055000 103:05 8422060                   /home/conor/mathematica/SystemFiles/Converters/Java/mail.jar
+7f522400e000-7f5224010000 r--s 00012000 103:05 8452199                   /home/conor/mathematica/SystemFiles/Autoload/PacletManager/Java/PacletManager.jar
+7f5224010000-7f5224012000 r--s 00013000 103:05 8452200                   /home/conor/mathematica/SystemFiles/Autoload/PacletManager/Java/WRIjdbm.jar
+7f5224012000-7f5224f00000 rw-p 00000000 00:00 0 
+7f5224f00000-7f5225000000 ---p 00000000 00:00 0 
+7f5225000000-7f5225540000 rwxp 00000000 00:00 0 
+7f5225540000-7f5234000000 ---p 00000000 00:00 0 
+7f5234000000-7f52344c4000 rw-p 00000000 00:00 0 
+7f52344c4000-7f5238000000 ---p 00000000 00:00 0 
+7f5238000000-7f5238006000 r--s 0006e000 103:05 8452202                   /home/conor/mathematica/SystemFiles/Autoload/PacletManager/Java/antlr.jar
+7f5238006000-7f523811b000 rw-p 00000000 00:00 0 
+7f523811b000-7f52382f4000 r--s 03d64000 103:05 8421694                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/rt.jar
+7f52382f4000-7f52394c5000 rw-p 00000000 00:00 0 
+7f52394c5000-7f52394c6000 ---p 00000000 00:00 0 
+7f52394c6000-7f52395c6000 rw-p 00000000 00:00 0 
+7f52395c6000-7f52395c7000 ---p 00000000 00:00 0 
+7f52395c7000-7f52396c7000 rw-p 00000000 00:00 0 
+7f52396c7000-7f52396c8000 ---p 00000000 00:00 0 
+7f52396c8000-7f52397c8000 rw-p 00000000 00:00 0 
+7f52397c8000-7f52397c9000 ---p 00000000 00:00 0 
+7f52397c9000-7f52398c9000 rw-p 00000000 00:00 0 
+7f52398c9000-7f52398ca000 ---p 00000000 00:00 0 
+7f52398ca000-7f52399ca000 rw-p 00000000 00:00 0 
+7f52399ca000-7f52399cb000 ---p 00000000 00:00 0 
+7f52399cb000-7f5239acb000 rw-p 00000000 00:00 0 
+7f5239acb000-7f5239acc000 ---p 00000000 00:00 0 
+7f5239acc000-7f5239bcc000 rw-p 00000000 00:00 0 
+7f5239bcc000-7f5239bcd000 ---p 00000000 00:00 0 
+7f5239bcd000-7f5239ccd000 rw-p 00000000 00:00 0 
+7f5239ccd000-7f5239cce000 ---p 00000000 00:00 0 
+7f5239cce000-7f5239dce000 rw-p 00000000 00:00 0 
+7f5239dce000-7f5239dcf000 ---p 00000000 00:00 0 
+7f5239dcf000-7f5239ecf000 rw-p 00000000 00:00 0 
+7f5239ecf000-7f5239ed0000 ---p 00000000 00:00 0 
+7f5239ed0000-7f5239fd0000 rw-p 00000000 00:00 0 
+7f5239fd0000-7f5239fd1000 ---p 00000000 00:00 0 
+7f5239fd1000-7f523a0d1000 rw-p 00000000 00:00 0 
+7f523a0d1000-7f523a0d2000 ---p 00000000 00:00 0 
+7f523a0d2000-7f523a1d2000 rw-p 00000000 00:00 0 
+7f523a1d2000-7f523a1d3000 ---p 00000000 00:00 0 
+7f523a1d3000-7f523a2d3000 rw-p 00000000 00:00 0 
+7f523a2d3000-7f523a2d4000 ---p 00000000 00:00 0 
+7f523a2d4000-7f523a4ea000 rw-p 00000000 00:00 0 
+7f523a4ea000-7f523a895000 ---p 00000000 00:00 0 
+7f523a895000-7f523a8b0000 r-xp 00000000 103:05 8421580                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/libzip.so
+7f523a8b0000-7f523aab0000 ---p 0001b000 103:05 8421580                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/libzip.so
+7f523aab0000-7f523aab1000 rw-p 0001b000 103:05 8421580                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/libzip.so
+7f523aab1000-7f523aabc000 r-xp 00000000 103:05 3937907                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f523aabc000-7f523acbb000 ---p 0000b000 103:05 3937907                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f523acbb000-7f523acbc000 r--p 0000a000 103:05 3937907                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f523acbc000-7f523acbd000 rw-p 0000b000 103:05 3937907                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f523acbd000-7f523acc3000 rw-p 00000000 00:00 0 
+7f523acc3000-7f523acce000 r-xp 00000000 103:05 3937911                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f523acce000-7f523aecd000 ---p 0000b000 103:05 3937911                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f523aecd000-7f523aece000 r--p 0000a000 103:05 3937911                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f523aece000-7f523aecf000 rw-p 0000b000 103:05 3937911                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f523aecf000-7f523aee5000 r-xp 00000000 103:05 3937890                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f523aee5000-7f523b0e4000 ---p 00016000 103:05 3937890                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f523b0e4000-7f523b0e5000 r--p 00015000 103:05 3937890                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f523b0e5000-7f523b0e6000 rw-p 00016000 103:05 3937890                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f523b0e6000-7f523b0e8000 rw-p 00000000 00:00 0 
+7f523b0e8000-7f523b0f0000 r-xp 00000000 103:05 3937902                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f523b0f0000-7f523b2ef000 ---p 00008000 103:05 3937902                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f523b2ef000-7f523b2f0000 r--p 00007000 103:05 3937902                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f523b2f0000-7f523b2f1000 rw-p 00008000 103:05 3937902                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f523b2f1000-7f523b31c000 r-xp 00000000 103:05 8421566                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/libjava.so
+7f523b31c000-7f523b51b000 ---p 0002b000 103:05 8421566                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/libjava.so
+7f523b51b000-7f523b51d000 rw-p 0002a000 103:05 8421566                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/libjava.so
+7f523b51d000-7f523b52a000 r-xp 00000000 103:05 8421577                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/libverify.so
+7f523b52a000-7f523b72a000 ---p 0000d000 103:05 8421577                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/libverify.so
+7f523b72a000-7f523b72c000 rw-p 0000d000 103:05 8421577                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/libverify.so
+7f523b72c000-7f523b733000 r-xp 00000000 103:05 3937912                   /lib/x86_64-linux-gnu/librt-2.23.so
+7f523b733000-7f523b932000 ---p 00007000 103:05 3937912                   /lib/x86_64-linux-gnu/librt-2.23.so
+7f523b932000-7f523b933000 r--p 00006000 103:05 3937912                   /lib/x86_64-linux-gnu/librt-2.23.so
+7f523b933000-7f523b934000 rw-p 00007000 103:05 3937912                   /lib/x86_64-linux-gnu/librt-2.23.so
+7f523b934000-7f523ba3c000 r-xp 00000000 103:05 3937875                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f523ba3c000-7f523bc3b000 ---p 00108000 103:05 3937875                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f523bc3b000-7f523bc3c000 r--p 00107000 103:05 3937875                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f523bc3c000-7f523bc3d000 rw-p 00108000 103:05 3937875                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f523bc3d000-7f523c916000 r-xp 00000000 103:05 8421548                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/server/libjvm.so
+7f523c916000-7f523cb15000 ---p 00cd9000 103:05 8421548                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/server/libjvm.so
+7f523cb15000-7f523cbee000 rw-p 00cd8000 103:05 8421548                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/server/libjvm.so
+7f523cbee000-7f523cc3a000 rw-p 00000000 00:00 0 
+7f523cc3a000-7f523cdfa000 r-xp 00000000 103:05 3937894                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f523cdfa000-7f523cffa000 ---p 001c0000 103:05 3937894                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f523cffa000-7f523cffe000 r--p 001c0000 103:05 3937894                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f523cffe000-7f523d000000 rw-p 001c4000 103:05 3937894                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f523d000000-7f523d004000 rw-p 00000000 00:00 0 
+7f523d004000-7f523d007000 r-xp 00000000 103:05 3937896                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7f523d007000-7f523d206000 ---p 00003000 103:05 3937896                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7f523d206000-7f523d207000 r--p 00002000 103:05 3937896                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7f523d207000-7f523d208000 rw-p 00003000 103:05 3937896                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7f523d208000-7f523d21e000 r-xp 00000000 103:05 8421624                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/jli/libjli.so
+7f523d21e000-7f523d41d000 ---p 00016000 103:05 8421624                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/jli/libjli.so
+7f523d41d000-7f523d41e000 rw-p 00015000 103:05 8421624                   /home/conor/mathematica/SystemFiles/Java/Linux-x86-64/lib/amd64/jli/libjli.so
+7f523d41e000-7f523d436000 r-xp 00000000 103:05 3937893                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f523d436000-7f523d635000 ---p 00018000 103:05 3937893                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f523d635000-7f523d636000 r--p 00017000 103:05 3937893                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f523d636000-7f523d637000 rw-p 00018000 103:05 3937893                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f523d637000-7f523d63b000 rw-p 00000000 00:00 0 
+7f523d63b000-7f523d661000 r-xp 00000000 103:05 3937892                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f523d661000-7f523d734000 rw-p 00000000 00:00 0 
+7f523d734000-7f523d737000 ---p 00000000 00:00 0 
+7f523d737000-7f523d839000 rw-p 00000000 00:00 0 
+7f523d839000-7f523d83b000 r--s 00011000 103:05 8452198                   /home/conor/mathematica/SystemFiles/Autoload/PacletManager/Java/mexprparser.jar
+7f523d83b000-7f523d83c000 r--s 00004000 103:05 8452201                   /home/conor/mathematica/SystemFiles/Autoload/PacletManager/Java/mexpr.jar
+7f523d83c000-7f523d842000 r--s 00041000 103:05 8421508                   /home/conor/mathematica/SystemFiles/Java/WolframSSHKeyGen.jar
+7f523d842000-7f523d847000 r--s 00042000 103:05 8421509                   /home/conor/mathematica/SystemFiles/Java/WolframSSH.jar
+7f523d847000-7f523d84b000 r--s 00039000 103:05 8450124                   /home/conor/mathematica/SystemFiles/Links/JLink/JLink.jar
+7f523d84b000-7f523d855000 rw-p 00000000 00:00 0 
+7f523d855000-7f523d85d000 rw-s 00000000 103:05 15466795                  /tmp/hsperfdata_conor/9143
+7f523d85d000-7f523d85e000 rw-p 00000000 00:00 0 
+7f523d85e000-7f523d85f000 r--p 00000000 00:00 0 
+7f523d85f000-7f523d860000 rw-p 00000000 00:00 0 
+7f523d860000-7f523d861000 r--p 00025000 103:05 3937892                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f523d861000-7f523d862000 rw-p 00026000 103:05 3937892                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f523d862000-7f523d863000 rw-p 00000000 00:00 0 
+7fff6f5f7000-7fff6f619000 rw-p 00000000 00:00 0                          [stack]
+7fff6f6f5000-7fff6f6f8000 r--p 00000000 00:00 0                          [vvar]
+7fff6f6f8000-7fff6f6fa000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xmx512m -Djava.system.class.loader=com.wolfram.jlink.JLinkSystemClassLoader -Djava.util.prefs.PreferencesFactory=com.wolfram.jlink.DisabledPreferencesFactory 
+java_command: com.wolfram.jlink.Install -init /tmp/m00000288181 -mathlink -linkprotocol SharedMemory -linkconnect -linkname 9wyu9_shm
+java_class_path (initial): /home/conor/mathematica/SystemFiles/Links/JLink/JLink.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/home/conor/mathematica/Executables:/home/conor/mathematica/SystemFiles/Graphics/Binaries/Linux-x86-64:/home/conor/mathematica/Executables:/home/conor/.bin:/usr/local/bin:/Users/johncosnett/anaconda/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/cuda-8.0/bin:/home/conor/anaconda2/bin:/home/cosnett/anaconda2/bin:/usr/local/cuda/bin:/home/conor/bin:/home/conor/.local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/conor/src/anaconda2/bin:/home/conor/Documents/uNi SUBJECTS/PH363 - Astronomical data analysis/omegaBash:/usr/bin/X11
+LD_LIBRARY_PATH=/home/conor/mathematica/SystemFiles/Libraries/Linux-x86-64:/usr/local/cuda-8.0/lib64:/usr/local/cuda-8.0/lib64
+SHELL=/usr/bin/zsh
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xad01e0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xad01e0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_SIGINFO
+SIGFPE: [libjvm.so+0x927fb0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libJLinkNativeLibrary.so+0xed140], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x927fb0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x927fb0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x9297f0], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libJLinkNativeLibrary.so+0xed140], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_SIGINFO
+SIGINT: [libJLinkNativeLibrary.so+0xed140], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_SIGINFO
+SIGTERM: [libJLinkNativeLibrary.so+0xed140], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_SIGINFO
+SIGQUIT: [libjvm.so+0x92abf0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=16.04
+DISTRIB_CODENAME=xenial
+DISTRIB_DESCRIPTION="Ubuntu 16.04.3 LTS"
+
+uname:Linux 4.15.0-42-generic #45~16.04.1-Ubuntu SMP Mon Nov 19 13:02:27 UTC 2018 x86_64
+libc:glibc 2.23 NPTL 2.23 
+rlimit: STACK 8192k, CORE 0k, NPROC 513933, NOFILE 1048576, AS infinity
+load average:0.24 0.36 0.46
+
+/proc/meminfo:
+MemTotal:       131696840 kB
+MemFree:        123112356 kB
+MemAvailable:   127622400 kB
+Buffers:          224540 kB
+Cached:          5237108 kB
+SwapCached:            0 kB
+Active:          3761028 kB
+Inactive:        3991756 kB
+Active(anon):    2293012 kB
+Inactive(anon):    71428 kB
+Active(file):    1468016 kB
+Inactive(file):  3920328 kB
+Unevictable:         320 kB
+Mlocked:             320 kB
+SwapTotal:      133881852 kB
+SwapFree:       133881852 kB
+Dirty:               912 kB
+Writeback:             0 kB
+AnonPages:       2291804 kB
+Mapped:           686420 kB
+Shmem:             73260 kB
+Slab:             447488 kB
+SReclaimable:     354908 kB
+SUnreclaim:        92580 kB
+KernelStack:       15808 kB
+PageTables:        42552 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    199730272 kB
+Committed_AS:    8808644 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      467832 kB
+DirectMap2M:    13877248 kB
+DirectMap1G:    119537664 kB
+
+
+CPU:total 20 (initial active 20) (10 cores per cpu, 2 threads per core) family 6 model 85 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 4226.933
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 0
+cpu cores	: 10
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 1257.246
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 1
+cpu cores	: 10
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 1977.731
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 2
+cpu cores	: 10
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 4276.637
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 3
+cpu cores	: 10
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 2651.694
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 4
+cpu cores	: 10
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 2300.667
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 8
+cpu cores	: 10
+apicid		: 16
+initial apicid	: 16
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 2110.157
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 9
+cpu cores	: 10
+apicid		: 18
+initial apicid	: 18
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 1592.793
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 10
+cpu cores	: 10
+apicid		: 20
+initial apicid	: 20
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 8
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 4296.863
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 11
+cpu cores	: 10
+apicid		: 22
+initial apicid	: 22
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 9
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 4100.002
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 12
+cpu cores	: 10
+apicid		: 24
+initial apicid	: 24
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 10
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 4282.773
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 0
+cpu cores	: 10
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 11
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 1288.968
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 1
+cpu cores	: 10
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 12
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 2270.819
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 2
+cpu cores	: 10
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 13
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 4180.441
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 3
+cpu cores	: 10
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 14
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 1662.603
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 4
+cpu cores	: 10
+apicid		: 9
+initial apicid	: 9
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 15
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 2110.869
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 8
+cpu cores	: 10
+apicid		: 17
+initial apicid	: 17
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 16
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 2224.934
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 9
+cpu cores	: 10
+apicid		: 19
+initial apicid	: 19
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 17
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 1600.712
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 10
+cpu cores	: 10
+apicid		: 21
+initial apicid	: 21
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 18
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 4266.304
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 11
+cpu cores	: 10
+apicid		: 23
+initial apicid	: 23
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 19
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 85
+model name	: Intel(R) Core(TM) i9-7900X CPU @ 3.30GHz
+stepping	: 4
+microcode	: 0x200004d
+cpu MHz		: 4100.001
+cache size	: 14080 KB
+physical id	: 0
+siblings	: 20
+core id		: 12
+cpu cores	: 10
+apicid		: 25
+initial apicid	: 25
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6600.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 131696840k(123103552k free), swap 133881852k(133881852k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.161-b12) for linux-amd64 JRE (1.8.0_161-b12), built on Dec 19 2017 16:12:43 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Sun Jan 13 12:22:31 2019
+elapsed time: 2 seconds (0d 0h 0m 2s)
+

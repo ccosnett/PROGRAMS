@@ -1,0 +1,66 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1795,         58]
+NotebookOptionsPosition[      1337,         42]
+NotebookOutlinePosition[      1680,         57]
+CellTagsIndexPosition[      1637,         54]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["https://joshuagrams.github.io/steno-jig/learn-plover.\
+html",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 1, 0],
+ FrontFaceColor->RGBColor[0, 1, 0],
+ BackFaceColor->RGBColor[0, 1, 0],
+ GraphicsColor->RGBColor[0, 1, 0],
+ FontSize->8,
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 1, 0],
+ Background->GrayLevel[0.5]]], "ExternalLanguage",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->(SystemOpen[cephalon`Private`xxx = First[{
+      SlotSequence[1]}]]& ),
+ CellFrameLabels->{{None, "hyperLink"}, {None, None}},
+ CellChangeTimes->{{3.771245217835229*^9, 
+  3.771245218300187*^9}},ExpressionUUID->"2b696d56-4e70-4407-92a1-\
+a9df89f5c423"],
+
+Cell["", "Subchapter",ExpressionUUID->"c625a52b-66f4-4b07-ba93-217091dd2414"]
+},
+WindowSize->{1661, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 695, 18, 90, "ExternalLanguage",ExpressionUUID->"2b696d56-4e70-4407-92a1-a9df89f5c423",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1256, 40, 77, 0, 128, "Subchapter",ExpressionUUID->"c625a52b-66f4-4b07-ba93-217091dd2414"]
+}
+]
+*)
+

@@ -1,0 +1,111 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3637,        103]
+NotebookOptionsPosition[      2891,         81]
+NotebookOutlinePosition[      3234,         96]
+CellTagsIndexPosition[      3191,         93]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["The goal is to express the transition equation in CNF",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.6657108684256456, 0.23898877484862702`, 0.8113683217589225],
+ FrontFaceColor->RGBColor[
+  0.6657108684256456, 0.23898877484862702`, 0.8113683217589225],
+ BackFaceColor->RGBColor[
+  0.6657108684256456, 0.23898877484862702`, 0.8113683217589225],
+ GraphicsColor->RGBColor[
+  0.6657108684256456, 0.23898877484862702`, 0.8113683217589225],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.6657108684256456, 0.23898877484862702`, 0.8113683217589225]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->False,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787428172589301*^9, 3.787428180583486*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"5e9469c9-acd4-47d0-bf82-a709fe28e0a5"],
+
+Cell[TextData[StyleBox["There are 8 choose 4 clauses like not x prime or not \
+x sub a or not x sub b or not x sub c or not x sub d",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787428186438068*^9, 3.787428216157598*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"0c653a48-7f72-47d0-b691-32b02f464ec8"],
+
+Cell[TextData[StyleBox["one for each of the four neighbors",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787428219855569*^9, 3.78742823096415*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"a9d2d4f4-081f-446f-9ef6-6167bb77c564"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"{", "}"}],
+  FontWeight->"Normal"]], "DisplayFormula",
+ CellChangeTimes->{{3.7874283044512053`*^9, 3.787428305400772*^9}},
+ FontSize->13,ExpressionUUID->"5b33c33c-a80e-4d29-8016-f8a3619c74b4"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 888, 19, 69, "Text",ExpressionUUID->"5e9469c9-acd4-47d0-bf82-a709fe28e0a5",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1449, 41, 639, 15, 69, "Text",ExpressionUUID->"0c653a48-7f72-47d0-b691-32b02f464ec8",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2091, 58, 565, 14, 69, "Text",ExpressionUUID->"a9d2d4f4-081f-446f-9ef6-6167bb77c564",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2659, 74, 228, 5, 50, "DisplayFormula",ExpressionUUID->"5b33c33c-a80e-4d29-8016-f8a3619c74b4"]
+}
+]
+*)
+

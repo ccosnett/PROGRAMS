@@ -1,0 +1,154 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4944,        146]
+NotebookOptionsPosition[      4046,        121]
+NotebookOutlinePosition[      4389,        136]
+CellTagsIndexPosition[      4346,        133]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["One nice way to look for a sequence of interesting \
+Life transitions is to assert that no cell stays alive more than four steps \
+in a row.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787405124731427*^9, 3.787405146947858*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"aec6c682-9011-4217-9b18-3f9746726839"],
+
+Cell[TextData[StyleBox["Let us therefore say that a mobile Life path is \
+sequence of transitions X0 X1 unto X r",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874051488037977`*^9, 3.787405170555078*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"cb983f66-331f-4386-a1a4-4efc064f78ce"],
+
+Cell[TextData[StyleBox["with the additional property that we have",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787405178690916*^9, 3.787405183641879*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"6694c54e-6418-43ee-9be0-fa32dfe6746e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   StyleBox["(",
+    FontWeight->"Normal"], 
+   RowBox[{
+    SubscriptBox[
+     OverscriptBox[
+      StyleBox["x",
+       FontWeight->"Normal"], "_"], 
+     RowBox[{"(", "t", ")"}]], "\[Or]", 
+    SubscriptBox[
+     OverscriptBox["x", "_"], 
+     RowBox[{"(", 
+      RowBox[{"t", "+", "1"}], ")"}]], "\[Or]", 
+    SubscriptBox[
+     OverscriptBox["x", "_"], 
+     RowBox[{"(", 
+      RowBox[{"t", "+", "2"}], ")"}]], "\[Or]", 
+    SubscriptBox[
+     OverscriptBox["x", "_"], 
+     RowBox[{"(", 
+      RowBox[{"t", "+", "3"}], ")"}]], "\[Or]", 
+    SubscriptBox[
+     OverscriptBox["x", "_"], 
+     RowBox[{"(", 
+      RowBox[{"t", "+", "4"}], ")"}]]}], ")"}], ",", 
+  "            "}]], "DisplayFormula",
+ CellChangeTimes->{{3.787405194757822*^9, 3.787405255380474*^9}},
+ FontSize->13,ExpressionUUID->"36180358-fd63-4a45-adab-2df04bd69dd9"],
+
+Cell[TextData[StyleBox["either this cell is dead at time zero, or, this cell \
+is dead at time step 1, or this cell is dead at time step 2, or, this cell is \
+dead at time step 3, or, this cell is dead at time step 4.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787405256096397*^9, 
+  3.787405299572893*^9}},ExpressionUUID->"38758fac-20c8-4fb0-80f7-\
+2400f82e502c"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 671, 16, 114, "Text",ExpressionUUID->"aec6c682-9011-4217-9b18-3f9746726839",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1232, 38, 622, 15, 69, "Text",ExpressionUUID->"cb983f66-331f-4386-a1a4-4efc064f78ce",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1857, 55, 573, 14, 69, "Text",ExpressionUUID->"6694c54e-6418-43ee-9be0-fa32dfe6746e",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2433, 71, 875, 29, 53, "DisplayFormula",ExpressionUUID->"36180358-fd63-4a45-adab-2df04bd69dd9"],
+Cell[3311, 102, 731, 17, 114, "Text",ExpressionUUID->"38758fac-20c8-4fb0-80f7-2400f82e502c",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+

@@ -1,0 +1,220 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7636,        212]
+NotebookOptionsPosition[      6141,        175]
+NotebookOutlinePosition[      6484,        190]
+CellTagsIndexPosition[      6441,        187]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Here is the story behind figure 35, in more detail.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787081919662485*^9, 
+  3.78708193035771*^9}},ExpressionUUID->"48b8509c-38c9-4063-8ced-\
+0653eb0e4e7e"],
+
+Cell[TextData[StyleBox["Damn that nap rejuvinated me.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787081931147559*^9, 3.787081939269318*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"02c28713-8e5f-43e8-a3bb-32d99660e7d4"],
+
+Cell[TextData[StyleBox["Since Life is two-dimensional we use variables x i j \
+instead of x j to indicate the states of individual cells, and x sub t i j \
+instead of x t j to indicate the states of cells at time t.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7870819494622803`*^9, 3.78708199471457*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"7a442a38-899f-4c09-83fd-0b2cb2923883"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox[
+   StyleBox["x",
+    FontWeight->"Normal"], "\[Prime]"], "=", 
+  RowBox[{"[", 
+   RowBox[{"2", "<", 
+    RowBox[{
+     SubscriptBox["x", "NW"], "+", "\[Ellipsis]", "+", 
+     RowBox[{
+      FractionBox["1", "2"], "x"}], "+", "\[Ellipsis]", "+", 
+     SubscriptBox["x", "SE"]}], "<", "4"}], " ", "]"}]}]], "DisplayFormula",
+ CellChangeTimes->{{3.787082059671983*^9, 3.787082107274851*^9}},
+ FontSize->13,ExpressionUUID->"d694a8a4-85c3-492f-8a4c-afd2c3b62980"],
+
+Cell[TextData[StyleBox["We generally assume that x sub t i j equals zero for \
+all cells outside of a given finite region, although the transition rule 35 \
+can allow cells ",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7870820069666843`*^9, 
+  3.787082040142395*^9}},ExpressionUUID->"efdeb478-7ac6-45f5-9a10-\
+cf008847a21d"],
+
+Cell[TextData[StyleBox["my use of living notation is more advanced than \
+Donald Knuth who values aesthetics over semantic living notation.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787082125053361*^9, 
+  3.787082150345191*^9}},ExpressionUUID->"5f045c69-7394-4b49-a9de-\
+ba110bbea9d7"],
+
+Cell[TextData[StyleBox["he still works with pencil",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787082157808711*^9, 3.7870821632573023`*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"35be06fb-14be-4615-8254-15dbcde6ab98"],
+
+Cell[TextData[StyleBox["In figure 35 the region was specified to be a 7 by 15 \
+rectangle at each unit of time.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.787082151813685*^9, {3.7870821875833282`*^9, 3.787082203670608*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"3ae69636-5181-4538-964a-c75648406bad"],
+
+Cell[TextData[StyleBox["Furthermore, configurations with three consecutive \
+live cells on a boundary edge were forbidden, so that cells outside the box \
+would not be activated.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787082204824459*^9, 3.787082245683999*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"823c8d17-65a8-43a9-b5e7-0bc60f5b81a9"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 563, 15, 69, "Text",ExpressionUUID->"48b8509c-38c9-4063-8ced-0653eb0e4e7e",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1124, 37, 560, 14, 69, "Text",ExpressionUUID->"02c28713-8e5f-43e8-a3bb-32d99660e7d4",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1687, 53, 723, 16, 114, "Text",ExpressionUUID->"7a442a38-899f-4c09-83fd-0b2cb2923883",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2413, 71, 500, 13, 80, "DisplayFormula",ExpressionUUID->"d694a8a4-85c3-492f-8a4c-afd2c3b62980"],
+Cell[2916, 86, 664, 17, 114, "Text",ExpressionUUID->"efdeb478-7ac6-45f5-9a10-cf008847a21d",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3583, 105, 653, 16, 114, "Text",ExpressionUUID->"5f045c69-7394-4b49-a9de-ba110bbea9d7",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4239, 123, 560, 14, 69, "Text",ExpressionUUID->"35be06fb-14be-4615-8254-15dbcde6ab98",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4802, 139, 646, 16, 69, "Text",ExpressionUUID->"3ae69636-5181-4538-964a-c75648406bad",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5451, 157, 686, 16, 114, "Text",ExpressionUUID->"823c8d17-65a8-43a9-b5e7-0bc60f5b81a9",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+

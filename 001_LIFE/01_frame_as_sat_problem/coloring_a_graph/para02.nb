@@ -1,0 +1,205 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7023,        197]
+NotebookOptionsPosition[      5508,        158]
+NotebookOutlinePosition[      5851,        173]
+CellTagsIndexPosition[      5808,        170]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["We could also add n times d choose 2 additional so \
+called exclusion clauses.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7873902514704647`*^9, 3.7873902667129993`*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"95624a02-8a76-402e-bbcf-cf61361eddfd"],
+
+Cell[TextData[StyleBox["vertices with more than one color are harmless",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7873902900343857`*^9, 3.7873903170940313`*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"8df533fe-ec65-4c29-a1fa-ba05d6a1e725"],
+
+Cell[TextData[StyleBox["Indeed, if we find a solution where vertex v has both \
+color 1 and color 2, then we will be extra happy, because it gives us two \
+legal ways to color vertex v.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787390320290564*^9, 3.787390354507835*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"816c9e0e-d8ab-4c89-8720-88afde5df4b0"],
+
+Cell[TextData[StyleBox["see exercise 14.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7873903567050123`*^9, 3.7873903605875273`*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"18dab9e1-5a04-4770-880f-d84f9305c56b"],
+
+Cell[CellGroupData[{
+
+Cell["", "Section",ExpressionUUID->"09bbc1f3-4782-4ebf-8a9b-371648df58e8"],
+
+Cell[TextData[StyleBox["Figure 33",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787390374922236*^9, 3.787390378330839*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"cd375489-85fa-4dba-b838-8ae0d89844a7"],
+
+Cell[TextData[StyleBox["The Conor McGregor graph of order 10.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787390380345249*^9, 3.787390390769949*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"9b7b579e-cb4d-4f5a-9351-58392122a982"],
+
+Cell[TextData[StyleBox["Each region of this map is identified by a two-digit \
+hexadecimal code.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7873903921044273`*^9, 3.787390427607254*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"f917e6e0-d945-409c-995f-e4512da12dc7"],
+
+Cell[TextData[StyleBox["Can you color the regions with four colors, never \
+using the same color for two adjacent regions?",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7873904291668577`*^9, 3.787390450462674*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"daebead5-4961-4780-ad4e-4054982cea18"]
+}, Open  ]]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 614, 15, 69, "Text",ExpressionUUID->"95624a02-8a76-402e-bbcf-cf61361eddfd",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1175, 37, 582, 14, 69, "Text",ExpressionUUID->"8df533fe-ec65-4c29-a1fa-ba05d6a1e725",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1760, 53, 693, 16, 114, "Text",ExpressionUUID->"816c9e0e-d8ab-4c89-8720-88afde5df4b0",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2456, 71, 577, 14, 69, "Text",ExpressionUUID->"18dab9e1-5a04-4770-880f-d84f9305c56b",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[3058, 89, 74, 0, 99, "Section",ExpressionUUID->"09bbc1f3-4782-4ebf-8a9b-371648df58e8"],
+Cell[3135, 91, 541, 14, 69, "Text",ExpressionUUID->"cd375489-85fa-4dba-b838-8ae0d89844a7",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3679, 107, 569, 14, 69, "Text",ExpressionUUID->"9b7b579e-cb4d-4f5a-9351-58392122a982",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4251, 123, 606, 15, 69, "Text",ExpressionUUID->"f917e6e0-d945-409c-995f-e4512da12dc7",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4860, 140, 632, 15, 69, "Text",ExpressionUUID->"daebead5-4961-4780-ad4e-4054982cea18",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}, Open  ]]
+}
+]
+*)
+

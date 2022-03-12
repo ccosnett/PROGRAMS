@@ -1,0 +1,112 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3306,        104]
+NotebookOptionsPosition[      2662,         85]
+NotebookOutlinePosition[      3026,        101]
+CellTagsIndexPosition[      2983,         98]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"a", " "}]], "DisplayFormula",
+ CellChangeTimes->{{3.787567828380929*^9, 3.787567839650154*^9}},
+ FontSize->13,ExpressionUUID->"e430b3eb-139f-4819-9c2d-582b0ced0403"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"x", "\[Equivalent]", "y"}],
+  FontWeight->"Normal"]], "DisplayFormula",
+ CellChangeTimes->{{3.787567911337021*^9, 3.787567916248788*^9}},
+ FontSize->13,ExpressionUUID->"df1a3f64-6871-4da3-8489-d54ecba963ee"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"cnf", "[", 
+  RowBox[{"x", "\[Equivalent]", "y"}], "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7875679191794662`*^9, 3.787567925023346*^9}},
+ CellLabel->"In[84]:=",ExpressionUUID->"9fc145cc-d538-4948-8f08-5308c9309a9f"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"CNF\"\>", "\<\"DNF\"\>"},
+    {
+     TagBox[
+      FormBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Not]", "x"}], "\[Or]", "y"}], ")"}], "\[And]", 
+        RowBox[{"(", 
+         RowBox[{"x", "\[Or]", 
+          RowBox[{"\[Not]", "y"}]}], ")"}]}],
+       TraditionalForm],
+      TraditionalForm,
+      Editable->True], 
+     TagBox[
+      FormBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"x", "\[And]", "y"}], ")"}], "\[Or]", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Not]", "x"}], "\[And]", 
+          RowBox[{"\[Not]", "y"}]}], ")"}]}],
+       TraditionalForm],
+      TraditionalForm,
+      Editable->True]}
+   },
+   AutoDelete->False,
+   GridBoxBackground->{"Columns" -> {{None}}, "Rows" -> {
+       GrayLevel[0.7], {
+        GrayLevel[1]}}},
+   GridBoxDividers->{"Columns" -> {{
+        GrayLevel[0]}}, "RowsIndexed" -> {2 -> GrayLevel[0]}},
+   GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {2, {0.7}, 2}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.787567927664966*^9},
+ CellLabel->"Out[84]=",ExpressionUUID->"1d9693fc-128b-41ad-bbc9-ae8600e68086"]
+}, Open  ]]
+},
+WindowSize->{1278, 1395},
+WindowMargins->{{Automatic, 0}, {Automatic, -1}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 189, 3, 49, "DisplayFormula",ExpressionUUID->"e430b3eb-139f-4819-9c2d-582b0ced0403"],
+Cell[750, 25, 243, 5, 49, "DisplayFormula",ExpressionUUID->"df1a3f64-6871-4da3-8489-d54ecba963ee"],
+Cell[CellGroupData[{
+Cell[1018, 34, 311, 6, 59, "Input",ExpressionUUID->"9fc145cc-d538-4948-8f08-5308c9309a9f"],
+Cell[1332, 42, 1314, 40, 214, "Output",ExpressionUUID->"1d9693fc-128b-41ad-bbc9-ae8600e68086"]
+}, Open  ]]
+}
+]
+*)
+

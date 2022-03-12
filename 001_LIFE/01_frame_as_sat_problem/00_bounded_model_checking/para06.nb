@@ -1,0 +1,146 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5360,        138]
+NotebookOptionsPosition[      4588,        116]
+NotebookOutlinePosition[      4931,        131]
+CellTagsIndexPosition[      4888,        128]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["how many states", "Section",
+ CellChangeTimes->{{3.787397721154916*^9, 
+  3.787397731018292*^9}},ExpressionUUID->"9be6dc99-1471-436f-b07a-\
+7ab40d639636"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"r", "=", "4"}],
+  FontWeight->"Normal"]], "DisplayFormula",
+ CellChangeTimes->{{3.7873977323865967`*^9, 3.787397734515024*^9}},
+ FontSize->13,ExpressionUUID->"e1c2df92-c021-41cf-8e8a-9b37486317fb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["how many Boolean variables represent a state", "Section",
+ CellChangeTimes->{{3.7873977475298023`*^9, 
+  3.787397765000432*^9}},ExpressionUUID->"d40b7092-0222-4fc7-ab6c-\
+44e028ab6977"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"n", "=", "16"}],
+  FontWeight->"Normal"]], "DisplayFormula",
+ CellChangeTimes->{{3.787397765928533*^9, 3.787397767209024*^9}, {
+  3.787397812879095*^9, 3.787397812923328*^9}},
+ FontSize->13,ExpressionUUID->"3e75aab1-bdfb-401d-b0da-c89c3dea0ad2"],
+
+Cell[BoxData[
+ FrameBox[
+  StyleBox[
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
+1: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
+4JkROAAAAAAAAAAAAAAAAAAAQGr/AJD0AnU=
+      "], {{0, 103}, {348, 0}}, {0, 255},
+      
+      ColorFunction->RGBColor],
+     BoxForm`ImageTag[
+     "Byte", ColorSpace -> "RGB", Interleaving -> True, MetaInformation -> 
+      Association[
+       "Comments" -> Association["Software" -> "gnome-screenshot"]]],
+     Selectable->False],
+    DefaultBaseStyle->"ImageGraphics",
+    ImageSizeRaw->{348, 103},
+    PlotRange->{{0, 348}, {0, 103}}],
+   StripOnInput->False,
+   Magnification->0.5 Inherited],
+  FrameStyle->RGBColor[
+   0.6105547025194917, 0.36981674677329757`, 0.04668840863455759],
+  RoundingRadius->30,
+  StripOnInput->False]], "Print",
+ Evaluatable->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.787397804709429*^9},ExpressionUUID->"10fc977a-f7a5-49d3-b37f-\
+d836ed8c3ec9"]
+}, Open  ]]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 160, 3, 99, "Section",ExpressionUUID->"9be6dc99-1471-436f-b07a-7ab40d639636"],
+Cell[743, 27, 233, 5, 50, "DisplayFormula",ExpressionUUID->"e1c2df92-c021-41cf-8e8a-9b37486317fb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1013, 37, 191, 3, 99, "Section",ExpressionUUID->"d40b7092-0222-4fc7-ab6c-44e028ab6977"],
+Cell[1207, 42, 281, 6, 50, "DisplayFormula",ExpressionUUID->"3e75aab1-bdfb-401d-b0da-c89c3dea0ad2"],
+Cell[1491, 50, 3081, 63, 139, "Print",ExpressionUUID->"10fc977a-f7a5-49d3-b37f-d836ed8c3ec9",
+ Evaluatable->False]
+}, Open  ]]
+}
+]
+*)
+

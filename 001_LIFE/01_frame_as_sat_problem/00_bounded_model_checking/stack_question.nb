@@ -1,0 +1,221 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7503,        213]
+NotebookOptionsPosition[      6018,        176]
+NotebookOutlinePosition[      6361,        191]
+CellTagsIndexPosition[      6318,        188]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["On p17 of TAOCP F6. Donald Knuth shows a sequence of \
+frames from Conways game of Life that end with the alive cells forming the \
+letters LIFE.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787404650565631*^9, 
+  3.787404701074456*^9}},ExpressionUUID->"7f4df3d8-e168-4710-9766-\
+5a1ad074f181"],
+
+Cell[TextData[StyleBox["In the next few paragraphs he describes how this is \
+achieved.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874047036536217`*^9, 
+  3.78740471795286*^9}},ExpressionUUID->"dc97f9bd-5ecd-4ebd-804a-\
+b847d26d5006"],
+
+Cell[TextData[StyleBox["He states that 190 clauses are needed for each cell \
+for each transition T.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787404719713168*^9, 3.787404785045761*^9}, {
+  3.7874048667914553`*^9, 3.787404869042262*^9}, {3.787404904261812*^9, 
+  3.787404909240213*^9}, {3.787405550938813*^9, 
+  3.787405552087016*^9}},ExpressionUUID->"6f3067b7-9796-44d5-bc11-\
+02e165c73359"],
+
+Cell[TextData[StyleBox["He does not provide these clauses.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787404786276454*^9, 3.7874047921736603`*^9}, 
+   3.787405602316223*^9, 
+   3.787405652122642*^9},ExpressionUUID->"82202efb-b4be-4865-a948-\
+7fe46ec431aa"],
+
+Cell[TextData[StyleBox["I am exploring this section as part of an undergrad \
+math project. I would love to be able to code up this example and get the \
+game of life to write other words besides LIFE.",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874047935041018`*^9, 3.787404808124976*^9}, {
+  3.787404954650855*^9, 
+  3.787404980460781*^9}},ExpressionUUID->"5928ab17-f543-4728-a5d2-\
+f31ddd403f20"],
+
+Cell[TextData[StyleBox["I wish Knuth had provided these clauses as I find it \
+difficult to infer them from his implicit description of them.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874048092739983`*^9, 
+  3.78740484470632*^9}},ExpressionUUID->"1e8b7ffe-c45a-4727-85da-\
+80924403ebd3"],
+
+Cell[TextData[StyleBox["Has anyone managed to write these clauses down?",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787404878258963*^9, 3.787404890008905*^9}, {
+  3.7874050191517687`*^9, 
+  3.787405020154581*^9}},ExpressionUUID->"ba1ddd04-01e3-4a22-ac9c-\
+2b4252ee80a8"],
+
+Cell[TextData[StyleBox["Here are screen shots of the section: and a link to a \
+pdf of a preprint of the book.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874048938617067`*^9, 
+  3.787404941270734*^9}},ExpressionUUID->"f2ff80d9-f43e-48b0-94e6-\
+b381caa3a5da"],
+
+Cell["\<\
+using a SAT solver to make Conways Game of Life write Characters and Words!\
+\>", "Section",
+ CellChangeTimes->{{3.7874056554017277`*^9, 
+  3.787405709958578*^9}},ExpressionUUID->"f96c393c-fb0c-46a3-bb4c-\
+4aeae8eac823"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 658, 17, 114, "Text",ExpressionUUID->"7f4df3d8-e168-4710-9766-5a1ad074f181",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1219, 39, 577, 16, 69, "Text",ExpressionUUID->"dc97f9bd-5ecd-4ebd-804a-b847d26d5006",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1799, 57, 735, 18, 69, "Text",ExpressionUUID->"6f3067b7-9796-44d5-bc11-02e165c73359",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2537, 77, 598, 16, 69, "Text",ExpressionUUID->"82202efb-b4be-4865-a948-7fe46ec431aa",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3138, 95, 766, 18, 114, "Text",ExpressionUUID->"5928ab17-f543-4728-a5d2-f31ddd403f20",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3907, 115, 631, 16, 69, "Text",ExpressionUUID->"1e8b7ffe-c45a-4727-85da-80924403ebd3",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4541, 133, 611, 16, 69, "Text",ExpressionUUID->"ba1ddd04-01e3-4a22-ac9c-2b4252ee80a8",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5155, 151, 626, 16, 69, "Text",ExpressionUUID->"f2ff80d9-f43e-48b0-94e6-b381caa3a5da",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5784, 169, 230, 5, 99, "Section",ExpressionUUID->"f96c393c-fb0c-46a3-bb4c-4aeae8eac823"]
+}
+]
+*)
+

@@ -1,0 +1,313 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10930,        305]
+NotebookOptionsPosition[      7370,        235]
+NotebookOutlinePosition[      7740,        251]
+CellTagsIndexPosition[      7697,        248]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Perhaps I should contact Basulto before I sign up for Susi", \
+"Subchapter",
+ CellChangeTimes->{{3.7686582105880203`*^9, 
+  3.7686582238033133`*^9}},ExpressionUUID->"0a188b67-9f41-443d-aef2-\
+f964485dde52"],
+
+Cell["today is the fifth of June I have 8 days until Susi closes", "Item",
+ CellChangeTimes->{{3.768658225552433*^9, 
+  3.76865824537819*^9}},ExpressionUUID->"6de7d8bb-cca3-4812-8dd7-\
+c5032ebec845"],
+
+Cell["", "Section",ExpressionUUID->"9d2cb2e8-8aea-48b2-88cc-f6a15fe0951d"],
+
+Cell[CellGroupData[{
+
+Cell["30th May 2019", "Section",
+ CellChangeTimes->{{3.768193852206708*^9, 
+  3.768193859014645*^9}},ExpressionUUID->"6c4e5f82-1ec3-42b1-bc30-\
+284627a1a1e6"],
+
+Cell["\<\
+Sign up for your maths degree. and then spend June and July trying to \
+implement a Markov Logic Network in Mathematica. Then make a you-tube demo of \
+your package. Then contact daniel lowd.\
+\>", "Text",
+ CellChangeTimes->{{3.768193946873809*^9, 3.768194014078199*^9}, 
+   3.768194066753244*^9},ExpressionUUID->"a274be29-0038-4e11-af1d-\
+3c4ebc9384b2"],
+
+Cell["\<\
+It could just be a front end for Alchemy with beautiful, literal, notation.\
+\>", "Subitem",
+ CellChangeTimes->{{3.7681940188541813`*^9, 
+  3.768194047100308*^9}},ExpressionUUID->"ac29c599-2550-4a12-a369-\
+207edaacf4ed"],
+
+Cell[CellGroupData[{
+
+Cell["June", "Item",
+ CellChangeTimes->{{3.768193873868081*^9, 
+  3.768193877573289*^9}},ExpressionUUID->"01d2d013-d18b-4cf0-afb2-\
+d2b6608cce8d"],
+
+Cell["July", "Item",
+ CellChangeTimes->{{3.7681938793708067`*^9, 
+  3.7681938809087563`*^9}},ExpressionUUID->"01444fd8-4b0d-4482-bce1-\
+44b3ae393831"],
+
+Cell["August", "Item",
+ CellChangeTimes->{{3.768193881587028*^9, 
+  3.768193883716604*^9}},ExpressionUUID->"2f264a10-0e10-49a1-bdb4-\
+33d9e4b37d3d"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["what ever you can code, you can understand", "Subchapter",
+ CellChangeTimes->{{3.768194213547193*^9, 
+  3.768194220106728*^9}},ExpressionUUID->"6f9420ee-0ba3-4a5b-abea-\
+5e2f46857f6d"],
+
+Cell[CellGroupData[{
+
+Cell["Lets get this maths degree set up as a placeholder.", "Section",
+ CellChangeTimes->{{3.768201605236925*^9, 
+  3.7682016145320587`*^9}},ExpressionUUID->"554a16b6-c04d-47ab-b82c-\
+57fb9c886cf8"],
+
+Cell[CellGroupData[{
+
+Cell["Make it look good on a PHD application.", "Item",
+ CellChangeTimes->{{3.768201615407297*^9, 
+  3.7682016248753967`*^9}},ExpressionUUID->"c236fcc8-81d5-4894-8206-\
+82929402b237"],
+
+Cell[CellGroupData[{
+
+Cell["List Relevant moocs to statistical relational learning", "Subitem",
+ CellChangeTimes->{{3.768201625507025*^9, 
+  3.768201637522422*^9}},ExpressionUUID->"a667f747-19a9-4487-a71e-\
+5861bad4f7ca"],
+
+Cell["Coursera graphical models for instance", "Subsubitem",
+ CellChangeTimes->{{3.768201638546157*^9, 
+  3.768201652809548*^9}},ExpressionUUID->"f98bd4e4-0f12-495d-b29a-\
+78a9969a1224"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["We need to organize SUSI grant, modules, and accommodation.", "Section",
+ CellChangeTimes->{{3.7682016646963167`*^9, 
+  3.768201686807054*^9}},ExpressionUUID->"ee216724-b784-4beb-a802-\
+2b5b7df1fba2"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Our priority is the SUSI. So we need to get in contact with Michael Meere \
+some how.\
+\>", "Item",
+ CellChangeTimes->{{3.768201691334844*^9, 
+  3.7682017168767567`*^9}},ExpressionUUID->"c6cd5db5-9ed4-4f7d-a2d6-\
+3b87b4a14c40"],
+
+Cell["\<\
+You could meet both him and Cora, when you go down to galway.\
+\>", "Subitem",
+ CellChangeTimes->{{3.768201720279636*^9, 
+  3.768201736026968*^9}},ExpressionUUID->"b03cc732-477f-41cd-8e4c-\
+64ed212c8a14"],
+
+Cell["Ask him what modules are available for next year.", "Item",
+ CellChangeTimes->{{3.768201741648467*^9, 
+  3.768201754025791*^9}},ExpressionUUID->"6ad3f59d-ec87-432b-a59c-\
+f7e8cc5bfc61"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["You need this as a placeholder", "Section",
+ CellChangeTimes->{{3.768201779760064*^9, 
+  3.768201784375773*^9}},ExpressionUUID->"83c771d0-b9e6-4829-a1a9-\
+e323218b831a"],
+
+Cell[CellGroupData[{
+
+Cell["you will be able to reboot your social interaction modules.", "Item",
+ CellChangeTimes->{{3.768201784977344*^9, 
+  3.768201815533738*^9}},ExpressionUUID->"add7f4bb-0d15-4113-9fa4-\
+1b1151ba0b70"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+You will have a token to sell on your PhD application. You will be able to \
+reuse James application.\
+\>", "Subitem",
+ CellChangeTimes->{{3.768201816733684*^9, 
+  3.768201842379301*^9}},ExpressionUUID->"24aad781-34d4-49b1-a9c0-\
+5eb84644ecf2"],
+
+Cell["And add bits on, and improve it.", "Subsubitem",
+ CellChangeTimes->{{3.768201850975009*^9, 
+  3.768201859601841*^9}},ExpressionUUID->"3e001305-7c68-4721-a142-\
+f45bd50f18a4"]
+}, Open  ]],
+
+Cell["Lets ask James for his project when you are down there.", "Item",
+ CellChangeTimes->{{3.768201871226823*^9, 
+  3.768201885583994*^9}},ExpressionUUID->"b733dc37-3084-4782-8d26-\
+24a34b50d4a7"],
+
+Cell["\<\
+Let us do a basic project explaining what a markov logic network is. Then you \
+make a front end for mathematica for the alchemy system. So that people can \
+use them in practical applications.\
+\>", "Subitem",
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.768201887066188*^9, 
+   3.768201933469143*^9}},ExpressionUUID->"8cccee23-4578-4c0d-a28d-\
+1d14f0616778"],
+
+Cell["Or code one from scratch in mathematica. (much harder)", "Item",
+ CellChangeTimes->{{3.768201935015459*^9, 
+  3.768201947362401*^9}},ExpressionUUID->"9239563e-ccac-49d1-8db2-\
+00f78d8ae732"],
+
+Cell[CellGroupData[{
+
+Cell["Code a markov logic network in markov logic.", "Subitem",
+ CellChangeTimes->{{3.7682019521160173`*^9, 
+  3.768201972865383*^9}},ExpressionUUID->"dff59c5d-03a1-4751-b969-\
+0f8e3eb45bec"],
+
+Cell["similar to how you can code lisp interpreter in lisp", "Subitem",
+ CellChangeTimes->{{3.768201976610865*^9, 
+  3.768201987120233*^9}},ExpressionUUID->"3a852d64-f4cc-424c-94f5-\
+d9f38d85317e"]
+}, Open  ]],
+
+Cell["\<\
+It is a placeholder. It will also help cut the uncertainty. To have a default.\
+\>", "Item",
+ CellChangeTimes->{{3.7682019997692413`*^9, 
+  3.768202018550014*^9}},ExpressionUUID->"505056b7-132d-46f5-82bc-\
+629a83729f76"],
+
+Cell["Lets work on this first.", "Item",
+ CellChangeTimes->{{3.7682020202101316`*^9, 
+  3.7682020257891397`*^9}},ExpressionUUID->"98c177f5-60f4-4a17-9a1a-\
+ce5e056f79fd"],
+
+Cell[TextData[StyleBox["No today we will compile a list of everybody working \
+on markov logic",
+ FontWeight->"Bold"]], "Item",
+ CellChangeTimes->{{3.768202028627922*^9, 
+  3.7682020417083406`*^9}},ExpressionUUID->"16c81f50-84e8-48f8-badd-\
+73d5dad9afac"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["Make updated profile photo", "Section",
+ CellChangeTimes->{{3.768553832242391*^9, 
+  3.7685538384660053`*^9}},ExpressionUUID->"b3f67944-f4ce-408b-a62b-\
+d95c0440336f"]
+}, Open  ]]
+},
+WindowSize->{1720, 1388},
+WindowMargins->{{Automatic, 51}, {0, Automatic}},
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 212, 4, 128, "Subchapter",ExpressionUUID->"0a188b67-9f41-443d-aef2-f964485dde52"],
+Cell[795, 28, 199, 3, 63, "Item",ExpressionUUID->"6de7d8bb-cca3-4812-8dd7-c5032ebec845"],
+Cell[997, 33, 74, 0, 99, "Section",ExpressionUUID->"9d2cb2e8-8aea-48b2-88cc-f6a15fe0951d"],
+Cell[CellGroupData[{
+Cell[1096, 37, 158, 3, 67, "Section",ExpressionUUID->"6c4e5f82-1ec3-42b1-bc30-284627a1a1e6"],
+Cell[1257, 42, 364, 7, 114, "Text",ExpressionUUID->"a274be29-0038-4e11-af1d-3c4ebc9384b2"],
+Cell[1624, 51, 230, 5, 53, "Subitem",ExpressionUUID->"ac29c599-2550-4a12-a369-207edaacf4ed"],
+Cell[CellGroupData[{
+Cell[1879, 60, 146, 3, 63, "Item",ExpressionUUID->"01d2d013-d18b-4cf0-afb2-d2b6608cce8d"],
+Cell[2028, 65, 150, 3, 63, "Item",ExpressionUUID->"01444fd8-4b0d-4482-bce1-44b3ae393831"],
+Cell[2181, 70, 148, 3, 63, "Item",ExpressionUUID->"2f264a10-0e10-49a1-bdb4-33d9e4b37d3d"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2390, 80, 190, 3, 128, "Subchapter",ExpressionUUID->"6f9420ee-0ba3-4a5b-abea-5e2f46857f6d"],
+Cell[CellGroupData[{
+Cell[2605, 87, 198, 3, 99, "Section",ExpressionUUID->"554a16b6-c04d-47ab-b82c-57fb9c886cf8"],
+Cell[CellGroupData[{
+Cell[2828, 94, 183, 3, 63, "Item",ExpressionUUID->"c236fcc8-81d5-4894-8206-82929402b237"],
+Cell[CellGroupData[{
+Cell[3036, 101, 199, 3, 53, "Subitem",ExpressionUUID->"a667f747-19a9-4487-a71e-5861bad4f7ca"],
+Cell[3238, 106, 186, 3, 50, "Subsubitem",ExpressionUUID->"f98bd4e4-0f12-495d-b29a-78a9969a1224"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3485, 116, 206, 3, 99, "Section",ExpressionUUID->"ee216724-b784-4beb-a802-2b5b7df1fba2"],
+Cell[CellGroupData[{
+Cell[3716, 123, 237, 6, 63, "Item",ExpressionUUID->"c6cd5db5-9ed4-4f7d-a2d6-3b87b4a14c40"],
+Cell[3956, 131, 214, 5, 53, "Subitem",ExpressionUUID->"b03cc732-477f-41cd-8e4c-64ed212c8a14"],
+Cell[4173, 138, 191, 3, 63, "Item",ExpressionUUID->"6ad3f59d-ec87-432b-a59c-f7e8cc5bfc61"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4413, 147, 175, 3, 99, "Section",ExpressionUUID->"83c771d0-b9e6-4829-a1a9-e323218b831a"],
+Cell[CellGroupData[{
+Cell[4613, 154, 201, 3, 63, "Item",ExpressionUUID->"add7f4bb-0d15-4113-9fa4-1b1151ba0b70"],
+Cell[CellGroupData[{
+Cell[4839, 161, 254, 6, 53, "Subitem",ExpressionUUID->"24aad781-34d4-49b1-a9c0-5eb84644ecf2"],
+Cell[5096, 169, 180, 3, 50, "Subsubitem",ExpressionUUID->"3e001305-7c68-4721-a142-f45bd50f18a4"]
+}, Open  ]],
+Cell[5291, 175, 197, 3, 63, "Item",ExpressionUUID->"b733dc37-3084-4782-8d26-24a34b50d4a7"],
+Cell[5491, 180, 372, 8, 92, "Subitem",ExpressionUUID->"8cccee23-4578-4c0d-a28d-1d14f0616778"],
+Cell[5866, 190, 196, 3, 63, "Item",ExpressionUUID->"9239563e-ccac-49d1-8db2-00f78d8ae732"],
+Cell[CellGroupData[{
+Cell[6087, 197, 191, 3, 53, "Subitem",ExpressionUUID->"dff59c5d-03a1-4751-b969-0f8e3eb45bec"],
+Cell[6281, 202, 197, 3, 53, "Subitem",ExpressionUUID->"3a852d64-f4cc-424c-94f5-d9f38d85317e"]
+}, Open  ]],
+Cell[6493, 208, 230, 5, 63, "Item",ExpressionUUID->"505056b7-132d-46f5-82bc-629a83729f76"],
+Cell[6726, 215, 170, 3, 63, "Item",ExpressionUUID->"98c177f5-60f4-4a17-9a1a-ce5e056f79fd"],
+Cell[6899, 220, 255, 5, 63, "Item",ExpressionUUID->"16c81f50-84e8-48f8-badd-73d5dad9afac"]
+}, Open  ]]
+}, Open  ]],
+Cell[7181, 229, 173, 3, 99, "Section",ExpressionUUID->"b3f67944-f4ce-408b-a62b-d95c0440336f"]
+}, Open  ]]
+}
+]
+*)
+

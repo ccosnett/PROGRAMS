@@ -1,0 +1,230 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8200,        222]
+NotebookOptionsPosition[      5433,        154]
+NotebookOutlinePosition[      7162,        204]
+CellTagsIndexPosition[      7119,        201]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["How to simulate keyboard input?",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7677789210967007`*^9, 3.767778935931189*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"ff9fc336-07de-4fba-be6e-a0c613c06e11"],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", " ", 
+  "\"\<https://askubuntu.com/questions/288114/how-to-simulate-keyboard-input\>\
+\"", "]"}]], "Input",
+ CellChangeTimes->{{3.767778821289817*^9, 3.76777883743592*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"13396282-5dbd-46a8-899f-f66a10e23835"],
+
+Cell[TextData[StyleBox["",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.767779096657386*^9},ExpressionUUID->"43556f34-cf30-412d-8f14-\
+4902c6c4aa7f"],
+
+Cell[TextData[StyleBox["How can I change what keys on my keyboard do?",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.767778938441957*^9, 
+  3.76777895573799*^9}},ExpressionUUID->"89ffd42c-3997-4111-bc65-\
+402dcd765564"],
+
+Cell[TextData[StyleBox["How can I create custom keyboard commands/shortcuts",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.767778957397081*^9, 
+  3.767778967054984*^9}},ExpressionUUID->"363c4f19-76f5-4c8e-9f03-\
+181238adea07"],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", " ", 
+  "\"\<Https://mathematica.stackexchange.com/questions/68864/customize-\
+keybindings-without-modifying-files-in-the-installation-directory?noredirect=\
+1&lq=1\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.7677789874428864`*^9, 3.767779004487859*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"1d0f3c95-3d7d-4cb7-a7ee-46571ab13f76"],
+
+Cell[TextData[StyleBox["",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.767779102255495*^9},ExpressionUUID->"a0daf70a-620b-4f6d-af14-\
+d9ac435731f1"],
+
+Cell[TextData[StyleBox["How do I remap certain keys or devices?",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.767779130024686*^9, 
+  3.767779135402526*^9}},ExpressionUUID->"1d49755e-62cc-4c25-8fc1-\
+73970a968e0d"],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", 
+  "\"\<https://askubuntu.com/questions/24916/how-do-i-remap-certain-keys-or-\
+devices\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.767779137193707*^9, 
+  3.7677791572191257`*^9}},ExpressionUUID->"8c6039df-5e31-4c94-b874-\
+4b91112f2368"]
+},
+WindowSize->{808, 911},
+WindowMargins->{{383, Automatic}, {Automatic, 224}},
+TaggingRules->{"LastCursorPosition" -> False},
+CellEpilog:>If[
+  IntegerQ[
+   CurrentValue[
+    SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}]], 
+  SelectionMove[
+    EvaluationCell[], Before, CellContents]; SelectionMove[
+    SelectedNotebook[], Next, Character, 
+    CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}]]; 
+  CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}] = False],
+CellEventActions:>{{"MenuCommand", "HandleShiftReturn"} :> (CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}] = If[
+     MemberQ[
+      FrontEndExecute[
+       FrontEnd`UndocumentedGetSelectionPacket[
+        SelectedNotebook[]]], "CharacterRange" -> Blank[]], 
+     Last[
+      ReplaceAll["CharacterRange", 
+       FrontEndExecute[
+        FrontEnd`UndocumentedGetSelectionPacket[
+         SelectedNotebook[]]]]], False]), {
+   "MenuCommand", "EvaluateCells"} :> (CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}] = If[
+     MemberQ[
+      FrontEndExecute[
+       FrontEnd`UndocumentedGetSelectionPacket[
+        SelectedNotebook[]]], "CharacterRange" -> Blank[]], 
+     Last[
+      ReplaceAll["CharacterRange", 
+       FrontEndExecute[
+        FrontEnd`UndocumentedGetSelectionPacket[
+         SelectedNotebook[]]]]], False]), PassEventsDown -> True},
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 564, 13, 69, "Text",ExpressionUUID->"ff9fc336-07de-4fba-be6e-a0c613c06e11",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1125, 35, 292, 5, 223, "Input",ExpressionUUID->"13396282-5dbd-46a8-899f-f66a10e23835"],
+Cell[1420, 42, 832, 22, 134, "Section",ExpressionUUID->"43556f34-cf30-412d-8f14-4902c6c4aa7f",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2255, 66, 557, 14, 114, "Text",ExpressionUUID->"89ffd42c-3997-4111-bc65-402dcd765564",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2815, 82, 564, 14, 114, "Text",ExpressionUUID->"363c4f19-76f5-4c8e-9f03-181238adea07",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3382, 98, 375, 6, 276, "Input",ExpressionUUID->"1d0f3c95-3d7d-4cb7-a7ee-46571ab13f76"],
+Cell[3760, 106, 832, 22, 134, "Section",ExpressionUUID->"a0daf70a-620b-4f6d-af14-d9ac435731f1",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4595, 130, 552, 14, 69, "Text",ExpressionUUID->"1d49755e-62cc-4c25-8fc1-73970a968e0d",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5150, 146, 279, 6, 190, "Input",ExpressionUUID->"8c6039df-5e31-4c94-b874-4b91112f2368"]
+}
+]
+*)
+

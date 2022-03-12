@@ -1,0 +1,166 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5582,        158]
+NotebookOptionsPosition[      4174,        131]
+NotebookOutlinePosition[      4517,        146]
+CellTagsIndexPosition[      4474,        143]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Each state t is encoded as a vector of boolean \
+variables",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787396735404121*^9, 3.787396750238052*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"9ee4a51c-bbfc-4e98-804d-25125b227ffd"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"t", "=", "t"}],
+  FontWeight->"Normal"]], "DisplayFormula",
+ CellChangeTimes->{{3.787396768594266*^9, 3.7873967700060263`*^9}},
+ FontSize->13,ExpressionUUID->"5b0fd2dd-23ff-4d2a-b418-9c006469c586"],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox[
+   StyleBox["x",
+    FontWeight->"Normal"], "t1"], ",", 
+  SubscriptBox["x", "t2"], ",", 
+  SubscriptBox["x", "t3"]}]], "DisplayFormula",
+ CellChangeTimes->{{3.787396775785714*^9, 3.787396781957057*^9}},
+ FontSize->13,ExpressionUUID->"9245eb3b-7139-46c2-ab49-2d1cbd2237e0"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"t", "=", "1"}],
+  FontWeight->"Normal"]], "DisplayFormula",
+ CellChangeTimes->{{3.787396786306756*^9, 3.787396787132925*^9}},
+ FontSize->13,ExpressionUUID->"92ef8433-fef0-4951-9c2c-1c6910bb3255"],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox[
+   StyleBox["x",
+    FontWeight->"Normal"], "11"], ",", 
+  SubscriptBox["x", "12"], ",", 
+  SubscriptBox["x", "13"]}]], "DisplayFormula",
+ CellChangeTimes->{{3.787396775785714*^9, 3.7873967924119797`*^9}},
+ FontSize->13,ExpressionUUID->"80024edd-3f98-4a1f-bdda-5d44f7b5ab97"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"t", "=", "2"}],
+  FontWeight->"Normal"]], "DisplayFormula",
+ CellChangeTimes->{{3.787396794940826*^9, 3.787396796148999*^9}},
+ FontSize->13,ExpressionUUID->"339b707b-b1a6-4994-9e54-1971bf083281"],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox[
+   StyleBox["x",
+    FontWeight->"Normal"], "21"], ",", 
+  SubscriptBox["x", "22"], ",", 
+  SubscriptBox["x", "23"]}]], "DisplayFormula",
+ CellChangeTimes->{{3.787396775785714*^9, 3.787396804267351*^9}},
+ FontSize->13,ExpressionUUID->"433086cf-3c1d-41f3-b55d-86694b52dd4d"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"t", "=", "3"}],
+  FontWeight->"Normal"]], "DisplayFormula",
+ CellChangeTimes->{{3.787396794940826*^9, 3.78739681602733*^9}},
+ FontSize->13,ExpressionUUID->"88f861a6-aa5d-4b5b-96db-c1ebe12e3d1f"],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox[
+   StyleBox["x",
+    FontWeight->"Normal"], "31"], ",", 
+  SubscriptBox["x", "32"], ",", 
+  SubscriptBox["x", "33"]}]], "DisplayFormula",
+ CellChangeTimes->{{3.787396775785714*^9, 3.787396821498958*^9}},
+ FontSize->13,ExpressionUUID->"7c478de1-bf69-4317-8718-4929035479fa"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"x", "=", 
+   RowBox[{
+    RowBox[{"1", "\[Or]", "x"}], "=", "0"}]}],
+  FontWeight->"Normal"]], "DisplayFormula",
+ CellChangeTimes->{{3.787396827578829*^9, 3.78739683221058*^9}},
+ FontSize->13,ExpressionUUID->"8766e715-a541-49f5-8ee9-3f229e3237d2"],
+
+Cell[TextData[StyleBox["Each transition r",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787396842458159*^9, 
+  3.787396846585257*^9}},ExpressionUUID->"f5367865-9de3-4601-adc2-\
+ada8e6347b78"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 590, 15, 69, "Text",ExpressionUUID->"9ee4a51c-bbfc-4e98-804d-25125b227ffd",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1151, 37, 233, 5, 50, "DisplayFormula",ExpressionUUID->"5b0fd2dd-23ff-4d2a-b418-9c006469c586"],
+Cell[1387, 44, 313, 8, 50, "DisplayFormula",ExpressionUUID->"9245eb3b-7139-46c2-ab49-2d1cbd2237e0"],
+Cell[1703, 54, 231, 5, 50, "DisplayFormula",ExpressionUUID->"92ef8433-fef0-4951-9c2c-1c6910bb3255"],
+Cell[1937, 61, 315, 8, 50, "DisplayFormula",ExpressionUUID->"80024edd-3f98-4a1f-bdda-5d44f7b5ab97"],
+Cell[2255, 71, 231, 5, 50, "DisplayFormula",ExpressionUUID->"339b707b-b1a6-4994-9e54-1971bf083281"],
+Cell[2489, 78, 313, 8, 50, "DisplayFormula",ExpressionUUID->"433086cf-3c1d-41f3-b55d-86694b52dd4d"],
+Cell[2805, 88, 230, 5, 50, "DisplayFormula",ExpressionUUID->"88f861a6-aa5d-4b5b-96db-c1ebe12e3d1f"],
+Cell[3038, 95, 313, 8, 50, "DisplayFormula",ExpressionUUID->"7c478de1-bf69-4317-8718-4929035479fa"],
+Cell[3354, 105, 283, 7, 50, "DisplayFormula",ExpressionUUID->"8766e715-a541-49f5-8ee9-3f229e3237d2"],
+Cell[3640, 114, 530, 15, 69, "Text",ExpressionUUID->"f5367865-9de3-4601-adc2-ada8e6347b78",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+

@@ -1,0 +1,334 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11768,        326]
+NotebookOptionsPosition[     10256,        290]
+NotebookOutlinePosition[     10620,        306]
+CellTagsIndexPosition[     10577,        303]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"a", " "}]], "DisplayFormula",
+ CellChangeTimes->{{3.787567828380929*^9, 3.787567839650154*^9}},
+ FontSize->13,ExpressionUUID->"e430b3eb-139f-4819-9c2d-582b0ced0403"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"x", "\[Equivalent]", "y"}],
+  FontWeight->"Normal"]], "DisplayFormula",
+ CellChangeTimes->{{3.787567911337021*^9, 3.787567916248788*^9}},
+ FontSize->13,ExpressionUUID->"df1a3f64-6871-4da3-8489-d54ecba963ee"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"cnf", "[", 
+  RowBox[{"x", "\[Equivalent]", "y"}], "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7875679191794662`*^9, 3.787567925023346*^9}},
+ CellLabel->"In[84]:=",ExpressionUUID->"9fc145cc-d538-4948-8f08-5308c9309a9f"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"CNF\"\>", "\<\"DNF\"\>"},
+    {
+     TagBox[
+      FormBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Not]", "x"}], "\[Or]", "y"}], ")"}], "\[And]", 
+        RowBox[{"(", 
+         RowBox[{"x", "\[Or]", 
+          RowBox[{"\[Not]", "y"}]}], ")"}]}],
+       TraditionalForm],
+      TraditionalForm,
+      Editable->True], 
+     TagBox[
+      FormBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"x", "\[And]", "y"}], ")"}], "\[Or]", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Not]", "x"}], "\[And]", 
+          RowBox[{"\[Not]", "y"}]}], ")"}]}],
+       TraditionalForm],
+      TraditionalForm,
+      Editable->True]}
+   },
+   AutoDelete->False,
+   GridBoxBackground->{"Columns" -> {{None}}, "Rows" -> {
+       GrayLevel[0.7], {
+        GrayLevel[1]}}},
+   GridBoxDividers->{"Columns" -> {{
+        GrayLevel[0]}}, "RowsIndexed" -> {2 -> GrayLevel[0]}},
+   GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {2, {0.7}, 2}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.787567927664966*^9},
+ CellLabel->"Out[84]=",ExpressionUUID->"1d9693fc-128b-41ad-bbc9-ae8600e68086"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "Section",ExpressionUUID->"5de98da5-56a2-4ead-a35d-919cfa6583f8"],
+
+Cell[TextData[StyleBox["I am trying to encode GOL in Boolean logic. like in \
+Knuths fascicle 6.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787568184761776*^9, 
+  3.7875682007353573`*^9}},ExpressionUUID->"afaabee2-f208-443f-85ee-\
+446ca6662c9f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"gra", "=", 
+   RowBox[{
+    RowBox[{"Item", "[", 
+     RowBox[{"#", ",", 
+      RowBox[{"Background", "\[Rule]", 
+       RowBox[{"Lighter", "[", 
+        RowBox[{"Gray", ",", " ", "0.2"}], "]"}]}]}], "]"}], "&"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Grid", "[", 
+  RowBox[{
+   RowBox[{
+    StyleBox[
+     RowBox[{"(", GridBox[{
+        {"\"\<\!\(\*SubscriptBox[\(xNW\), \(22\)]\)\>\"", 
+         "\"\<\!\(\*SubscriptBox[\(xN\), \(22\)]\)\>\"", 
+         "\"\<\!\(\*SubscriptBox[\(xNE\), \(22\)]\)\>\""},
+        {"\"\<\!\(\*SubscriptBox[\(xW\), \(22\)]\)\>\"", 
+         "\"\<\!\(\*SubscriptBox[\(x\), \(22\)]\)\>\"", 
+         "\"\<\!\(\*SubscriptBox[\(xE\), \(22\)]\)\>\""},
+        {"\"\<\!\(\*SubscriptBox[\(xSW\), \(22\)]\)\>\"", 
+         "\"\<\!\(\*SubscriptBox[\(xS\), \(22\)]\)\>\"", 
+         "\"\<\!\(\*SubscriptBox[\(xSE\), \(22\)]\)\>\""}
+       }], ")"}],
+     FontWeight->"Normal"], 
+    StyleBox["/.",
+     FontWeight->"Normal"], 
+    RowBox[{
+     StyleBox["{",
+      FontWeight->"Normal"], 
+     RowBox[{
+      RowBox[{"\"\<\!\(\*SubscriptBox[\(x\), \(22\)]\)\>\"", "\[Rule]", 
+       RowBox[{
+       "gra", "[", "\"\<\!\(\*SubscriptBox[\(x\), \(22\)]\)\>\"", "]"}]}], 
+      ",", 
+      RowBox[{"\"\<\!\(\*SubscriptBox[\(xP\), \(32\)]\)\>\"", "\[Rule]", 
+       RowBox[{
+       "gra", "[", "\"\<\!\(\*SubscriptBox[\(xP\), \(32\)]\)\>\"", "]"}]}], 
+      ",", 
+      RowBox[{"\"\<\!\(\*SubscriptBox[\(xP\), \(22\)]\)\>\"", "\[Rule]", 
+       RowBox[{
+       "gra", "[", "\"\<\!\(\*SubscriptBox[\(xP\), \(22\)]\)\>\"", "]"}]}]}], 
+     "}"}]}], ",", 
+   RowBox[{"Frame", "\[Rule]", "All"}]}], "]"}]}], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{{3.7875564642642736`*^9, 3.787556515682349*^9}, {
+  3.787556587655665*^9, 3.787556604799337*^9}, {3.787556707389999*^9, 
+  3.78755685325401*^9}, {3.787568212506559*^9, 3.787568291204693*^9}},
+ FontSize->13,
+ CellLabel->"In[88]:=",ExpressionUUID->"ea9e109f-0604-4fb3-af93-180961248f39"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"\\!\\(\\*SubscriptBox[\\(xNW\\), \\(22\\)]\\)\"\>", \
+"\<\"\\!\\(\\*SubscriptBox[\\(xN\\), \\(22\\)]\\)\"\>", \
+"\<\"\\!\\(\\*SubscriptBox[\\(xNE\\), \\(22\\)]\\)\"\>"},
+    {"\<\"\\!\\(\\*SubscriptBox[\\(xW\\), \\(22\\)]\\)\"\>", 
+     ItemBox["\<\"\\!\\(\\*SubscriptBox[\\(x\\), \\(22\\)]\\)\"\>",
+      Background->RGBColor[0.6, 0.6, 0.6],
+      StripOnInput->
+       False], "\<\"\\!\\(\\*SubscriptBox[\\(xE\\), \\(22\\)]\\)\"\>"},
+    {"\<\"\\!\\(\\*SubscriptBox[\\(xSW\\), \\(22\\)]\\)\"\>", \
+"\<\"\\!\\(\\*SubscriptBox[\\(xS\\), \\(22\\)]\\)\"\>", \
+"\<\"\\!\\(\\*SubscriptBox[\\(xSE\\), \\(22\\)]\\)\"\>"}
+   },
+   AutoDelete->False,
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.787556738172222*^9, 3.787556778856756*^9}, 
+   3.787556814721547*^9, {3.787556847752472*^9, 3.787556853836989*^9}, {
+   3.787568278017992*^9, 3.787568292036807*^9}},
+ CellLabel->"Out[89]=",ExpressionUUID->"d051d800-b531-44e4-b131-9950f05f937c"]
+}, {2}]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"gra", "=", 
+   RowBox[{
+    RowBox[{"Item", "[", 
+     RowBox[{"#", ",", 
+      RowBox[{"Background", "\[Rule]", 
+       RowBox[{"Lighter", "[", 
+        RowBox[{"Gray", ",", " ", "0.2"}], "]"}]}]}], "]"}], "&"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Grid", "[", 
+  RowBox[{
+   RowBox[{
+    StyleBox[
+     RowBox[{"(", GridBox[{
+        {"\"\<\!\(\*SubscriptBox[\(xN\), \(21\)]\)\>\"", 
+         "\"\<\!\(\*SubscriptBox[\(xNE\), \(21\)]\)\>\"", "\"\<   \>\""},
+        {"\"\<\!\(\*SubscriptBox[\(x\), \(21\)]\)\>\"", 
+         "\"\<\!\(\*SubscriptBox[\(xE\), \(21\)]\)\>\"", "\"\<   \>\""},
+        {"\"\<\!\(\*SubscriptBox[\(xS\), \(21\)]\)\>\"", 
+         "\"\<\!\(\*SubscriptBox[\(xSE\), \(21\)]\)\>\"", "\"\<   \>\""}
+       }], ")"}],
+     FontWeight->"Normal"], 
+    StyleBox["/.",
+     FontWeight->"Normal"], 
+    RowBox[{
+     StyleBox["{",
+      FontWeight->"Normal"], 
+     RowBox[{
+      RowBox[{"\"\<\!\(\*SubscriptBox[\(x\), \(21\)]\)\>\"", "\[Rule]", 
+       RowBox[{
+       "gra", "[", "\"\<\!\(\*SubscriptBox[\(x\), \(21\)]\)\>\"", "]"}]}], 
+      ",", 
+      RowBox[{"\"\<\!\(\*SubscriptBox[\(xP\), \(32\)]\)\>\"", "\[Rule]", 
+       RowBox[{
+       "gra", "[", "\"\<\!\(\*SubscriptBox[\(xP\), \(32\)]\)\>\"", "]"}]}], 
+      ",", 
+      RowBox[{"\"\<\!\(\*SubscriptBox[\(xP\), \(22\)]\)\>\"", "\[Rule]", 
+       RowBox[{
+       "gra", "[", "\"\<\!\(\*SubscriptBox[\(xP\), \(22\)]\)\>\"", "]"}]}]}], 
+     "}"}]}], ",", 
+   RowBox[{"Frame", "\[Rule]", "All"}]}], "]"}]}], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787568321862522*^9, 3.7875683406395197`*^9}, {
+   3.7875683711455307`*^9, 3.787568391642324*^9}, {3.787569850132612*^9, 
+   3.787569852608857*^9}},
+ CellLabel->
+  "In[100]:=",ExpressionUUID->"97a72b06-19d8-47ac-bdb9-caede0e12fe6"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"\\!\\(\\*SubscriptBox[\\(xN\\), \\(21\\)]\\)\"\>", \
+"\<\"\\!\\(\\*SubscriptBox[\\(xNE\\), \\(21\\)]\\)\"\>", "\<\"   \"\>"},
+    {
+     ItemBox["\<\"\\!\\(\\*SubscriptBox[\\(x\\), \\(21\\)]\\)\"\>",
+      Background->RGBColor[0.6, 0.6, 0.6],
+      StripOnInput->
+       False], "\<\"\\!\\(\\*SubscriptBox[\\(xE\\), \\(21\\)]\\)\"\>", "\<\"  \
+ \"\>"},
+    {"\<\"\\!\\(\\*SubscriptBox[\\(xS\\), \\(21\\)]\\)\"\>", \
+"\<\"\\!\\(\\*SubscriptBox[\\(xSE\\), \\(21\\)]\\)\"\>", "\<\"   \"\>"}
+   },
+   AutoDelete->False,
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{
+  3.78756833517271*^9, {3.787568372252104*^9, 3.7875683920103817`*^9}, {
+   3.787569848916503*^9, 3.7875698533381977`*^9}},
+ CellLabel->
+  "Out[101]=",ExpressionUUID->"ae2ebc65-d96e-4392-ac32-4c82884cc4e8"]
+}, {2}]],
+
+Cell[TextData[{
+ StyleBox["I want to encode the fact that ",
+  StripOnInput->False,
+  LineColor->GrayLevel[0],
+  FrontFaceColor->GrayLevel[0],
+  BackFaceColor->GrayLevel[0],
+  GraphicsColor->GrayLevel[0],
+  FontWeight->Normal,
+  FontColor->GrayLevel[0]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "21"], "=", 
+    RowBox[{"x", "\[InvisibleSpace]", 
+     SubscriptBox["W", "22"]}]}], TraditionalForm]], "DisplayFormulaNumbered",
+  
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "4b0397d9-b9a2-4801-88fd-087bdb66b282"]
+}], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787569866585224*^9, 
+  3.787569903342605*^9}},ExpressionUUID->"29bb07f3-9e38-4eb0-be45-\
+a7e9b157287b"]
+}, Open  ]]
+},
+WindowSize->{1278, 1395},
+WindowMargins->{{Automatic, 0}, {Automatic, -1}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 189, 3, 49, "DisplayFormula",ExpressionUUID->"e430b3eb-139f-4819-9c2d-582b0ced0403"],
+Cell[750, 25, 243, 5, 49, "DisplayFormula",ExpressionUUID->"df1a3f64-6871-4da3-8489-d54ecba963ee"],
+Cell[CellGroupData[{
+Cell[1018, 34, 311, 6, 59, "Input",ExpressionUUID->"9fc145cc-d538-4948-8f08-5308c9309a9f"],
+Cell[1332, 42, 1314, 40, 180, "Output",ExpressionUUID->"1d9693fc-128b-41ad-bbc9-ae8600e68086"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2683, 87, 74, 0, 98, "Section",ExpressionUUID->"5de98da5-56a2-4ead-a35d-919cfa6583f8"],
+Cell[2760, 89, 612, 16, 69, "Text",ExpressionUUID->"afaabee2-f208-443f-85ee-446ca6662c9f",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[3397, 109, 2026, 50, 271, "Input",ExpressionUUID->"ea9e109f-0604-4fb3-af93-180961248f39"],
+Cell[5426, 161, 1111, 21, 170, "Output",ExpressionUUID->"d051d800-b531-44e4-b131-9950f05f937c"]
+}, {2}]],
+Cell[CellGroupData[{
+Cell[6571, 187, 1868, 48, 293, "Input",ExpressionUUID->"97a72b06-19d8-47ac-bdb9-caede0e12fe6"],
+Cell[8442, 237, 944, 21, 170, "Output",ExpressionUUID->"ae2ebc65-d96e-4392-ac32-4c82884cc4e8"]
+}, {2}]],
+Cell[9398, 261, 842, 26, 69, "Text",ExpressionUUID->"29bb07f3-9e38-4eb0-be45-a7e9b157287b",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}, Open  ]]
+}
+]
+*)
+

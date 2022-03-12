@@ -1,0 +1,459 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15646,        451]
+NotebookOptionsPosition[     14252,        416]
+NotebookOutlinePosition[     14595,        431]
+CellTagsIndexPosition[     14552,        428]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["so we need to turn the transitions into clauses.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787155385743143*^9, 3.7871553941882477`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"7504d683-0941-410f-9586-952b6b71727e"],
+
+Cell[TextData[StyleBox["Lets search through the intro and the first example \
+to find a simple example of writing down clauses and feeding them to a sat \
+solver.",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787155396754794*^9, 3.787155425026887*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"815a700e-acad-467c-a81d-8050626c0be3"],
+
+Cell[TextData[StyleBox["Given a boolean formula",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787155435669024*^9, 3.787155440729886*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"1e7e26f1-9854-4ec4-a77d-b1f66b03ff63"],
+
+Cell[TextData[StyleBox["expressed as a sequence of clauses or ORs",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787155442202436*^9, 3.787155450073635*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"0353b4a9-b412-4c5e-aec4-dd52b26c171e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "F", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"F", "[", 
+    RowBox[{"x1_", ",", "x2_", ",", "x3_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"x1", "\[Or]", 
+      RowBox[{"\[Not]", "x2"}]}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{"x2", "\[Or]", "x3"}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"\[Not]", "x1"}], "\[Or]", 
+      RowBox[{"\[Not]", "x3"}]}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"\[Not]", "x1"}], "\[Or]", 
+      RowBox[{"\[Not]", "x2"}], "\[Or]", "x3"}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"sat", "[", 
+  RowBox[{"x1", ",", "x2", ",", "x3", ",", 
+   RowBox[{
+    RowBox[{"F", "[", 
+     RowBox[{"x1", ",", "x2", ",", "x3"}], "]"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{"x1", "\[Or]", "x2", "\[Or]", 
+      RowBox[{"\[Not]", "x3"}]}], ")"}]}]}], "]"}]}], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellFrameLabels->{{None, None}, {None, 
+    Cell[
+     TextData[{
+       StyleBox["input", FontColor -> GrayLevel[0.5]], " ", 
+       "(Mathematica Code)"}], "Input", FontSize -> 13, FontColor -> 
+     RGBColor[0.8491033800710062, 0.0031235304134196173`, 
+       0.06325861363578178], FontFamily -> "TeX Gyre Chorus", Background -> 
+     GrayLevel[0.99]]}},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7871554572883043`*^9, 3.787155549941217*^9}, {
+   3.7871592037623663`*^9, 3.7871592440293083`*^9}, {3.787159284671167*^9, 
+   3.78715928485089*^9}},
+ Background->GrayLevel[0.95],
+ CellLabel->"In[18]:=",ExpressionUUID->"3e8da39c-e028-41cc-92ab-99d5edd4f2a3"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellFrame->{{True, True}, {True, False}},
+ CellFrameLabels->{{None, None}, {
+    Cell[
+     TextData[{"output"}], "Input", Background -> GrayLevel[0.99], FontSize -> 
+     13, FontColor -> GrayLevel[0.5], FontFamily -> "TeX Gyre Chorus"], None}},
+ CellChangeTimes->{
+  3.7871554573324633`*^9, {3.787155547464122*^9, 3.7871555508580227`*^9}, {
+   3.787159183097971*^9, 3.7871592073861437`*^9}, 3.787159244652294*^9, 
+   3.787159285146983*^9},
+ Background->GrayLevel[0.85],
+ CellLabel->"Out[20]=",ExpressionUUID->"6d85fea6-4f11-42e7-8160-59f07556975d"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["A clause is an OR of literals",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 1],
+ FrontFaceColor->RGBColor[1, 0, 1],
+ BackFaceColor->RGBColor[1, 0, 1],
+ GraphicsColor->RGBColor[1, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787159622490601*^9, 3.787159627736177*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"631016b7-f114-4f10-a9b9-3300ce331971"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "R", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"R", "[", 
+    RowBox[{"x1_", ",", "x2_", ",", "x3_", ",", "x4_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"x1", "\[Or]", "x2", "\[Or]", 
+      RowBox[{"\[Not]", "x3"}]}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{"x2", "\[Or]", "x3", "\[Or]", 
+      RowBox[{"\[Not]", "x4"}]}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{"x3", "\[Or]", "x4", "\[Or]", "x1"}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{"x4", "\[Or]", 
+      RowBox[{"\[Not]", "x1"}], "\[Or]", "x2"}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"\[Not]", "x1"}], "\[Or]", 
+      RowBox[{"\[Not]", "x2"}], "\[Or]", "x3"}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"\[Not]", "x2"}], "\[Or]", 
+      RowBox[{"\[Not]", "x3"}], "\[Or]", "x4"}], ")"}], "\[And]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"\[Not]", "x3"}], "\[Or]", 
+      RowBox[{"\[Not]", "x4"}], "\[Or]", 
+      RowBox[{"\[Not]", "x1"}]}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"tabl", "[", 
+  RowBox[{"x1", ",", "x2", ",", "x3", ",", "x4", ",", 
+   RowBox[{"R", "[", 
+    RowBox[{"x1", ",", "x2", ",", "x3", ",", "x4"}], "]"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellFrameLabels->{{None, None}, {None, 
+    Cell[
+     TextData[{
+       StyleBox["input", FontColor -> GrayLevel[0.5]], " ", 
+       "(Mathematica Code)"}], "Input", FontSize -> 13, FontColor -> 
+     RGBColor[0.8491033800710062, 0.0031235304134196173`, 
+       0.06325861363578178], FontFamily -> "TeX Gyre Chorus", Background -> 
+     GrayLevel[0.99]]}},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7871599213503017`*^9, 3.787160054048869*^9}},
+ Background->GrayLevel[0.95],
+ CellLabel->"In[26]:=",ExpressionUUID->"95e05a4f-b530-4d6c-9ad7-3499798194b3"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"\\!\\(\\*FormBox[\\\"x1\\\", TraditionalForm]\\)\"\>", \
+"\<\"\\!\\(\\*FormBox[\\\"x2\\\", TraditionalForm]\\)\"\>", \
+"\<\"\\!\\(\\*FormBox[\\\"x3\\\", TraditionalForm]\\)\"\>", \
+"\<\"\\!\\(\\*FormBox[\\\"x4\\\", TraditionalForm]\\)\"\>", \
+"\<\"\\!\\(\\*FormBox[RowBox[{RowBox[{\\\"(\\\", RowBox[{\\\"x1\\\", \
+\\\"\[Or]\\\", \\\"x2\\\", \\\"\[Or]\\\", RowBox[{\\\"\[Not]\\\", \
+\\\"x3\\\"}]}], \\\")\\\"}], \\\"\[And]\\\", RowBox[{\\\"(\\\", \
+RowBox[{\\\"x2\\\", \\\"\[Or]\\\", \\\"x3\\\", \\\"\[Or]\\\", RowBox[{\\\"\
+\[Not]\\\", \\\"x4\\\"}]}], \\\")\\\"}], \\\"\[And]\\\", RowBox[{\\\"(\\\", \
+RowBox[{\\\"x3\\\", \\\"\[Or]\\\", \\\"x4\\\", \\\"\[Or]\\\", \\\"x1\\\"}], \
+\\\")\\\"}], \\\"\[And]\\\", RowBox[{\\\"(\\\", RowBox[{\\\"x4\\\", \\\"\[Or]\
+\\\", RowBox[{\\\"\[Not]\\\", \\\"x1\\\"}], \\\"\[Or]\\\", \\\"x2\\\"}], \
+\\\")\\\"}], \\\"\[And]\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"\[Not]\\\", \\\"x1\\\"}], \\\"\[Or]\\\", RowBox[{\\\"\
+\[Not]\\\", \\\"x2\\\"}], \\\"\[Or]\\\", \\\"x3\\\"}], \\\")\\\"}], \
+\\\"\[And]\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"\[Not]\\\", \
+\\\"x2\\\"}], \\\"\[Or]\\\", RowBox[{\\\"\[Not]\\\", \\\"x3\\\"}], \
+\\\"\[Or]\\\", \\\"x4\\\"}], \\\")\\\"}], \\\"\[And]\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"\[Not]\\\", \\\"x3\\\"}], \\\"\[Or]\\\", RowBox[{\\\"\
+\[Not]\\\", \\\"x4\\\"}], \\\"\[Or]\\\", RowBox[{\\\"\[Not]\\\", \
+\\\"x1\\\"}]}], \\\")\\\"}]}], TraditionalForm]\\)\"\>"},
+    {
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0"},
+    {
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0", "0"},
+    {
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0", 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0"},
+    {
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0", "0", "0"},
+    {
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0", 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0"},
+    {
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0", 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0", "0"},
+    {
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0", "0", 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0"},
+    {
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0", "0", "0", "0"},
+    {"0", 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False]},
+    {"0", 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0", "0"},
+    {"0", 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0", 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False]},
+    {"0", 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0", "0", "0"},
+    {"0", "0", 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0"},
+    {"0", "0", 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0", "0"},
+    {"0", "0", "0", 
+     ItemBox["1",
+      Background->RGBColor[1, 
+        Rational[1, 3], 1],
+      StripOnInput->False], "0"},
+    {"0", "0", "0", "0", "0"}
+   },
+   AutoDelete->False,
+   FrameStyle->GrayLevel[0.5],
+   GridBoxBackground->{"Columns" -> {{None}}, "Rows" -> {
+       GrayLevel[0.7], {
+        GrayLevel[1]}}},
+   GridBoxDividers->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{0.7}}, "Rows" -> {{0.7}}}],
+  "Grid"]], "Output",
+ CellFrame->{{True, True}, {True, False}},
+ CellFrameLabels->{{None, None}, {
+    Cell[
+     TextData[{"output"}], "Input", Background -> GrayLevel[0.99], FontSize -> 
+     13, FontColor -> GrayLevel[0.5], FontFamily -> "TeX Gyre Chorus"], None}},
+ CellChangeTimes->{3.787159921400537*^9, 3.787160054538006*^9},
+ Background->GrayLevel[0.85],
+ CellLabel->"Out[28]=",ExpressionUUID->"e704e413-60c6-425a-9204-4dde14466678"]
+}, Open  ]]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 606, 14, 69, "Text",ExpressionUUID->"7504d683-0941-410f-9586-952b6b71727e",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1167, 36, 694, 16, 114, "Text",ExpressionUUID->"815a700e-acad-467c-a81d-8050626c0be3",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1864, 54, 554, 14, 69, "Text",ExpressionUUID->"1e7e26f1-9854-4ec4-a77d-b1f66b03ff63",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2421, 70, 572, 14, 69, "Text",ExpressionUUID->"0353b4a9-b412-4c5e-aec4-dd52b26c171e",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[3018, 88, 1712, 45, 229, "Input",ExpressionUUID->"3e8da39c-e028-41cc-92ab-99d5edd4f2a3"],
+Cell[4733, 135, 597, 12, 179, "Output",ExpressionUUID->"6d85fea6-4f11-42e7-8160-59f07556975d"]
+}, Open  ]],
+Cell[5345, 150, 586, 14, 69, "Text",ExpressionUUID->"631016b7-f114-4f10-a9b9-3300ce331971",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[5956, 168, 1978, 50, 315, "Input",ExpressionUUID->"95e05a4f-b530-4d6c-9ad7-3499798194b3"],
+Cell[7937, 220, 6299, 193, 948, "Output",ExpressionUUID->"e704e413-60c6-425a-9204-4dde14466678"]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,546 @@
+BeginPackage["RussianTools`"];
+Unprotect["RussianTools`*"]; ClearAll["RussianTools`*"]; ClearAll["RussianTools`Private`*"];
+keyboardRussian::usage = "keyboardRussian[]";
+keyboardRussianUpper::usage = "keyboardRussianUpper[]";
+
+buttoner::usage = "buttoner[str]";
+hardVowels::usage = "hardVowels[]";
+softVowels::usage = "softVowels[]";
+variantConsonants::usage = "variantConsonants[]";
+invariantHardConsonants::usage = "invariantHardConsonants[]";
+keyboardRussianPaster::usage = "keyboardRussianPaster[]";
+
+
+
+
+
+
+
+(*jsonToCardSet1::usage = "jsonToCardSet1[jsonFile]";*)
+(*jsonToCardSet2::usage = "jsonToCardSet2[jsonFile]";*)
+(*jsonToCardSet3::usage = "jsonToCardSet3[jsonFile]";*)
+jsonToDeck::usage = "jsonToDeck[jsonFile, deckFile]";
+
+
+
+dayNouns::usage = "dayNouns[]";
+numberNouns::usage = "numberNouns[]";
+foodNouns::usage = "foodNouns[]";
+
+verbs1to50::usage = "verbs1to50[]";
+
+name::usage = "name[nam][img]";
+
+nameFormat::usage = "nameFormat[name]";
+
+nameF::usage = "nameF[n,word]";
+
+
+rootF::usage = "rootF[]";
+imageConCat::usage = "imageConCat[im1,im2]";
+
+russianWordFrequencyRank::usage = "russianWordFrequencyRank[]";
+
+russianImport::usage = "russianImport[lexicalClass,semanticClass]";
+
+
+rsav::usage = "rsav[en,rus,image, lexicalClass, semanticClass]";
+temp::usage = "temp[en,rus,img]";
+
+russianJasonify::usage = "russianJasonify[data]";
+
+openHere::usage = "openHere[]";
+
+rdel::usage = "rdel[lexicalClass, semanticClass,case]";
+
+russianPDFmaker::usage = "russianPDFmaker[data,name]";
+
+longestRun::usage = "longestRun[]";
+thousCounter::usage = "thousCounter[]";
+
+
+accuracyCounter::usage = "accuracyCounter[]";
+
+copyTranslate::usage = "copyTranslate[eng]";
+
+accuracyGraph::usage = "accuracyGraph[]";
+
+Begin["`Private`"];
+
+
+accuracyGraph :=
+ Module[{fil1, fil2, file1, file2, accLis, data},
+  fil1 = "/home/conor/.local/share/Anki2/addons21/1836029849/thous.\
+txt";
+  DeleteFile[fil1];
+  CreateFile[fil1];
+  Export[fil1, {"1", "2", ""}, "Table"] // Import;
+  fil2 = "/home/conor/.local/share/Anki2/addons21/1836029849/\
+allChordsCount.txt";
+  DeleteFile[fil2];
+  CreateFile[fil2];
+  Export[fil2, {"1", "2", ""}, "Table"] // Import;
+  file1 =
+   "/home/conor/.local/share/Anki2/addons21/1836029849/thous.txt";
+  file2 =
+   "/home/conor/.local/share/Anki2/addons21/1836029849/allChordsCount.\
+txt";
+  last = #[[-2]] &;
+  accLis = {0.1, 0.1};
+  styl = Style[#, FontSize -> 50, FontColor -> Magenta,
+     FontFamily -> "Nimbus Mono L", FontWeight -> Bold] &;
+  Dynamic[Refresh[filesize := FileByteCount[file2];
+    allChords = Flatten@Import[file2, "TABLE"];
+    successfulChords = Flatten@Import[file1, "TABLE"];
+
+    AppendTo[accLis, Last@successfulChords/Last@allChords];
+
+    data = accLis;
+    Show[
+     ListPlot[data, Joined -> True, PlotTheme -> "Marketing"],
+     ListPlot[data, PlotStyle -> {PointSize[Medium], Green},
+      PlotTheme -> "Marketing"]
+      ],
+
+
+
+    TrackedSymbols :> {filesize}]]];
+
+
+copyTranslate[eng_] := Cases[
+      #[[1 ;; 2]] & /@ russianImport["*", "*"]
+      , {eng, _} ] // First // Last // CopyToClipboard;
+
+accuracyCounter := Module[{fil1, fil2, file1, file2},
+   
+   fil1 = 
+    "/home/conor/.local/share/Anki2/addons21/1836029849/thous.txt";
+   DeleteFile[fil1];
+   CreateFile[fil1];
+   Export[fil1, {"1", "2", "\n"}, "Table"] // Import;
+   
+   fil2 = 
+    "/home/conor/.local/share/Anki2/addons21/1836029849/\
+allChordsCount.txt";
+   DeleteFile[fil2];
+   CreateFile[fil2];
+   Export[fil2, {"1", "2", "\n"}, "Table"] // Import;
+   
+   file1 = 
+    "/home/conor/.local/share/Anki2/addons21/1836029849/thous.txt";
+   file2 = 
+    "/home/conor/.local/share/Anki2/addons21/1836029849/\
+allChordsCount.txt";
+   last = #[[-2]] &;
+   styl = 
+    Style[#, FontSize -> 50, FontColor -> Magenta, 
+      FontFamily -> "Nimbus Mono L", FontWeight -> Bold] &;
+   Dynamic[Refresh[filesize := FileByteCount[file2];
+     allChords = Last@last@Import[file2, "TABLE"];
+     successfulChords = Last@last@Import[file1, "TABLE"];
+     Button[
+      Row[{"accuracy = ", 
+        Internal`RationalNoReduce[ successfulChords, allChords], 
+        " = ", ToString[Round[successfulChords/allChords , 0.01]] }] ,
+       BaseStyle -> {"GenericButton", 20}], 
+     TrackedSymbols :> {filesize}, UpdateInterval -> 5]]];
+
+
+longestRun := Module[{fil, file},
+   fil = "/home/conor/.local/share/Anki2/addons21/1836029849/do_re_mi.\
+txt";
+   DeleteFile[fil];
+   CreateFile[fil];
+   Export[fil, {"1", "2", "\n"}, "Table"] // Import;
+   file =
+    "/home/conor/.local/share/Anki2/addons21/1836029849/do_re_mi.txt";\
+
+   Dynamic[
+    Refresh[
+     filesize := FileByteCount[file];
+     data = Max@Import[file, "TABLE"];
+     Button[
+	     Row[	     { "longest-run = ", Style[ToString[data ] , FontSize -> 50, FontColor -> Magenta,      FontFamily -> "Nimbus Mono L", FontWeight -> Bold]}]
+     ]
+     , TrackedSymbols :> {filesize}
+     , UpdateInterval -> 5]]
+    ];
+
+
+
+thousCounter := Module[{fil, file},
+   fil = "/home/conor/.local/share/Anki2/addons21/1836029849/thous.\
+txt";
+   DeleteFile[fil];
+   CreateFile[fil];
+   Export[fil, {"1", "2", "\n"}, "Table"] // Import;
+   file =
+    "/home/conor/.local/share/Anki2/addons21/1836029849/thous.txt";\
+
+   Dynamic[
+    Refresh[
+     filesize := FileByteCount[file];
+     data = Max@Import[file, "TABLE"];
+     Button[
+	     Row[	     { "successfully chorded count  = ", Style[ToString[data ] , FontSize -> 50, FontColor -> Magenta,      FontFamily -> "Nimbus Mono L", FontWeight -> Bold]}]
+     ]
+     , TrackedSymbols :> {filesize}
+     , UpdateInterval -> 5]]
+    ];
+
+
+russianPDFmaker[data_, name_] := Module[{out1, f, out2, out3, out4},
+   out1 = SortBy[data, Last];
+   f[x_, {n_}] := {n}~Join~x;
+   out2 = MapIndexed[f, out1];
+   out3 = Grid[out2 , Frame -> All, FrameStyle -> Cyan];
+   out4 =
+    Export[NotebookDirectory[] <> ToString[name] <> ".pdf", out3];
+   SystemOpen[NotebookDirectory[]];
+   SystemOpen[out4];
+   CopyToClipboard[out4];
+   out4
+    ];
+
+
+russianJasonify[data_] := Module[{formString, out1, out2, out3},
+   formString = StringReplace[#, {" " -> "-", "?" -> ""}] &;
+   out1 = {#[[1]], #[[2]]} & /@ data;
+   out2 = {StringReplace[#[[1]], {" " -> "-", "?" -> ""}], #[[2]]} & /@
+      out1;
+   out3 = Rule @@ # & /@ out2;
+   Export[NotebookDirectory[] <> "01_JSON_.json", out3, "JSON"]
+   ];
+
+openHere:=SystemOpen[NotebookDirectory[]];
+
+temp[en_,rus_,img_]:=CellPrint@Cell[BoxData[
+ RowBox[{"rsav", "[",
+  RowBox[{"\"\<"<>ToString[en]<>"\>\"", ",", "\"\<"<>ToString[rus]<>"\>\"", ",", img}], "]"}]], "Input",
+ CellChangeTimes->{{3.816249377001637*^9, 3.816249387454041*^9}, {3.819368923470767*^9,
+   3.819368935949018*^9}, {3.8194436542880917`*^9, 3.819443654294434*^9}, {3.820065362110557*^9,
+   3.8200653653174057`*^9}, 3.820065415129891*^9, {3.820669183175229*^9, 3.8206691942354813`*^9}, {
+   3.82067092071509*^9, 3.820670936833147*^9}, 3.821166837511579*^9, 3.8211668850028133`*^9, {
+   3.821435779934889*^9, 3.8214358318782473`*^9}, {3.821435954734068*^9, 3.82143595694882*^9}}];
+
+
+formString = StringReplace[#, {" " -> "-", "?" -> ""}] &;
+
+rdel[lexicalClass_, semanticClass_, case_] :=
+  Module[{rank, img, database, newDataBase, tt},
+   tt = ToString;
+   fileString =
+    "/home/conor/Dropbox/33_Nadira/03_data_base/" <>
+     ToString@lexicalClass <> "/" <> tt@semanticClass <> ".mx";
+   database = Import[fileString];
+   newDataBase = DeleteCases[database, case];
+   Export[fileString, newDataBase]
+   ];
+
+rsav[en_, rus_, image_, lexicalClass_, semanticClass_] :=
+  Module[{rank, img, database, newDataBase,tt},
+      tt=ToString;
+   fileString =
+    "/home/conor/Dropbox/33_Nadira/03_data_base/" <>
+     ToString@lexicalClass <> "/" <> ToString@semanticClass <> ".mx";
+   name[tt@en][image];
+   rank = russianWordFrequencyRank[rus];
+
+   img = (ImageResize[image, {200, 200}]);
+
+   If[
+    FileExistsQ[fileString]
+    , (
+     database = Import[fileString];
+
+     database = SortBy[database, Last];
+     newDataBase =
+      DeleteCases[DeleteDuplicates[database~Join~{{tt@en, tt@rus, img, rank}} ], {_, _, "-Image-", _}];
+     Export[fileString, newDataBase];
+     )
+    , Export[fileString, {{tt@en, tt@rus, tt@img, tt@rank}}]];
+   {tt@en, tt@rus, img, tt@rank}
+   ];
+
+russianImport[lexicalClass_: "*", semanticClass_ : "*"] := DeleteCases[# , {_, _, "-Image-", _}] &@Module[
+  {}, Join@@(
+   Import /@
+    FileNames[
+     "/home/conor/Dropbox/33_Nadira/03_data_base/" <>
+      ToString@lexicalClass <> "/" <> ToString@semanticClass <>
+      ".mx"] )
+   ];
+
+
+data = Import["https://raw.githubusercontent.com/ccosnett/russianWordFrequenciesRanks/main/russianWordFrequencies.mx"];
+russianWordFrequencyRank[w_] := If[
+
+    MemberQ[data, {ToLowerCase@w, _, _}]
+    , Cases[data, {ToLowerCase@w, _, _}, 3][[1, 3]]
+    , "?"
+];
+
+
+
+imageConCat[im1_, im2_,amount_:100] := ImagePad[ImageCollage[{im1, im2}] , {{0, 0}, {amount, amount}}];
+
+
+rootF:=Module[{},CellPrint[Cell[BoxData[{
+ RowBox[{
+  RowBox[{"data", "=",
+   RowBox[{"Import", "[",
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<01_JSON_.json\>\""}], "]"}]}], ";"}], "\n",
+ RowBox[{"MapIndexed", "[",
+  RowBox[{"nameF", ",",
+   RowBox[{"First", "/@", "data"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8206715580854063`*^9, 3.82067157430023*^9}, 3.820671690885435*^9, {3.82067176234181*^9,
+    3.820671779757964*^9}}]]];
+
+nameF[word_, {n_}]:=Module[{},
+    CellPrint@Cell[ToString[n], "Section",
+ CellChangeTimes->{{3.8162493888708067`*^9, 3.816249389334406*^9}, {3.819368915358821*^9,
+  3.819368916573967*^9}, {3.8200653369509487`*^9, 3.820065337358562*^9}}];
+CellPrint@Cell[BoxData[
+ RowBox[{
+  RowBox[{"name", "[", "\"\<"<>ToString[word]<>"\>\"", "]"}],
+  "[", "\"\<PICTURE\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.816249377001637*^9,
+   3.816249387454041*^9}, {3.819368923470767*^9,
+    3.819368935949018*^9}, {
+   3.8194436542880917`*^9,
+   3.819443654294434*^9}, {3.820065362110557*^9,
+    3.8200653653174057`*^9},
+   3.820065415129891*^9, {3.820669183175229*^9,
+   3.8206691942354813`*^9}, {
+   3.82067092071509*^9, 3.820670936833147*^9}}]];
+
+
+
+nameFormat[name_]:=Cell[BoxData[
+ RowBox[{
+  RowBox[{"name", "[", "\"\<"<>ToString[name]<>"\>\"", "]"}],
+  "[", "\"\<PICTURE\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.816249377001637*^9,
+   3.816249387454041*^9}, {3.819368923470767*^9,
+    3.819368935949018*^9}, {
+   3.8194436542880917`*^9,
+   3.819443654294434*^9}, {3.820065362110557*^9,
+    3.8200653653174057`*^9},
+   3.820065415129891*^9, {3.820669183175229*^9,
+   3.8206691942354813`*^9}, {
+   3.82067092071509*^9, 3.820670936833147*^9}}]
+
+
+
+
+
+
+name[nam_][img_] := Module[{mediaDir},
+  mediaDir = "~/.local/share/Anki2/User 1/collection.media/";
+
+  (*Export[NotebookDirectory[]<>ToString[nam ]<>".jpg",
+  ImageResize[#,{100,100}]&@img];*)
+
+  Export[mediaDir <> formString[ToString[nam ]] <> ".jpg",
+   ImageResize[#, {100, 100}] &@img];]
+
+verbs1to50[] := Module[{i1, l1},
+  
+  i1 = "/home/conor/Dropbox/33_Nadira/09_Lesson_9_verbs_50/01_verbs/\
+01_JSON_.json";
+  l1 = Map[First][Import[i1]];
+  Join[
+   l1
+   ] ];
+
+verbs1to50[1] := Module[{i1, l1},
+
+  i1 = "/home/conor/Dropbox/33_Nadira/09_Lesson_9_verbs_50/01_verbs/\
+01_JSON_.json";
+  l1 = Import[i1];
+  Join[
+   l1
+   ] ];
+
+
+foodNouns[] := Module[{i1, i2, i3, i4, i5, l1, l2, l3, l4, l5},
+  i1 = "/home/conor/Dropbox/33_Nadira/04_Lesson_4/01_food_page_1/00_\
+FOOD_.json";
+  i2 = "/home/conor/Dropbox/33_Nadira/04_Lesson_4/02_food_page_2/00_\
+FOOD_.json";
+  i3 = "/home/conor/Dropbox/33_Nadira/04_Lesson_4/03_food_page_3/00_\
+FOOD_.json";
+  i4 = "/home/conor/Dropbox/33_Nadira/04_Lesson_4/04_food_page_4/00_\
+FOOD_.json";
+  i5 = "/home/conor/Dropbox/33_Nadira/04_Lesson_4/05_food_page_5/00_\
+FOOD_.json";
+  
+  l1 = Map[First][Import[i1]];
+  l2 = Map[First][Import[i2]];
+  l3 = Map[First][Import[i3]];
+  l4 = Map[First][Import[i4]];
+  l5 = Map[First][Import[i5]];
+  
+  Join[
+   l1, l2, l3, l4, l5
+   ] ];
+
+foodNouns[1] := Module[{i1, i2, i3, i4, i5, l1, l2, l3, l4, l5},
+  i1 = "/home/conor/Dropbox/33_Nadira/04_Lesson_4/01_food_page_1/00_\
+FOOD_.json";
+  i2 = "/home/conor/Dropbox/33_Nadira/04_Lesson_4/02_food_page_2/00_\
+FOOD_.json";
+  i3 = "/home/conor/Dropbox/33_Nadira/04_Lesson_4/03_food_page_3/00_\
+FOOD_.json";
+  i4 = "/home/conor/Dropbox/33_Nadira/04_Lesson_4/04_food_page_4/00_\
+FOOD_.json";
+  i5 = "/home/conor/Dropbox/33_Nadira/04_Lesson_4/05_food_page_5/00_\
+FOOD_.json";
+
+  l1 = Map[First][Import[i1]];
+  l2 = Map[First][Import[i2]];
+  l3 = Map[First][Import[i3]];
+  l4 = Map[First][Import[i4]];
+  l5 = Map[First][Import[i5]];
+
+  Join[
+   Flatten[Import/@{i1,i2,i3,i4,i5}]
+   ] ];
+
+numberNouns := Module[{i1, l1},
+  i1 = "/home/conor/Dropbox/33_Nadira/05_Lesson_5/01_numbers_/00_FOOD_\
+.json";
+
+  l1 = Map[First][Import[i1]];
+
+  Join[
+   l1
+   ] ];
+dayNouns := Module[{i1, l1},
+  
+  i1 = "/home/conor/Dropbox/33_Nadira/06_Lesson_6/01_day/01_JSON_.\
+json";
+  l1 = Map[First][Import[i1]];
+  Join[
+   l1
+   ] ]
+
+jsonToDeck[jsonFile_, deckFile_] := Export[deckFile,
+  jsonToCardSet3[jsonFile] <> jsonToCardSet2[jsonFile] <>
+   jsonToCardSet1[jsonFile],
+  "String" ];
+
+(*jsonToCardSet1[jsonFile_] := Module[*)
+    (*{in,out0,function,out1,out2},*)
+   (*in = Import[jsonFile ];*)
+   (*out0 = (in /. Rule -> List);*)
+   (*function[first_] := {First[first], Last[first] <> " [sound:" <> First[first] <> ".mp3]"};*)
+   (*out1 = function /@ out0;*)
+   (*out2 = StringReplace[*)
+     (*ExportString[out1, "TSV"],*)
+     (*"\"" -> ""*)
+      (*];*)
+   (*out2*)
+    (*];*)
+
+jsonToCardSet1[jsonFile_] := Module[{in, out0, function, out1, out2, out3,out4},
+  in = Import[jsonFile];
+  out0 = (in /. Rule -> List);
+  function[first_] :=
+      {
+          First[first]<> " " <>"<img src=\"" <> First[first] <> ".jpg\">",
+          Last[first] <> " " <>"[sound:" <> First[first] <> ".mp3]"<>" "
+      };
+  out1 = function /@ out0;
+  out2 = ExportString[out1, "TSV"];
+  (*Print[out2];*)
+  out3 = StringReplace[out2, "\"" -> ""];
+  out4 = StringReplace[out3, {"src=" -> "src=\"",".jpg>"->".jpg\">"}];
+  out4];
+
+
+(*jsonToCardSet2[jsonFile_] := Module[{in, out0, function, out1, out2}, in = Import[jsonFile];*)
+   (*out0 = (in /. Rule -> List);*)
+   (*function[first_] :=*)
+       (*{*)
+       (*Last[first],*)
+       (*First[first] <> " [sound:" <> First[first] <> ".mp3]"*)
+       (*};*)
+   (*out1 = function /@ out0;*)
+   (*out2 = StringReplace[ExportString[out1, "TSV"], "\"" -> ""];*)
+   (*out2];*)
+
+jsonToCardSet2[jsonFile_] := Module[{in, out0, function, out1, out2, out3,out4},
+  in = Import[jsonFile];
+  out0 = (in /. Rule -> List);
+  function[first_] :=
+      {
+          Last[first]<> " " ,
+          First[first] <> " " <>"[sound:" <> First[first] <> ".mp3]"<>" "<>"<img src=\"" <> First[first] <> ".jpg\">"
+      };
+  out1 = function /@ out0;
+  out2 = ExportString[out1, "TSV"];
+  (*Print[out2];*)
+  out3 = StringReplace[out2, "\"" -> ""];
+  out4 = StringReplace[out3, {"src=" -> "src=\"",".jpg>"->".jpg\">"}];
+  out4];
+
+
+
+(*jsonToCardSet3[jsonFile_] := Module[{in, out0, function, out1, out2}, in = Import[jsonFile];*)
+  (*out0 = (in /. Rule -> List);*)
+  (*function[first_] := {"{LISTEN!} [sound:" <> First[first] <> ".mp3]",*)
+    (*First[first] };*)
+  (*out1 = function /@ out0;*)
+  (*out2 = StringReplace[ExportString[out1, "TSV"], "\"" -> ""];*)
+  (*out2]*)
+
+
+jsonToCardSet3[jsonFile_] := Module[{in, out0, function, out1, out2, out3,out4},
+  in = Import[jsonFile];
+  out0 = (in /. Rule -> List);
+  function[first_] :=
+      {
+          "{LISTEN!} [sound:" <> First[first] <> ".mp3]",
+          First[first] <> " " <>"[sound:" <> First[first] <> ".mp3]"<>" "<>"<img src=\"" <> First[first] <> ".jpg\">"
+      };
+  out1 = function /@ out0;
+  out2 = ExportString[out1, "TSV"];
+  (*Print[out2];*)
+  out3 = StringReplace[out2, "\"" -> ""];
+  out4 = StringReplace[out3, {"src=" -> "src=\"",".jpg>"->".jpg\">"}];
+  out4];
+
+
+buttoner[ str_] := Button[str, CopyToClipboard[ str]];
+lower = {"а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к",
+   "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч",
+   "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я", " ", "."};
+upper = {"А", "Б", "В", "Г", "Д", "Е", "Ё", "Ж", "З", "И", "Й", "К",
+   "Л", "М", "Н", "О", "П", "Р", "С", "Т", "У", "Ф", "Х", "Ц", "Ч",
+   "Ш", "Щ", "Ъ", "Ы", "Ь", "Э", "Ю", "Я", "", "."};
+hardVowels = {"а", "о", "у", "ы", "э"};
+variantConsonants = {"б", "в", "г", "д", "з", "к", "л", "м", "п", "р", "с", "т", "ф", "х"};
+softVowels = {"я", "ё", "ю", "и", "е"};
+invariantHardConsonants = {"ж", "ц", "ч", "ш", "щ"};
+keyboardRussian:=CreatePalette[
+  Grid[Partition[
+    Button[#, CopyToClipboard[ #], ImageSize -> 30] & /@ lower, 5],
+   Spacings -> {0, 0}]];
+
+keyboardRussianPaster:=CreatePalette[
+  Grid[Partition[
+    Button[#, Paste[ #], ImageSize -> 20] & /@ lower, 5],
+   Spacings -> {0, 0}]];
+
+
+kayboardRussianUpper:=CreatePalette[
+  Grid[Partition[
+    Button[#, CopyToClipboard[ #], ImageSize -> 40] & /@ upper, 5],
+   Spacings -> {0, 0}]];
+
+
+
+End[];
+EndPackage[];

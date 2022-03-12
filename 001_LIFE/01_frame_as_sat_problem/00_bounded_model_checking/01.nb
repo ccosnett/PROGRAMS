@@ -1,0 +1,419 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14542,        411]
+NotebookOptionsPosition[     11535,        343]
+NotebookOutlinePosition[     11878,        358]
+CellTagsIndexPosition[     11835,        355]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["We have essentially unrolled the sequence into r \
+copies of the transition relation",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787400251886526*^9, 3.787400275592639*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"bf718467-19c2-4de1-b3f8-4c2d040223b2"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["F",
+   FontWeight->"Normal"], "[", 
+  RowBox[{
+   SubscriptBox["X", "t"], ",", 
+   SubscriptBox["X", 
+    RowBox[{"t", "+", "1"}]]}], "]"}]], "DisplayFormula",
+ CellChangeTimes->{{3.7874002840280533`*^9, 3.787400294759276*^9}},
+ FontSize->13,ExpressionUUID->"63fe813d-f625-48c5-b0a1-3851ddd579c3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    StyleBox["X",
+     FontWeight->"Normal"], "t"], 
+   StyleBox["=",
+    FontWeight->"Normal"], 
+   StyleBox[
+    RowBox[{"(", GridBox[{
+       {
+        SubscriptBox["x", "11"], 
+        SubscriptBox["x", "12"], 
+        SubscriptBox["x", "13"]},
+       {
+        SubscriptBox["x", "21"], 
+        SubscriptBox["x", "22"], 
+        SubscriptBox["x", "23"]},
+       {
+        SubscriptBox["x", "31"], 
+        SubscriptBox["x", "32"], 
+        SubscriptBox["x", "33"]}
+      }], ")"}],
+    FontWeight->"Normal"]}], 
+  StyleBox[",",
+   FontWeight->"Normal"], 
+  RowBox[{
+   SubscriptBox[
+    StyleBox["X",
+     FontWeight->"Normal"], "t"], 
+   StyleBox["=",
+    FontWeight->"Normal"], 
+   StyleBox[
+    RowBox[{"(", GridBox[{
+       {
+        SubsuperscriptBox["x", "11", "\[Prime]"], 
+        SubsuperscriptBox["x", "12", "\[Prime]"], 
+        SubsuperscriptBox["x", "13", "\[Prime]"]},
+       {
+        SubsuperscriptBox["x", "21", "\[Prime]"], 
+        SubsuperscriptBox["x", "22", "\[Prime]"], 
+        SubsuperscriptBox["x", "23", "\[Prime]"]},
+       {
+        SubsuperscriptBox["x", "31", "\[Prime]"], 
+        SubsuperscriptBox["x", "32", "\[Prime]"], 
+        SubsuperscriptBox["x", "33", "\[Prime]"]}
+      }], ")"}],
+    FontWeight->"Normal"]}]}]], "DisplayFormula",
+ CellChangeTimes->{{3.7874002958837013`*^9, 3.787400399470489*^9}},
+ FontSize->13,ExpressionUUID->"5d24dce3-4c35-4fb3-b766-4f38cce560cb"],
+
+Cell[TextData[StyleBox["Additional clauses can now be added to specify \
+constraints on the initial state X zero and or the final state X r, as well \
+as any other conditions that want to impose on the sequence",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874004096530933`*^9, 3.787400446783255*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"857e4c41-ae74-4e12-a8a4-853258b4a81b"],
+
+Cell[CellGroupData[{
+
+Cell["", "Section",ExpressionUUID->"87820694-a1af-4d55-85bf-4c32a1e1b8db"],
+
+Cell[TextData[StyleBox["This general setup is called bounded model checking",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787400450980319*^9, 3.787400460654417*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"063d1bbb-fe66-4cb3-9da7-54e981ef502c"],
+
+Cell[TextData[StyleBox["we are using it to check properties of a transition \
+rule, (the Game of life rule is written below)",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787400462409582*^9, 3.787400487149188*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"e80edd83-5148-4302-a24a-661f9c196254"],
+
+Cell[TextData[StyleBox["we are only considering finite or bounded sequences",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874004912875137`*^9, 3.787400503267913*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"4937f1bd-6e1b-4c77-8a53-52f4a6b99ec5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "Section",ExpressionUUID->"a72e9f67-b958-4ee1-9470-0a372ca26b38"],
+
+Cell[TextData[StyleBox["Game of life provides a particularly instructive set \
+of examples that illustrate basic principles of bounded model checking.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787400508145618*^9, 3.787400529475028*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"e5d291da-5174-4587-a29b-3ee0f6af03f2"],
+
+Cell[TextData[StyleBox["The states X of this game are two dimensional \
+bitmaps, corresponding to arrays of square cells that are either alive or \
+dead.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787400530651277*^9, 3.7874005591779413`*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"aa62911a-ca71-4498-b823-8593b2fc28a2"],
+
+Cell[TextData[StyleBox["Every bitmap X has a unique successor X prime, \
+determined by the action of a simple 3 by 3 cellular automata",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787400560405197*^9, 3.787400579976988*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"c9d1dd6c-f59a-4562-82b8-8b6f9302dd35"],
+
+Cell[TextData[StyleBox["Suppose cell has the 8 neighbors and let nu",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787400581429009*^9, 
+  3.7874005945442743`*^9}},ExpressionUUID->"2169d809-3ec0-46de-a1be-\
+ae73726949c5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "Section",ExpressionUUID->"f58f3c52-8780-4830-8cc3-3ea55c4a30cc"],
+
+Cell[TextData[StyleBox["Conway called game of life a no ",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787400601702228*^9, 
+  3.78740060927962*^9}},ExpressionUUID->"78d518d2-512e-4cd8-986a-\
+354406cacdb7"],
+
+Cell[TextData[StyleBox["Once an initial state has been completely specified, \
+all subsequent states are determined.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787400612627327*^9, 3.78740063328615*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"3289997f-5554-40d7-97cf-72f82034adc1"],
+
+Cell[TextData[StyleBox["",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.787400634993971*^9},ExpressionUUID->"fe09c023-7804-44b5-a9ee-\
+fb7de20e5b8f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "Section",ExpressionUUID->"25f4a166-966f-4005-932e-5c24c172ffcb"],
+
+Cell[TextData[StyleBox["In exercises 7.1.4-160 through 162 we have already \
+seen some of the amazing Life histories that are possible using BDD methods.",
+ 
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787400642806519*^9, 3.7874006712364283`*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"4ef15a7c-6de0-447d-8a25-6e8b61e9355a"],
+
+Cell[TextData[StyleBox["And many further aspects of Life can be explored with \
+SAT methods, because SAT solvers can often deal with many more variables.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787400672261127*^9, 3.787400699251731*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"88232f9c-8921-4fa4-8d89-08907e48be69"]
+}, Open  ]]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 615, 15, 69, "Text",ExpressionUUID->"bf718467-19c2-4de1-b3f8-4c2d040223b2",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1176, 37, 333, 9, 50, "DisplayFormula",ExpressionUUID->"63fe813d-f625-48c5-b0a1-3851ddd579c3"],
+Cell[1512, 48, 1467, 49, 122, "DisplayFormula",ExpressionUUID->"5d24dce3-4c35-4fb3-b766-4f38cce560cb"],
+Cell[2982, 99, 719, 16, 114, "Text",ExpressionUUID->"857e4c41-ae74-4e12-a8a4-853258b4a81b",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[3726, 119, 74, 0, 99, "Section",ExpressionUUID->"87820694-a1af-4d55-85bf-4c32a1e1b8db"],
+Cell[3803, 121, 582, 14, 69, "Text",ExpressionUUID->"063d1bbb-fe66-4cb3-9da7-54e981ef502c",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4388, 137, 632, 15, 69, "Text",ExpressionUUID->"e80edd83-5148-4302-a24a-661f9c196254",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5023, 154, 585, 14, 69, "Text",ExpressionUUID->"4937f1bd-6e1b-4c77-8a53-52f4a6b99ec5",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5645, 173, 74, 0, 99, "Section",ExpressionUUID->"a72e9f67-b958-4ee1-9470-0a372ca26b38"],
+Cell[5722, 175, 658, 15, 114, "Text",ExpressionUUID->"e5d291da-5174-4587-a29b-3ee0f6af03f2",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[6383, 192, 663, 16, 114, "Text",ExpressionUUID->"aa62911a-ca71-4498-b823-8593b2fc28a2",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[7049, 210, 642, 15, 114, "Text",ExpressionUUID->"c9d1dd6c-f59a-4562-82b8-8b6f9302dd35",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[7694, 227, 558, 15, 69, "Text",ExpressionUUID->"2169d809-3ec0-46de-a1be-ae73726949c5",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8289, 247, 74, 0, 99, "Section",ExpressionUUID->"f58f3c52-8780-4830-8cc3-3ea55c4a30cc"],
+Cell[8366, 249, 544, 15, 69, "Text",ExpressionUUID->"78d518d2-512e-4cd8-986a-354406cacdb7",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[8913, 266, 623, 15, 69, "Text",ExpressionUUID->"3289997f-5554-40d7-97cf-72f82034adc1",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[9539, 283, 537, 17, 69, "Text",ExpressionUUID->"fe09c023-7804-44b5-a9ee-fb7de20e5b8f",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10113, 305, 74, 0, 99, "Section",ExpressionUUID->"25f4a166-966f-4005-932e-5c24c172ffcb"],
+Cell[10190, 307, 665, 16, 114, "Text",ExpressionUUID->"4ef15a7c-6de0-447d-8a25-6e8b61e9355a",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[10858, 325, 661, 15, 114, "Text",ExpressionUUID->"88232f9c-8921-4fa4-8d89-08907e48be69",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}, Open  ]]
+}
+]
+*)
+

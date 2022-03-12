@@ -1,0 +1,358 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13336,        350]
+NotebookOptionsPosition[     11995,        317]
+NotebookOutlinePosition[     12338,        332]
+CellTagsIndexPosition[     12295,        329]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["The goal is to express the transition equation in CNF",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.6657108684256456, 0.23898877484862702`, 0.8113683217589225],
+ FrontFaceColor->RGBColor[
+  0.6657108684256456, 0.23898877484862702`, 0.8113683217589225],
+ BackFaceColor->RGBColor[
+  0.6657108684256456, 0.23898877484862702`, 0.8113683217589225],
+ GraphicsColor->RGBColor[
+  0.6657108684256456, 0.23898877484862702`, 0.8113683217589225],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.6657108684256456, 0.23898877484862702`, 0.8113683217589225]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->False,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787428172589301*^9, 3.787428180583486*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"5e9469c9-acd4-47d0-bf82-a709fe28e0a5"],
+
+Cell[TextData[StyleBox["There are 8 choose 4 clauses like not x prime or not \
+x sub a or not x sub b or not x sub c or not x sub d",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787428186438068*^9, 3.787428216157598*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"0c653a48-7f72-47d0-b691-32b02f464ec8"],
+
+Cell[TextData[StyleBox["one for each of the four neighbors",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787428219855569*^9, 3.78742823096415*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"a9d2d4f4-081f-446f-9ef6-6167bb77c564"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"{", 
+   RowBox[{
+   "NW", ",", "N", ",", "NE", ",", "W", ",", "E", ",", "SW", ",", "S", ",", 
+    "SE"}], "}"}],
+  FontWeight->"Normal"]], "DisplayFormula",
+ CellChangeTimes->{{3.7874283044512053`*^9, 3.7874283352792473`*^9}},
+ FontSize->13,ExpressionUUID->"5b33c33c-a80e-4d29-8016-f8a3619c74b4"],
+
+Cell[TextData[StyleBox["There are 8 choose 4 clauses like ",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874283500280943`*^9, 
+  3.787428360652175*^9}},ExpressionUUID->"b19de6c2-aab7-4acf-8508-\
+26498e2bab20"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Binomial", "[", 
+   RowBox[{"8", ",", "4"}], "]"}], "+", 
+  RowBox[{"Binomial", "[", 
+   RowBox[{"8", ",", "7"}], "]"}], "+", 
+  RowBox[{"Binomial", "[", 
+   RowBox[{"8", ",", "6"}], "]"}], "+", 
+  RowBox[{"Binomial", "[", 
+   RowBox[{"8", ",", "3"}], "]"}], "+", 
+  RowBox[{"Binomial", "[", 
+   RowBox[{"8", ",", "2"}], "]"}]}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787428380598172*^9, 3.787428424433866*^9}, {
+   3.787428566731295*^9, 3.787428595135968*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"567a3cf5-15d3-4c68-be24-38d3ea17c094"],
+
+Cell[BoxData["190"], "Output",
+ CellChangeTimes->{
+  3.787428424752844*^9, {3.787428588295669*^9, 3.787428595434497*^9}},
+ CellLabel->"Out[32]=",ExpressionUUID->"54a3f7d7-e958-4fc7-8c15-05ee56724a14"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "S", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Subsets", "[", 
+  RowBox[{
+   StyleBox[
+    RowBox[{"{", 
+     RowBox[{
+     "NW", ",", "\[CapitalNu]", ",", "NE", ",", "W", ",", "\[CapitalEpsilon]",
+       ",", "SW", ",", "S", ",", "SE"}], "}"}],
+    FontWeight->"Normal"], ",", 
+   RowBox[{"{", "4", "}"}]}], "]"}]}], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7874284321542883`*^9, 3.787428498759297*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"1c2e1f72-c27a-4b30-8d34-5daecb507230"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalNu]", ",", "NE", ",", "W"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalNu]", ",", "NE", ",", "\[CapitalEpsilon]"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalNu]", ",", "NE", ",", "SW"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalNu]", ",", "NE", ",", "S"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalNu]", ",", "NE", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalNu]", ",", "W", ",", "\[CapitalEpsilon]"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalNu]", ",", "W", ",", "SW"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalNu]", ",", "W", ",", "S"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalNu]", ",", "W", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalNu]", ",", "\[CapitalEpsilon]", ",", "SW"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalNu]", ",", "\[CapitalEpsilon]", ",", "S"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalNu]", ",", "\[CapitalEpsilon]", ",", "SE"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalNu]", ",", "SW", ",", "S"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalNu]", ",", "SW", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalNu]", ",", "S", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "NE", ",", "W", ",", "\[CapitalEpsilon]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "NE", ",", "W", ",", "SW"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "NE", ",", "W", ",", "S"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "NE", ",", "W", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "NE", ",", "\[CapitalEpsilon]", ",", "SW"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "NE", ",", "\[CapitalEpsilon]", ",", "S"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "NE", ",", "\[CapitalEpsilon]", ",", "SE"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "NE", ",", "SW", ",", "S"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "NE", ",", "SW", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "NE", ",", "S", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "W", ",", "\[CapitalEpsilon]", ",", "SW"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "W", ",", "\[CapitalEpsilon]", ",", "S"}], "}"}], ",", 
+   
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "W", ",", "\[CapitalEpsilon]", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "W", ",", "SW", ",", "S"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "W", ",", "SW", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "W", ",", "S", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalEpsilon]", ",", "SW", ",", "S"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalEpsilon]", ",", "SW", ",", "SE"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "\[CapitalEpsilon]", ",", "S", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NW", ",", "SW", ",", "S", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "NE", ",", "W", ",", "\[CapitalEpsilon]"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "NE", ",", "W", ",", "SW"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "NE", ",", "W", ",", "S"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "NE", ",", "W", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "NE", ",", "\[CapitalEpsilon]", ",", "SW"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "NE", ",", "\[CapitalEpsilon]", ",", "S"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "NE", ",", "\[CapitalEpsilon]", ",", "SE"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "NE", ",", "SW", ",", "S"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "NE", ",", "SW", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "NE", ",", "S", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "W", ",", "\[CapitalEpsilon]", ",", "SW"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "W", ",", "\[CapitalEpsilon]", ",", "S"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "W", ",", "\[CapitalEpsilon]", ",", "SE"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "W", ",", "SW", ",", "S"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "W", ",", "SW", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "W", ",", "S", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "\[CapitalEpsilon]", ",", "SW", ",", "S"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "\[CapitalEpsilon]", ",", "SW", ",", "SE"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "\[CapitalEpsilon]", ",", "S", ",", "SE"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalNu]", ",", "SW", ",", "S", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NE", ",", "W", ",", "\[CapitalEpsilon]", ",", "SW"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NE", ",", "W", ",", "\[CapitalEpsilon]", ",", "S"}], "}"}], ",", 
+   
+   RowBox[{"{", 
+    RowBox[{"NE", ",", "W", ",", "\[CapitalEpsilon]", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NE", ",", "W", ",", "SW", ",", "S"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NE", ",", "W", ",", "SW", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NE", ",", "W", ",", "S", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NE", ",", "\[CapitalEpsilon]", ",", "SW", ",", "S"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NE", ",", "\[CapitalEpsilon]", ",", "SW", ",", "SE"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"NE", ",", "\[CapitalEpsilon]", ",", "S", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"NE", ",", "SW", ",", "S", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"W", ",", "\[CapitalEpsilon]", ",", "SW", ",", "S"}], "}"}], ",", 
+   
+   RowBox[{"{", 
+    RowBox[{"W", ",", "\[CapitalEpsilon]", ",", "SW", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"W", ",", "\[CapitalEpsilon]", ",", "S", ",", "SE"}], "}"}], ",", 
+   
+   RowBox[{"{", 
+    RowBox[{"W", ",", "SW", ",", "S", ",", "SE"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[CapitalEpsilon]", ",", "SW", ",", "S", ",", "SE"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.7874284645965652`*^9, 3.787428499006999*^9}},
+ CellLabel->"Out[30]=",ExpressionUUID->"e7ee3c4a-9c83-4da6-be28-92070db044b5"]
+}, Open  ]]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 888, 19, 69, "Text",ExpressionUUID->"5e9469c9-acd4-47d0-bf82-a709fe28e0a5",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1449, 41, 639, 15, 69, "Text",ExpressionUUID->"0c653a48-7f72-47d0-b691-32b02f464ec8",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2091, 58, 565, 14, 69, "Text",ExpressionUUID->"a9d2d4f4-081f-446f-9ef6-6167bb77c564",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2659, 74, 332, 8, 50, "DisplayFormula",ExpressionUUID->"5b33c33c-a80e-4d29-8016-f8a3619c74b4"],
+Cell[2994, 84, 549, 15, 69, "Text",ExpressionUUID->"b19de6c2-aab7-4acf-8508-26498e2bab20",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[3568, 103, 642, 16, 60, "Input",ExpressionUUID->"567a3cf5-15d3-4c68-be24-38d3ea17c094"],
+Cell[4213, 121, 200, 3, 97, "Output",ExpressionUUID->"54a3f7d7-e958-4fc7-8c15-05ee56724a14"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4450, 129, 601, 15, 104, "Input",ExpressionUUID->"1c2e1f72-c27a-4b30-8d34-5daecb507230"],
+Cell[5054, 146, 6925, 168, 571, "Output",ExpressionUUID->"e7ee3c4a-9c83-4da6-be28-92070db044b5"]
+}, Open  ]]
+}
+]
+*)
+

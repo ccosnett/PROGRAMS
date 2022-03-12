@@ -1,0 +1,561 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     23595,        553]
+NotebookOptionsPosition[     21920,        524]
+NotebookOutlinePosition[     22265,        539]
+CellTagsIndexPosition[     22222,        536]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.795358133472766*^9, 3.7953581340260077`*^9}},
+ CellLabel->"In[76]:=",ExpressionUUID->"e9585a66-edf2-4b96-aa38-937436b6bf78"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"endState", 
+   StyleBox["=",
+    FontSize->12], 
+   StyleBox[
+    RowBox[{"(", GridBox[{
+       {"0", "0", "0", "0", "0", "0", "0", "1", "0", "0", "1", "0", "0", "0", 
+        "0", "0", "0", "0", "0", "0", "0"},
+       {"0", "0", "1", "1", "1", "0", "0", "0", "0", "0", "0", "0", "0", "1", 
+        "0", "0", "0", "0", "0", "0", "0"},
+       {"0", "1", "0", "0", "0", "0", "0", "0", "1", "1", "0", "0", "0", "1", 
+        "1", "0", "0", "1", "1", "1", "1"},
+       {"0", "1", "0", "1", "1", "0", "0", "1", "0", "0", "1", "0", "0", "1", 
+        "0", "0", "0", "0", "0", "1", "0"},
+       {"0", "1", "0", "0", "0", "1", "0", "1", "0", "0", "1", "0", "0", "1", 
+        "0", "0", "0", "0", "1", "0", "0"},
+       {"0", "0", "1", "1", "1", "0", "0", "0", "1", "1", "0", "0", "0", "0", 
+        "1", "0", "0", "1", "1", "1", "1"},
+       {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", 
+        "0", "0", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", 
+        "0", "0", "0", "0", "0", "0", "0"}
+      }], ")"}],
+    FontSize->12]}], 
+  StyleBox[";",
+   FontSize->12]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"endGeneration", "=", "4"}], ";"}], "\n", 
+ RowBox[{"Get", "[", 
+  RowBox[{
+   RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<wordLife.m\>\""}], 
+  "]"}]}], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellFrameLabels->{{None, None}, {None, "input (mathematica code)"}},
+ CellChangeTimes->{{3.765690460663842*^9, 3.765690461391439*^9}, {
+  3.7656906024434443`*^9, 3.765690603751608*^9}, {3.7953370729602127`*^9, 
+  3.795337073615592*^9}, {3.795358147605494*^9, 3.795358148281096*^9}, {
+  3.795358210229726*^9, 3.795358253765773*^9}, {3.795358311871089*^9, 
+  3.795358315090886*^9}, {3.795358626133041*^9, 3.795358637425416*^9}, {
+  3.795359379514883*^9, 3.795359400835491*^9}},
+ Background->GrayLevel[0.95],
+ CellLabel->"In[10]:=",ExpressionUUID->"a2391d37-264a-4790-8401-9d3ea37ec631"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part","partw",
+   "\"Part \\!\\(\\*RowBox[{\\\"1\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\) does not exist.\"",2,12,27,20379489467509183177,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.795358273021912*^9, 3.795358319609782*^9}, 
+   3.7953584108345833`*^9, 3.795358469435656*^9, 3.79535852579704*^9, 
+   3.795358697588087*^9, {3.79535938279841*^9, 3.795359407518711*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"f74f7ee7-f60e-4dec-afd2-86821492381f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Table","iterb",
+   "\"Iterator \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"i\\\", \\\",\\\", \
+\\\"2\\\", \\\",\\\", RowBox[{\\\"1\\\", \\\"+\\\", \
+RowBox[{RowBox[{\\\"{\\\", \\\"}\\\"}], \\\"\[LeftDoubleBracket]\\\", \\\"1\\\
+\", \\\"\[RightDoubleBracket]\\\"}]}]}], \\\"}\\\"}]\\) does not have \
+appropriate bounds.\"",2,12,28,20379489467509183177,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.795358273021912*^9, 3.795358319609782*^9}, 
+   3.7953584108345833`*^9, 3.795358469435656*^9, 3.79535852579704*^9, 
+   3.795358697588087*^9, {3.79535938279841*^9, 3.7953594075329514`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"fc10def1-8c0c-49f5-ab7b-a97e50e19035"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Table","iterb",
+   "\"Iterator \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"i\\\", \\\",\\\", \
+\\\"2\\\", \\\",\\\", RowBox[{\\\"1\\\", \\\"+\\\", \
+RowBox[{RowBox[{\\\"{\\\", \\\"}\\\"}], \\\"\[LeftDoubleBracket]\\\", \\\"1\\\
+\", \\\"\[RightDoubleBracket]\\\"}]}]}], \\\"}\\\"}]\\) does not have \
+appropriate bounds.\"",2,12,29,20379489467509183177,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.795358273021912*^9, 3.795358319609782*^9}, 
+   3.7953584108345833`*^9, 3.795358469435656*^9, 3.79535852579704*^9, 
+   3.795358697588087*^9, {3.79535938279841*^9, 3.795359407589346*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"427c6633-5911-4745-be24-72e48d078c8b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part","partw",
+   "\"Part \\!\\(\\*RowBox[{\\\"2\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"3\\\", \\\"}\\\"}]\\) does not exist.\"",2,12,30,20379489467509183177,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.795358273021912*^9, 3.795358319609782*^9}, 
+   3.7953584108345833`*^9, 3.795358469435656*^9, 3.79535852579704*^9, 
+   3.795358697588087*^9, {3.79535938279841*^9, 3.795359407639215*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"05224f4e-8208-425c-ace7-11f086dda3d6"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part","partw",
+   "\"Part \\!\\(\\*RowBox[{\\\"2\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"3\\\", \\\"}\\\"}]\\) does not exist.\"",2,12,31,20379489467509183177,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.795358273021912*^9, 3.795358319609782*^9}, 
+   3.7953584108345833`*^9, 3.795358469435656*^9, 3.79535852579704*^9, 
+   3.795358697588087*^9, {3.79535938279841*^9, 3.795359407690345*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"21caf055-e802-493f-83b5-35aac6e559fc"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Part\\\", \\\"::\\\", \
+\\\"partw\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"",2,12,32,20379489467509183177,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.795358273021912*^9, 3.795358319609782*^9}, 
+   3.7953584108345833`*^9, 3.795358469435656*^9, 3.79535852579704*^9, 
+   3.795358697588087*^9, {3.79535938279841*^9, 3.79535940774325*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"1cddab39-2269-458f-83c1-6844d6d731af"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Table","iterb",
+   "\"Iterator \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"j\\\", \\\",\\\", \
+\\\"2\\\", \\\",\\\", RowBox[{RowBox[{\\\"dim$4765\\\", \\\"\
+\[LeftDoubleBracket]\\\", \\\"2\\\", \\\"\[RightDoubleBracket]\\\"}], \\\"+\\\
+\", \\\"1\\\"}]}], \\\"}\\\"}]\\) does not have appropriate bounds.\"",2,12,
+   33,20379489467509183177,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.795358273021912*^9, 3.795358319609782*^9}, 
+   3.7953584108345833`*^9, 3.795358469435656*^9, 3.79535852579704*^9, 
+   3.795358697588087*^9, {3.79535938279841*^9, 3.795359407789978*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"89092315-c93b-411c-82af-756d7f47c791"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Table\\\", \\\"::\\\", \
+\\\"iterb\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"",2,12,34,20379489467509183177,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.795358273021912*^9, 3.795358319609782*^9}, 
+   3.7953584108345833`*^9, 3.795358469435656*^9, 3.79535852579704*^9, 
+   3.795358697588087*^9, {3.79535938279841*^9, 3.795359407845643*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"a95e6b76-9ba9-46d7-b698-8d264a4fa7cc"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ArrayPlot","mat",
+   "\"Argument \\!\\(\\*RowBox[{\\\"\\\\\\\"unsatisfiable\\\\\\\"\\\"}]\\) at \
+position \\!\\(\\*RowBox[{\\\"1\\\"}]\\) is not a list of lists.\"",2,12,35,
+   20379489467509183177,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.795358273021912*^9, 3.795358319609782*^9}, 
+   3.7953584108345833`*^9, 3.795358469435656*^9, 3.79535852579704*^9, 
+   3.795358697588087*^9, {3.79535938279841*^9, 3.795359407905566*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"4214fc6c-81cc-4992-9cba-70efd2f50d25"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ArrayPlot","mat",
+   "\"Argument \\!\\(\\*RowBox[{\\\"Table\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"xPrime$4758\\\", \\\"[\\\", RowBox[{\\\"i\\\", \\\",\\\", \
+\\\"j\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{\\\"i\\\", \\\
+\",\\\", \\\"2\\\", \\\",\\\", RowBox[{\\\"1\\\", \\\"+\\\", RowBox[{RowBox[{\
+\\\"{\\\", \\\"}\\\"}], \\\"\[LeftDoubleBracket]\\\", \\\"1\\\", \\\"\
+\[RightDoubleBracket]\\\"}]}]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{\\\"j\\\", \\\",\\\", \\\"2\\\", \\\",\\\", \
+RowBox[{RowBox[{\\\"dim$4758\\\", \\\"\[LeftDoubleBracket]\\\", \\\"2\\\", \\\
+\"\[RightDoubleBracket]\\\"}], \\\"+\\\", \\\"1\\\"}]}], \\\"}\\\"}]}], \\\"]\
+\\\"}]\\) at position \\!\\(\\*RowBox[{\\\"1\\\"}]\\) is not a list of lists.\
+\"",2,12,36,20379489467509183177,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.795358273021912*^9, 3.795358319609782*^9}, 
+   3.7953584108345833`*^9, 3.795358469435656*^9, 3.79535852579704*^9, 
+   3.795358697588087*^9, {3.79535938279841*^9, 3.795359407940609*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"52c2ea8d-4568-4317-a004-f90f801a8550"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ArrayPlot","mat",
+   "\"Argument \\!\\(\\*RowBox[{\\\"Table\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"xPrime$4765\\\", \\\"[\\\", RowBox[{\\\"i\\\", \\\",\\\", \
+\\\"j\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{\\\"i\\\", \\\
+\",\\\", \\\"2\\\", \\\",\\\", \\\"4\\\"}], \\\"}\\\"}], \\\",\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"j\\\", \\\",\\\", \\\"2\\\", \\\",\\\", \
+RowBox[{RowBox[{\\\"dim$4765\\\", \\\"\[LeftDoubleBracket]\\\", \\\"2\\\", \\\
+\"\[RightDoubleBracket]\\\"}], \\\"+\\\", \\\"1\\\"}]}], \\\"}\\\"}]}], \\\"]\
+\\\"}]\\) at position \\!\\(\\*RowBox[{\\\"1\\\"}]\\) is not a list of lists.\
+\"",2,12,37,20379489467509183177,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.795358273021912*^9, 3.795358319609782*^9}, 
+   3.7953584108345833`*^9, 3.795358469435656*^9, 3.79535852579704*^9, 
+   3.795358697588087*^9, {3.79535938279841*^9, 3.79535940797584*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"4264010a-fa76-4f03-bab0-1e1662073f0a"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"ArrayPlot\\\", \\\"::\\\
+\", \\\"mat\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"",2,12,38,20379489467509183177,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.795358273021912*^9, 3.795358319609782*^9}, 
+   3.7953584108345833`*^9, 3.795358469435656*^9, 3.79535852579704*^9, 
+   3.795358697588087*^9, {3.79535938279841*^9, 3.795359407983603*^9}},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"d8b4c4de-bd52-4831-b2bb-a1740b790a5c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.524794`", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     StyleBox[
+      GraphicsBox[{
+        RasterBox[{{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+         1, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+         1}, {1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 
+         0}, {1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 
+         1}, {1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 
+         1}, {1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 
+         0}, {1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 
+         1}, {1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+         1}}, {{0, 0}, {21, 8}}, {0, 1}], {
+         {GrayLevel[
+           NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+          
+          StyleBox[
+           LineBox[{{{0, 8}, {21, 8}}, {{0, 7}, {21, 7}}, {{0, 6}, {21, 
+            6}}, {{0, 5}, {21, 5}}, {{0, 4}, {21, 4}}, {{0, 3}, {21, 3}}, {{0,
+             2}, {21, 2}}, {{0, 1}, {21, 1}}, {{0, 0}, {21, 0}}}],
+           Antialiasing->False]}, 
+         {GrayLevel[
+           NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+          
+          StyleBox[
+           LineBox[{{{0, 0}, {0, 8}}, {{1, 0}, {1, 8}}, {{2, 0}, {2, 8}}, {{3,
+             0}, {3, 8}}, {{4, 0}, {4, 8}}, {{5, 0}, {5, 8}}, {{6, 0}, {6, 
+            8}}, {{7, 0}, {7, 8}}, {{8, 0}, {8, 8}}, {{9, 0}, {9, 8}}, {{10, 
+            0}, {10, 8}}, {{11, 0}, {11, 8}}, {{12, 0}, {12, 8}}, {{13, 0}, {
+            13, 8}}, {{14, 0}, {14, 8}}, {{15, 0}, {15, 8}}, {{16, 0}, {16, 
+            8}}, {{17, 0}, {17, 8}}, {{18, 0}, {18, 8}}, {{19, 0}, {19, 
+            8}}, {{20, 0}, {20, 8}}, {{21, 0}, {21, 8}}}],
+           Antialiasing->False]}}},
+       Frame->False,
+       FrameLabel->{None, None},
+       FrameTicks->{{None, None}, {None, None}},
+       GridLinesStyle->Directive[
+         GrayLevel[0.5, 0.4]],
+       Method->{
+        "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic}],
+      StripOnInput->False,
+      Magnification->0.3 Inherited], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       StyleBox[
+        RowBox[{"ArrayPlot", "[", 
+         RowBox[{"\<\"unsatisfiable\"\>", ",", 
+          RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+          RowBox[{"Mesh", "\[Rule]", "True"}]}], "]"}],
+        StripOnInput->False,
+        Magnification->0.3 Inherited], ",", 
+       StyleBox[
+        RowBox[{"ArrayPlot", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"xPrime$4758", "[", 
+             RowBox[{"i", ",", "j"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "2", ",", 
+              RowBox[{"1", "+", 
+               RowBox[{
+                RowBox[{"{", "}"}], "\[LeftDoubleBracket]", "1", 
+                "\[RightDoubleBracket]"}]}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", "2", ",", 
+              RowBox[{
+               RowBox[{
+               "dim$4758", "\[LeftDoubleBracket]", "2", 
+                "\[RightDoubleBracket]"}], "+", "1"}]}], "}"}]}], "]"}], ",", 
+          
+          RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+          RowBox[{"Mesh", "\[Rule]", "True"}]}], "]"}],
+        StripOnInput->False,
+        Magnification->0.3 Inherited], ",", 
+       StyleBox[
+        RowBox[{"ArrayPlot", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"xPrime$4765", "[", 
+             RowBox[{"i", ",", "j"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "2", ",", "4"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", "2", ",", 
+              RowBox[{
+               RowBox[{
+               "dim$4765", "\[LeftDoubleBracket]", "2", 
+                "\[RightDoubleBracket]"}], "+", "1"}]}], "}"}]}], "]"}], ",", 
+          
+          RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+          RowBox[{"Mesh", "\[Rule]", "True"}]}], "]"}],
+        StripOnInput->False,
+        Magnification->0.3 Inherited], ",", 
+       StyleBox[
+        RowBox[{"ArrayPlot", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"xPrime$4778", "[", 
+             RowBox[{"i", ",", "j"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "2", ",", "4"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", "2", ",", 
+              RowBox[{
+               RowBox[{
+               "dim$4778", "\[LeftDoubleBracket]", "2", 
+                "\[RightDoubleBracket]"}], "+", "1"}]}], "}"}]}], "]"}], ",", 
+          
+          RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+          RowBox[{"Mesh", "\[Rule]", "True"}]}], "]"}],
+        StripOnInput->False,
+        Magnification->0.3 Inherited], ",", 
+       StyleBox[
+        RowBox[{"ArrayPlot", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"xPrime$4779", "[", 
+             RowBox[{"i", ",", "j"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "2", ",", "4"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", "2", ",", 
+              RowBox[{
+               RowBox[{
+               "dim$4779", "\[LeftDoubleBracket]", "2", 
+                "\[RightDoubleBracket]"}], "+", "1"}]}], "}"}]}], "]"}], ",", 
+          
+          RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+          RowBox[{"Mesh", "\[Rule]", "True"}]}], "]"}],
+        StripOnInput->False,
+        Magnification->0.3 Inherited], ",", 
+       StyleBox[
+        RowBox[{"ArrayPlot", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"xPrime$4780", "[", 
+             RowBox[{"i", ",", "j"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "2", ",", "4"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", "2", ",", 
+              RowBox[{
+               RowBox[{
+               "dim$4780", "\[LeftDoubleBracket]", "2", 
+                "\[RightDoubleBracket]"}], "+", "1"}]}], "}"}]}], "]"}], ",", 
+          
+          RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+          RowBox[{"Mesh", "\[Rule]", "True"}]}], "]"}],
+        StripOnInput->False,
+        Magnification->0.3 Inherited], ",", 
+       StyleBox[
+        RowBox[{"ArrayPlot", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"xPrime$4781", "[", 
+             RowBox[{"i", ",", "j"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "2", ",", "4"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", "2", ",", 
+              RowBox[{
+               RowBox[{
+               "dim$4781", "\[LeftDoubleBracket]", "2", 
+                "\[RightDoubleBracket]"}], "+", "1"}]}], "}"}]}], "]"}], ",", 
+          
+          RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+          RowBox[{"Mesh", "\[Rule]", "True"}]}], "]"}],
+        StripOnInput->False,
+        Magnification->0.3 Inherited], ",", 
+       StyleBox[
+        RowBox[{"ArrayPlot", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"xPrime$4782", "[", 
+             RowBox[{"i", ",", "j"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "2", ",", "4"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", "2", ",", 
+              RowBox[{
+               RowBox[{
+               "dim$4782", "\[LeftDoubleBracket]", "2", 
+                "\[RightDoubleBracket]"}], "+", "1"}]}], "}"}]}], "]"}], ",", 
+          
+          RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+          RowBox[{"Mesh", "\[Rule]", "True"}]}], "]"}],
+        StripOnInput->False,
+        Magnification->0.3 Inherited], ",", 
+       StyleBox[
+        RowBox[{"ArrayPlot", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"xPrime$4783", "[", 
+             RowBox[{"i", ",", "j"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "2", ",", "4"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", "2", ",", 
+              RowBox[{
+               RowBox[{
+               "dim$4783", "\[LeftDoubleBracket]", "2", 
+                "\[RightDoubleBracket]"}], "+", "1"}]}], "}"}]}], "]"}], ",", 
+          
+          RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+          RowBox[{"Mesh", "\[Rule]", "True"}]}], "]"}],
+        StripOnInput->False,
+        Magnification->0.3 Inherited], ",", 
+       StyleBox[
+        RowBox[{"ArrayPlot", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"xPrime$4784", "[", 
+             RowBox[{"i", ",", "j"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "2", ",", "4"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", "2", ",", 
+              RowBox[{
+               RowBox[{
+               "dim$4784", "\[LeftDoubleBracket]", "2", 
+                "\[RightDoubleBracket]"}], "+", "1"}]}], "}"}]}], "]"}], ",", 
+          
+          RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+          RowBox[{"Mesh", "\[Rule]", "True"}]}], "]"}],
+        StripOnInput->False,
+        Magnification->0.3 Inherited], ",", 
+       StyleBox[
+        RowBox[{"ArrayPlot", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"xPrime$4785", "[", 
+             RowBox[{"i", ",", "j"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "2", ",", "4"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", "2", ",", 
+              RowBox[{
+               RowBox[{
+               "dim$4785", "\[LeftDoubleBracket]", "2", 
+                "\[RightDoubleBracket]"}], "+", "1"}]}], "}"}]}], "]"}], ",", 
+          
+          RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+          RowBox[{"Mesh", "\[Rule]", "True"}]}], "]"}],
+        StripOnInput->False,
+        Magnification->0.3 Inherited]}], "}"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7953582146636143`*^9, {3.795358273610012*^9, 3.795358320244253*^9}, 
+   3.795358411377508*^9, 3.7953584699883738`*^9, 3.795358526318164*^9, 
+   3.795358698111163*^9, {3.795359383291184*^9, 3.7953594080619593`*^9}},
+ CellLabel->"Out[12]=",ExpressionUUID->"c72b08fb-9a18-42c8-9d14-97e517ba1631"]
+}, Open  ]]
+},
+WindowSize->{1686, 1387},
+WindowMargins->{{Automatic, 0}, {-28, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 198, 3, 61, "Input",ExpressionUUID->"e9585a66-edf2-4b96-aa38-937436b6bf78"],
+Cell[CellGroupData[{
+Cell[781, 27, 2074, 43, 469, "Input",ExpressionUUID->"a2391d37-264a-4790-8401-9d3ea37ec631"],
+Cell[2858, 72, 549, 11, 44, "Message",ExpressionUUID->"f74f7ee7-f60e-4dec-afd2-86821492381f"],
+Cell[3410, 85, 745, 14, 44, "Message",ExpressionUUID->"fc10def1-8c0c-49f5-ab7b-a97e50e19035"],
+Cell[4158, 101, 743, 14, 44, "Message",ExpressionUUID->"427c6633-5911-4745-be24-72e48d078c8b"],
+Cell[4904, 117, 564, 12, 44, "Message",ExpressionUUID->"05224f4e-8208-425c-ace7-11f086dda3d6"],
+Cell[5471, 131, 564, 12, 44, "Message",ExpressionUUID->"21caf055-e802-493f-83b5-35aac6e559fc"],
+Cell[6038, 145, 608, 12, 44, "Message",ExpressionUUID->"1cddab39-2269-458f-83c1-6844d6d731af"],
+Cell[6649, 159, 731, 14, 44, "Message",ExpressionUUID->"89092315-c93b-411c-82af-756d7f47c791"],
+Cell[7383, 175, 610, 12, 44, "Message",ExpressionUUID->"a95e6b76-9ba9-46d7-b698-8d264a4fa7cc"],
+Cell[7996, 189, 594, 12, 44, "Message",ExpressionUUID->"4214fc6c-81cc-4992-9cba-70efd2f50d25"],
+Cell[8593, 203, 1184, 20, 44, "Message",ExpressionUUID->"52c2ea8d-4568-4317-a004-f90f801a8550"],
+Cell[9780, 225, 1044, 18, 44, "Message",ExpressionUUID->"4264010a-fa76-4f03-bab0-1e1662073f0a"],
+Cell[10827, 245, 612, 12, 44, "Message",ExpressionUUID->"d8b4c4de-bd52-4831-b2bb-a1740b790a5c"],
+Cell[11442, 259, 10462, 262, 350, "Output",ExpressionUUID->"c72b08fb-9a18-42c8-9d14-97e517ba1631"]
+}, Open  ]]
+}
+]
+*)
+

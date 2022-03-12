@@ -1,0 +1,207 @@
+#container {
+	display: block;
+
+	/* Box Model */
+	width: 90%;
+	height: 90%;
+	padding: 0;
+	border: 1px solid #000;
+	margin: 0;
+}
+h1 {
+	padding: 0;
+	margin: 0 0 10px 0;
+}
+.fixedwidth {
+	float: left;
+	width: 25px;
+}
+.area {
+	display: block;
+
+	/* Box Model */
+	width: 600px;
+	height: 200px;
+	padding: 10px;
+	border: 1px solid #000000;
+	margin: 10px;
+
+	/* Colors */
+	color: #000000;
+	background-color: #FFFFFF;
+
+	/* Fonts */
+	font: bold 10pt helvetica, verdana, sans-serif;
+}
+#downKeys {
+	width: 600px;
+	height: 60px;
+}
+#process {
+	width: 600px;
+	height: 125px;
+
+}
+#output {
+	width: 600px;
+	height: 70px;
+}
+
+#stdKeyboard{
+	display: block;
+
+	/* Box Model */
+	width: 750px; /* will fit 15 regular-sized keys horizontally */
+	height: 250px; /* will fit 5 regular-sized keys vertically */
+	padding: 10px;
+	border: 1px solid	#000000;
+	margin: 0;
+
+	background-color: #FFFFFF;
+}
+.stdRow {
+	/* Box Model */
+	width: 100%;
+	height: 20%; /* will fit 5 rows in the keyboard */
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+.stdKey {
+	/* Box Model */
+	width: 6%; /* 100% / 15 (keys) - (2 (left and right) * 0.333% (margin)) */
+	height: 90%; /* 100% - (15 (ratio across width / row height) * (2 (left and right) * 0.333% (margin))) */
+	padding: 0;
+	border: 0;
+	margin: 0.333%; /* width and height depend on this value. change accordingly */
+
+	/* Box Placement */
+	float: left;
+
+	/* Box Shaping */
+	-webkit-border-radius: 10%;
+	-moz-border-radius: 10%;
+	border-radius: 10%;
+
+	/* Colors */
+	color: #FFFFFF;
+	background-color: #000000;
+
+	/* Text */
+	font-family: sans-serif;
+	font-size: 15px; /* 250px (stdKeyboard height) * 20% (stdRow height) * 90% (stdKey height) / 3 */
+	font-weight: bold;
+	line-height: 45px; /* 250px (stdKeyboard height) * 20% (stdRow height) * 90% (stdKey height) */
+	text-align: center;
+}
+#stdKeyBackspace{
+	width: 12.666%;
+}
+#stdKeyTab{
+	width: 9.333%;
+}
+#stdKeyBackslash{
+	width: 9.333%;
+}
+#stdKeyCapsLock{
+	width: 11%;
+}
+#stdKeyEnter{
+	width: 14.333%;
+}
+#stdKeyLeftShift{
+	width: 14.333%;
+}
+#stdKeyRightShift{
+	width: 17.666%;
+}
+#stdKeyLeftControl{
+	width: 9.333%;
+}
+#stdKeyLeftAlt{
+	width: 9.333%;
+}
+#stdKeySpace{
+	width: 39.333%;
+}
+#stdKeyRightAlt{
+	width: 9.333%;
+}
+#stdKeyRightControl{
+	width: 9.333%;
+}
+.upper {
+	float: left;
+	height: 50%;
+	width: 100%;
+	line-height: 30px; /* 250px (stdKeyboard height) * 20% (stdRow height) * 90% (stdKey height) / 3 * 2 */
+	text-align: center;
+}
+.lower {
+	float: left;
+	height: 50%;
+	width: 100%;
+	line-height: 15px; /* 250px (stdKeyboard height) * 20% (stdRow height) * 90% (stdKey height) / 3 */
+	text-align: center;
+}
+
+#stenoKeyboard{
+	display: block;
+
+	/* Box Model */
+	width: 500px;
+	height: 150px;
+	padding: 10px;
+	border: 1px solid #000000;
+	margin: 0;
+
+	background-color: #FFFFFF;
+}
+.stenoRow {
+	/* Box Model */
+	width: 100%;
+	height: 33.333%;
+	padding: 0;
+	border: 0;
+	margin: 0 auto;
+}
+.stenoKey {
+	/* Box Dimensions */
+	height: 95%;
+	width: 9%;
+	padding: 0;
+	border: 0;
+	margin: 0.5%;
+
+	/* Box Placement */
+	float: left;
+
+	/* Box Shaping */
+	-webkit-border-radius: 10%;
+	-moz-border-radius: 10%;
+	border-radius: 10%;
+
+	/* Colors */
+	color: #FFFFFF;
+	background-color: #000000;
+
+	/* Text */
+	font-family: sans-serif;
+	font-size: 24px;
+	text-align: center;
+	line-height: 49px;
+}
+.rounded {
+	-webkit-border-radius: 10%;
+	-webkit-border-bottom-right-radius: 50%;
+	-webkit-border-bottom-left-radius: 50%;
+	-moz-border-radius: 10%;
+	-moz-border-radius-bottomright: 50%;
+	-moz-border-radius-bottomleft: 50%;
+	border-radius: 10%;
+	border-bottom-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+#stenoA {
+	margin-left: 24.75%;
+}

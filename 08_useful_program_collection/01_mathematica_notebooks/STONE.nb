@@ -1,0 +1,115 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3550,        107]
+NotebookOptionsPosition[      2980,         88]
+NotebookOutlinePosition[      3353,        105]
+CellTagsIndexPosition[      3310,        102]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Stone1",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.754646009865453*^9, 
+  3.7546460139123983`*^9}},ExpressionUUID->"7f2f9f5b-fdbe-4fea-9356-\
+083457dd362e"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"stone1", "[", 
+   RowBox[{
+    RowBox[{"w_:", " ", "400"}], ",", 
+    RowBox[{"h_:", " ", "200"}], ",", 
+    RowBox[{"f1_:", " ", "4"}], ",", 
+    RowBox[{"f2_:", " ", "1.7"}]}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"l", ",", "e", ",", "curr"}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"curr", "=", 
+      RowBox[{"ColorConvert", "[", 
+       RowBox[{
+        RowBox[{"CurrentImage", "[", 
+         RowBox[{"RasterSize", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"w", ",", "h"}], "}"}]}], "]"}], ",", 
+        "\"\<Grayscale\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"l", "=", 
+      RowBox[{"LaplacianFilter", "[", 
+       RowBox[{"curr", ",", "1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"e", "=", 
+      RowBox[{"EdgeDetect", "[", "curr", "]"}]}], ";", "\[IndentingNewLine]", 
+     
+     RowBox[{"GaussianFilter", "[", 
+      RowBox[{
+       RowBox[{"ImageAdd", "[", 
+        RowBox[{"l", "+", "e"}], "]"}], ",", "f1"}], "]"}]}]}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"stone1", "[", 
+    RowBox[{"1000", ",", "1000"}], "]"}], "//", "ColorNegate"}], "//", 
+  "Dynamic"}]}], "Input",
+ CellChangeTimes->{{3.754645781162794*^9, 3.754646003066511*^9}, {
+  3.7546460904527473`*^9, 3.7546461559914017`*^9}, {3.754646232123714*^9, 
+  3.754646243366741*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"4b4b3fb9-6bc8-4350-9525-e873ea202ce9"],
+
+Cell[BoxData[" "], "Input",
+ CellChangeTimes->{
+  3.754647165637814*^9},ExpressionUUID->"e4195795-ab1b-44d4-80db-\
+3044bc839533"]
+},
+WindowSize->{1280, 1391},
+WindowMargins->{{Automatic, 0}, {Automatic, -1}},
+Magnification->2,
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 816, 20, 134, "Section",ExpressionUUID->"7f2f9f5b-fdbe-4fea-9356-083457dd362e",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1377, 42, 1467, 39, 306, "Input",ExpressionUUID->"4b4b3fb9-6bc8-4350-9525-e873ea202ce9"],
+Cell[2847, 83, 129, 3, 59, "Input",ExpressionUUID->"e4195795-ab1b-44d4-80db-3044bc839533"]
+}
+]
+*)
+

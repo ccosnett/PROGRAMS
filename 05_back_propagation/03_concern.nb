@@ -1,0 +1,181 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6314,        173]
+NotebookOptionsPosition[      4574,        140]
+NotebookOutlinePosition[      4929,        156]
+CellTagsIndexPosition[      4886,        153]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Dear Nicholas,", "Item",
+ CellChangeTimes->{{3.745790079175956*^9, 
+  3.745790082496512*^9}},ExpressionUUID->"3e778657-fca8-4425-b910-\
+c250a8361cca"],
+
+Cell["", "Item",
+ CellChangeTimes->{{3.745790079175956*^9, 
+  3.745790082672331*^9}},ExpressionUUID->"a8c2e9a2-8b52-4516-9b80-\
+85c3852350f9"],
+
+Cell["I\[CloseCurlyQuote]m a bit concerned about the paper.", "Item",
+ CellChangeTimes->{{3.745790079175956*^9, 
+  3.74579009471346*^9}},ExpressionUUID->"eb15b0e0-ae35-4516-a862-\
+26a4cc34d7c3"],
+
+Cell["\<\
+I recently bought a deep learning text book and started a rigorous study of \
+deep convolutional neural networks.\
+\>", "Item",
+ CellChangeTimes->{{3.745790079175956*^9, 3.745790129363183*^9}, {
+  3.745790164698106*^9, 
+  3.745790171909525*^9}},ExpressionUUID->"6954d5ba-0c8e-441a-b46d-\
+745bd85ec61f"],
+
+Cell[TextData[{
+ "It turns out that my idea from our last meeting (to replace the \
+hand-crafted algorithm with a ",
+ StyleBox["densely connected layer",
+  FontWeight->"Bold"],
+ " is a dead end.)"
+}], "Item",
+ CellChangeTimes->{{3.745790079175956*^9, 3.745790129363183*^9}, {
+  3.745790164698106*^9, 
+  3.745790204760625*^9}},ExpressionUUID->"10899666-029e-46e4-9e5d-\
+0b7b283a15f5"],
+
+Cell["I\[CloseCurlyQuote]m quite stressed, ", "Item",
+ CellChangeTimes->{{3.74579024568797*^9, 
+  3.745790251878861*^9}},ExpressionUUID->"ca725ad9-b77b-4f25-87ce-\
+204d78eb1fc3"],
+
+Cell["\<\
+I realize that Kenneth leaving soon. And I will need some real data in order \
+to prove that my method is better than Gomez\[CloseCurlyQuote]s\
+\>", "Item",
+ CellChangeTimes->{{3.745790258663535*^9, 3.7457903114446898`*^9}, 
+   3.745790812702615*^9},
+ FontSize->16,ExpressionUUID->"13ce0426-b7e6-4d5f-a5c0-343691d3f8de"]
+}, Open  ]],
+
+Cell["\<\
+I think it might be extremely beneficial to switch course from the structured \
+masters to a pure research masters.\
+\>", "Text",
+ CellChangeTimes->{{3.7457903173297453`*^9, 
+  3.745790363482863*^9}},ExpressionUUID->"f5404d7f-1d9a-4062-a68f-\
+0188787dbe56"],
+
+Cell["\<\
+With your permission I would like to switch from the structured masters to a \
+pure research masters.\
+\>", "Text",
+ CellChangeTimes->{{3.745790921515874*^9, 
+  3.7457909472614727`*^9}},ExpressionUUID->"525b833b-5d4c-49fb-8ecd-\
+c7fba2f3b4d4"],
+
+Cell["\<\
+I think it will be the difference between a successful paper and a wasted \
+year.\
+\>", "Text",
+ CellChangeTimes->{{3.745790895373839*^9, 3.745790916862588*^9}, {
+  3.745790955933723*^9, 
+  3.7457909775563602`*^9}},ExpressionUUID->"dc8b370a-342e-4353-ac77-\
+d0f6dd6020d6"],
+
+Cell[CellGroupData[{
+
+Cell["My research so far will be rather redundant.", "Item",
+ CellChangeTimes->{{3.745790368379424*^9, 
+  3.745790412816907*^9}},ExpressionUUID->"2f7038db-8379-470b-a5b3-\
+06ce1627a123"],
+
+Cell["\<\
+I would like to put all 100% of my available time and energy into the \
+research as opposed to 70%.\
+\>", "Item",
+ CellChangeTimes->{{3.7457905347813263`*^9, 3.745790568731295*^9}, {
+  3.745790743805676*^9, 
+  3.745790760455523*^9}},ExpressionUUID->"005f4adc-87c4-49c2-99c7-\
+43d44d1f8131"],
+
+Cell["\<\
+I feel I don\[CloseCurlyQuote]t fully understand my problem and that time \
+needs to be invested in order to do a thorough reading of the field. \
+\>", "Item",
+ CellChangeTimes->{{3.745790782012439*^9, 3.7457907823395844`*^9}, {
+  3.745791093536645*^9, 
+  3.7457911283427877`*^9}},ExpressionUUID->"a89b2f58-efeb-4d4e-99f3-\
+1e094096bea0"],
+
+Cell["\<\
+Hopefully I have demonstrated this summer that I am diligent enough to carry \
+out this research.\
+\>", "Item",
+ CellChangeTimes->{{3.7457911566306353`*^9, 
+  3.7457911928286133`*^9}},ExpressionUUID->"d38ba645-be56-4228-88e9-\
+15df46ca70b8"]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.745790775062621*^9},
+ FontSize->12,ExpressionUUID->"c61de014-1be9-4d39-9491-ef4235e9326d"],
+
+Cell["It seems foolish", "Item",
+ CellChangeTimes->{{3.7457907638213787`*^9, 
+  3.745790767371945*^9}},ExpressionUUID->"b65f16cf-8586-431f-9163-\
+8a1adce46117"]
+},
+WindowSize->{1280, 1391},
+WindowMargins->{{Automatic, 0}, {Automatic, -1}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 156, 3, 32, "Item",ExpressionUUID->"3e778657-fca8-4425-b910-c250a8361cca"],
+Cell[739, 27, 142, 3, 32, "Item",ExpressionUUID->"a8c2e9a2-8b52-4516-9b80-85c3852350f9"],
+Cell[884, 32, 194, 3, 32, "Item",ExpressionUUID->"eb15b0e0-ae35-4516-a862-26a4cc34d7c3"],
+Cell[1081, 37, 312, 7, 32, "Item",ExpressionUUID->"6954d5ba-0c8e-441a-b46d-745bd85ec61f"],
+Cell[1396, 46, 383, 10, 32, "Item",ExpressionUUID->"10899666-029e-46e4-9e5d-0b7b283a15f5"],
+Cell[1782, 58, 178, 3, 32, "Item",ExpressionUUID->"ca725ad9-b77b-4f25-87ce-204d78eb1fc3"],
+Cell[1963, 63, 330, 6, 33, "Item",ExpressionUUID->"13ce0426-b7e6-4d5f-a5c0-343691d3f8de"]
+}, Open  ]],
+Cell[2308, 72, 267, 6, 35, "Text",ExpressionUUID->"f5404d7f-1d9a-4062-a68f-0188787dbe56"],
+Cell[2578, 80, 253, 6, 35, "Text",ExpressionUUID->"525b833b-5d4c-49fb-8ecd-c7fba2f3b4d4"],
+Cell[2834, 88, 282, 7, 35, "Text",ExpressionUUID->"dc8b370a-342e-4353-ac77-d0f6dd6020d6"],
+Cell[CellGroupData[{
+Cell[3141, 99, 186, 3, 32, "Item",ExpressionUUID->"2f7038db-8379-470b-a5b3-06ce1627a123"],
+Cell[3330, 104, 300, 7, 32, "Item",ExpressionUUID->"005f4adc-87c4-49c2-99c7-43d44d1f8131"],
+Cell[3633, 113, 348, 7, 32, "Item",ExpressionUUID->"a89b2f58-efeb-4d4e-99f3-1e094096bea0"],
+Cell[3984, 122, 251, 6, 32, "Item",ExpressionUUID->"d38ba645-be56-4228-88e9-15df46ca70b8"]
+}, Open  ]],
+Cell[4250, 131, 157, 2, 49, "Input",ExpressionUUID->"c61de014-1be9-4d39-9491-ef4235e9326d"],
+Cell[4410, 135, 160, 3, 32, "Item",ExpressionUUID->"b65f16cf-8586-431f-9163-8a1adce46117"]
+}
+]
+*)
+

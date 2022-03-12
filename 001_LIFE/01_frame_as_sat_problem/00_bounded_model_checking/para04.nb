@@ -1,0 +1,403 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17449,        395]
+NotebookOptionsPosition[     15376,        350]
+NotebookOutlinePosition[     15719,        365]
+CellTagsIndexPosition[     15676,        362]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Each transition function T can be represented by a \
+set of m clauses that must be satisfied for that function to be equal to 1",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787396842458159*^9, 3.787396869664504*^9}, {
+  3.787397009233554*^9, 
+  3.787397027423484*^9}},ExpressionUUID->"f5367865-9de3-4601-adc2-\
+ada8e6347b78"],
+
+Cell[TextData[StyleBox["if the function equals 1, then the transition is \
+legal, and we are legally allowed to leap from state X to state X prime",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7873970349834642`*^9, 3.787397066981874*^9}},
+ CellLabel->"In[68]:=",ExpressionUUID->"1302f0cc-f5c6-4264-902e-5241e02c5159"],
+
+Cell[TextData[StyleBox["what does this look like?, maybe the answer on \
+mathematica stack can help?",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787396871986038*^9, 3.787396883111973*^9}},
+ CellLabel->"In[55]:=",ExpressionUUID->"0e610e24-1bf4-4335-b556-468a20e11ae2"],
+
+Cell[TextData[StyleBox["These clauses involve 2n variables",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787396888810355*^9, 3.787396905502578*^9}},
+ CellLabel->"In[58]:=",ExpressionUUID->"a81c6527-fece-4fba-be70-a3756aa01c5d"],
+
+Cell[TextData[StyleBox["so they are some relation between the booleans of \
+state 1 and the booleans of state 2",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787396910254418*^9, 3.787396926213511*^9}},
+ CellLabel->"In[60]:=",ExpressionUUID->"ff4a54b6-b935-4e19-851f-814b26260517"],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[
+   TagBox[RasterBox[CompressedData["
+1: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
+2ps=
+     "], {{0, 121}, {577, 0}}, {0, 255},
+     ColorFunction->RGBColor],
+    BoxForm`ImageTag[
+    "Byte", ColorSpace -> "RGB", Interleaving -> True, MetaInformation -> 
+     Association["Comments" -> Association["Software" -> "gnome-screenshot"]]],
+    Selectable->False],
+   DefaultBaseStyle->"ImageGraphics",
+   ImageSizeRaw->{577, 121},
+   PlotRange->{{0, 577}, {0, 121}}],
+  StripOnInput->False,
+  Magnification->0.3 Inherited]], "Print",
+ Evaluatable->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.787396952703459*^9},ExpressionUUID->"830a5c21-029e-4d90-b118-\
+b2ad5a7da07d"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["F",
+   FontWeight->"Normal"], "[", 
+  RowBox[{
+   SubscriptBox[
+    StyleBox["x",
+     FontWeight->"Normal"], "ij"], ",", 
+   SubsuperscriptBox["x", "ij", "\[Prime]"]}], "]"}]], "DisplayFormula",
+ CellChangeTimes->{{3.787396954874823*^9, 3.787396983122941*^9}},
+ FontSize->13,ExpressionUUID->"24799bbb-424e-4b4d-998f-f524d4d7fef3"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["T",
+   FontWeight->"Normal"], "[", 
+  RowBox[{"X", ",", 
+   SuperscriptBox["X", "\[Prime]"]}], "]"}]], "DisplayFormula",
+ CellChangeTimes->{{3.7873969737731543`*^9, 3.7873969780108433`*^9}},
+ FontSize->13,ExpressionUUID->"08e03e5c-4c5a-47ed-b0ae-b5390b28e32c"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"X", "=", 
+   SubscriptBox["x", "ij"]}], ",", 
+  RowBox[{"X", "=", 
+   SubsuperscriptBox["x", "ij", "\[Prime]"]}]}]], "DisplayFormula",
+ CellChangeTimes->{{3.787396985265184*^9, 3.78739700476865*^9}},
+ FontSize->13,ExpressionUUID->"0e075430-a500-4425-b491-eff1e87f0852"],
+
+Cell[TextData[StyleBox["The existence of some sequence, 33 is equivalent to \
+the satisfiability of m r clauses ",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787397088925164*^9, 3.7873971241785316`*^9}, {
+  3.787397166227655*^9, 3.787397185319868*^9}},
+ CellLabel->"In[70]:=",ExpressionUUID->"7c05ca55-a5e0-4074-80ee-f05ce616344d"],
+
+Cell[TextData[StyleBox["So if all these transitions are legal",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787397194448906*^9, 3.787397202199032*^9}},
+ CellLabel->"In[79]:=",ExpressionUUID->"f6cb25d6-76ba-40b8-8130-fef0ba3dbe9a"],
+
+Cell[TextData[StyleBox["Then the sequence is legal",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787397204025679*^9, 3.787397209334619*^9}},
+ CellLabel->"In[78]:=",ExpressionUUID->"c04d60ee-7a0b-4a4b-a30a-ed2699328d72"],
+
+Cell[TextData[StyleBox["if something is legal then it exists in the platonic \
+realm",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.78739721123277*^9, 3.7873972217577257`*^9}, 
+   3.7873974411466722`*^9, 3.787397496503667*^9},
+ CellLabel->"In[77]:=",ExpressionUUID->"e3c2d7ff-9621-40b3-896e-12c7bcc0aed9"],
+
+Cell[BoxData[""], "DisplayFormula",
+ CellChangeTimes->{{3.787396985265184*^9, 3.7873969944972878`*^9}},
+ FontSize->13,ExpressionUUID->"5a037c6c-719c-4a1b-bfc2-302e314bf504"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 689, 17, 114, "Text",ExpressionUUID->"f5367865-9de3-4601-adc2-ada8e6347b78",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1250, 39, 971, 20, 114, "Text",ExpressionUUID->"1302f0cc-f5c6-4264-902e-5241e02c5159",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2224, 61, 633, 15, 69, "Text",ExpressionUUID->"0e610e24-1bf4-4335-b556-468a20e11ae2",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2860, 78, 566, 14, 69, "Text",ExpressionUUID->"a81c6527-fece-4fba-be70-a3756aa01c5d",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3429, 94, 644, 15, 69, "Text",ExpressionUUID->"ff4a54b6-b935-4e19-851f-814b26260517",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4076, 111, 7691, 135, 89, "Print",ExpressionUUID->"830a5c21-029e-4d90-b118-b2ad5a7da07d",
+ Evaluatable->False],
+Cell[11770, 248, 367, 10, 56, "DisplayFormula",ExpressionUUID->"24799bbb-424e-4b4d-998f-f524d4d7fef3"],
+Cell[12140, 260, 296, 7, 50, "DisplayFormula",ExpressionUUID->"08e03e5c-4c5a-47ed-b0ae-b5390b28e32c"],
+Cell[12439, 269, 304, 7, 56, "DisplayFormula",ExpressionUUID->"0e075430-a500-4425-b491-eff1e87f0852"],
+Cell[12746, 278, 671, 16, 69, "Text",ExpressionUUID->"7c05ca55-a5e0-4074-80ee-f05ce616344d",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[13420, 296, 569, 14, 69, "Text",ExpressionUUID->"f6cb25d6-76ba-40b8-8130-fef0ba3dbe9a",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[13992, 312, 558, 14, 69, "Text",ExpressionUUID->"c04d60ee-7a0b-4a4b-a30a-ed2699328d72",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[14553, 328, 643, 16, 69, "Text",ExpressionUUID->"e3c2d7ff-9621-40b3-896e-12c7bcc0aed9",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[15199, 346, 173, 2, 50, "DisplayFormula",ExpressionUUID->"5a037c6c-719c-4a1b-bfc2-302e314bf504"]
+}
+]
+*)
+

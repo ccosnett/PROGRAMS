@@ -1,0 +1,286 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9666,        278]
+NotebookOptionsPosition[      8901,        257]
+NotebookOutlinePosition[      9244,        272]
+CellTagsIndexPosition[      9201,        269]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"space0symbol0", "=", 
+   StyleBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"x1", "\[Or]", "x2", "\[Or]", "x3"}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{"x2", "\[Or]", "x3", "\[Or]", "x4"}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{"x3", "\[Or]", "x4", "\[Or]", "x5"}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{"x4", "\[Or]", "x5", "\[Or]", "x6"}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{"x5", "\[Or]", "x6", "\[Or]", "x7"}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{"x6", "\[Or]", "x7", "\[Or]", "x8"}], ")"}]}],
+    FontWeight->"Normal"]}], 
+  StyleBox[";",
+   FontWeight->"Normal"]}], "\n", 
+ RowBox[{
+  RowBox[{"space1symbol0", "=", 
+   StyleBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"x1", "\[Or]", "x3", "\[Or]", "x5"}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{"x2", "\[Or]", "x4", "\[Or]", "x6"}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{"x3", "\[Or]", "x5", "\[Or]", "x7"}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{"x4", "\[Or]", "x6", "\[Or]", "x8"}], ")"}]}],
+    FontWeight->"Normal"]}], 
+  StyleBox[";",
+   FontWeight->"Normal"]}], "\n", 
+ RowBox[{
+  RowBox[{"space0symbol1", "=", 
+   StyleBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Not]", "x1"}], "\[Or]", 
+       RowBox[{"\[Not]", "x2"}], "\[Or]", 
+       RowBox[{"\[Not]", "x3"}]}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Not]", "x2"}], "\[Or]", 
+       RowBox[{"\[Not]", "x3"}], "\[Or]", 
+       RowBox[{"\[Not]", "x4"}]}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Not]", "x3"}], "\[Or]", 
+       RowBox[{"\[Not]", "x4"}], "\[Or]", 
+       RowBox[{"\[Not]", "x5"}]}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Not]", "x4"}], "\[Or]", 
+       RowBox[{"\[Not]", "x5"}], "\[Or]", 
+       RowBox[{"\[Not]", "x6"}]}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Not]", "x5"}], "\[Or]", 
+       RowBox[{"\[Not]", "x6"}], "\[Or]", 
+       RowBox[{"\[Not]", "x7"}]}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Not]", "x6"}], "\[Or]", 
+       RowBox[{"\[Not]", "x7"}], "\[Or]", 
+       RowBox[{"\[Not]", "x8"}]}], ")"}]}],
+    FontWeight->"Normal"]}], 
+  StyleBox[";",
+   FontWeight->"Normal"]}], "\n", 
+ RowBox[{
+  RowBox[{"space1symbol0", "=", 
+   StyleBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"x1", "\[Or]", "x3", "\[Or]", "x5"}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{"x2", "\[Or]", "x4", "\[Or]", "x6"}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{"x3", "\[Or]", "x5", "\[Or]", "x7"}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{"x4", "\[Or]", "x6", "\[Or]", "x8"}], ")"}]}],
+    FontWeight->"Normal"]}], 
+  StyleBox[";",
+   FontWeight->"Normal"]}], "\n", 
+ RowBox[{
+  RowBox[{"space1symbol1", "=", 
+   StyleBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Not]", "x1"}], "\[Or]", 
+       RowBox[{"\[Not]", "x3"}], "\[Or]", 
+       RowBox[{"\[Not]", "x5"}]}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Not]", "x2"}], "\[Or]", 
+       RowBox[{"\[Not]", "x4"}], "\[Or]", 
+       RowBox[{"\[Not]", "x6"}]}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Not]", "x3"}], "\[Or]", 
+       RowBox[{"\[Not]", "x5"}], "\[Or]", 
+       RowBox[{"\[Not]", "x7"}]}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Not]", "x4"}], "\[Or]", 
+       RowBox[{"\[Not]", "x6"}], "\[Or]", 
+       RowBox[{"\[Not]", "x8"}]}], ")"}]}],
+    FontWeight->"Normal"]}], 
+  StyleBox[";",
+   FontWeight->"Normal"]}], "\n", 
+ RowBox[{
+  RowBox[{"space2symbol0", "=", 
+   StyleBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"x1", "\[Or]", "x4", "\[Or]", "x7"}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{"x2", "\[Or]", "x5", "\[Or]", "x8"}], ")"}]}],
+    FontWeight->"Normal"]}], 
+  StyleBox[";",
+   FontWeight->"Normal"]}], "\n", 
+ RowBox[{
+  RowBox[{"space2symbol1", "=", 
+   StyleBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Not]", "x1"}], "\[Or]", 
+       RowBox[{"\[Not]", "x4"}], "\[Or]", 
+       RowBox[{"\[Not]", "x7"}]}], ")"}], "\[And]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Not]", "x2"}], "\[Or]", 
+       RowBox[{"\[Not]", "x5"}], "\[Or]", 
+       RowBox[{"\[Not]", "x8"}]}], ")"}]}],
+    FontWeight->"Normal"]}], 
+  StyleBox[";",
+   FontWeight->"Normal"]}]}], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787238266117175*^9, 3.787238295440283*^9}, 
+   3.787239284179577*^9},ExpressionUUID->"da1403e9-a080-4167-8944-\
+fe78ac32928b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sat", "[", 
+   RowBox[{
+   "x1", ",", "x2", ",", "x3", ",", "x4", ",", "x5", ",", "x6", ",", "x7", 
+    ",", "x8", ",", 
+    RowBox[{
+    "space0symbol0", "\[And]", "space0symbol1", "\[And]", "space1symbol0", 
+     "\[And]", "space1symbol1", "\[And]", "space2symbol0", "\[And]", 
+     "space2symbol1"}]}], "]"}], "//", "plt"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787218826841934*^9, 3.787218842501739*^9}, {
+   3.787219157575272*^9, 3.787219357036083*^9}, {3.7872381910897503`*^9, 
+   3.787238199174285*^9}, {3.787238232110839*^9, 3.787238233556883*^9}, {
+   3.7872383684857197`*^9, 3.787238396445429*^9}, {3.787238464249716*^9, 
+   3.787238470370661*^9}, {3.787238534342067*^9, 3.787238540485115*^9}, {
+   3.78723870243722*^9, 3.7872387064984303`*^9}, {3.787239261479558*^9, 
+   3.787239261641963*^9}, {3.7872393096113253`*^9, 3.787239323296916*^9}, {
+   3.787239378606765*^9, 3.787239379734*^9}},
+ CellLabel->
+  "In[115]:=",ExpressionUUID->"0b438640-110f-4992-9924-0b7af0e52bfb"],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{
+    RasterBox[{{1, 1, 0, 0, 1, 1, 0, 0}, {1, 0, 1, 0, 0, 1, 0, 1}, {1, 0, 0, 
+     1, 1, 0, 0, 1}, {0, 1, 1, 0, 0, 1, 1, 0}, {0, 1, 0, 1, 1, 0, 1, 0}, {0, 
+     0, 1, 1, 0, 0, 1, 1}}, {{0, 0}, {8, 6}}, {0, 1}], {
+     {GrayLevel[
+       NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+      StyleBox[
+       LineBox[{{{0, 6}, {8, 6}}, {{0, 5}, {8, 5}}, {{0, 4}, {8, 4}}, {{0, 
+        3}, {8, 3}}, {{0, 2}, {8, 2}}, {{0, 1}, {8, 1}}, {{0, 0}, {8, 0}}}],
+       Antialiasing->False]}, 
+     {GrayLevel[
+       NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+      StyleBox[
+       LineBox[{{{0, 0}, {0, 6}}, {{1, 0}, {1, 6}}, {{2, 0}, {2, 6}}, {{3, 
+        0}, {3, 6}}, {{4, 0}, {4, 6}}, {{5, 0}, {5, 6}}, {{6, 0}, {6, 6}}, {{
+        7, 0}, {7, 6}}, {{8, 0}, {8, 6}}}],
+       Antialiasing->False]}}},
+   Frame->False,
+   FrameLabel->{None, None},
+   FrameTicks->{{None, None}, {None, None}},
+   GridLinesStyle->Directive[
+     GrayLevel[0.5, 0.4]],
+   Method->{
+    "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic}],
+  StripOnInput->False,
+  Magnification->0.3 Inherited]], "Output",
+ CellChangeTimes->{
+  3.787218845646929*^9, 3.787219162132174*^9, {3.787219208235649*^9, 
+   3.787219270679064*^9}, 3.787219305246519*^9, {3.787219339827106*^9, 
+   3.7872193579811363`*^9}, 3.7872381995823717`*^9, 3.787238397365864*^9, 
+   3.787238470911924*^9, {3.787238513185915*^9, 3.787238540965803*^9}, {
+   3.7872386941375647`*^9, 3.787238706818791*^9}, {3.787239262128645*^9, 
+   3.787239323921142*^9}, {3.787239365678088*^9, 3.787239380106675*^9}},
+ FontSize->10,
+ CellLabel->
+  "Out[115]=",ExpressionUUID->"43a74733-47ec-4656-afd4-7de72a3022bc"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["got that is beautiful, we can use a sat solver to \
+find these!",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787239383873588*^9, 
+  3.78723939442905*^9}},ExpressionUUID->"644b9818-350f-4103-a390-\
+80c14ac7f7b1"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787239300515601*^9, 
+   3.787239303257608*^9}},ExpressionUUID->"312c3863-d9c4-4a84-835f-\
+f2262265cac7"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4727, 146, 405, "Input",ExpressionUUID->"da1403e9-a080-4167-8944-fe78ac32928b"],
+Cell[CellGroupData[{
+Cell[5310, 170, 1086, 21, 176, "Input",ExpressionUUID->"0b438640-110f-4992-9924-0b7af0e52bfb"],
+Cell[6399, 193, 1702, 37, 227, "Output",ExpressionUUID->"43a74733-47ec-4656-afd4-7de72a3022bc"]
+}, Open  ]],
+Cell[8116, 233, 600, 16, 69, "Text",ExpressionUUID->"644b9818-350f-4103-a390-80c14ac7f7b1",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[8719, 251, 178, 4, 60, "Input",ExpressionUUID->"312c3863-d9c4-4a84-835f-f2262265cac7"]
+}
+]
+*)
+

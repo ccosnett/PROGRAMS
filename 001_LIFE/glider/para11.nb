@@ -1,0 +1,103 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3149,         95]
+NotebookOptionsPosition[      2502,         74]
+NotebookOutlinePosition[      2845,         89]
+CellTagsIndexPosition[      2802,         86]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Let us look for a moment at some of the patterns that \
+can occur on a chessboard, an 8 by 8 grid.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787154166113038*^9, 3.7871541816172113`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"54d054f6-3a62-4c57-af1f-69c1a6121b4b"],
+
+Cell[TextData[StyleBox["Human beings will never be able to contemplate more \
+than a tiny fraction of the 2 to the 64 states that are possible;",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7871541829034643`*^9, 
+  3.787154206576017*^9}},ExpressionUUID->"6af37f47-bd0d-4615-a7c6-\
+e273e4b6cb6f"],
+
+Cell[TextData[StyleBox["So we can be fairly sure that Life-enthusiasts have \
+not already explored every tantalizing configuration that exists, even on \
+such a small playing field.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.78715420732388*^9, 
+  3.78715424459098*^9}},ExpressionUUID->"621647ff-8cdb-4276-bf2d-\
+d84e469e9f34"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 632, 15, 69, "Text",ExpressionUUID->"54d054f6-3a62-4c57-af1f-69c1a6121b4b",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1193, 37, 634, 16, 114, "Text",ExpressionUUID->"6af37f47-bd0d-4615-a7c6-e273e4b6cb6f",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1830, 55, 668, 17, 114, "Text",ExpressionUUID->"621647ff-8cdb-4276-bf2d-d84e469e9f34",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+

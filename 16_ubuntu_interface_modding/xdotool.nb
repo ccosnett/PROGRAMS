@@ -1,0 +1,297 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11009,        289]
+NotebookOptionsPosition[      7483,        211]
+NotebookOutlinePosition[      9219,        261]
+CellTagsIndexPosition[      9176,        258]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RunProcess", "[", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<xdotool\>\"", ",", "\"\<key\>\"", " ", ",", "\"\<alt+Tab\>\""}], 
+    "}"}], "]"}], ";"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767893396172139*^9, 3.767893410161696*^9}, {
+   3.7678934420268917`*^9, 3.767893461097278*^9}, 3.767895554971923*^9},
+ CellLabel->"In[2]:=",ExpressionUUID->"45d12d00-594e-48a0-bf1b-0aefb84d73bd"],
+
+Cell[TextData[StyleBox["http://xmodulo.com/simulate-key-press-mouse-movement-\
+linux.html",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 1, 0],
+ FrontFaceColor->RGBColor[0, 1, 0],
+ BackFaceColor->RGBColor[0, 1, 0],
+ GraphicsColor->RGBColor[0, 1, 0],
+ FontSize->8,
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 1, 0],
+ Background->GrayLevel[0.5]]], "ExternalLanguage",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->(SystemOpen[cephalon`Private`xxx = First[{
+      SlotSequence[1]}]]& ),
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.767896961378563*^9, 
+  3.767896982539928*^9}},ExpressionUUID->"38211198-c77b-49e9-8e76-\
+696e6bf9f140"],
+
+Cell[" xdotool key alt+Tab", "ExternalLanguage",
+ Evaluatable->True,
+ CellGroupingRules->"InputGrouping",
+ CellEvaluationFunction->(Import[
+   StringExpression["!", #], "Text"]& ),
+ CellFrameLabels->{{None, "shell"}, {None, None}},
+ CellChangeTimes->{
+  3.767897167706085*^9, {3.767897214950852*^9, 3.767897248884955*^9}},
+ CellLabel->"In[55]:=",ExpressionUUID->"c74b3bc9-b532-42e9-9953-578b1bcb6bb8"],
+
+Cell[BoxData[
+ RowBox[{"<<", "cephalon`"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767897357978759*^9, 3.767897365567548*^9}},
+ CellLabel->"In[57]:=",ExpressionUUID->"51fae74d-dc47-44cf-bb56-7597ec3b060b"],
+
+Cell[BoxData[
+ RowBox[{"#", " "}]], "Input",
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767897398912876*^9, 
+   3.767897398960601*^9}},ExpressionUUID->"f06d2a38-2391-4aa7-9c33-\
+b572116c7019"],
+
+Cell[BoxData[
+ RowBox[{"unix", "[", "\"\<echo hello world\>\"", "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767897367672944*^9, 3.7678973900465*^9}},
+ CellLabel->"In[61]:=",ExpressionUUID->"c790e693-a54f-4f7b-ab1b-3142043b3834"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["Import"], "Input",
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.76789761605595*^9, 
+   3.767897617178176*^9}},ExpressionUUID->"15346e66-4a0f-4915-9bc3-\
+d763f4e14c06"],
+
+Cell[BoxData["\<\"hello world\"\>"], "Output",
+ CellChangeTimes->{{3.767897374188739*^9, 3.767897390783218*^9}},
+ CellLabel->"Out[61]=",ExpressionUUID->"02767b3b-b31a-4d75-b04b-400868e4ee83"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Get", "[", 
+  "\"\<!xdotool type 'alt+Tab' 'sleep 2' 'alt+Tab' 'sleep 2'\>\"", 
+  "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767897717909814*^9, 3.7678977301247673`*^9}, {
+   3.767897814340742*^9, 3.7678978361590033`*^9}, {3.767898153561777*^9, 
+   3.7678982290752993`*^9}, {3.767898314386588*^9, 3.767898342888526*^9}},
+ CellLabel->"In[85]:=",ExpressionUUID->"b2854e06-3021-43b6-9cc4-100898b93da0"],
+
+Cell[TextData[StyleBox["",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Section",\
+
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.76789349039561*^9},ExpressionUUID->"fb562320-876b-4513-aafa-b68e8c664a46"],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", 
+  RowBox[{"\<\"http://lxlinux.com/uxlta.html\"\>", ",", "TextForm"}], 
+  "]"}]], "Output",
+ CellChangeTimes->{3.767895655938442*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"dd60e60d-82ab-4bc6-ae29-fe9f39c8d143"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringSplit", "[", 
+  RowBox[{"\"\<xdotool search --name Hud key alt+Tab\>\"", ",", "\"\< \>\""}],
+   "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellLabel->"In[12]:=",ExpressionUUID->"e3455a8a-8f17-4cbd-8e37-42ff61be65ca"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"xdotool\"\>", ",", "\<\"search\"\>", ",", "\<\"--name\"\>", 
+   ",", "\<\"Hud\"\>", ",", "\<\"key\"\>", ",", "\<\"alt+Tab\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.767893713403804*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"4759d513-1340-4b95-9807-6472541c492b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RunProcess", "[", 
+  RowBox[{"StringSplit", "[", 
+   RowBox[{
+   "\"\<xdotool search --name Hud key alt+Tab\>\"", ",", "\"\< \>\""}], "]"}],
+   " ", "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7678935330869226`*^9, 3.767893547328583*^9}, {
+   3.7678936547819366`*^9, 3.767893703464281*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"ba81cea8-3670-465f-b23b-615c9a220239"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"ExitCode\"\>", "\[Rule]", "0"}], ",", 
+   RowBox[{"\<\"StandardOutput\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
+   RowBox[{"\<\"StandardError\"\>", "\[Rule]", "\<\"\"\>"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.767893705123262*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"7649c123-70f5-43d0-99e2-3502d7da34db"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RunProcess", "[", 
+   RowBox[{"StringSplit", "[", 
+    RowBox[{
+    "\"\<xdotool search --name Hud key alt+Tab\>\"", ",", "\"\< \>\""}], 
+    "]"}], " ", "]"}], "\[IndentingNewLine]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7678935330869226`*^9, 3.767893547328583*^9}, {
+   3.7678936547819366`*^9, 3.767893703464281*^9}, {3.76789396964785*^9, 
+   3.7678939697055902`*^9}},ExpressionUUID->"3a6ee80d-a792-4814-9422-\
+56ab973ac917"],
+
+Cell[TextData[StyleBox["The xdotool is a ",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.767895569660658*^9, 
+  3.767895578848415*^9}},ExpressionUUID->"8fbea610-c013-4759-b6f5-\
+945b89a712af"]
+},
+WindowSize->{1720, 1388},
+WindowMargins->{{Automatic, 2}, {0, Automatic}},
+TaggingRules->{"LastCursorPosition" -> False},
+CellEpilog:>If[
+  IntegerQ[
+   CurrentValue[
+    SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}]], 
+  SelectionMove[
+    EvaluationCell[], Before, CellContents]; SelectionMove[
+    SelectedNotebook[], Next, Character, 
+    CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}]]; 
+  CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}] = False],
+CellEventActions:>{{"MenuCommand", "HandleShiftReturn"} :> (CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}] = If[
+     MemberQ[
+      FrontEndExecute[
+       FrontEnd`UndocumentedGetSelectionPacket[
+        SelectedNotebook[]]], "CharacterRange" -> Blank[]], 
+     Last[
+      ReplaceAll["CharacterRange", 
+       FrontEndExecute[
+        FrontEnd`UndocumentedGetSelectionPacket[
+         SelectedNotebook[]]]]], False]), {
+   "MenuCommand", "EvaluateCells"} :> (CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}] = If[
+     MemberQ[
+      FrontEndExecute[
+       FrontEnd`UndocumentedGetSelectionPacket[
+        SelectedNotebook[]]], "CharacterRange" -> Blank[]], 
+     Last[
+      ReplaceAll["CharacterRange", 
+       FrontEndExecute[
+        FrontEnd`UndocumentedGetSelectionPacket[
+         SelectedNotebook[]]]]], False]), PassEventsDown -> True},
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 484, 11, 60, "Input",ExpressionUUID->"45d12d00-594e-48a0-bf1b-0aefb84d73bd"],
+Cell[1045, 33, 692, 18, 90, "ExternalLanguage",ExpressionUUID->"38211198-c77b-49e9-8e76-696e6bf9f140",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1740, 53, 401, 8, 100, "ExternalLanguage",ExpressionUUID->"c74b3bc9-b532-42e9-9953-578b1bcb6bb8",
+ Evaluatable->True,
+ CellGroupingRules->"InputGrouping"],
+Cell[2144, 63, 271, 5, 60, "Input",ExpressionUUID->"51fae74d-dc47-44cf-bb56-7597ec3b060b"],
+Cell[2418, 70, 196, 5, 60, "Input",ExpressionUUID->"f06d2a38-2391-4aa7-9c33-b572116c7019"],
+Cell[2617, 77, 296, 5, 60, "Input",ExpressionUUID->"c790e693-a54f-4f7b-ab1b-3142043b3834"],
+Cell[CellGroupData[{
+Cell[2938, 86, 183, 4, 60, "Input",ExpressionUUID->"15346e66-4a0f-4915-9bc3-d763f4e14c06"],
+Cell[3124, 92, 191, 2, 97, "Output",ExpressionUUID->"02767b3b-b31a-4d75-b04b-400868e4ee83"]
+}, Open  ]],
+Cell[3330, 97, 492, 9, 60, "Input",ExpressionUUID->"b2854e06-3021-43b6-9cc4-100898b93da0"],
+Cell[3825, 108, 829, 21, 134, "Section",ExpressionUUID->"fb562320-876b-4513-aafa-b68e8c664a46",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4657, 131, 253, 5, 68, "Output",ExpressionUUID->"dd60e60d-82ab-4bc6-ae29-fe9f39c8d143"],
+Cell[CellGroupData[{
+Cell[4935, 140, 269, 5, 60, "Input",ExpressionUUID->"e3455a8a-8f17-4cbd-8e37-42ff61be65ca"],
+Cell[5207, 147, 315, 6, 97, "Output",ExpressionUUID->"4759d513-1340-4b95-9807-6472541c492b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5559, 158, 461, 10, 60, "Input",ExpressionUUID->"ba81cea8-3670-465f-b23b-615c9a220239"],
+Cell[6023, 170, 402, 8, 97, "Output",ExpressionUUID->"7649c123-70f5-43d0-99e2-3502d7da34db"]
+}, Open  ]],
+Cell[6440, 181, 531, 12, 104, "Input",ExpressionUUID->"3a6ee80d-a792-4814-9422-56ab973ac917"],
+Cell[6974, 195, 505, 14, 69, "Text",ExpressionUUID->"8fbea610-c013-4759-b6f5-945b89a712af",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+

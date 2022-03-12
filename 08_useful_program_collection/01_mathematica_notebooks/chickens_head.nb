@@ -1,0 +1,191 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6929,        181]
+NotebookOptionsPosition[      6252,        159]
+NotebookOutlinePosition[      6625,        176]
+CellTagsIndexPosition[      6582,        173]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Dynamic", "[", 
+  RowBox[{
+   RowBox[{"image", "=", 
+    RowBox[{"EdgeDetect", "[", 
+     RowBox[{"CurrentImage", "[", 
+      RowBox[{"RasterSize", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"400", ",", "200"}], "}"}]}], "]"}], "]"}]}], ";", "\n", 
+   RowBox[{"gg", "=", "image"}], ";", "\n", 
+   RowBox[{"lines", "=", 
+    RowBox[{"ImageLines", "[", 
+     RowBox[{"gg", ",", 
+      RowBox[{"MaxFeatures", "\[Rule]", "10"}]}], "]"}]}], ";", "\n", 
+   RowBox[{"angles", "=", 
+    RowBox[{"Mod", "[", 
+     RowBox[{
+      RowBox[{"ArcTan", "@@@", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{
+         RowBox[{"Differences", "@@@", "lines"}], ",", "1"}], "]"}]}], ",", 
+      "\[Pi]"}], "]"}]}], ";", "\n", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"verti", ",", "horiz"}], "}"}], "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Select", "[", 
+       RowBox[{"angles", ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Abs", "[", 
+           RowBox[{"#", "-", 
+            FractionBox["\[Pi]", "2"]}], "]"}], "<", 
+          FractionBox["\[Pi]", "4"]}], "&"}]}], "]"}], ",", 
+      RowBox[{"Complement", "[", 
+       RowBox[{"angles", ",", 
+        RowBox[{"Select", "[", 
+         RowBox[{"angles", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Abs", "[", 
+             RowBox[{"#", "-", 
+              FractionBox["\[Pi]", "2"]}], "]"}], "<", 
+            FractionBox["\[Pi]", "4"]}], "&"}]}], "]"}]}], "]"}]}], "}"}]}], 
+   ";", "\n", 
+   RowBox[{"ImageRotate", "[", 
+    RowBox[{"image", ",", 
+     RowBox[{"\[Pi]", "-", 
+      RowBox[{"Mean", "[", "horiz", "]"}]}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7546389918266077`*^9, 3.7546390006862297`*^9}, {
+  3.754642794072425*^9, 3.754642799377767*^9}, {3.754642940316121*^9, 
+  3.754642949563561*^9}, {3.7546432417106667`*^9, 3.754643264275489*^9}, {
+  3.754643319915352*^9, 3.754643423809301*^9}, {3.754643516198042*^9, 
+  3.754643531103314*^9}, {3.7546437623696012`*^9, 3.754643780842811*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"1a37ae94-e9c6-444d-885e-db5f4ebbdf0d"],
+
+Cell[BoxData[
+ DynamicBox[ToBoxes[$CellContext`image = EdgeDetect[
+      CurrentImage[
+      RasterSize -> {400, 
+        200}]]; $CellContext`gg = $CellContext`image; $CellContext`lines = 
+    ImageLines[$CellContext`gg, MaxFeatures -> 10]; $CellContext`angles = 
+    Mod[
+      Apply[ArcTan, 
+       Flatten[
+        Apply[Differences, $CellContext`lines, {1}], 1], {1}], 
+      Pi]; {$CellContext`verti, $CellContext`horiz} = {
+      Select[$CellContext`angles, Abs[# - Pi/2] < Pi/4& ], 
+      Complement[$CellContext`angles, 
+       Select[$CellContext`angles, Abs[# - Pi/2] < Pi/4& ]]}; 
+   ImageRotate[$CellContext`image, Pi - Mean[$CellContext`horiz]], 
+   StandardForm],
+  ImageSizeCache->{982., {454., 465.}}]], "Output",
+ CellChangeTimes->{3.754643782680169*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"d4b9ee97-32b7-4921-a69a-e2a59fb70cd6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EdgeDetect", "[", 
+  RowBox[{"CurrentImage", "[", 
+   RowBox[{"RasterSize", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"400", ",", "200"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7546435338111277`*^9, 3.7546436463975887`*^9}, {
+  3.754643725351584*^9, 3.754643735058935*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"0251558c-5fac-4fc8-b341-edffa0a74bcd"],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1:eJzt3UtOU1EAgOEeRw7dgnMX4NShU4wLwIjECSZgYtyFSxZK0fJsC6X3b/i+
+8Iim6S33v69zLo+3X34cfHs1m83OXp9/ODj89eH09PD3pzfn//h8cvb9+OTo
+68eTn0fHR6fvv1w87N2Yzf6cvwMAAAAAAAAAAAAAAAAAAAAAwD4ZfndOyZi/
+UTAu9w09Gs5rjIskejSMpXemN258ZlpjfgZxfZWhBQCbceZIWRoEChOwmLQa
+hucR8+PVYtfQo2IYDsaIEeLWR8t8vn3qF8F/w+VuynD3o2UYqKc4o6fMB4WK
+ZIyrJBQs7tfqETEWb3o0jKt5xalfCHPmd2PM78KD7B8lS1e7ukzv+k1bQaa2
+PN9uGDK95Z1Cj+npUbL47qur87ke0/p3c/DqhK7HpBYZ7B8RNyZL9GjRo0WP
+Fj1a9GjRo0WPFj1SzLe36NGiR4seLXq06NGiR4seLXq06NGiR4vpqxY9WvRo
+0aNFjxY9UvwUeovhR4seLXq06NGiR4seLS53W/Ro0aNFjxY9WvRo0aNFjxY9
+WvRIMV3SokeLHi16tOjRokeLHi16tOjRokeL6ZIWPVr0aNGjRY8WPVr0aNGj
+RY8Uw/MWPVr0aNGjRY8WPVr0aNGjRY8WPVqGv7adYvqqRY8WPVr0aNGjRY8W
+PVr0aNGjRY8WPVr0aNEjxXR7ix4terTo0aJHix4terTo0aJHix4terTo0aJH
+ix4terTo0aJHix4terTo0aJHi28vadGjRY8WPVr0aNGjRY8WPVr0aNGjRY8W
+PVq222PcsMWnfiGe2GPF+hdmQ2Pc2qY3sv5ydLnT7RW6lXW0ZjJBLjy8QY9r
+D9z8GVdt99ce9FJ7rFxZS/vHtZ1lPY9+UU/5mvbR/Wvs7jXqdu0zuHfDXb1J
+67EtD6zrDQ4rejzVvSv7UUd3PVa6+9y5+oj0uIXtpMc+n8jvOfrc8V+Pv9BZ
+eqbd9NjjvXCdS/mtLu3519R84LGvQW4erlZfIz1paTvoMfZ7B9mp3fQYfmv/
+mnbQY76I4T7LWnbS43LWUo817KKHI9X6nGhb9GjRo0WPFj1a9GjRo0WPFj1a
+TGO06NGiR4seLXq06NGiR4seLXq06NGiR4seLXq06NGiR4seLXq06NGiR4se
+LXq06NGiR4seLXq06NGiR4seLXq06NGiR4seLXq06NGiR4seLXq06NGiR4se
+LXq06NGiR4seLXq06NGiR4seLXq06NGiR4seLXq06NGiR4seLXq06NGiR4se
+LXq06NGiR4seLXq06NHi7xW16NGiR8ue9PgLlNURRg==
+    "], {{0, 300}, {400, 0}}, {0,
+     1},
+    ColorFunction->GrayLevel],
+   BoxForm`ImageTag[
+   "Bit", ColorSpace -> Automatic, Interleaving -> None, MetaInformation -> 
+    Association[
+     "Exif" -> Association[
+       "DateTime" -> 
+        DateObject[{2018, 12, 24, 12, 35, 45.08699989318848}, "Instant", 
+          "Gregorian", 0.], "Model" -> 
+        "UVC Camera VendorID_6008 ProductID_548", "PixelXDimension" -> 400, 
+        "PixelYDimension" -> 300, "TimeZoneOffset" -> 0., "Software" -> 
+        "Created with the Wolfram Language : www.wolfram.com"]]],
+   Selectable->False],
+  DefaultBaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{400, 300},
+  PlotRange->{{0, 400}, {0, 300}}]], "Output",
+ CellChangeTimes->{3.7546436669584017`*^9, 3.754643747331691*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"3f639c90-186c-4d92-909b-e7165aa7bfad"]
+}, Open  ]]
+},
+WindowSize->{1280, 1391},
+WindowMargins->{{Automatic, 0}, {Automatic, -1}},
+Magnification->2,
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2107, 55, 387, "Input",ExpressionUUID->"1a37ae94-e9c6-444d-885e-db5f4ebbdf0d"],
+Cell[2690, 79, 850, 18, 953, "Output",ExpressionUUID->"d4b9ee97-32b7-4921-a69a-e2a59fb70cd6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3577, 102, 393, 8, 59, "Input",ExpressionUUID->"0251558c-5fac-4fc8-b341-edffa0a74bcd"],
+Cell[3973, 112, 2263, 44, 634, "Output",ExpressionUUID->"3f639c90-186c-4d92-909b-e7165aa7bfad"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

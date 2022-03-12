@@ -1,0 +1,81 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2377,         73]
+NotebookOptionsPosition[      1879,         55]
+NotebookOutlinePosition[      2222,         70]
+CellTagsIndexPosition[      2179,         67]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["SAT solvers are basically useless for the study of \
+Methuselahs, because the state space becomes too large.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787427558674264*^9, 3.787427578922838*^9}},
+ CellLabel->"In[48]:=",ExpressionUUID->"d503ca86-97e3-4a90-9404-bcf3f7e0d9e4"],
+
+Cell[TextData[StyleBox["But they are quite helpful when we want to illuminate \
+many other aspects of life, and exercises 66 to 85 discuss some notable \
+instances.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787427580499021*^9, 3.7874276117855797`*^9}},
+ CellLabel->"In[50]:=",ExpressionUUID->"4ef8039b-fd6f-45b8-87c1-6f2d789caa78"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 640, 15, 69, "Text",ExpressionUUID->"d503ca86-97e3-4a90-9404-bcf3f7e0d9e4",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1201, 37, 674, 16, 114, "Text",ExpressionUUID->"4ef8039b-fd6f-45b8-87c1-6f2d789caa78",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+

@@ -1,0 +1,209 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7481,        201]
+NotebookOptionsPosition[      6089,        165]
+NotebookOutlinePosition[      6432,        180]
+CellTagsIndexPosition[      6389,        177]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["The clauses that correspond to a four-step sequence \
+X0 to X1 to X2 to X4 leading to X4 equals Life turn out to be unsatisfiable \
+without going outside of the 7 by 15 frame.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.78740438770217*^9, 3.787404424951376*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"9b7ca6d1-71df-45fd-9374-eba928a658bf"],
+
+Cell[TextData[StyleBox["Only 10 gigamems of calculation were needed to \
+establish this fact, using Algorithm C below, even though roughly 34000 \
+clauses in 9000 variables needed to be examined",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787404431474098*^9, 3.787404472860783*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"d344370d-1b1d-4b38-82ec-c8b7123fb781"],
+
+Cell[TextData[StyleBox["So the next step in the preparation of 35 was to try \
+X3 equals LIFE and this trial succeeded.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874044787697678`*^9, 3.787404503875206*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"aa3baef4-1cd3-4ab5-a184-24b6fb8b2cec"],
+
+Cell[TextData[StyleBox["Additional clauses, which permitted X zero to have at \
+most 39 live cells led to the solution shown at a cost of about 17 gigamems;",
+ 
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787404505393723*^9, 3.787404535953505*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"2ff851c7-fc86-4bf2-81fa-ea7655f5255c"],
+
+Cell[TextData[StyleBox["And that solution is ",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787404537576187*^9, 
+  3.787404541671096*^9}},ExpressionUUID->"b31c688f-be21-4486-b8d9-\
+4011fdf773a0"],
+
+Cell[TextData[StyleBox["meta: so he is just describing what happened when he \
+wrote down these mysterious clauses.",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787404542906983*^9, 3.787404560744113*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"53ab003e-7488-4fbe-a6cd-3dd83f57dab3"],
+
+Cell[TextData[StyleBox["I could ask on stack if anyone has written down these \
+clauses for this simple sequence.",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874045643483953`*^9, 3.78740458400664*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"5c3c7acc-3859-44f0-be20-2c675e6ecf0d"],
+
+Cell[TextData[StyleBox["and that solution is optimum, because a further run \
+(costing 12 gigamems) proved that there is no solution with at most 38.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.7874045624984903`*^9, {3.7874045943751507`*^9, 3.7874046161659307`*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"d77c16ef-50bc-400e-a17d-dad9062657ad"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 705, 16, 114, "Text",ExpressionUUID->"9b7ca6d1-71df-45fd-9374-eba928a658bf",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1266, 38, 701, 16, 114, "Text",ExpressionUUID->"d344370d-1b1d-4b38-82ec-c8b7123fb781",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1970, 56, 628, 15, 69, "Text",ExpressionUUID->"aa3baef4-1cd3-4ab5-a184-24b6fb8b2cec",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2601, 73, 665, 16, 114, "Text",ExpressionUUID->"2ff851c7-fc86-4bf2-81fa-ea7655f5255c",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3269, 91, 534, 15, 69, "Text",ExpressionUUID->"b31c688f-be21-4486-b8d9-4011fdf773a0",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3806, 108, 648, 15, 69, "Text",ExpressionUUID->"53ab003e-7488-4fbe-a6cd-3dd83f57dab3",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4457, 125, 937, 20, 69, "Text",ExpressionUUID->"5c3c7acc-3859-44f0-be20-2c675e6ecf0d",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5397, 147, 688, 16, 114, "Text",ExpressionUUID->"d77c16ef-50bc-400e-a17d-dad9062657ad",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+

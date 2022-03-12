@@ -1,0 +1,146 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4642,        138]
+NotebookOptionsPosition[      3608,        110]
+NotebookOutlinePosition[      3951,        125]
+CellTagsIndexPosition[      3908,        122]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Figure 35 was discovered by using 105 variables for \
+each state ",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787400712442556*^9, 3.7874007316806192`*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"664c4956-4180-4302-9a8c-1168016370fe"],
+
+Cell[TextData[StyleBox["The values of X 3 were obviously predetermined",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787400735231937*^9, 3.787400748592347*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"26a88776-a49f-48a9-a5e8-7732b44f1422"],
+
+Cell[TextData[StyleBox["But the initial state had to be computed ",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874007505117083`*^9, 3.78740076829312*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"10e3ade5-1c2f-437f-9345-363f859c5045"],
+
+Cell[TextData[StyleBox["BDDs cannot handle this problem",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787400774103664*^9, 3.787400781654406*^9}},
+ CellLabel->"In[38]:=",ExpressionUUID->"7e2d8d76-be8d-4151-ba0e-ad5add012d15"],
+
+Cell[TextData[StyleBox["",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.787400782991971*^9},ExpressionUUID->"c51ab675-eb1a-4ff0-ad5e-\
+71f4390a2678"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787400787319439*^9, 
+   3.7874007879347754`*^9}},ExpressionUUID->"b25cf949-7adf-4ed6-9d92-\
+1cd6e83c6e3d"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 599, 15, 69, "Text",ExpressionUUID->"664c4956-4180-4302-9a8c-1168016370fe",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1160, 37, 578, 14, 69, "Text",ExpressionUUID->"26a88776-a49f-48a9-a5e8-7732b44f1422",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1741, 53, 574, 14, 69, "Text",ExpressionUUID->"10e3ade5-1c2f-437f-9345-363f859c5045",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2318, 69, 563, 14, 69, "Text",ExpressionUUID->"7e2d8d76-be8d-4151-ba0e-ad5add012d15",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2884, 85, 537, 17, 69, "Text",ExpressionUUID->"c51ab675-eb1a-4ff0-ad5e-71f4390a2678",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3424, 104, 180, 4, 60, "Input",ExpressionUUID->"b25cf949-7adf-4ed6-9d92-1cd6e83c6e3d"]
+}
+]
+*)
+

@@ -1,0 +1,278 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10416,        270]
+NotebookOptionsPosition[      8484,        224]
+NotebookOutlinePosition[      8827,        239]
+CellTagsIndexPosition[      8784,        236]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["This result is a special case of a general fact that \
+holds for any given positive integers j and k",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787239795587132*^9, 3.787239827164852*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"bdd20f02-b3b6-4e2c-9d37-ed72080a9602"],
+
+Cell[TextData[StyleBox["If n is sufficiently large, every binary sequence x1 \
+unto xn  contains either j equally zeros or k equally spaced ones.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787239828762084*^9, 3.787239865003007*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"7114f8b8-460a-4092-93fb-d1a3d579f26d"],
+
+Cell[TextData[StyleBox["that is fascinating and mind bending to behold",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787239870185602*^9, 3.787239885121258*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"db6f89f7-71e6-41ed-a453-7306db271c3b"],
+
+Cell[TextData[StyleBox["so we can choose j equals 3, and k equals 5",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787239888655006*^9, 3.787239946350197*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"cdf1585b-ec68-4c8c-b8c3-ede9d02f1a67"],
+
+Cell[TextData[StyleBox["it is impossible to generate a large binary sequence \
+that does not satisfy this contraint",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787239952786881*^9, 3.787239971293118*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"9bfd05c8-e25a-431e-9651-5ea0a35d735b"],
+
+Cell[TextData[StyleBox["suppose we had 10 zeros",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.78723997504989*^9, 3.78723998677866*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"c53d5333-28a3-4c91-911d-e78c67fda83a"],
+
+Cell[TextData[StyleBox["well that satisfies the constraint as there will be 3 \
+zeros adjacent and zero spaced.",
+ StripOnInput->False,
+ LineColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FrontFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ BackFaceColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ GraphicsColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`],
+ FontWeight->Normal,
+ FontColor->RGBColor[
+  0.22899251821568467`, 0.7568250097244553, 0.18772375680879838`]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787239989974607*^9, 
+  3.787240008675026*^9}},ExpressionUUID->"adbdb696-ed66-4b40-834d-\
+bb945eb115c2"],
+
+Cell[TextData[StyleBox["The smallest such n is denoted by big W of j and k in \
+honor of B. L. van der Waerden, who proved that an even more general result \
+(see exercise 2.3.4.3-6)",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787243116555155*^9, 3.787243154002008*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"b653d55d-dc74-4f79-9172-f2677b0f00be"],
+
+Cell[TextData[StyleBox["More general result",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787243161496929*^9, 3.787243171248921*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"4b40d06c-1bcb-4bbe-a7dd-6ff6061cc184"],
+
+Cell[TextData[StyleBox["If n is sufficiently large, and if k zero unto k b \
+minus 1 are positive integers, every b-ary sequence x 1 unto x n contains k a \
+equally spaced eighs for some digit a, where b is greater than a and both a \
+and b are positive integers.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7872431729631433`*^9, 3.787243233582076*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"212266aa-7d03-46b4-827d-fa301f5952cf"],
+
+Cell[TextData[StyleBox["The least such n is Waerden of high dimensional k \
+arguments",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787243247280333*^9, 3.7872432623163347`*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"1e93884a-48c4-42b7-8cb2-2cc2e6f27719"],
+
+Cell["", "Section",ExpressionUUID->"c1cca59f-090a-44fa-a7a2-c774dae5f5c0"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 631, 15, 69, "Text",ExpressionUUID->"bdd20f02-b3b6-4e2c-9d37-ed72080a9602",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1192, 37, 652, 15, 114, "Text",ExpressionUUID->"7114f8b8-460a-4092-93fb-d1a3d579f26d",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1847, 54, 602, 14, 69, "Text",ExpressionUUID->"db6f89f7-71e6-41ed-a453-7306db271c3b",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2452, 70, 600, 14, 69, "Text",ExpressionUUID->"cdf1585b-ec68-4c8c-b8c3-ede9d02f1a67",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3055, 86, 938, 20, 69, "Text",ExpressionUUID->"9bfd05c8-e25a-431e-9651-5ea0a35d735b",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3996, 108, 868, 19, 69, "Text",ExpressionUUID->"c53d5333-28a3-4c91-911d-e78c67fda83a",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4867, 129, 915, 21, 69, "Text",ExpressionUUID->"adbdb696-ed66-4b40-834d-bb945eb115c2",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5785, 152, 690, 16, 114, "Text",ExpressionUUID->"b653d55d-dc74-4f79-9172-f2677b0f00be",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[6478, 170, 551, 14, 69, "Text",ExpressionUUID->"4b40d06c-1bcb-4bbe-a7dd-6ff6061cc184",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[7032, 186, 773, 17, 159, "Text",ExpressionUUID->"212266aa-7d03-46b4-827d-fa301f5952cf",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[7808, 205, 595, 15, 69, "Text",ExpressionUUID->"1e93884a-48c4-42b7-8cb2-2cc2e6f27719",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[8406, 222, 74, 0, 99, "Section",ExpressionUUID->"c1cca59f-090a-44fa-a7a2-c774dae5f5c0"]
+}
+]
+*)
+

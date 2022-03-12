@@ -1,0 +1,151 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5869,        143]
+NotebookOptionsPosition[      5255,        125]
+NotebookOutlinePosition[      5600,        140]
+CellTagsIndexPosition[      5557,        137]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ StyleBox[
+  RowBox[{
+   RowBox[{"LIFE", "=", 
+    RowBox[{"(", GridBox[{
+       {"0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0"},
+       {"0", "0", "1", "0", "0"},
+       {"0", "0", "1", "0", "0"},
+       {"0", "0", "1", "0", "0"},
+       {"0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0"}
+      }], ")"}]}], ";"}],
+  FontSize->12], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"xpArray", "=", "LIFE"}], ";"}]}], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellFrameLabels->{{None, None}, {None, "input (mathematica code)"}},
+ CellChangeTimes->{{3.765690460663842*^9, 3.765690461391439*^9}, {
+  3.7656906024434443`*^9, 3.765690603751608*^9}, {3.7952783431848288`*^9, 
+  3.795278355627019*^9}, {3.795278640903007*^9, 3.795278642513907*^9}, {
+  3.795284396319167*^9, 3.795284396982353*^9}, {3.795327463566908*^9, 
+  3.795327464151267*^9}},
+ Background->GrayLevel[
+  0.95],ExpressionUUID->"7bf7d270-8d27-4445-964a-a47b74a0383b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Get", "[", 
+  "\"\</home/asdf/Dropbox/05_PROGRAMS/001_LIFE/wordLifeDirectory/IJ_1_GEN.m\>\
+\"", "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, 3.795169598427752*^9, {3.7951840517979097`*^9, 
+   3.795184051891821*^9}, {3.795233995073737*^9, 3.795233995776691*^9}, {
+   3.795234319134783*^9, 3.795234336144182*^9}, 3.795234390922215*^9, {
+   3.795236814131798*^9, 3.795236831721703*^9}, {3.795239637980455*^9, 
+   3.7952396515420847`*^9}, {3.795272073003791*^9, 3.795272077299*^9}, {
+   3.795278246221499*^9, 3.7952782465960197`*^9}, {3.795278308195773*^9, 
+   3.7952783136482553`*^9}, 3.795278541623661*^9, {3.795278684862647*^9, 
+   3.795278705534322*^9}, 3.795278904610847*^9, {3.795279993128064*^9, 
+   3.795279993181423*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"0f35d294-990c-44fa-97f1-455e31dcaee1"],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{
+    RasterBox[{{1, 1, 1, 1, 1}, {1, 1, 1, 1, 1}, {1, 1, 1, 1, 1}, {1, 0, 0, 0,
+      1}, {1, 1, 1, 1, 1}, {1, 1, 1, 1, 1}, {1, 1, 1, 1, 1}}, {{0, 0}, {5, 
+     7}}, {0, 1}], {
+     {GrayLevel[
+       NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+      StyleBox[
+       LineBox[{{{0, 7}, {5, 7}}, {{0, 6}, {5, 6}}, {{0, 5}, {5, 5}}, {{0, 
+        4}, {5, 4}}, {{0, 3}, {5, 3}}, {{0, 2}, {5, 2}}, {{0, 1}, {5, 1}}, {{
+        0, 0}, {5, 0}}}],
+       Antialiasing->False]}, 
+     {GrayLevel[
+       NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+      StyleBox[
+       LineBox[{{{0, 0}, {0, 7}}, {{1, 0}, {1, 7}}, {{2, 0}, {2, 7}}, {{3, 
+        0}, {3, 7}}, {{4, 0}, {4, 7}}, {{5, 0}, {5, 7}}}],
+       Antialiasing->False]}}},
+   Frame->False,
+   FrameLabel->{None, None},
+   FrameTicks->{{None, None}, {None, None}},
+   GridLinesStyle->Directive[
+     GrayLevel[0.5, 0.4]],
+   Method->{
+    "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic}],
+  StripOnInput->False,
+  Magnification->0.3 Inherited]], "Output",
+ CellChangeTimes->{
+  3.795278913230743*^9, 3.795279428733778*^9, 3.7952795370112553`*^9, 
+   3.795279590801704*^9, 3.795279748087019*^9, 3.7952799071014557`*^9, {
+   3.795279995480506*^9, 3.7952800197462187`*^9}, 3.795282308612702*^9, 
+   3.795282427958417*^9, 3.7952825524183207`*^9, {3.79528321240554*^9, 
+   3.795283221650763*^9}, 3.795283310481477*^9, 3.7952833735507107`*^9, 
+   3.795283750502232*^9, 3.795283828737732*^9, 3.795283883997999*^9, {
+   3.795283930747739*^9, 3.7952839377074833`*^9}, {3.795284009349606*^9, 
+   3.795284063943708*^9}, 3.7952841089782343`*^9, 3.79528418988997*^9, 
+   3.79528424055573*^9, 3.795284278601561*^9, 3.795284402357181*^9, 
+   3.795327443214922*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"86dacbd9-4e93-4631-ac09-02f5a76c4da5"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Get", "[", 
+  "\"\</home/asdf/Dropbox/05_PROGRAMS/001_LIFE/wordLifeDirectory/IJ2_1_GEN.m\>\
+\"", "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, 3.795169598427752*^9, {3.7951840517979097`*^9, 
+   3.795184051891821*^9}, {3.795233995073737*^9, 3.795233995776691*^9}, {
+   3.795234319134783*^9, 3.795234336144182*^9}, 3.795234390922215*^9, {
+   3.795236814131798*^9, 3.795236831721703*^9}, {3.795239637980455*^9, 
+   3.7952396515420847`*^9}, {3.795272073003791*^9, 3.795272077299*^9}, {
+   3.795278246221499*^9, 3.7952782465960197`*^9}, {3.795278308195773*^9, 
+   3.7952783136482553`*^9}, 3.795278541623661*^9, {3.795278684862647*^9, 
+   3.795278705534322*^9}, 3.795278904610847*^9, {3.7952799896403227`*^9, 
+   3.795279991413307*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"9bdadf27-7af2-4b72-8358-1f88d4fb07cf"]
+},
+WindowSize->{1686, 1387},
+WindowMargins->{{Automatic, 0}, {-27, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1017, 25, 387, "Input",ExpressionUUID->"7bf7d270-8d27-4445-964a-a47b74a0383b"],
+Cell[CellGroupData[{
+Cell[1600, 49, 892, 15, 61, "Input",ExpressionUUID->"0f35d294-990c-44fa-97f1-455e31dcaee1"],
+Cell[2495, 66, 1846, 39, 293, "Output",ExpressionUUID->"86dacbd9-4e93-4631-ac09-02f5a76c4da5"]
+}, Open  ]],
+Cell[4356, 108, 895, 15, 61, "Input",ExpressionUUID->"9bdadf27-7af2-4b72-8358-1f88d4fb07cf"]
+}
+]
+*)
+

@@ -1,0 +1,97 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3425,         89]
+NotebookOptionsPosition[      3121,         75]
+NotebookOutlinePosition[      3473,         91]
+CellTagsIndexPosition[      3430,         88]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Dear Nicholas, 
+
+\tI returned to Cavan on the bus yesterday and found myself full of doubt.
+
+One thing I was not doubtful about was my fervent desire to do fundamental \
+research in machine learning algorithms .
+
+\tI had hoped that pursuing the speckle investigation would - as a spinoff - \
+train me further in this field that I care so much about. (but) I realized \
+that applying a neural network to a data set is not the same as understanding \
+what was happening in the neural net (convolutional or otherwise). I was \
+disappointed that after an entire summer of working - almost non-stop - I \
+could not achieve our goals. I still think it is feasible, its just simply \
+that I do not know enough about algorithm design and theory. I need to spend \
+a number of years learning about this.
+\t
+\tI signed up and organized my fees for your structured masters in good \
+faith. I thought it would be good to publish a paper on the speckle issue, \
+but now looking at the modules on offer, I can see that few of them are \
+linked with what I am passionate about.
+\t
+\tI have had a long chat with my Dad who knows me quite well. He agrees that \
+I should pursue my goals. Thus I am going to do the applied maths diploma at \
+NUIG in order to learn more about linear algebra, statistics and neural \
+network theory. 
+\t
+\tI am sorry to let you down like this, but I think the paradigms of academic \
+life are changing. I care more about acquiring basic knowledge about my \
+chosen field than getting a PhD or MSc. I don\[CloseCurlyQuote]t want to make \
+an idiot of myself publishing papers before I understand the field in depth.
+\t
+\tMy heartfelt thanks for your support through my 2 internships with you. I \
+understand my situation regarding with regards to academia and neural \
+networks much better due to my interaction with you. I will be forever \
+grateful for your insights.
+\t
+Best regards,
+Conor
+
+
+
+ \
+\>", "Text",
+ CellChangeTimes->{{3.745914672821446*^9, 3.7459148824288816`*^9}, {
+   3.745914941406362*^9, 3.745915590901863*^9}, {3.745915641278366*^9, 
+   3.745915736173798*^9}, 3.745915815286262*^9, {3.745915853319271*^9, 
+   3.745915854245865*^9}, {3.745915886254401*^9, 3.745916022245837*^9}, {
+   3.7459160539426928`*^9, 3.7459160629819527`*^9}, {3.7459161077652893`*^9, 
+   3.745916114948739*^9}, {3.745916340871128*^9, 3.745916352621893*^9}, {
+   3.745916404709982*^9, 3.7459164076302757`*^9}, {3.745917137542614*^9, 
+   3.745917179526022*^9}, 
+   3.7459181122875423`*^9},ExpressionUUID->"8e992095-c793-49a1-b1b5-\
+b1e738f0af4a"]
+},
+WindowSize->{808, 911},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2559, 53, 840, "Text",ExpressionUUID->"8e992095-c793-49a1-b1b5-b1e738f0af4a"]
+}
+]
+*)
+

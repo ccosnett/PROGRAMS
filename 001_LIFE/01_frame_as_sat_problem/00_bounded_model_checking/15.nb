@@ -1,0 +1,165 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5685,        157]
+NotebookOptionsPosition[      4500,        126]
+NotebookOutlinePosition[      4843,        141]
+CellTagsIndexPosition[      4800,        138]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Interesting mobile paths appear also if we restrict \
+the population at each time to 6 7 8 9 10 instead of 1 2 3 4 5.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787427111525079*^9, 3.7874271346230507`*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"cab5b4c8-6b7c-4faf-8c66-06e9ad09d6a4"],
+
+Cell[TextData[StyleBox["For example, here are some of the first such paths \
+that the authors solver came up with, having length r equals 8.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7874271363097687`*^9, 3.7874271624772797`*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"0792d3ca-defa-43ac-bea7-abc8015eda46"],
+
+Cell[TextData[StyleBox["These paths illustrate the fact that symmetry can be \
+gained, but never lost, as Life evolves deterministically.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787427170731378*^9, 3.787427189275535*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"8dd6ca1f-0684-423e-814a-36ea7aa38275"],
+
+Cell[TextData[StyleBox["Marvelous designs are spawned in the process.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.78742719642243*^9, 3.7874272056099453`*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"8983c4d7-16f5-4952-aee1-add9e4ffd971"],
+
+Cell[TextData[StyleBox["In each of these sequences the next bitmap, X9 would \
+break our ground rules.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787427208531962*^9, 3.787427227600812*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"120f8c5a-1407-43b3-b35d-86150ddbc5cd"],
+
+Cell[TextData[StyleBox["The population immediately after X8 grows to 12 in \
+the first and last examples.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787427231643799*^9, 3.7874272475758657`*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"63e88f02-abdf-41c6-aa55-9c6156b02fc2"],
+
+Cell[BoxData["\[AliasDelimiter]"], "Input",
+ CellChangeTimes->{3.767869704382765*^9, 
+  3.7874272897464237`*^9},ExpressionUUID->"d25ce60a-cf76-470b-973d-\
+be4ed8cff3f2"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 651, 15, 114, "Text",ExpressionUUID->"cab5b4c8-6b7c-4faf-8c66-06e9ad09d6a4",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1212, 37, 652, 15, 114, "Text",ExpressionUUID->"0792d3ca-defa-43ac-bea7-abc8015eda46",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1867, 54, 645, 15, 69, "Text",ExpressionUUID->"8dd6ca1f-0684-423e-814a-36ea7aa38275",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2515, 71, 578, 14, 69, "Text",ExpressionUUID->"8983c4d7-16f5-4952-aee1-add9e4ffd971",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3096, 87, 610, 15, 69, "Text",ExpressionUUID->"120f8c5a-1407-43b3-b35d-86150ddbc5cd",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3709, 104, 615, 15, 69, "Text",ExpressionUUID->"63e88f02-abdf-41c6-aa55-9c6156b02fc2",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4327, 121, 169, 3, 60, "Input",ExpressionUUID->"d25ce60a-cf76-470b-973d-be4ed8cff3f2"]
+}
+]
+*)
+

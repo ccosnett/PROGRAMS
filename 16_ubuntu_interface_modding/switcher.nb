@@ -1,0 +1,294 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10912,        284]
+NotebookOptionsPosition[      9037,        244]
+NotebookOutlinePosition[     10053,        273]
+CellTagsIndexPosition[     10010,        270]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"SetOptions", "[", 
+  RowBox[{
+   RowBox[{"EvaluationNotebook", "[", " ", "]"}], ",", 
+   RowBox[{"NotebookEventActions", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<KeyDown\>\"", ",", "\"\<1\>\""}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"$CellContext`numberKeyFunction", "[", "1", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<KeyDown\>\"", ",", "\"\<2\>\""}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"Print", "[", "\"\<2\>\"", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<KeyDown\>\"", ",", "\"\<3\>\""}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"$CellContext`numberKeyFunction", "[", "3", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<KeyDown\>\"", ",", "\"\<4\>\""}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"$CellContext`numberKeyFunction", "[", "4", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<KeyDown\>\"", ",", "\"\<5\>\""}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"$CellContext`numberKeyFunction", "[", "5", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<KeyDown\>\"", ",", "\"\<6\>\""}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"$CellContext`numberKeyFunction", "[", "6", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<MenuCommand\>\"", ",", "\"\<New\>\""}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"NotebookCreate", "[", "]"}], ";", 
+         RowBox[{"NotebookClose", "[", 
+          RowBox[{"EvaluationNotebook", "[", "]"}], "]"}]}], ")"}]}], ",", 
+      RowBox[{"\"\<DownArrowKeyDown\>\"", "\[RuleDelayed]", 
+       RowBox[{"$CellContext`arrowKeyFunction", "[", 
+        RowBox[{"Plus", "[", "1", "]"}], "]"}]}], ",", 
+      RowBox[{"\"\<UpArrowKeyDown\>\"", "\[RuleDelayed]", 
+       RowBox[{"$CellContext`arrowKeyFunction", "[", 
+        RowBox[{"-", "1"}], "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<MenuCommand\>\"", ",", "\"\<Close\>\""}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"NotebookClose", "[", 
+        RowBox[{"EvaluationNotebook", "[", "]"}], "]"}]}]}], "}"}]}]}], " ", 
+  "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7679649075449133`*^9, 3.7679649844375267`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"2062bdda-fb9d-4405-9378-eb8a51641dfc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Options", "[", 
+  RowBox[{"EvaluationNotebook", "[", "]"}], "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767964958693748*^9, 3.7679649645343246`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"25684cba-96ad-415c-b8b2-4d405e1ddff6"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"Background", "\[Rule]", 
+    InterpretationBox[
+     ButtonBox[
+      TooltipBox[
+       GraphicsBox[{
+         {GrayLevel[0], RectangleBox[{0, 0}]}, 
+         {GrayLevel[0], RectangleBox[{1, -1}]}, 
+         {GrayLevel[1], RectangleBox[{0, -1}, {2, 1}]}},
+        AspectRatio->1,
+        DefaultBaseStyle->"ColorSwatchGraphics",
+        Frame->True,
+        FrameStyle->GrayLevel[0.6666666666666666],
+        FrameTicks->None,
+        ImageSize->
+         Dynamic[{
+          Automatic, 1.35 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+           Magnification]}],
+        PlotRangePadding->None],
+       StyleBox[
+        RowBox[{"GrayLevel", "[", "1", "]"}], NumberMarks -> False]],
+      Appearance->None,
+      BaseStyle->{},
+      BaselinePosition->Baseline,
+      ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+        If[
+         Not[
+          AbsoluteCurrentValue["Deployed"]], 
+         SelectionMove[Typeset`box$, All, Expression]; 
+         FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+         FrontEnd`Private`$ColorSelectorInitialColor = GrayLevel[1]; 
+         FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+         MathLink`CallFrontEnd[
+           FrontEnd`AttachCell[Typeset`box$, 
+            FrontEndResource["GrayLevelColorValueSelector"], {
+            0, {Left, Bottom}}, {Left, Top}, 
+            "ClosingActions" -> {
+             "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+      DefaultBaseStyle->{},
+      Evaluator->Automatic,
+      Method->"Preemptive"],
+     GrayLevel[1],
+     Editable->False,
+     Selectable->False]}], ",", 
+   RowBox[{
+   "FrontEndVersion", 
+    "\[Rule]", "\<\"11.3 for Linux x86 (64-bit) (March 6, 2018)\"\>"}], ",", 
+   RowBox[{"NotebookEventActions", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"KeyDown\"\>", ",", "\<\"1\"\>"}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"$CellContext`numberKeyFunction", "[", "1", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"KeyDown\"\>", ",", "\<\"2\"\>"}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"Print", "[", "\<\"2\"\>", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"KeyDown\"\>", ",", "\<\"3\"\>"}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"$CellContext`numberKeyFunction", "[", "3", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"KeyDown\"\>", ",", "\<\"4\"\>"}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"$CellContext`numberKeyFunction", "[", "4", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"KeyDown\"\>", ",", "\<\"5\"\>"}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"$CellContext`numberKeyFunction", "[", "5", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"KeyDown\"\>", ",", "\<\"6\"\>"}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"$CellContext`numberKeyFunction", "[", "6", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"MenuCommand\"\>", ",", "\<\"New\"\>"}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"NotebookCreate", "[", "]"}], ";", 
+         RowBox[{"NotebookClose", "[", 
+          RowBox[{"EvaluationNotebook", "[", "]"}], "]"}]}], ")"}]}], ",", 
+      RowBox[{"\<\"DownArrowKeyDown\"\>", "\[RuleDelayed]", 
+       RowBox[{"$CellContext`arrowKeyFunction", "[", 
+        RowBox[{"+", "1"}], "]"}]}], ",", 
+      RowBox[{"\<\"UpArrowKeyDown\"\>", "\[RuleDelayed]", 
+       RowBox[{"$CellContext`arrowKeyFunction", "[", 
+        RowBox[{"-", "1"}], "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"MenuCommand\"\>", ",", "\<\"Close\"\>"}], "}"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"NotebookClose", "[", 
+        RowBox[{"EvaluationNotebook", "[", "]"}], "]"}]}]}], "}"}]}], ",", 
+   RowBox[{"StyleDefinitions", "\[Rule]", "\<\"DefaultModified2.nb\"\>"}], 
+   ",", 
+   RowBox[{"WindowMargins", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"Automatic", ",", "270"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "Automatic"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"WindowSize", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"1720", ",", "1388"}], "}"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.767964965419976*^9, 3.76796499102556*^9}},
+ CellLabel->"Out[7]=",ExpressionUUID->"34239962-e5a4-4821-a94d-f220cb1e61fa"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"2\"\>"], "Print",
+ CellChangeTimes->{3.767964993364579*^9},
+ CellLabel->"",ExpressionUUID->"0724796d-caa2-48aa-9a99-4e27576cc09c"],
+
+Cell[BoxData["\<\"2\"\>"], "Print",
+ CellChangeTimes->{3.767964993811206*^9},
+ CellLabel->"",ExpressionUUID->"67aecb52-85b7-4afe-9e4b-1e1bc62c7946"],
+
+Cell[BoxData["\<\"2\"\>"], "Print",
+ CellChangeTimes->{3.767964994224161*^9},
+ CellLabel->"",ExpressionUUID->"fac7b6e8-517b-4cb1-b970-70a2cd33360b"],
+
+Cell[BoxData["\<\"2\"\>"], "Print",
+ CellChangeTimes->{3.767964995259067*^9},
+ CellLabel->"",ExpressionUUID->"d44e901e-39d0-4c97-9eed-d86d264bed77"],
+
+Cell[BoxData["\<\"2\"\>"], "Print",
+ CellChangeTimes->{3.767964995531056*^9},
+ CellLabel->"",ExpressionUUID->"0ec71474-310d-4695-8b7c-729e93e5c571"],
+
+Cell[BoxData["\<\"2\"\>"], "Print",
+ CellChangeTimes->{3.767964995770998*^9},
+ CellLabel->"",ExpressionUUID->"01772299-4c88-4a78-abf2-7f7d75590e27"],
+
+Cell[BoxData["\<\"2\"\>"], "Print",
+ CellChangeTimes->{3.767964996010786*^9},
+ CellLabel->"",ExpressionUUID->"d23c77f6-e3cb-4886-9c77-d78b007f8277"]
+}, Open  ]]
+}, Open  ]]
+},
+NotebookEventActions->{{"KeyDown", "1"} :> $CellContext`numberKeyFunction[
+   1], {"KeyDown", "2"} :> 
+  Print["2"], {"KeyDown", "3"} :> $CellContext`numberKeyFunction[3], {
+   "KeyDown", "4"} :> $CellContext`numberKeyFunction[4], {
+   "KeyDown", "5"} :> $CellContext`numberKeyFunction[5], {
+   "KeyDown", "6"} :> $CellContext`numberKeyFunction[6], {
+   "MenuCommand", "New"} :> (NotebookCreate[]; NotebookClose[
+     EvaluationNotebook[]]), 
+  "DownArrowKeyDown" :> $CellContext`arrowKeyFunction[
+    Plus[1]], 
+  "UpArrowKeyDown" :> $CellContext`arrowKeyFunction[-1], {
+   "MenuCommand", "Close"} :> NotebookClose[
+    EvaluationNotebook[]]},
+WindowSize->{1720, 1388},
+WindowMargins->{{Automatic, 270}, {0, Automatic}},
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2519, 62, 491, "Input",ExpressionUUID->"2062bdda-fb9d-4405-9378-eb8a51641dfc"],
+Cell[CellGroupData[{
+Cell[3102, 86, 319, 6, 60, "Input",ExpressionUUID->"25684cba-96ad-415c-b8b2-4d405e1ddff6"],
+Cell[3424, 94, 4506, 116, 413, "Output",ExpressionUUID->"34239962-e5a4-4821-a94d-f220cb1e61fa"],
+Cell[CellGroupData[{
+Cell[7955, 214, 148, 2, 48, "Print",ExpressionUUID->"0724796d-caa2-48aa-9a99-4e27576cc09c"],
+Cell[8106, 218, 148, 2, 48, "Print",ExpressionUUID->"67aecb52-85b7-4afe-9e4b-1e1bc62c7946"],
+Cell[8257, 222, 148, 2, 48, "Print",ExpressionUUID->"fac7b6e8-517b-4cb1-b970-70a2cd33360b"],
+Cell[8408, 226, 148, 2, 48, "Print",ExpressionUUID->"d44e901e-39d0-4c97-9eed-d86d264bed77"],
+Cell[8559, 230, 148, 2, 48, "Print",ExpressionUUID->"0ec71474-310d-4695-8b7c-729e93e5c571"],
+Cell[8710, 234, 148, 2, 48, "Print",ExpressionUUID->"01772299-4c88-4a78-abf2-7f7d75590e27"],
+Cell[8861, 238, 148, 2, 48, "Print",ExpressionUUID->"d23c77f6-e3cb-4886-9c77-d78b007f8277"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

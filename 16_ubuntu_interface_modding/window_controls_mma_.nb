@@ -1,0 +1,389 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15081,        381]
+NotebookOptionsPosition[     11906,        309]
+NotebookOutlinePosition[     13643,        359]
+CellTagsIndexPosition[     13600,        356]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"do", "[", "\"\<AllWindowsFront\>\"", "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767943591668944*^9, 
+   3.7679436130035152`*^9}},ExpressionUUID->"e8aaa75b-d6a3-421c-9a3b-\
+e18e06b1a7eb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"frontEndTokens", "[", 
+    RowBox[{"[", "n", "]"}], "]"}], " ", ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "1", ",", 
+     RowBox[{"Length", "[", "frontEndTokens", "]"}], ",", "1"}], "}"}]}], 
+  "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767946072829793*^9, 3.7679461148978777`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"15a42254-16a1-42ec-a21c-8468d417effd"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{cephalon`n$$ = 340, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[cephalon`n$$], 1, 370, 1}}, Typeset`size$$ = {146., {6., 20.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    cephalon`n$5853$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {cephalon`n$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[cephalon`n$$, cephalon`n$5853$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Part[mindExtension`frontEndTokens, cephalon`n$$], 
+      "Specifications" :> {{cephalon`n$$, 1, 370, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{487., {88., 100.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.767946087901804*^9, 3.767946115631832*^9}},
+ CellLabel->"Out[3]=",ExpressionUUID->"96f8f53d-1689-4564-bdb9-fce3634bde6f"]
+}, Open  ]],
+
+Cell[BoxData["SetSelectedNotebook"], "Input",
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7679476628470488`*^9, 
+   3.7679476628485117`*^9}},ExpressionUUID->"d98124c4-2b13-4f97-bfc9-\
+a5dfbe676d6f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"liss", "=", 
+  RowBox[{"Cases", "[", 
+   RowBox[{"frontEndTokens", " ", ",", 
+    RowBox[{"a_", "/;", 
+     RowBox[{"StringMatchQ", "[", 
+      RowBox[{"a", ",", "\"\<*indow*\>\""}], " ", "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"liss", "[", 
+    RowBox[{"[", "n", "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"liss", "[", 
+        RowBox[{"[", "1", "]"}], "]"}]}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"Button", "[", 
+       RowBox[{"\"\<execute\>\"", ",", 
+        RowBox[{"do", "@", 
+         RowBox[{"liss", "[", 
+          RowBox[{"[", "n", "]"}], "]"}]}]}], "]"}], "&"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "1", ",", 
+     RowBox[{"Length", "[", "liss", "]"}], ",", "1"}], "}"}]}], 
+  "]"}]}], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767946200222135*^9, 3.767946355285331*^9}, {
+   3.767946564832562*^9, 3.767946614069696*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"cd36d0f7-e409-4663-bcda-662f3f04bed1"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"AllWindowsFront\"\>", ",", "\<\"MenuListHelpWindows\"\>", 
+   ",", "\<\"MenuListPackageWindows\"\>", 
+   ",", "\<\"MenuListPaletteWindows\"\>", 
+   ",", "\<\"MenuListPlayerWindows\"\>", 
+   ",", "\<\"MenuListStylesheetWindows\"\>", 
+   ",", "\<\"MenuListTextWindows\"\>", ",", "\<\"MenuListWindows\"\>", 
+   ",", "\<\"SelectNotebookWindow\"\>", ",", "\<\"StackWindows\"\>", 
+   ",", "\<\"TileWindowsTall\"\>", ",", "\<\"TileWindowsWide\"\>", 
+   ",", "\<\"WindowMiniaturize\"\>", ",", "\<\"ZoomWindow\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.767946201608767*^9, 3.767946230105566*^9}, {
+   3.7679462630566883`*^9, 3.767946301831244*^9}, 3.767946343146587*^9, 
+   3.7679466153282137`*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"75389726-3120-46ea-b24f-af484ae5031b"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Out", "[", "14", "]"}], "="}]], "Input",
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767947739045332*^9, 
+   3.767947739046821*^9}},ExpressionUUID->"5f0bb23f-8cd9-4ec1-9d3d-\
+53648ae29c26"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FE`Evaluate", "[", 
+  RowBox[{"FEPrivate`GetPopupList", "[", "\"\<MenuListWindows\>\"", "]"}], 
+  "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellLabel->"In[43]:=",ExpressionUUID->"8ef5d2ef-6863-4fae-bfe8-6ef4d30d64b4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"All", "\[Rule]", "All"}], ",", 
+   RowBox[{
+    TemplateBox[{FrontEndObject[
+       LinkObject["egjqb_shm", 3, 1]],1,
+      "FrontEndObject[LinkObject[\"egjqb_shm\", 3, 1]]","1","\"Messages\""},
+     "NotebookObjectUnsaved"], "\[Rule]", "\<\"Messages\"\>"}], ",", 
+   "Delimiter", ",", 
+   RowBox[{
+    TemplateBox[{FrontEndObject[
+       LinkObject["egjqb_shm", 3, 1]],16,
+      "FrontEndObject[LinkObject[\"egjqb_shm\", 3, 1]]","16",
+      "\"window_controls_mma_.nb\"",
+      "\"/home/conor/Dropbox/05_PROGRAMS/16_ubuntu_interface_modding/window_\
+controls_mma_.nb\""},
+     "NotebookObject"], "\[Rule]", "\<\"window_controls_mma_.nb\"\>"}], ",", 
+   RowBox[{
+    TemplateBox[{FrontEndObject[
+       LinkObject["egjqb_shm", 3, 1]],21,
+      "FrontEndObject[LinkObject[\"egjqb_shm\", 3, 1]]","21",
+      "\"SetSelectedNotebook - Wolfram Mathematica 11.3\"",
+      "\"/home/conor/mathematica/Documentation/English/System/ReferencePages/\
+Symbols/SetSelectedNotebook.nb\""},
+     "NotebookObject"], 
+    "\[Rule]", "\<\"SetSelectedNotebook - Wolfram Mathematica 11.3\"\>"}], 
+   ",", 
+   RowBox[{
+    TemplateBox[{FrontEndObject[
+       LinkObject["egjqb_shm", 3, 1]],32,
+      "FrontEndObject[LinkObject[\"egjqb_shm\", 3, 1]]","32","\"Untitled-4\""},
+     "NotebookObjectUnsaved"], "\[Rule]", "\<\"Untitled-4\"\>"}], ",", 
+   RowBox[{
+    TemplateBox[{FrontEndObject[
+       LinkObject["egjqb_shm", 3, 1]],31,
+      "FrontEndObject[LinkObject[\"egjqb_shm\", 3, 1]]","31","\"Untitled-3\""},
+     "NotebookObjectUnsaved"], "\[Rule]", "\<\"Untitled-3\"\>"}], ",", 
+   RowBox[{
+    TemplateBox[{FrontEndObject[
+       LinkObject["egjqb_shm", 3, 1]],30,
+      "FrontEndObject[LinkObject[\"egjqb_shm\", 3, 1]]","30","\"Untitled-2\""},
+     "NotebookObjectUnsaved"], "\[Rule]", "\<\"Untitled-2\"\>"}], ",", 
+   RowBox[{
+    TemplateBox[{"FrontEndObject[LinkObject[\"egjqb_shm\", 3, 1]]","27"},
+     "NotebookObjectMissing"], "\[Rule]", "\<\"Find and Replace\"\>"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.767946201608767*^9, 3.767946230105566*^9}, {
+   3.7679462630566883`*^9, 3.767946301831244*^9}, 3.767946343146587*^9, {
+   3.7679466157313232`*^9, 3.767946620310543*^9}, 3.767947747747078*^9},
+ CellLabel->"Out[43]=",ExpressionUUID->"a4490f68-00dd-44fe-a985-850d1d3e5544"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetSelectedNotebook", "[", 
+  TemplateBox[{FrontEndObject[
+     LinkObject["egjqb_shm", 3, 1]],30,
+    "FrontEndObject[LinkObject[\"egjqb_shm\", 3, 1]]","30","\"Untitled-2\""},
+   "NotebookObjectUnsaved"], "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7679476788957443`*^9, 3.767947683173324*^9}, {
+   3.767947767493019*^9, 3.76794778098104*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"40fbecf5-efc2-4c7d-b6d8-2753b07f7542"],
+
+Cell[BoxData[
+ TemplateBox[{FrontEndObject[
+    LinkObject["egjqb_shm", 3, 1]],30,
+   "FrontEndObject[LinkObject[\"egjqb_shm\", 3, 1]]","30","\"Untitled-2\""},
+  "NotebookObjectUnsaved"]], "Output",
+ CellChangeTimes->{3.767947782559719*^9},
+ CellLabel->"Out[44]=",ExpressionUUID->"33b17bda-2137-4234-819a-9dc0e2337a84"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"FE`Evaluate", "[", 
+  RowBox[{"FEPrivate`GetPopupList", "[", "\"\<MenuListWindows\>\"", "]"}], 
+  "]"}]], "Input",ExpressionUUID->"a88b9126-1383-4df1-8946-434e780b2f59"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", "font", "}"}], ",", 
+   RowBox[{"Row", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"PopupMenu", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "[", "font", "]"}], ",", 
+        RowBox[{"FE`Evaluate", "[", 
+         RowBox[{
+         "FEPrivate`GetPopupList", "[", "\"\<MenuListWindows\>\"", "]"}], 
+         "]"}]}], "]"}], ",", 
+      RowBox[{"Spacer", "[", "20", "]"}], ",", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<The quick brown fox\>\"", ",", "20", ",", 
+        RowBox[{"FontFamily", "\[Rule]", 
+         RowBox[{"Dynamic", "[", "font", "]"}]}]}], "]"}]}], "}"}], "]"}]}], 
+  "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.767947858592761*^9, 3.767947858593856*^9}, {
+   3.767947929672721*^9, 3.767947938468622*^9}},
+ CellLabel->"In[51]:=",ExpressionUUID->"e92d0e0a-967f-47cb-a47a-ef740aa2604b"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`font$$ = NotebookObject[
+   FrontEndObject[
+    LinkObject["egjqb_shm", 3, 1]], 16]}, 
+  TemplateBox[{PopupMenuBox[
+     Dynamic[$CellContext`font$$], {All -> "All", NotebookObject[
+        FrontEndObject[
+         LinkObject["egjqb_shm", 3, 1]], 1] -> "\"Messages\"", Delimiter, 
+      NotebookObject[
+        FrontEndObject[
+         LinkObject["egjqb_shm", 3, 1]], 16] -> "\"window_controls_mma_.nb\"",
+       NotebookObject[
+        FrontEndObject[
+         LinkObject["egjqb_shm", 3, 1]], 30] -> "\"Untitled-2\"", 
+      NotebookObject[
+        FrontEndObject[
+         LinkObject["egjqb_shm", 3, 1]], 21] -> 
+      "\"SetSelectedNotebook - Wolfram Mathematica 11.3\"", NotebookObject[
+        FrontEndObject[
+         LinkObject["egjqb_shm", 3, 1]], 32] -> "\"Untitled-4\"", 
+      NotebookObject[
+        FrontEndObject[
+         LinkObject["egjqb_shm", 3, 1]], 31] -> "\"Untitled-3\"", 
+      NotebookObject[
+        FrontEndObject[
+         LinkObject["egjqb_shm", 3, 1]], 27] -> "\"Find and Replace\""}],
+    TemplateBox[{20}, "Spacer1"],StyleBox[
+    "\"The quick brown fox\"", 20, FontFamily -> Dynamic[$CellContext`font$$],
+      StripOnInput -> False]},
+   "RowDefault"],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{{3.767947922532832*^9, 3.7679479394016*^9}},
+ CellLabel->"Out[51]=",ExpressionUUID->"e658dc9d-50fa-44ce-80a6-5f11d2743af2"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"do", "[", "\"\<SelectPreviousExpression\>\"", "]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7679478958397617`*^9, 3.7679479046130123`*^9}},
+ CellLabel->"In[49]:=",ExpressionUUID->"8e0f929b-8da2-40fb-832c-1c4f1ec1de79"]
+},
+WindowSize->{1720, 1388},
+WindowMargins->{{Automatic, -6}, {0, Automatic}},
+TaggingRules->{"LastCursorPosition" -> False},
+CellEpilog:>If[
+  IntegerQ[
+   CurrentValue[
+    SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}]], 
+  SelectionMove[
+    EvaluationCell[], Before, CellContents]; SelectionMove[
+    SelectedNotebook[], Next, Character, 
+    CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}]]; 
+  CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}] = False],
+CellEventActions:>{{"MenuCommand", "HandleShiftReturn"} :> (CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}] = If[
+     MemberQ[
+      FrontEndExecute[
+       FrontEnd`UndocumentedGetSelectionPacket[
+        SelectedNotebook[]]], "CharacterRange" -> Blank[]], 
+     Last[
+      ReplaceAll["CharacterRange", 
+       FrontEndExecute[
+        FrontEnd`UndocumentedGetSelectionPacket[
+         SelectedNotebook[]]]]], False]), {
+   "MenuCommand", "EvaluateCells"} :> (CurrentValue[
+     SelectedNotebook[], {"TaggingRules", "LastCursorPosition"}] = If[
+     MemberQ[
+      FrontEndExecute[
+       FrontEnd`UndocumentedGetSelectionPacket[
+        SelectedNotebook[]]], "CharacterRange" -> Blank[]], 
+     Last[
+      ReplaceAll["CharacterRange", 
+       FrontEndExecute[
+        FrontEnd`UndocumentedGetSelectionPacket[
+         SelectedNotebook[]]]]], False]), PassEventsDown -> True},
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 279, 6, 60, "Input",ExpressionUUID->"e8aaa75b-d6a3-421c-9a3b-e18e06b1a7eb"],
+Cell[CellGroupData[{
+Cell[862, 30, 498, 12, 60, "Input",ExpressionUUID->"15a42254-16a1-42ec-a21c-8468d417effd"],
+Cell[1363, 44, 1662, 34, 224, "Output",ExpressionUUID->"96f8f53d-1689-4564-bdb9-fce3634bde6f"]
+}, Open  ]],
+Cell[3040, 81, 201, 4, 60, "Input",ExpressionUUID->"d98124c4-2b13-4f97-bfc9-a5dfbe676d6f"],
+Cell[CellGroupData[{
+Cell[3266, 89, 1146, 32, 147, "Input",ExpressionUUID->"cd36d0f7-e409-4663-bcda-662f3f04bed1"],
+Cell[4415, 123, 820, 15, 227, "Output",ExpressionUUID->"75389726-3120-46ea-b24f-af484ae5031b"]
+}, Open  ]],
+Cell[5250, 141, 227, 6, 60, "Input",ExpressionUUID->"5f0bb23f-8cd9-4ec1-9d3d-53648ae29c26"],
+Cell[CellGroupData[{
+Cell[5502, 151, 265, 5, 60, "Input",ExpressionUUID->"8ef5d2ef-6863-4fae-bfe8-6ef4d30d64b4"],
+Cell[5770, 158, 2327, 50, 397, "Output",ExpressionUUID->"a4490f68-00dd-44fe-a985-850d1d3e5544"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8134, 213, 515, 10, 75, "Input",ExpressionUUID->"40fbecf5-efc2-4c7d-b6d8-2753b07f7542"],
+Cell[8652, 225, 319, 6, 113, "Output",ExpressionUUID->"33b17bda-2137-4234-819a-9dc0e2337a84"]
+}, Open  ]],
+Cell[8986, 234, 193, 3, 60, "Input",ExpressionUUID->"a88b9126-1383-4df1-8946-434e780b2f59"],
+Cell[CellGroupData[{
+Cell[9204, 241, 959, 24, 147, "Input",ExpressionUUID->"e92d0e0a-967f-47cb-a47a-ef740aa2604b"],
+Cell[10166, 267, 1413, 32, 107, "Output",ExpressionUUID->"e658dc9d-50fa-44ce-80a6-5f11d2743af2"]
+}, Open  ]],
+Cell[11594, 302, 308, 5, 60, "Input",ExpressionUUID->"8e0f929b-8da2-40fb-832c-1c4f1ec1de79"]
+}
+]
+*)
+

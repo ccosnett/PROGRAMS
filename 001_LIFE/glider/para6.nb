@@ -1,0 +1,172 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5651,        164]
+NotebookOptionsPosition[      4466,        133]
+NotebookOutlinePosition[      4809,        148]
+CellTagsIndexPosition[      4766,        145]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Conway called life a no player game because it \
+involves no strategy",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.78708134722933*^9, 3.787081358044756*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"bb654e04-f648-46c5-97a7-e0a3b10481cb"],
+
+Cell[TextData[StyleBox["Once an initial state X0 has been set up, all \
+subsequent states Xt are completely determined.",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787081363020727*^9, 
+  3.787081395363337*^9}},ExpressionUUID->"4323d855-9bea-4ba7-8e9c-\
+6d62cf694fe4"],
+
+Cell[TextData[StyleBox["Yet, in spite of the simple rules, he also proved \
+that Life is inherently complicated and unpredictable, indeed beyond human \
+comprehension, in the sense that it is universal",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787081396106195*^9, 3.787081434792879*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"cc0ac075-1723-4117-aea1-ed7c4e4b84cd"],
+
+Cell[TextData[StyleBox["Every finite, discrete deterministic system however \
+complex, can be simulated faithfully by some finite initial state X zero of \
+life.",
+ StripOnInput->False,
+ LineColor->RGBColor[1, 0, 0],
+ FrontFaceColor->RGBColor[1, 0, 0],
+ BackFaceColor->RGBColor[1, 0, 0],
+ GraphicsColor->RGBColor[1, 0, 0],
+ FontWeight->Normal,
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7870814392465363`*^9, 3.78708146567937*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"cf8902b3-a0fd-47f0-bc71-a70484cc35e1"],
+
+Cell[TextData[StyleBox["See Conways book winning ways written in 04",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7870814707712603`*^9, 
+  3.787081487830161*^9}},ExpressionUUID->"4f06edef-1294-4d40-8775-\
+82510a48efb4"],
+
+Cell[TextData[StyleBox["",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{
+  3.7870814886364117`*^9},ExpressionUUID->"f7986a3e-0d71-454a-8c76-\
+19de19b70a7b"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7870813164572277`*^9, 
+   3.787081316887321*^9}},ExpressionUUID->"69d56ddc-c20d-4105-a587-\
+92a4e2f88934"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 599, 15, 69, "Text",ExpressionUUID->"bb654e04-f648-46c5-97a7-e0a3b10481cb",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1160, 37, 608, 16, 69, "Text",ExpressionUUID->"4323d855-9bea-4ba7-8e9c-6d62cf694fe4",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1771, 55, 708, 16, 114, "Text",ExpressionUUID->"cc0ac075-1723-4117-aea1-ed7c4e4b84cd",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2482, 73, 694, 16, 114, "Text",ExpressionUUID->"cf8902b3-a0fd-47f0-bc71-a70484cc35e1",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3179, 91, 558, 15, 69, "Text",ExpressionUUID->"4f06edef-1294-4d40-8775-82510a48efb4",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3740, 108, 539, 17, 69, "Text",ExpressionUUID->"f7986a3e-0d71-454a-8c76-19de19b70a7b",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4282, 127, 180, 4, 60, "Input",ExpressionUUID->"69d56ddc-c20d-4105-a587-92a4e2f88934"]
+}
+]
+*)
+

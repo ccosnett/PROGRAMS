@@ -1,0 +1,515 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19381,        507]
+NotebookOptionsPosition[     17662,        474]
+NotebookOutlinePosition[     18005,        489]
+CellTagsIndexPosition[     17962,        486]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData["e"], "Input",
+ CellChangeTimes->{3.767869704382765*^9, 
+  3.7874789578797007`*^9},ExpressionUUID->"195a2701-a7e8-4e2c-b07c-\
+2915a0cb4f58"],
+
+Cell[BoxData["updateLife"], "Input",
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787478947887397*^9, 
+   3.787478952775713*^9}},ExpressionUUID->"d6cf31ee-7be7-46df-9b12-\
+f01a1b6fe301"],
+
+Cell[BoxData["the190"], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7874788070793457`*^9, 3.787478808334628*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"49c8bc7b-736c-4792-a7be-3c6e0d6ce3f0"],
+
+Cell[BoxData["lr"], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787478782137183*^9, 3.787478782246345*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"e7f2f21b-3c37-4834-bd65-2a016c7931e3"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.767869704382765*^9, 
+  3.787478734965269*^9},ExpressionUUID->"380f7c4e-4555-4b84-9d75-\
+a89804a78668"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.767869704382765*^9, 
+  3.787478734223132*^9},ExpressionUUID->"d9d3b741-471f-42b4-8291-\
+9bb7689a64fe"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787478429302351*^9, 3.7874784308602343`*^9}, {
+   3.787478636398159*^9, 3.787478637311296*^9}, {3.787478732234928*^9, 
+   3.78747873295352*^9}},ExpressionUUID->"4223fab3-7865-459e-941d-\
+23dd3679da08"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"X1", "=", 
+   RowBox[{"(", GridBox[{
+      {"0", "0", "0"},
+      {"1", "1", "1"},
+      {"0", "0", "0"}
+     }], ")"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"plt", "/@", 
+  RowBox[{"NestList", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"updateLife", "[", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "3"}], "}"}], "]"}], "[", " ", "#", "]"}], "&"}], 
+    ",", "\[IndentingNewLine]", "X1", ",", "1"}], "]"}]}]}], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellFrameLabels->{{None, None}, {None, 
+    Cell[
+     TextData[{
+       StyleBox["input", FontColor -> GrayLevel[0.5]], " ", 
+       "(Mathematica Code)"}], "Input", FontSize -> 13, FontColor -> 
+     RGBColor[0.8491033800710062, 0.0031235304134196173`, 
+       0.06325861363578178], FontFamily -> "TeX Gyre Chorus", Background -> 
+     GrayLevel[0.99]]}},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787397882303399*^9, 3.787397920128484*^9}, {
+   3.787398269246654*^9, 3.787398399936985*^9}, {3.7874702563471193`*^9, 
+   3.7874702702412*^9}, {3.787470450126066*^9, 3.7874705029795017`*^9}, 
+   3.787477710666464*^9},
+ Background->GrayLevel[0.95],
+ CellLabel->"In[21]:=",ExpressionUUID->"de63d8a8-db5c-4c9d-9c12-5d748121faec"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   StyleBox[
+    GraphicsBox[{
+      RasterBox[{{1, 1, 1}, {0, 0, 0}, {1, 1, 1}}, {{0, 0}, {3, 3}}, {0, 1}], {
+       {GrayLevel[
+         NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+        StyleBox[
+         LineBox[{{{0, 3}, {3, 3}}, {{0, 2}, {3, 2}}, {{0, 1}, {3, 1}}, {{0, 
+          0}, {3, 0}}}],
+         Antialiasing->False]}, 
+       {GrayLevel[
+         NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+        StyleBox[
+         LineBox[{{{0, 0}, {0, 3}}, {{1, 0}, {1, 3}}, {{2, 0}, {2, 3}}, {{3, 
+          0}, {3, 3}}}],
+         Antialiasing->False]}}},
+     Frame->False,
+     FrameLabel->{None, None},
+     FrameTicks->{{None, None}, {None, None}},
+     GridLinesStyle->Directive[
+       GrayLevel[0.5, 0.4]],
+     Method->{
+      "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic}],
+    StripOnInput->False,
+    Magnification->0.3 Inherited], ",", 
+   StyleBox[
+    GraphicsBox[{
+      RasterBox[{{1, 0, 1}, {1, 0, 1}, {1, 0, 1}}, {{0, 0}, {3, 3}}, {0, 1}], {
+       {GrayLevel[
+         NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+        StyleBox[
+         LineBox[{{{0, 3}, {3, 3}}, {{0, 2}, {3, 2}}, {{0, 1}, {3, 1}}, {{0, 
+          0}, {3, 0}}}],
+         Antialiasing->False]}, 
+       {GrayLevel[
+         NCache[-1 + GoldenRatio, 0.6180339887498949]], 
+        StyleBox[
+         LineBox[{{{0, 0}, {0, 3}}, {{1, 0}, {1, 3}}, {{2, 0}, {2, 3}}, {{3, 
+          0}, {3, 3}}}],
+         Antialiasing->False]}}},
+     Frame->False,
+     FrameLabel->{None, None},
+     FrameTicks->{{None, None}, {None, None}},
+     GridLinesStyle->Directive[
+       GrayLevel[0.5, 0.4]],
+     Method->{
+      "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic}],
+    StripOnInput->False,
+    Magnification->0.3 Inherited]}], "}"}]], "Output",
+ CellFrame->{{True, True}, {True, False}},
+ CellFrameLabels->{{None, None}, {
+    Cell[
+     TextData[{"output"}], "Input", Background -> GrayLevel[0.99], FontSize -> 
+     13, FontColor -> GrayLevel[0.5], FontFamily -> "TeX Gyre Chorus"], None}},
+ CellChangeTimes->{
+  3.7873978823502903`*^9, {3.787398307474762*^9, 3.7873984002809467`*^9}, 
+   3.787470256846654*^9, {3.7874704511342382`*^9, 3.787470503355277*^9}, 
+   3.787477710696219*^9},
+ Background->GrayLevel[0.85],
+ CellLabel->"Out[22]=",ExpressionUUID->"d9e91367-4033-4cfd-ba64-9b8b4ce5fc4c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "i", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"updateLife", "[", "stateXt_", "]"}], ":=", 
+   RowBox[{"Module", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "x", ",", "xNW", ",", "xN", ",", "xNE", ",", "xW", ",", "xE", ",", 
+       "xSW", ",", "xS", ",", "xSE", ",", "xPrime", ",", "pad", ",", "Xt"}], 
+      "}"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"pad", "=", 
+       RowBox[{
+        RowBox[{"ArrayPad", "[", 
+         RowBox[{"#", ",", "1"}], "]"}], "&"}]}], ";", "\[IndentingNewLine]", 
+      
+      RowBox[{"Table", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Xt", "=", 
+          RowBox[{"pad", "[", "stateXt", "]"}]}], ";", "\[IndentingNewLine]", 
+         
+         RowBox[{"x", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "j"}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xNW", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"i", "+", "1"}], ",", 
+             RowBox[{"j", "-", "1"}]}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xN", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"i", "+", "1"}], ",", "j"}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xNE", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"i", "+", "1"}], ",", 
+             RowBox[{"j", "+", "1"}]}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xW", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", 
+             RowBox[{"j", "-", "1"}]}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xE", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", 
+             RowBox[{"j", "+", "1"}]}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xSW", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"i", "-", "1"}], ",", 
+             RowBox[{"j", "-", "1"}]}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xS", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"i", "-", "1"}], ",", "j"}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xSE", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"i", "-", "1"}], ",", 
+             RowBox[{"j", "+", "1"}]}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xPrime", "=", 
+          RowBox[{"Boole", "[", 
+           RowBox[{"2", "<", 
+            RowBox[{"xNW", "+", "xN", "+", "xNE", "+", "xW", "+", 
+             RowBox[{
+              RowBox[{"1", "/", "2"}], " ", "x"}], "+", "xE", "+", "xSW", "+",
+              "xS", "+", "xSE"}], "<", "4"}], "]"}]}]}], 
+        "\[IndentingNewLine]", ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "2", ",", "4"}], "}"}], "\[IndentingNewLine]", ",", 
+        RowBox[{"{", 
+         RowBox[{"j", ",", "2", ",", "4"}], "}"}]}], "\[IndentingNewLine]", 
+       "]"}]}]}], "\[IndentingNewLine]", "]"}]}], " ", 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"updateLife", "[", 
+  RowBox[{"(", GridBox[{
+     {"0", "0", "0"},
+     {"1", "1", "1"},
+     {"0", "0", "0"}
+    }], ")"}], "]"}]}], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellFrameLabels->{{None, None}, {None, 
+    Cell[
+     TextData[{
+       StyleBox["input", FontColor -> GrayLevel[0.5]], " ", 
+       "(Mathematica Code)"}], "Input", FontSize -> 13, FontColor -> 
+     RGBColor[0.8491033800710062, 0.0031235304134196173`, 
+       0.06325861363578178], FontFamily -> "TeX Gyre Chorus", Background -> 
+     GrayLevel[0.99]]}},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7874778969954357`*^9, 3.787478251119141*^9}, {
+   3.787478970937908*^9, 3.787479006899663*^9}},
+ Background->GrayLevel[0.95],
+ CellLabel->"In[11]:=",ExpressionUUID->"9afca0ac-376c-4710-b9ae-a336197c6e7f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "0"}], "}"}]}], "}"}]], "Output",
+ CellFrame->{{True, True}, {True, False}},
+ CellFrameLabels->{{None, None}, {
+    Cell[
+     TextData[{"output"}], "Input", Background -> GrayLevel[0.99], FontSize -> 
+     13, FontColor -> GrayLevel[0.5], FontFamily -> "TeX Gyre Chorus"], None}},
+ CellChangeTimes->{
+  3.787477897001539*^9, {3.787478215598859*^9, 3.787478254860606*^9}, {
+   3.7874789766384687`*^9, 3.787479007172496*^9}},
+ FontSize->10,
+ Background->GrayLevel[0.85],
+ CellLabel->"Out[13]=",ExpressionUUID->"1a7e1cb3-00a0-496d-b732-e8c16149c839"]
+}, Open  ]],
+
+Cell[BoxData["recallUpdateLifeCode"], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787479078119809*^9, 3.787479078983869*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"64032708-8cc2-4a00-9eb7-d3b5aa0e4117"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "i", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"updateLife", "[", "stateXt_", "]"}], ":=", 
+   RowBox[{"Module", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "x", ",", "xNW", ",", "xN", ",", "xNE", ",", "xW", ",", "xE", ",", 
+       "xSW", ",", "xS", ",", "xSE", ",", "xPrime", ",", "pad", ",", "Xt"}], 
+      "}"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"pad", "=", 
+       RowBox[{
+        RowBox[{"ArrayPad", "[", 
+         RowBox[{"#", ",", "1"}], "]"}], "&"}]}], ";", "\[IndentingNewLine]", 
+      
+      RowBox[{"Table", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Xt", "=", 
+          RowBox[{"pad", "[", "stateXt", "]"}]}], ";", "\[IndentingNewLine]", 
+         
+         RowBox[{"x", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "j"}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xNW", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"i", "+", "1"}], ",", 
+             RowBox[{"j", "-", "1"}]}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xN", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"i", "+", "1"}], ",", "j"}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xNE", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"i", "+", "1"}], ",", 
+             RowBox[{"j", "+", "1"}]}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xW", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", 
+             RowBox[{"j", "-", "1"}]}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xE", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", 
+             RowBox[{"j", "+", "1"}]}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xSW", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"i", "-", "1"}], ",", 
+             RowBox[{"j", "-", "1"}]}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xS", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"i", "-", "1"}], ",", "j"}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xSE", "=", 
+          RowBox[{"Xt", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"i", "-", "1"}], ",", 
+             RowBox[{"j", "+", "1"}]}], "]"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"xPrime", "=", 
+          RowBox[{"Boole", "[", 
+           RowBox[{"2", "<", 
+            RowBox[{"xNW", "+", "xN", "+", "xNE", "+", "xW", "+", 
+             RowBox[{
+              RowBox[{"1", "/", "2"}], " ", "x"}], "+", "xE", "+", "xSW", "+",
+              "xS", "+", "xSE"}], "<", "4"}], "]"}]}]}], 
+        "\[IndentingNewLine]", ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "2", ",", "4"}], "}"}], "\[IndentingNewLine]", ",", 
+        RowBox[{"{", 
+         RowBox[{"j", ",", "2", ",", "4"}], "}"}]}], "\[IndentingNewLine]", 
+       "]"}]}]}], "\[IndentingNewLine]", "]"}]}], " ", 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"updateLife", "[", 
+  RowBox[{"(", GridBox[{
+     {"0", "0", "0"},
+     {"1", "1", "1"},
+     {"0", "0", "0"}
+    }], ")"}], "]"}]}], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellFrameLabels->{{None, None}, {None, 
+    Cell[
+     TextData[{
+       StyleBox["input", FontColor -> GrayLevel[0.5]], " ", 
+       "(Mathematica Code)"}], "Input", FontSize -> 13, FontColor -> 
+     RGBColor[0.8491033800710062, 0.0031235304134196173`, 
+       0.06325861363578178], FontFamily -> "TeX Gyre Chorus", Background -> 
+     GrayLevel[0.99]]}},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.7874778969954357`*^9, 3.787478251119141*^9}, {
+   3.787478970937908*^9, 3.787479006899663*^9}, 3.787479079258861*^9},
+ Background->GrayLevel[0.95],
+ CellLabel->"In[11]:=",ExpressionUUID->"da51c644-e02f-4a83-8ba9-aedd7c6f0f3f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "0"}], "}"}]}], "}"}]], "Output",
+ CellFrame->{{True, True}, {True, False}},
+ CellFrameLabels->{{None, None}, {
+    Cell[
+     TextData[{"output"}], "Input", Background -> GrayLevel[0.99], FontSize -> 
+     13, FontColor -> GrayLevel[0.5], FontFamily -> "TeX Gyre Chorus"], None}},
+ CellChangeTimes->{
+  3.787477897001539*^9, {3.787478215598859*^9, 3.787478254860606*^9}, {
+   3.7874789766384687`*^9, 3.787479007172496*^9}, 3.7874790792796583`*^9},
+ FontSize->10,
+ Background->GrayLevel[0.85],
+ CellLabel->"Out[13]=",ExpressionUUID->"20ededc7-7976-45ca-bbb0-9ed21faae4f2"]
+}, Open  ]],
+
+Cell[BoxData["lr"], "Input",
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787479075656826*^9, 3.7874790758805933`*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"16656c8e-e261-4daf-9ecd-fade5277aa6f"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 153, 3, 60, "Input",ExpressionUUID->"195a2701-a7e8-4e2c-b07c-2915a0cb4f58"],
+Cell[714, 25, 188, 4, 60, "Input",ExpressionUUID->"d6cf31ee-7be7-46df-9b12-f01a1b6fe301"],
+Cell[905, 31, 251, 4, 60, "Input",ExpressionUUID->"49c8bc7b-736c-4792-a7be-3c6e0d6ce3f0"],
+Cell[1159, 37, 245, 4, 60, "Input",ExpressionUUID->"e7f2f21b-3c37-4834-bd65-2a016c7931e3"],
+Cell[1407, 43, 169, 3, 104, "Input",ExpressionUUID->"380f7c4e-4555-4b84-9d75-a89804a78668"],
+Cell[1579, 48, 169, 3, 104, "Input",ExpressionUUID->"d9d3b741-471f-42b4-8291-9bb7689a64fe"],
+Cell[1751, 53, 1169, 18, 1566, "Input",ExpressionUUID->"4223fab3-7865-459e-941d-23dd3679da08"],
+Cell[CellGroupData[{
+Cell[2945, 75, 1353, 35, 299, "Input",ExpressionUUID->"de63d8a8-db5c-4c9d-9c12-5d748121faec"],
+Cell[4301, 112, 2383, 61, 255, "Output",ExpressionUUID->"d9e91367-4033-4cfd-ba64-9b8b4ce5fc4c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6721, 178, 4360, 116, 1115, "Input",ExpressionUUID->"9afca0ac-376c-4710-b9ae-a336197c6e7f"],
+Cell[11084, 296, 775, 19, 172, "Output",ExpressionUUID->"1a7e1cb3-00a0-496d-b732-e8c16149c839"]
+}, Open  ]],
+Cell[11874, 318, 264, 4, 60, "Input",ExpressionUUID->"64032708-8cc2-4a00-9eb7-d3b5aa0e4117"],
+Cell[CellGroupData[{
+Cell[12163, 326, 4430, 118, 1115, "Input",ExpressionUUID->"da51c644-e02f-4a83-8ba9-aedd7c6f0f3f"],
+Cell[16596, 446, 799, 19, 172, "Output",ExpressionUUID->"20ededc7-7976-45ca-bbb0-9ed21faae4f2"]
+}, Open  ]],
+Cell[17410, 468, 248, 4, 60, "Input",ExpressionUUID->"16656c8e-e261-4daf-9ecd-fade5277aa6f"]
+}
+]
+*)
+

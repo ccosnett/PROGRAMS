@@ -1,0 +1,607 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     24825,        599]
+NotebookOptionsPosition[     20378,        495]
+NotebookOutlinePosition[     22594,        556]
+CellTagsIndexPosition[     22509,        551]
+WindowTitle->Shortcuts
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["SHORTCUTS SYMBOL", "PacletNameCell",ExpressionUUID->
+     "340156a3-92d7-4a64-905e-90654f9dd84e"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"94f336c4-03bd-4443-9162-cd8e440d8384"],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"InstallShortcuts\"\>":>
+       Documentation`HelpLookup[
+       "paclet:Shortcuts/ref/InstallShortcuts"], "\<\"UninstallShortcuts\"\>":>
+       Documentation`HelpLookup["paclet:Shortcuts/ref/UninstallShortcuts"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "1a2556df-fb72-4081-8706-893b62b6cda3"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"73939b19-b722-4359-8310-73416dbc155a"],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ShortcutsGuide\"\>":>
+       Documentation`HelpLookup["paclet:Shortcuts/guide/ShortcutsGuide"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "f6b28607-11a4-4284-9f7e-df804ff9603f"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }],ExpressionUUID->"3455e911-3992-4706-8eb7-c6c68a3b73f0"],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Shortcuts/ref/Shortcuts\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["Shortcuts/ref/Shortcuts"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/Shortcuts/ref/\
+Shortcuts.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]},
+             Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$2609], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "Shortcuts/ref/Shortcuts", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "c4ae5e06-1fd9-4f3c-abf0-c491abc82d28"]
+    }], "AnchorBar",ExpressionUUID->"5c120e9a-5fcd-4f89-8787-ec442033607f"]}
+  }]], "AnchorBarGrid",
+ CellID->1,ExpressionUUID->"71205fe6-5398-4249-a3b0-2d3cbca72762"],
+
+Cell[CellGroupData[{
+
+Cell["Shortcuts", "ObjectName",
+ CellID->1224892054,ExpressionUUID->"992be819-f1f2-4fef-94cf-611f1b9bee64"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"Shortcuts", "[", "]"}]], "InlineFormula",ExpressionUUID->
+      "eea49475-5c17-4a0b-9422-29d16de6a234"],
+     " \[LineSeparator]Shortcuts[] displays a table of additional keyboard \
+shortcuts."
+    }],ExpressionUUID->"4cd34f7e-c57d-4a2d-8fae-d0397e047ec3"]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436,ExpressionUUID->"3f353ac3-9b31-4783-a9b3-3fe26cc062b6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]],ExpressionUUID->"3f1ce99c-c138-43f9-89b1-d336e2c3eb02"],
+   "Details"
+  }], "NotesFrameText",ExpressionUUID->"eff00e99-2446-4023-b853-1fc9f489daf4"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->
+   "Preemptive"]],ExpressionUUID->"3af8b97d-5362-42e9-87bb-d7a15a9919b4"]], \
+"NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->811403716,ExpressionUUID->"108fd1a6-be83-43fa-84e7-7b42f671c015"],
+
+Cell["", "SectionHeaderSpacer",ExpressionUUID->"a837553c-922f-41b2-978b-335c841573b3"],
+
+Cell["Shortcuts[] returns a table of keyboard shortcuts.", "Notes",
+ CellID->1067943069,ExpressionUUID->"d0938beb-32b5-4b1b-8d26-269d7f167cfa"],
+
+Cell["", "SectionFooterSpacer",ExpressionUUID->"a71c7810-1910-4371-b984-d023c799c26b"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]],ExpressionUUID->"c818e073-fe9f-45a7-8025-caf6dba23bef"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "fa039cbd-8b58-4d2f-b6fb-0ff0db3d46cf"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->21982883,ExpressionUUID->"5d46f5ed-6cff-4e29-a676-81450a150513"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "2b36409b-d4e4-43e9-a287-5b697e376a24"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->278285639,ExpressionUUID->"33b3cd3d-d198-4c5f-a9b4-59d17e98e7ba"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<Shortcuts`\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Shortcuts", "[", "]"}]}], "Input",
+ CellLabel->"In[1]:=",
+ CellID->263767708,ExpressionUUID->"846e8ce7-ab1f-46ff-bf39-be80eeca4ef8"],
+
+Cell[BoxData[
+ DynamicModuleBox[{Shortcuts`Private`keyStyle$$}, 
+  DynamicBox[ToBoxes[
+    Style[
+     Column[{
+       Switch[$OperatingSystem, "Windows", 
+        StringJoin["In the following table the ", 
+         Shortcuts`Private`keyStyle$$["Win"], 
+         " key is meant to be the Windows key next to the ", 
+         Shortcuts`Private`keyStyle$$["Alt"], " key.\n"], "Unix", 
+        StringJoin["In the following table the ", 
+         Shortcuts`Private`keyStyle$$["Mod1"], 
+         " key is usually the Windows key and the ", 
+         Shortcuts`Private`keyStyle$$["Mod2"], " key is usually the ", 
+         Shortcuts`Private`keyStyle$$["Alt"], " key"], 
+        Blank[], ""], 
+       Switch[$OperatingSystem, "Windows", 
+        ((StringReplace[#, "Cmd" -> "Win"]& )[
+         ToString[#, StandardForm]]& )[
+         Grid[
+          Map[Shortcuts`Private`toKeyStyle, 
+           Map[{#, 
+             Shortcuts`Private`keyHelp[#]}& , {
+            "Ctrl F1", "Ctrl Tab", "Ctrl Shift Tab", "Ctrl Shift \[UpArrow]", 
+             "Ctrl ;", "Ctrl Shift \[DownArrow]", "Ctrl Shift X", 
+             "Ctrl Alt X", "Ctrl Q", "Ctrl R", "Ctrl H", "Ctrl Shift ,", 
+             "Cmd Alt B", "Cmd Alt M", "Cmd Alt U", "Cmd Alt D", 
+             "Cmd Alt Delete", "Ctrl Shift Delete", "F4", "F6", "Ctrl T", 
+             "Ctrl Shift J", "Ctrl F2", 
+             Framed[
+              Style[
+              "The following shortcuts do only work on english keyboard \
+layouts:", "Text"], Background -> LightGray, FrameStyle -> None, FrameMargins -> 
+              10], "Ctrl `", "Ctrl Shift /", "Ctrl [", "Ctrl ]", 
+             "Ctrl Alt ]"}]], Shortcuts`Private`gridOptions]], "Unix", 
+        ((StringReplace[#, {"Cmd" -> "Mod1", "Alt" -> "Mod2"}]& )[
+         ToString[#, StandardForm]]& )[
+         Grid[
+          Map[Shortcuts`Private`toKeyStyle, 
+           Map[{#, 
+             Shortcuts`Private`keyHelp[#]}& , {
+            "Ctrl F1", "Ctrl Tab", "Ctrl Shift Tab", "Ctrl Shift \[UpArrow]", 
+             "Ctrl ;", "Ctrl Shift \[DownArrow]", "Ctrl Alt X", "Cmd Alt X", 
+             "Ctrl Shift Q", "Ctrl R", "Ctrl H", "Cmd Alt C", "Cmd Alt B", 
+             "Cmd Alt M", "Cmd Alt U", "Cmd Alt D", "Cmd Alt Delete", 
+             "Ctrl Shift Delete", "F4", "F6", "Ctrl T", "Ctrl Shift J", 
+             "Ctrl F2", "Cmd Alt I", 
+             Framed[
+              Style[
+              "The following shortcuts do only work on english keyboard \
+layouts:", "Text"], Background -> LightGray, FrameStyle -> None, FrameMargins -> 
+              10], "Ctrl `", "Ctrl [", "Ctrl ]", "Ctrl Alt ]"}]], 
+          Shortcuts`Private`gridOptions]], "MacOSX", 
+        ((StringReplace[#, {"Cmd" -> "\[CloverLeaf]", "Alt" -> "Alt"}]& )[
+         ToString[#, StandardForm]]& )[
+         Grid[
+          Map[Shortcuts`Private`toKeyStyle, 
+           Map[{#, 
+             Shortcuts`Private`keyHelp[#]}& , {
+            "Cmd Escape", "Ctrl Tab", "Ctrl Shift Tab", 
+             "Cmd Shift \[UpArrow]", "Cmd Shift \[DownArrow]", "Cmd Shift X", 
+             "Ctrl Q", "Ctrl R", "Ctrl H", "Cmd PageDown", "Cmd PageUp", 
+             "Cmd Home", "Cmd End", "Cmd Alt I", "Cmd Alt B", "Cmd Alt M", 
+             "Cmd Alt U", "Cmd Alt J", "Ctrl Shift Delete", "Ctrl D", 
+             "Ctrl Shift J", 
+             Framed[
+              Style[
+              "The following shortcuts do only work on english keyboard \
+layouts:", "Text"], FrameStyle -> None, FrameMargins -> 10], "Ctrl `", 
+             "Ctrl [", "Ctrl ]"}]], Shortcuts`Private`gridOptions]]]}], 
+     "Text"], StandardForm],
+   ImageSizeCache->{1037., {1635.767578125, 1650.232421875}}],
+  DynamicModuleValues:>{{
+    DownValues[Shortcuts`Private`keyStyle$$] = {HoldPattern[
+         Shortcuts`Private`keyStyle$$[
+          Pattern[Shortcuts`Private`s, 
+           Blank[]]]] :> ToString[
+         Framed[
+          Style[
+          Shortcuts`Private`s, FontFamily -> "Courier", FontColor -> 
+           GrayLevel[0.365], FontWeight -> "Bold"], 
+          ImageMargins -> {{2, 2}, {2, 2}}, FrameStyle -> GrayLevel[0.8], 
+          Background -> GrayLevel[0.965]], StandardForm]}}},
+  Initialization:>(
+   Shortcuts`Private`gridOptions = {
+     Alignment -> {Left, Center}, Dividers -> All, FrameStyle -> LightGray, 
+      Spacings -> {2, 1}}; Shortcuts`Private`jokerdir = StringReplace[
+      FileNameJoin[{$UserBaseDirectory, "SystemFiles", "FrontEnd", 
+        "TextResources", 
+        Switch[$OperatingSystem, "MacOSX", "Macintosh", "Windows", "Windows", 
+         "Unix", "X"]}], $UserBaseDirectory -> "$UserBaseDirectory"]; 
+   Shortcuts`Private`keyHelp[
+      Condition[
+       Pattern[Shortcuts`Private`z, 
+        Blank[]], Head[Shortcuts`Private`z] =!= String]] := SpanFromLeft; 
+   Shortcuts`Private`keyHelp["Ctrl F1"] = (
+     Shortcuts`Private`keyHelp["Cmd Escape"] = 
+     "Open the Shortcuts documentation page listing all extra keyboard \
+shortcuts."); 
+   Shortcuts`Private`keyHelp["Ctrl Tab"] = 
+    "Delete all output and evaluate all cells from the top to the insertion \
+point."; Shortcuts`Private`keyHelp["Ctrl Shift Tab"] = 
+    "Delete all output, restart the kernel and evaluate all cells from the \
+top to the insertion point."; 
+   Shortcuts`Private`keyHelp["Ctrl Shift \[UpArrow]"] = 
+    "Evaluate all cells from the top of the notebook until the insertion \
+point."; Shortcuts`Private`keyHelp["Ctrl ;"] = (
+     Shortcuts`Private`keyHelp["Cmd Home"] = 
+     "Select all cells from the top of the notebook to the insertion point."); 
+   Shortcuts`Private`keyHelp["Ctrl Shift \[DownArrow]"] = 
+    "Select all cells from the insertion point until the end of the \
+notebook."; 
+   Shortcuts`Private`keyHelp["Ctrl Shift Tab"] = 
+    "Delete all output, restart the kernel and evaluate all cells from the \
+top to the insertion point."; 
+   Shortcuts`Private`keyHelp["Ctrl Shift \[UpArrow]"] = (
+     Shortcuts`Private`keyHelp["Cmd Shift \[UpArrow]"] = 
+     "Evaluate all cells from the top of the notebook until the insertion \
+point."); Shortcuts`Private`keyHelp["Ctrl ;"] = 
+    "Select all cells from the top of the notebook to the insertion point."; 
+   Shortcuts`Private`keyHelp["Ctrl Shift \[DownArrow]"] = (
+     Shortcuts`Private`keyHelp["Cmd Shift \[DownArrow]"] = 
+     "Select all cells from the insertion point until the end of the \
+notebook."); 
+   Shortcuts`Private`keyHelp["Ctrl Shift X"] = (
+     Shortcuts`Private`keyHelp["Ctrl Cmd X"] = (
+      Shortcuts`Private`keyHelp["Cmd Shift X"] = 
+      "Delete all generated cells, like Output, Message and Print cells, also \
+in MessagesNotebook[].")); 
+   Shortcuts`Private`keyHelp["Ctrl Alt X"] = (
+     Shortcuts`Private`keyHelp["Cmd Alt X"] = 
+     "Delete all non-Input and non-Code cells."); 
+   Shortcuts`Private`keyHelp["Ctrl Q"] = (
+     Shortcuts`Private`keyHelp["Ctrl Shift Q"] = 
+     "Quit and restart the kernel."); 
+   Shortcuts`Private`keyHelp["Ctrl R"] = 
+    StringJoin[
+     "Quit and restart the front end. All Untitled notebooks are closed \
+without confirmation.", " All others are saved.", 
+      " The selected notebook is saved and reopened, if possible."]; 
+   Shortcuts`Private`keyHelp["Ctrl H"] = "Evaluate Notebook."; 
+   Shortcuts`Private`keyHelp["Ctrl Shift ,"] = (
+     Shortcuts`Private`keyHelp["Cmd Alt C"] = (
+      Shortcuts`Private`keyHelp["Cmd PageDown"] = 
+      "Copy, paste and evaluate the selected expression from the inside of a \
+cell into a new notebook.")); 
+   Shortcuts`Private`keyHelp["Cmd Alt B"] = 
+    "Select the current cell. The insertion point can be anywhere inside the \
+cell."; Shortcuts`Private`keyHelp["Cmd Alt M"] = "Minimize all notebooks."; 
+   Shortcuts`Private`keyHelp["Cmd Alt U"] = 
+    "Cut the selected cell and paste it before the preceding cell."; 
+   Shortcuts`Private`keyHelp["Cmd Alt D"] = (
+     Shortcuts`Private`keyHelp["Cmd Alt J"] = 
+     "Cut the selected cell and paste it after the following cell."); 
+   Shortcuts`Private`keyHelp["Cmd Alt Delete"] = 
+    "Quit the front end, saving named notebooks first."; 
+   Shortcuts`Private`keyHelp["Ctrl Shift Delete"] = 
+    "Close all Untitled notebooks without confirmation."; 
+   Shortcuts`Private`keyHelp["F4"] = 
+    "Insert \[LeftDoubleBracket]\[RightDoubleBracket]"; 
+   Shortcuts`Private`keyHelp["F6"] = (Shortcuts`Private`keyHelp["Cmd PageUp"] = 
+     "Stack windows."); 
+   Shortcuts`Private`keyHelp["Ctrl T"] = (Shortcuts`Private`keyHelp["Ctrl D"] = 
+     StringJoin[
+      "Evaluate the user defined code written in joker.m from ", 
+       Shortcuts`Private`jokerdir]); 
+   Shortcuts`Private`keyHelp["Ctrl Shift J"] = 
+    StringJoin[
+     "Open the user configurable file joker.m from ", 
+      Shortcuts`Private`jokerdir]; 
+   Shortcuts`Private`keyHelp["Ctrl F2"] = (
+     Shortcuts`Private`keyHelp["Cmd End"] = 
+     "Open $UserBaseDirectory by SystemOpen[$UserBaseDirectory]."); 
+   Shortcuts`Private`keyHelp["Ctrl `"] = "Evaluate Notebook."; 
+   Shortcuts`Private`keyHelp["Ctrl Shift /"] = (
+     Shortcuts`Private`keyHelp["Cmd Alt I"] = 
+     "Open the init.m file found by FindFile[\"init.m\"] in the front end."); 
+   Shortcuts`Private`keyHelp["Ctrl ["] = "Insert [["; 
+   Shortcuts`Private`keyHelp["Ctrl ]"] = "Insert ]]"; 
+   Shortcuts`Private`keyHelp["Ctrl Alt ]"] = "Insert [[]]"; 
+   Shortcuts`Private`keyStyle$$[
+      Pattern[Shortcuts`Private`s, 
+       Blank[]]] := ToString[
+      Framed[
+       Style[
+       Shortcuts`Private`s, FontFamily -> "Courier", FontColor -> 
+        GrayLevel[0.365], FontWeight -> "Bold"], 
+       ImageMargins -> {{2, 2}, {2, 2}}, FrameStyle -> GrayLevel[0.8], 
+       Background -> GrayLevel[0.965]], StandardForm]; 
+   Shortcuts`Private`toKeyStyle[{
+       Pattern[Shortcuts`Private`keyshort$, 
+        Blank[String]], 
+       Pattern[Shortcuts`Private`desc$, 
+        Blank[String]]}] := {
+      Row[
+       Riffle[
+        Map[Shortcuts`Private`keyStyle$$, 
+         StringSplit[Shortcuts`Private`keyshort$]], " + "]], 
+      Shortcuts`Private`desc$}; Shortcuts`Private`toKeyStyle[{
+       Pattern[Shortcuts`Private`a, 
+        Blank[]], 
+       Pattern[Shortcuts`Private`b, 
+        Blank[Symbol]]}] := {Shortcuts`Private`a, Shortcuts`Private`b}; 
+   Null)]], "Output",
+ ImageSize->{586, 1388},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->773833130,ExpressionUUID->"6275fd6f-28c0-4232-bc58-9602a14384f6"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer",ExpressionUUID->"3102a279-5cef-4c65-9286-a38bdbe877c2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]],ExpressionUUID->"884e7110-82cd-4f6d-a6aa-2d504c41fb2f"],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->1255426704,ExpressionUUID->"14333060-38ee-4a59-8e7e-1e573bfd3f3d"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["InstallShortcuts"]],"paclet:Shortcuts/ref/InstallShortcuts"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula",
+  ExpressionUUID->"868ecf72-98a5-474d-a32e-c5ab93e3b3c3"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["UninstallShortcuts"]],
+    "paclet:Shortcuts/ref/UninstallShortcuts"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula",
+  ExpressionUUID->"d2fb5710-338b-44d7-96c9-a36a9bed2713"]
+}], "SeeAlso",
+ CellID->929782353,ExpressionUUID->"bda7ca32-c47d-49d5-b675-8dc4ed2d7e79"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]],ExpressionUUID->"134485a7-e8f9-49bf-9490-631fcbc35a13"],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->
+  True,ExpressionUUID->"0a11739a-e40b-4bea-8a3e-f802af431fa5"],
+
+Cell["", "SectionHeaderSpacer",ExpressionUUID->"b2cbc4ba-f6d7-4db5-9747-b2ece538d78c"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["ShortcutsGuide"]],"paclet:Shortcuts/guide/ShortcutsGuide"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->514173314,ExpressionUUID->"ebca2597-7f6a-4aea-b4e4-0209e3047d50"]
+}, Open  ]],
+
+Cell[" ", "FooterCell",ExpressionUUID->"489d9503-b381-4ca5-96f2-f499889ba9bf"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{
+  Scaled[
+   Rational[1, 2]], 
+  Scaled[1]},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Shortcuts",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:Shortcuts/guide/Shortcuts", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, 
+  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2015, 7, 6, 15, 6, 31.3235432}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "Shortcuts`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Shortcuts Symbol", "language" -> "en", "paclet" -> "Shortcuts", "status" -> 
+    "None", "summary" -> 
+    "Shortcuts[] Shortcuts[] displays a table of additional keyboard \
+shortcuts.", "synonyms" -> {}, "title" -> "Shortcuts", "titlemodifier" -> "", 
+    "windowtitle" -> "Shortcuts", "type" -> "Symbol", "uri" -> 
+    "Shortcuts/ref/Shortcuts", "WorkflowDockedCell" -> ""}, 
+  "SearchTextTranslated" -> "", "NewStyles" -> False},
+CellContext->"Global`",
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> 
+  "11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, 2018)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[6813, 178, 554, 16, 70, "PrimaryExamplesSection",ExpressionUUID->"5d46f5ed-6cff-4e29-a676-81450a150513",
+   CellTags->"PrimaryExamplesSection",
+   CellID->21982883]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 22312, 544}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[581, 21, 4169, 94, 102, "AnchorBarGrid",ExpressionUUID->"71205fe6-5398-4249-a3b0-2d3cbca72762",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[4775, 119, 107, 1, 106, "ObjectName",ExpressionUUID->"992be819-f1f2-4fef-94cf-611f1b9bee64",
+ CellID->1224892054],
+Cell[4885, 122, 566, 13, 217, "Usage",ExpressionUUID->"3f353ac3-9b31-4783-a9b3-3fe26cc062b6",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5488, 140, 964, 26, 72, "NotesSection",ExpressionUUID->"108fd1a6-be83-43fa-84e7-7b42f671c015",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->811403716],
+Cell[6455, 168, 86, 0, 70, "SectionHeaderSpacer",ExpressionUUID->"a837553c-922f-41b2-978b-335c841573b3"],
+Cell[6544, 170, 143, 1, 70, "Notes",ExpressionUUID->"d0938beb-32b5-4b1b-8d26-269d7f167cfa",
+ CellID->1067943069],
+Cell[6690, 173, 86, 0, 70, "SectionFooterSpacer",ExpressionUUID->"a71c7810-1910-4371-b984-d023c799c26b"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[6813, 178, 554, 16, 70, "PrimaryExamplesSection",ExpressionUUID->"5d46f5ed-6cff-4e29-a676-81450a150513",
+ CellTags->"PrimaryExamplesSection",
+ CellID->21982883],
+Cell[CellGroupData[{
+Cell[7392, 198, 308, 7, 59, "ExampleSection",ExpressionUUID->"33b3cd3d-d198-4c5f-a9b4-59d17e98e7ba",
+ CellID->278285639],
+Cell[CellGroupData[{
+Cell[7725, 209, 254, 6, 94, "Input",ExpressionUUID->"846e8ce7-ab1f-46ff-bf39-be80eeca4ef8",
+ CellID->263767708],
+Cell[7982, 217, 10385, 208, 3331, "Output",ExpressionUUID->"6275fd6f-28c0-4232-bc58-9602a14384f6",
+ CellID->773833130]
+}, Open  ]]
+}, Open  ]],
+Cell[18394, 429, 86, 0, 70, "SectionFooterSpacer",ExpressionUUID->"3102a279-5cef-4c65-9286-a38bdbe877c2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18517, 434, 380, 12, 70, "SeeAlsoSection",ExpressionUUID->"14333060-38ee-4a59-8e7e-1e573bfd3f3d",
+ CellID->1255426704],
+Cell[18900, 448, 646, 16, 70, "SeeAlso",ExpressionUUID->"bda7ca32-c47d-49d5-b675-8dc4ed2d7e79",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19583, 469, 370, 12, 70, "MoreAboutSection",ExpressionUUID->"0a11739a-e40b-4bea-8a3e-f802af431fa5"],
+Cell[19956, 483, 86, 0, 70, "SectionHeaderSpacer",ExpressionUUID->"b2cbc4ba-f6d7-4db5-9747-b2ece538d78c"],
+Cell[20045, 485, 236, 5, 70, "MoreAbout",ExpressionUUID->"ebca2597-7f6a-4aea-b4e4-0209e3047d50",
+ CellID->514173314]
+}, Open  ]],
+Cell[20296, 493, 78, 0, 70, "FooterCell",ExpressionUUID->"489d9503-b381-4ca5-96f2-f499889ba9bf"]
+}
+]
+*)
+

@@ -1,0 +1,704 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     24000,        696]
+NotebookOptionsPosition[     21196,        636]
+NotebookOutlinePosition[     21539,        651]
+CellTagsIndexPosition[     21496,        648]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ StyleBox[
+  TemplateBox[{RowBox[{"n", "=", "3"}],FrameStyle -> None},
+   "Highlighted"],
+  FontWeight->"Normal"]], "DisplayFormula",
+ CellChangeTimes->{{3.7873134039363117`*^9, 3.787313405521162*^9}},
+ FontSize->13,ExpressionUUID->"b6f3f9f4-c640-4f56-8226-7b71a942e944"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Cases", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Cases", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Cases", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Permutations", "[", 
+         StyleBox[
+          RowBox[{"{", 
+           RowBox[{"1", ",", "1", ",", "2", ",", "2", ",", "3", ",", "3"}], 
+           "}"}],
+          FontWeight->"Normal"], " ", "]"}], " ", "\[IndentingNewLine]", ",", 
+        
+        RowBox[{"{", 
+         RowBox[{"___", ",", "1", ",", "_", ",", "1", ",", "___"}], "}"}]}], 
+       "]"}], "\[IndentingNewLine]", ",", 
+      RowBox[{"{", 
+       RowBox[{"___", ",", "2", ",", "_", ",", "_", ",", "2", ",", "___"}], 
+       "}"}]}], " ", "]"}], "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "___", ",", "3", ",", "_", ",", "_", ",", "_", ",", "3", ",", "___"}], 
+     "}"}]}], " ", "]"}], "\[IndentingNewLine]"}]], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellFrameLabels->{{None, None}, {None, 
+    Cell[
+     TextData[{
+       StyleBox["input", FontColor -> GrayLevel[0.5]], " ", 
+       "(Mathematica Code)"}], "Input", FontSize -> 13, FontColor -> 
+     RGBColor[0.8491033800710062, 0.0031235304134196173`, 
+       0.06325861363578178], FontFamily -> "TeX Gyre Chorus", Background -> 
+     GrayLevel[0.99]]}},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787313293552864*^9, 3.787313383835614*^9}},
+ Background->GrayLevel[0.95],
+ CellLabel->"In[18]:=",ExpressionUUID->"b39a47fc-26fd-489c-8c28-8bc3757ea201"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3", ",", "1", ",", "2", ",", "1", ",", "3"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "1", ",", "2", ",", "1", ",", "3", ",", "2"}], "}"}]}], 
+  "}"}]], "Output",
+ CellFrame->{{True, True}, {True, False}},
+ CellFrameLabels->{{None, None}, {
+    Cell[
+     TextData[{"output"}], "Input", Background -> GrayLevel[0.99], FontSize -> 
+     13, FontColor -> GrayLevel[0.5], FontFamily -> "TeX Gyre Chorus"], None}},
+ CellChangeTimes->{{3.7873132936091003`*^9, 3.7873133312721367`*^9}, {
+  3.7873133641392517`*^9, 3.787313384690803*^9}},
+ Background->GrayLevel[0.85],
+ CellLabel->"Out[18]=",ExpressionUUID->"0a06d9c7-4160-4755-872a-a511c0378ed7"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["the corresponding exact covering problem has 9 \
+columns and 8 rows",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7873418534456472`*^9, 3.787341869770627*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"837df25c-3f45-4b3c-808e-8b63874cc5e4"],
+
+Cell[TextData[StyleBox["the columns are dee eyes for i iterating from 1 to 3",
+ 
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787341879966798*^9, 3.787341894547586*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"8afab33a-c12d-4abc-be1e-4ca6948f66f2"],
+
+Cell[TextData[StyleBox["the row d i s j and s k means that digit i is placed \
+in slots j and k",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.78734192962829*^9, 3.787341950486806*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"fa878b1b-f07f-48c9-b4c3-4c4e6ab89dbb"],
+
+Cell[TextData[StyleBox["left right symmetry allows us to omit the row d 3 s 2 \
+s 6 from this specification",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787341960917754*^9, 3.787341980298991*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"520f5a43-c83c-4e6f-adbc-7ffa9da3322e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    StyleBox["d",
+     FontWeight->"Normal"], "1"], "=", "1"}], ",", 
+  RowBox[{
+   SubscriptBox["d", "2"], "=", "2"}], ",", 
+  RowBox[{
+   SubscriptBox["d", "3"], "=", "3"}]}]], "DisplayFormula",
+ CellChangeTimes->{{3.787342037702215*^9, 3.7873420467130833`*^9}},
+ FontSize->13,ExpressionUUID->"c5d8d27f-76c9-4503-a516-d218633607ec"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"langf", "=", 
+   RowBox[{"(", GridBox[{
+      {"0", "1", "2", "3", "4", "5", "6"},
+      {"1", "1", "0", "1", "0", "0", "0"},
+      {"2", "0", "1", "0", "1", "0", "0"},
+      {"3", "0", "0", "1", "0", "1", "0"},
+      {"4", "0", "0", "0", "1", "0", "1"},
+      {"5", "2", "0", "0", "2", "0", "0"},
+      {"6", "0", "2", "0", "0", "2", "0"},
+      {"7", "0", "0", "2", "0", "0", "2"},
+      {"8", "3", "0", "0", "0", "3", "0"}
+     }], ")"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"langFormat", "=", 
+   RowBox[{
+    RowBox[{"Grid", "[", 
+     RowBox[{
+      RowBox[{"#", " ", "/.", 
+       RowBox[{"{", " ", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"1", "->", 
+          RowBox[{"Item", "[", 
+           RowBox[{"1", ",", 
+            RowBox[{"Background", "\[Rule]", "Green"}]}], "]"}]}], 
+         "\[IndentingNewLine]", ",", 
+         RowBox[{"2", "\[Rule]", 
+          RowBox[{"Item", "[", 
+           RowBox[{"2", ",", 
+            RowBox[{"Background", "\[Rule]", "Magenta"}]}], "]"}]}], 
+         "\[IndentingNewLine]", ",", 
+         RowBox[{"3", "->", 
+          RowBox[{"Item", "[", 
+           RowBox[{"3", ",", 
+            RowBox[{"Background", "\[Rule]", "Yellow"}]}], " ", "]"}]}], 
+         "\[IndentingNewLine]", ",", 
+         RowBox[{"0", "->", 
+          RowBox[{"Item", "[", "\"\<\>\"", "]"}]}]}], "\[IndentingNewLine]", 
+        "}"}]}], ",", 
+      RowBox[{"Frame", "\[Rule]", "All"}]}], "]"}], "&"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"langFormat", "@", "langf"}]}], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellFrameLabels->{{None, None}, {None, 
+    Cell[
+     TextData[{
+       StyleBox["input", FontColor -> GrayLevel[0.5]], " ", 
+       "(Mathematica Code)"}], "Input", FontSize -> 13, FontColor -> 
+     RGBColor[0.8491033800710062, 0.0031235304134196173`, 
+       0.06325861363578178], FontFamily -> "TeX Gyre Chorus", Background -> 
+     GrayLevel[0.99]]}},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.78734202133858*^9, 3.787342067283924*^9}, {
+   3.7873425784522038`*^9, 3.787342607617096*^9}, {3.787342659149458*^9, 
+   3.787342722679434*^9}, {3.787342758085099*^9, 3.7873428826867437`*^9}, {
+   3.787343079314117*^9, 3.7873430919602327`*^9}, {3.78738418199201*^9, 
+   3.787384236738915*^9}},
+ Background->GrayLevel[
+  0.95],ExpressionUUID->"c7c5e919-e588-4f57-8abb-444342e152ba"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     ItemBox["1",
+      Background->RGBColor[0, 1, 0],
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[0, 1, 0],
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False]},
+    {
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[0, 1, 0],
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[0, 1, 0],
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False]},
+    {
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[0, 1, 0],
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[0, 1, 0],
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False]},
+    {
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[0, 1, 0],
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["1",
+      Background->RGBColor[0, 1, 0],
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False]},
+    {
+     ItemBox["2",
+      Background->RGBColor[1, 0, 1],
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["2",
+      Background->RGBColor[1, 0, 1],
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False]},
+    {
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["2",
+      Background->RGBColor[1, 0, 1],
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["2",
+      Background->RGBColor[1, 0, 1],
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False]},
+    {
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["2",
+      Background->RGBColor[1, 0, 1],
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["2",
+      Background->RGBColor[1, 0, 1],
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False]},
+    {
+     ItemBox["3",
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["3",
+      Background->RGBColor[1, 1, 0],
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False], 
+     ItemBox["\<\"\"\>",
+      StripOnInput->False]}
+   },
+   AutoDelete->False,
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellFrame->{{True, True}, {True, False}},
+ CellFrameLabels->{{None, None}, {
+    Cell[
+     TextData[{"output"}], "Input", Background -> GrayLevel[0.99], FontSize -> 
+     13, FontColor -> GrayLevel[0.5], FontFamily -> "TeX Gyre Chorus"], None}},
+ CellChangeTimes->{
+  3.7873420213867273`*^9, {3.787342767720265*^9, 3.78734281076959*^9}, {
+   3.787342856700571*^9, 3.787342870374819*^9}, 3.7873430923662367`*^9, 
+   3.78738419268676*^9},
+ Background->GrayLevel[0.85],
+ CellLabel->"Out[3]=",ExpressionUUID->"dadcede7-28dc-4ef2-a249-2a7477dd3e99"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["We want to select rows of 11 so that each column \
+appears just once",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787342895181761*^9, 3.787342907427994*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"8d4b6faf-c98c-464a-8dbf-4a842a514632"],
+
+Cell[TextData[StyleBox["Let the Boolean variable x j mean select row j for ",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787343012566454*^9, 3.787343027672319*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"d4598ddf-ae6b-4ea8-a1d9-2031b5027061"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "row1", ",", "row2", ",", "row3", ",", "row4", ",", "row5", ",", "row6", 
+     ",", "row7", ",", "row8"}], "}"}], "=", "langf"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{"row5", "+", "row6", "+", "row7"}], "}"}], "//", 
+  "langFormat"}]}], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ TaggingRules->{"LastCursorPosition" -> False},
+ CellFrameLabels->{{None, None}, {None, 
+    Cell[
+     TextData[{
+       StyleBox["input", FontColor -> GrayLevel[0.5]], " ", 
+       "(Mathematica Code)"}], "Input", FontSize -> 13, FontColor -> 
+     RGBColor[0.8491033800710062, 0.0031235304134196173`, 
+       0.06325861363578178], FontFamily -> "TeX Gyre Chorus", Background -> 
+     GrayLevel[0.99]]}},
+ CellChangeTimes->{
+  3.767869704382765*^9, {3.787343072161437*^9, 3.787343118519147*^9}, {
+   3.7873431844058*^9, 3.787343254983931*^9}, {3.7873433652513723`*^9, 
+   3.787343401510125*^9}},
+ Background->GrayLevel[0.95],
+ CellLabel->"In[59]:=",ExpressionUUID->"3cc62e8c-0478-4e0e-81d8-606a913e8f32"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     ItemBox["2",
+      Background->RGBColor[1, 0, 1],
+      StripOnInput->False], 
+     ItemBox["2",
+      Background->RGBColor[1, 0, 1],
+      StripOnInput->False], 
+     ItemBox["2",
+      Background->RGBColor[1, 0, 1],
+      StripOnInput->False], 
+     ItemBox["2",
+      Background->RGBColor[1, 0, 1],
+      StripOnInput->False], 
+     ItemBox["2",
+      Background->RGBColor[1, 0, 1],
+      StripOnInput->False], 
+     ItemBox["2",
+      Background->RGBColor[1, 0, 1],
+      StripOnInput->False], "0", "0", "0"}
+   },
+   AutoDelete->False,
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellFrame->{{True, True}, {True, False}},
+ CellFrameLabels->{{None, None}, {
+    Cell[
+     TextData[{"output"}], "Input", Background -> GrayLevel[0.99], FontSize -> 
+     13, FontColor -> GrayLevel[0.5], FontFamily -> "TeX Gyre Chorus"], None}},
+ CellChangeTimes->{
+  3.787343072181395*^9, 3.787343118979927*^9, {3.787343201768325*^9, 
+   3.787343255380068*^9}, {3.787343368371797*^9, 3.787343401944648*^9}},
+ Background->GrayLevel[0.85],
+ CellLabel->"Out[60]=",ExpressionUUID->"b87e3e16-cecb-4a5b-b4d4-295e5dc4e3ff"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["Here as usual, S1 of arguments y 1 unto y p denotes \
+the symmetric function",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787343291294223*^9, 3.787343309371887*^9}},
+ CellLabel->"In[47]:=",ExpressionUUID->"6dbb0b6f-e3b1-47e4-84af-72471be3d960"],
+
+Cell[TextData[StyleBox["i.e. the arguments sum to 1",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787343326567729*^9, 3.787343334434794*^9}},
+ CellLabel->"In[49]:=",ExpressionUUID->"1f36e656-fa8c-43c3-a41f-62ba481d4c5a"],
+
+Cell[TextData[StyleBox["is S1 a predicate?",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787343338491596*^9, 3.787343343777843*^9}},
+ CellLabel->"In[51]:=",ExpressionUUID->"a24d467d-3559-4ea4-a94e-f98cb43038e3"],
+
+Cell[TextData[StyleBox["for examle x5 plus x6+ x7 sums to 1",
+ StripOnInput->False,
+ LineColor->GrayLevel[0],
+ FrontFaceColor->GrayLevel[0],
+ BackFaceColor->GrayLevel[0],
+ GraphicsColor->GrayLevel[0],
+ FontWeight->Normal,
+ FontColor->GrayLevel[0]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ ShowCellLabel->"False",
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.787343346758309*^9, 3.787343357073015*^9}},
+ CellLabel->"In[53]:=",ExpressionUUID->"80bfdb09-c94b-4022-8827-41d97bfea7c5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Expectation", "[", 
+  RowBox[{"x", ",", 
+   RowBox[{"x", "\[Distributed]", 
+    RowBox[{"ProbabilityDistribution", "[", 
+     RowBox[{
+      RowBox[{"n", 
+       FractionBox[
+        RowBox[{" ", 
+         SuperscriptBox["x", 
+          RowBox[{"n", "-", "1"}]]}], 
+        SuperscriptBox["\[Theta]", "n"]]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "0", ",", "\[Theta]"}], "}"}]}], "]"}]}]}], 
+  "]"}]], "Input",
+ CellFrame->{{True, True}, {False, True}},
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellFrameLabels->{{None, None}, {None, 
+    Cell[
+     TextData[{
+       StyleBox["input", FontColor -> GrayLevel[0.5]], " ", 
+       "(Mathematica Code)"}], "Input", FontSize -> 13, FontColor -> 
+     RGBColor[0.8491033800710062, 0.0031235304134196173`, 
+       0.06325861363578178], FontFamily -> "TeX Gyre Chorus", Background -> 
+     GrayLevel[0.99]]}},
+ CellChangeTimes->{3.767869704382765*^9, 3.787343360316902*^9},
+ Background->GrayLevel[0.95],
+ CellLabel->"In[62]:=",ExpressionUUID->"18da52ce-9234-4d8f-8eb2-d2b4e4d8649a"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"n", " ", "\[Theta]"}], 
+  RowBox[{"1", "+", "n"}]]], "Output",
+ CellFrame->{{True, True}, {True, False}},
+ CellFrameLabels->{{None, None}, {
+    Cell[
+     TextData[{"output"}], "Input", Background -> GrayLevel[0.99], FontSize -> 
+     13, FontColor -> GrayLevel[0.5], FontFamily -> "TeX Gyre Chorus"], None}},
+ CellChangeTimes->{3.787343360341275*^9},
+ Background->GrayLevel[0.85],
+ CellLabel->"Out[62]=",ExpressionUUID->"c47d56da-3695-4f90-b8d7-dc6ced7e9cf2"]
+}, Open  ]]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"DefaultModified2.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 285, 6, 72, "DisplayFormula",ExpressionUUID->"b6f3f9f4-c640-4f56-8226-7b71a942e944"],
+Cell[CellGroupData[{
+Cell[868, 30, 1596, 38, 444, "Input",ExpressionUUID->"b39a47fc-26fd-489c-8c28-8bc3757ea201"],
+Cell[2467, 70, 736, 17, 179, "Output",ExpressionUUID->"0a06d9c7-4160-4755-872a-a511c0378ed7"]
+}, Open  ]],
+Cell[3218, 90, 600, 15, 69, "Text",ExpressionUUID->"837df25c-3f45-4b3c-808e-8b63874cc5e4",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[3821, 107, 585, 15, 69, "Text",ExpressionUUID->"8afab33a-c12d-4abc-be1e-4ca6948f66f2",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[4409, 124, 601, 15, 69, "Text",ExpressionUUID->"fa878b1b-f07f-48c9-b4c3-4c4e6ab89dbb",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5013, 141, 614, 15, 69, "Text",ExpressionUUID->"520f5a43-c83c-4e6f-adbc-7ffa9da3322e",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[5630, 158, 386, 11, 50, "DisplayFormula",ExpressionUUID->"c5d8d27f-76c9-4503-a516-d218633607ec"],
+Cell[CellGroupData[{
+Cell[6041, 173, 2457, 60, 746, "Input",ExpressionUUID->"c7c5e919-e588-4f57-8abb-444342e152ba"],
+Cell[8501, 235, 5181, 185, 426, "Output",ExpressionUUID->"dadcede7-28dc-4ef2-a249-2a7477dd3e99"]
+}, Open  ]],
+Cell[13697, 423, 600, 15, 69, "Text",ExpressionUUID->"8d4b6faf-c98c-464a-8dbf-4a842a514632",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[14300, 440, 583, 14, 69, "Text",ExpressionUUID->"d4598ddf-ae6b-4ea8-a1d9-2031b5027061",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[14908, 458, 1099, 27, 186, "Input",ExpressionUUID->"3cc62e8c-0478-4e0e-81d8-606a913e8f32"],
+Cell[16010, 487, 1263, 35, 188, "Output",ExpressionUUID->"b87e3e16-cecb-4a5b-b4d4-295e5dc4e3ff"]
+}, Open  ]],
+Cell[17288, 525, 608, 15, 69, "Text",ExpressionUUID->"6dbb0b6f-e3b1-47e4-84af-72471be3d960",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[17899, 542, 559, 14, 69, "Text",ExpressionUUID->"1f36e656-fa8c-43c3-a41f-62ba481d4c5a",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[18461, 558, 550, 14, 69, "Text",ExpressionUUID->"a24d467d-3559-4ea4-a94e-f98cb43038e3",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[19014, 574, 567, 14, 69, "Text",ExpressionUUID->"80bfdb09-c94b-4022-8827-41d97bfea7c5",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[CellGroupData[{
+Cell[19606, 592, 1071, 28, 192, "Input",ExpressionUUID->"18da52ce-9234-4d8f-8eb2-d2b4e4d8649a"],
+Cell[20680, 622, 500, 11, 206, "Output",ExpressionUUID->"c47d56da-3695-4f90-b8d7-dc6ced7e9cf2"]
+}, Open  ]]
+}
+]
+*)
+

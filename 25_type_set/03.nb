@@ -1,0 +1,139 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4549,        131]
+NotebookOptionsPosition[      3442,        103]
+NotebookOutlinePosition[      4028,        123]
+CellTagsIndexPosition[      3985,        120]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["The maximum and minimum values of the pressure on the \
+sphere are thus:",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.7757373949386044`*^9, 3.775737407060671*^9}, 
+   3.775737535200406*^9},ExpressionUUID->"0c7276f3-7357-4834-b37a-\
+feee03fe8c00"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SubscriptBox["p", "max"], "(", "a", ")"}], "=", 
+    RowBox[{
+     SubscriptBox["p", "\[Infinity]"], "+", 
+     RowBox[{
+      FractionBox["1", "2"], "\[Rho]", "\[InvisibleSpace]", 
+      SuperscriptBox["U", "2"]}]}]}], ",", "    ", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["p", "min"], "(", "a", ")"}], "=", 
+    RowBox[{
+     SubscriptBox["p", "\[Infinity]"], "-", 
+     RowBox[{
+      FractionBox["5", "8"], "\[Rho]", " ", 
+      SuperscriptBox["U", "2"]}]}]}]}], TraditionalForm]],
+ FormatType->
+  "TraditionalForm",ExpressionUUID->"d462e9a5-0886-4937-8264-42cf82e9320c"]], \
+"DisplayFormulaNumbered",
+ CellChangeTimes->{{3.775737410316689*^9, 
+  3.775737452411829*^9}},ExpressionUUID->"f55c262a-bbb7-4348-a929-\
+6cb188be71a1"],
+
+Cell[TextData[StyleBox["taking place at:",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.775737462576214*^9, 3.775737526769322*^9}, {
+  3.775737805007634*^9, 3.775737807390884*^9}, {3.7757378797411947`*^9, 
+  3.775737894579076*^9}},ExpressionUUID->"10694fc4-6f73-47e1-8cfd-\
+dd0669757d17"],
+
+Cell["\[Theta] = 0,     \[Theta] = \[Pi]", "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.775737778205607*^9, 3.775737793400386*^9}, {
+  3.775737915633087*^9, 
+  3.7757379192691298`*^9}},ExpressionUUID->"38ef9dc4-b19f-46da-957f-\
+d96455d93d8e"],
+
+Cell[TextData[StyleBox["(at the location of the rear and forward stagnation \
+points)",
+ StripOnInput->False,
+ LineColor->RGBColor[0, 0, 1],
+ FrontFaceColor->RGBColor[0, 0, 1],
+ BackFaceColor->RGBColor[0, 0, 1],
+ GraphicsColor->RGBColor[0, 0, 1],
+ FontWeight->Normal,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin",
+ CellEvaluationFunction->cel`gTalker,
+ CellFrameLabels->{{None, ""}, {None, None}},
+ CellChangeTimes->{{3.775737897297621*^9, 
+  3.775737897485214*^9}},ExpressionUUID->"70dc9bef-8e92-49c3-b6c2-\
+3e4221a58199"]
+},
+WindowSize->{1690, 1388},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "DefaultModified2.nb"]]}, 
+  WindowMargins -> {{1285, Automatic}, {225, Automatic}}, FrontEndVersion -> 
+  "11.3 for Linux x86 (64-bit) (March 6, 2018)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 610, 15, 69, "Text",ExpressionUUID->"0c7276f3-7357-4834-b37a-feee03fe8c00",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[1171, 37, 813, 24, 73, "DisplayFormulaNumbered",ExpressionUUID->"f55c262a-bbb7-4348-a929-6cb188be71a1"],
+Cell[1987, 63, 626, 15, 69, "Text",ExpressionUUID->"10694fc4-6f73-47e1-8cfd-dd0669757d17",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"],
+Cell[2616, 80, 245, 4, 50, "DisplayFormulaNumbered",ExpressionUUID->"38ef9dc4-b19f-46da-957f-d96455d93d8e"],
+Cell[2864, 86, 574, 15, 69, "Text",ExpressionUUID->"70dc9bef-8e92-49c3-b6c2-3e4221a58199",
+ Evaluatable->True,
+ CellGroupingRules->"InputGroupin"]
+}
+]
+*)
+
